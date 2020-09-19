@@ -1,0 +1,3 @@
+[submodule "MaLiang"]
+	path = MaLiang
+	url = git@github.com:ulitiy/MaLiang.git

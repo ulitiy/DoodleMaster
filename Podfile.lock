@@ -1,0 +1,16 @@
+PODS:
+  - MaLiang (2.8.0)
+
+DEPENDENCIES:
+  - MaLiang (from `MaLiang`)
+
+EXTERNAL SOURCES:
+  MaLiang:
+    :path: MaLiang
+
+SPEC CHECKSUMS:
+  MaLiang: 5c42ad3f27486901911d2deb0763cd14ce05bc17
+
+PODFILE CHECKSUM: b8cab26ccad837d7aac4e3bd65d6e9f72c1f9574
+
+COCOAPODS: 1.9.3

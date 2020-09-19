@@ -3,27 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3105C724EA9E2A0017F99F /* CanvasContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */; };
 		6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22D24EA71B30002E77B /* AppDelegate.swift */; };
 		6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */; };
-		6CB5E23224EA71B30002E77B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E23124EA71B30002E77B /* ContentView.swift */; };
+		6CB5E23224EA71B30002E77B /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E23124EA71B30002E77B /* TaskView.swift */; };
 		6CB5E23424EA71B40002E77B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23324EA71B40002E77B /* Assets.xcassets */; };
 		6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23624EA71B40002E77B /* Preview Assets.xcassets */; };
 		6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */; };
+		6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E24724EA7B8E0002E77B /* MaLiang */; };
+		D07906C5821EEF980BBDFC82 /* Pods_DoodleMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasContainer.swift; sourceTree = "<group>"; };
 		6CB5E22A24EA71B30002E77B /* DoodleMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoodleMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB5E22D24EA71B30002E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6CB5E23124EA71B30002E77B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6CB5E23124EA71B30002E77B /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		6CB5E23324EA71B40002E77B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CB5E23624EA71B40002E77B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6CB5E23924EA71B40002E77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CB5E23B24EA71B40002E77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB5E24524EA7B720002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
+		6CB5E24724EA7B8E0002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
+		6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.debug.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.debug.xcconfig"; sourceTree = "<group>"; };
+		A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.release.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.release.xcconfig"; sourceTree = "<group>"; };
+		FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoodleMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +40,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07906C5821EEF980BBDFC82 /* Pods_DoodleMaster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11D9BA740FEE31A7CFF6B9EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */,
+				A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2626117F4B8834D0CA4CC50E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CB5E24524EA7B720002E77B /* MaLiang */,
+				6CB5E24724EA7B8E0002E77B /* MaLiang */,
+				FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6CB5E22124EA71B30002E77B = {
 			isa = PBXGroup;
 			children = (
 				6CB5E22C24EA71B30002E77B /* DoodleMaster */,
 				6CB5E22B24EA71B30002E77B /* Products */,
+				11D9BA740FEE31A7CFF6B9EC /* Pods */,
+				2626117F4B8834D0CA4CC50E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +89,8 @@
 			children = (
 				6CB5E22D24EA71B30002E77B /* AppDelegate.swift */,
 				6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */,
-				6CB5E23124EA71B30002E77B /* ContentView.swift */,
+				6CB5E23124EA71B30002E77B /* TaskView.swift */,
+				6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */,
 				6CB5E23324EA71B40002E77B /* Assets.xcassets */,
 				6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */,
 				6CB5E23B24EA71B40002E77B /* Info.plist */,
@@ -82,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CB5E23E24EA71B40002E77B /* Build configuration list for PBXNativeTarget "DoodleMaster" */;
 			buildPhases = (
+				266B1787443F8011323F4DE3 /* [CP] Check Pods Manifest.lock */,
 				6CB5E22624EA71B30002E77B /* Sources */,
 				6CB5E22724EA71B30002E77B /* Frameworks */,
 				6CB5E22824EA71B30002E77B /* Resources */,
+				4B1F95E7C2B016EF20B9661D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,7 +136,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Aleksandr Ulitin";
 				TargetAttributes = {
 					6CB5E22924EA71B30002E77B = {
@@ -133,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */,
 				6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */,
 				6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */,
 				6CB5E23424EA71B40002E77B /* Assets.xcassets in Resources */,
@@ -141,6 +176,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		266B1787443F8011323F4DE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoodleMaster-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1F95E7C2B016EF20B9661D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6CB5E22624EA71B30002E77B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,7 +225,8 @@
 			files = (
 				6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
-				6CB5E23224EA71B30002E77B /* ContentView.swift in Sources */,
+				6CB5E23224EA71B30002E77B /* TaskView.swift in Sources */,
+				6C3105C724EA9E2A0017F99F /* CanvasContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +270,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -223,6 +302,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -252,6 +332,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -276,16 +357,19 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		6CB5E23F24EA71B40002E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DoodleMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -295,16 +379,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.DoodleMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
 		6CB5E24024EA71B40002E77B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DoodleMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.DoodleMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

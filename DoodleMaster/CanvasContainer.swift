@@ -22,22 +22,26 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
 
 class CanvasContainerViewController: UIViewController {
     var canvas: Canvas!
+    
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
         do {
             try canvas.setTemplateTexture(name: "1-template")
+            let brush = try canvas.registerBrush(name: "main")
+            brush.forceSensitive = 0.5
+            brush.pointSize = 10
+            brush.opacity = 0.3
+            
             let shadowBrush = try canvas.registerBrush(name: "shadow")
-            shadowBrush.forceSensitive = 0.1
-//            shadowBrush.opacity = 1 // works poorly
-//            shadowBrush.opacity = 90
-            shadowBrush.pointSize = 200
+            shadowBrush.forceSensitive = 0
+            shadowBrush.pointSize = 50
+            shadowBrush.opacity = 0.05 // cannot be lower because of the 1 byte precision
             view.addSubview(canvas)
-//            shadowBrush.use()
+            brush.use()
             shadowBrush.useShadow()
         } catch {
             fatalError("Template not loaded")
         }
-//        canvas.backgroundColor = .blue
     }
 }

@@ -9,18 +9,20 @@
 import SwiftUI
 
 struct TaskView: View {
+    var task: Task
+
     var body: some View {
         ZStack {
-            Image("1-task")
+            Image("Courses/\(task.path)/1.step")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            CanvasContainerRepresentation()
+            CanvasContainerRepresentation(task: task)
         }
     }
 }
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView().previewLayout(.fixed(width: 1366, height: 1024))
+        TaskView(task: Task(name: "Line", path: "Basics/1/1")).previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

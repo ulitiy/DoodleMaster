@@ -11,8 +11,10 @@ import SwiftUI
 import MaLiang
 
 struct CanvasContainerRepresentation: UIViewControllerRepresentable {
+    var task: Task
     func makeUIViewController(context: Context) -> CanvasContainerViewController {
         let controller = CanvasContainerViewController()
+        controller.task = task
         return controller
     }
     
@@ -21,13 +23,17 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
 }
 
 class CanvasContainerViewController: UIViewController {
+    var task: Task!
     var canvas: Canvas!
     
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
+        canvas.onCountCompleted = { res in
+            
+        }
         do {
-            try canvas.setTemplateTexture(name: "1-template")
+            try canvas.setTemplateTexture(name: "Courses/\(task.path)/1.temp")
             let brush = try canvas.registerBrush(name: "main")
             brush.forceSensitive = 0.5
             brush.pointSize = 10

@@ -12,6 +12,8 @@ import MaLiang
 
 struct CanvasContainerRepresentation: UIViewControllerRepresentable {
     var task: Task
+    @ObservedObject var result: Result
+
     func makeUIViewController(context: Context) -> CanvasContainerViewController {
         let controller = CanvasContainerViewController()
         controller.task = task
@@ -19,6 +21,12 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ controller: CanvasContainerViewController, context: Context) {
+        controller.canvas.onTemplateCountCompleted = { res in
+            result.templateCount = res
+        }
+        controller.canvas.onCountCompleted = { res in
+            result.matchResults = res
+        }
     }
 }
 
@@ -29,9 +37,6 @@ class CanvasContainerViewController: UIViewController {
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
-        canvas.onCountCompleted = { res in
-            
-        }
         do {
             try canvas.setTemplateTexture(name: "Courses/\(task.path)/1.temp")
             let brush = try canvas.registerBrush(name: "main")

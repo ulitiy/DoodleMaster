@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct ScoringSystem: Hashable {
-    // sign * max(abs(c), x<b ? 0 : abs(a*(x-b))) , [b, a, c] array - min val, amplification, max absolute contribution
-    var overlap = [0.05, -20.0, 1.0]
-    var curvature = [0, -0.005, 1.0]
-    var strokeCount = [1, -0.05, 1.0]
+    // xa, ya, xb, yb clamp x and interpolate
+    var overlap = [0.3, 0.0, 0.7, -1.0]
+    var curvature = [0.0, 0.0, 1.0, -0.3]
+    var strokeCount = [1.0, 0.0, 3.0, -1.0]
 
-    var oneMinusRed = [0.0, -1000, 0.5]
-    var green = [0.0, 1.0, 1.0] // THE ONLY POSITIVE
-    var blue = [0.0, 0.0, 0.0] // Ignore blue
-    var oneMinusAlpha = [0.0, -100, 1.0]
+    var red = [0.0, -1.0, 1.0, 0.0]
+    var green = [0.0, 0.0, 1.0, 1.0]
+    var blue = [0.0, 0.0, 1.0, 0.0]
+    var oneMinusAlpha = [0.0, 0.0, 0.1, -1]
 
     var passingScore = 95.0
 }

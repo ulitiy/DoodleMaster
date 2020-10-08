@@ -10,13 +10,15 @@ import SwiftUI
 
 struct TaskView: View {
     var task: Task
+    @StateObject var result = Result()
 
     var body: some View {
         ZStack {
             Image("Courses/\(task.path)/1.step")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            CanvasContainerRepresentation(task: task)
+            CanvasContainerRepresentation(task: task, result: result)
+            Text("\(result.overall)")
         }
     }
 }

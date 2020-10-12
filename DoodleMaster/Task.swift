@@ -17,7 +17,7 @@ struct ScoringSystem: Hashable {
     var red = [0.0, -1.0, 1.0, 0.0]
     var green = [0.0, 0.0, 1.0, 1.0]
     var blue = [0.0, 0.0, 1.0, 0.0]
-    var oneMinusAlpha = [0.0, 0.0, 0.1, -1]
+    var oneMinusAlpha = [0.0, 0.0, 0.005, -1]
 
     var passingScore = 95.0
 }

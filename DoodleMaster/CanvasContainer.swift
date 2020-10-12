@@ -23,8 +23,10 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
     func updateUIViewController(_ controller: CanvasContainerViewController, context: Context) {
         controller.canvas.onTemplateCountCompleted = { res in
             result.templateCount = res
+            result.scoringSystem = task.scoringSystem
         }
         controller.canvas.onCountCompleted = { res in
+            result.strokeCount = controller.canvas.data.elements.count
             result.matchResults = res
         }
     }

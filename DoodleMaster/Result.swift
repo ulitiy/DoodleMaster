@@ -18,6 +18,8 @@ class Result: ObservableObject {
     @Published var templateCount: [UInt32] = [0, 0, 0, 0]
     @Published var strokeCount = 0
     @Published var curvature = 0
+    // Add time
+    // Add length
 
     @Published var scoringSystem = ScoringSystem()
     
@@ -35,7 +37,9 @@ class Result: ObservableObject {
     
     func calculateK(val: Double = 0, scoring: [Double] = [0.0, 0.0, 1.0, 0.0]) -> Double {
         var x = val
+        // line through 2 points
         let (xa, ya, xb, yb) = (scoring[0], scoring[1], scoring[2], scoring[3])
+        // but x is clipped, xb>xa
         x = min(xb, max(xa, x))
         let a = (yb - ya)/(xb - xa)
         let b = (xb*ya - xa*yb)/(xb - xa)
@@ -60,6 +64,8 @@ class Result: ObservableObject {
         if templateCount[3] > 0 {
             oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
         }
+        strokeCountK = calculateK(val: Double(strokeCount+1), scoring: scoringSystem.strokeCount)
+        // Why +1? It doesn't recalculate when canvas.data.elements.count changes because it doesn't redraw
         positive = min(1, greenK)
         negative = max(-1, overlapK + curvatureK + strokeCountK + blueK + oneMinusAlphaK + redK)
         overall = max(0, positive + negative)

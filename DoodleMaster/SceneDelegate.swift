@@ -9,6 +9,12 @@
 import UIKit
 import SwiftUI
 
+class HostingController: UIHostingController<TaskListView> {
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -25,7 +31,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = HostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }

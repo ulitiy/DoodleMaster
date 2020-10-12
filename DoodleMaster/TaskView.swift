@@ -16,10 +16,16 @@ struct TaskView: View {
         ZStack {
             Image("Courses/\(task.path)/1.step")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+//                .aspectRatio(contentMode: .fill)
+            Text("\(String(format:"%.2f", result.overall))")
             CanvasContainerRepresentation(task: task, result: result)
-            Text("\(result.overall)")
         }
+        .navigationBarHidden(true)
+        .navigationBarTitle(Text(""))
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
+        .statusBar(hidden: true)
+//        .prefersHomeIndicatorAutoHidden(true)
     }
 }
 

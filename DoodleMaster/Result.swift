@@ -30,7 +30,7 @@ class Result: ObservableObject {
     @Published var overlapK = 0.0
     @Published var curvatureK = 0.0
     @Published var strokeCountK = 0.0
-    @Published var redK = 1.0
+    @Published var redK = 0.0
     @Published var greenK = 0.0
     @Published var blueK = 0.0
     @Published var oneMinusAlphaK = 0.0
@@ -61,16 +61,13 @@ class Result: ObservableObject {
         }
         greenK = calculateK(val: Double(matchResults[1]) / Double(templateCount[1]), scoring: scoringSystem.green)
         blueK = calculateK(val: Double(matchResults[2]) / Double(templateCount[2]), scoring: scoringSystem.blue)
-        if templateCount[3] > 0 {
-            oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
-        }
+        oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
+        
         strokeCountK = calculateK(val: Double(strokeCount+1), scoring: scoringSystem.strokeCount)
         // Why +1? It doesn't recalculate when canvas.data.elements.count changes because it doesn't redraw
         positive = min(1, greenK)
         negative = max(-1, overlapK + curvatureK + strokeCountK + blueK + oneMinusAlphaK + redK)
         overall = max(0, positive + negative)
-        print(positive)
-        print(negative)
-        print("----------")
+        print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) sc\(Int(100.0*strokeCountK))")
     }
 }

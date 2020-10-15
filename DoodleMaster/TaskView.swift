@@ -18,7 +18,7 @@ struct TaskView: View {
 //            Image("Courses/\(task.path)/1.step")
 //                .resizable()
 //                .aspectRatio(contentMode: .fill)
-            Text("\(String(format:"%.2f", result.overall))")
+//            Text("\(String(format:"%.2f", result.overall))")
             CanvasContainerRepresentation(task: task, result: result)
         }
         .navigationBarHidden(true)

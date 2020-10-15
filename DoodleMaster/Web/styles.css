@@ -1,0 +1,43 @@
+[id$="-group"] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[id$="-draw-line"] {
+  stroke-dashoffset: 3000;
+  stroke-dasharray: 3000;
+  stroke-linecap: round;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.show-step-1 #step-1-group,
+.show-step-2 #step-2-group,
+.show-step-3 #step-3-group,
+.show-step-4 #step-4-group,
+.show-step-5 #step-5-group,
+.show-step-6 #step-6-group {
+  opacity: 1;
+}
+
+.show-step-1 #step-1-draw-line,
+.show-step-2 #step-2-draw-line,
+.show-step-3 #step-3-draw-line,
+.show-step-4 #step-4-draw-line,
+.show-step-5 #step-5-draw-line,
+.show-step-6 #step-6-draw-line {
+  animation: draw 5s linear forwards;
+}
+
+.show-steps-le-1 #step-1-draw-line {
+  animation: draw 5s linear forwards;
+}
+
+.show-steps-le-2 #step-1-draw-line,
+.show-steps-le-2 #step-2-draw-line {
+  animation: draw 5s linear forwards;
+}

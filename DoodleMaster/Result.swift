@@ -21,7 +21,11 @@ class Result: ObservableObject {
     // Add time
     // Add length
 
-    @Published var scoringSystem = ScoringSystem()
+    @Published var scoringSystem: ScoringSystem
+    
+    init(scoringSystem: ScoringSystem) {
+        self.scoringSystem = scoringSystem
+    }
     
     @Published var overall = 0.0
     @Published var positive = 0.0

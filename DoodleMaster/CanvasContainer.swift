@@ -11,36 +11,34 @@ import SwiftUI
 import MaLiang
 
 struct CanvasContainerRepresentation: UIViewControllerRepresentable {
-    var task: Task
-    @ObservedObject var result: Result
+    @ObservedObject var taskState: TaskState
 
     func makeUIViewController(context: Context) -> CanvasContainerViewController {
         let controller = CanvasContainerViewController()
-        controller.task = task
+        controller.taskState = taskState
         return controller
     }
     
     func updateUIViewController(_ controller: CanvasContainerViewController, context: Context) {
         controller.canvas.onTemplateCountCompleted = { res in
-            result.templateCount = res
-            result.scoringSystem = task.scoringSystem
+            taskState.currentResult.templateCount = res
         }
         controller.canvas.onCountCompleted = { res in
-            result.strokeCount = controller.canvas.data.elements.count
-            result.matchResults = res
+            taskState.currentResult.strokeCount = controller.canvas.data.elements.count
+            taskState.currentResult.matchResults = res
         }
     }
 }
 
 class CanvasContainerViewController: UIViewController {
-    var task: Task!
+    var taskState: TaskState!
     var canvas: Canvas!
     
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
         do {
-            try canvas.setTemplateTexture(name: "Courses/\(task.path)/1.temp")
+            try canvas.setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
             let brush = try canvas.registerBrush(name: "main")
             brush.forceSensitive = 0.5
             brush.pointSize = 10

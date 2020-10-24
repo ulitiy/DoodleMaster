@@ -9,17 +9,18 @@
 import SwiftUI
 
 struct TaskView: View {
-    var task: Task
-    @StateObject var result = Result()
-
+    @StateObject var taskState: TaskState
+    
+    init(task: Task) {
+        let ts = TaskState(task: task)
+        _taskState = StateObject(wrappedValue: ts)
+    }
+    
     var body: some View {
         ZStack {
             WebViewWrapper()
-//            Image("Courses/\(task.path)/1.step")
-//                .resizable()
-//                .aspectRatio(contentMode: .fill)
-//            Text("\(String(format:"%.2f", result.overall))")
-            CanvasContainerRepresentation(task: task, result: result)
+            Text(String(format: "%.2f", taskState.currentResult.overall*100)).position(x: 100.0, y: 100.0)
+            CanvasContainerRepresentation(taskState: taskState)
         }
         .navigationBarHidden(true)
         .navigationBarTitle(Text(""))
@@ -27,6 +28,7 @@ struct TaskView: View {
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
 //        .prefersHomeIndicatorAutoHidden(true)
+        
     }
 }
 

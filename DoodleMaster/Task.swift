@@ -19,7 +19,7 @@ struct ScoringSystem: Hashable {
     var blue = [0.0, 0.0, 1.0, 1.0] // good
     var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad
 
-    var passingScore = 95.0
+    var passingScore = 0.5
 }
 
 struct TaskStep: Hashable {

@@ -17,10 +17,20 @@ struct TaskView: View {
     }
     
     var body: some View {
+        ProgressView(value: taskState.currentResult.overall).padding()
         ZStack {
             WebViewWrapper()
-            Text(String(format: "%.2f", taskState.currentResult.overall*100)).position(x: 100.0, y: 100.0)
+            Text(String(format: "%.2f", taskState.currentResult.overall*100))
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             CanvasContainerRepresentation(taskState: taskState)
+            if taskState.stepSuccess {
+                ZStack {
+                    Rectangle().fill(Color.white)
+                    Text("✅").font(.system(size: 100.0))
+                }
+                .zIndex(1)
+                .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
+            }
         }
         .navigationBarHidden(true)
         .navigationBarTitle(Text(""))

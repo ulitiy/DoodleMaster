@@ -24,21 +24,48 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
             taskState.currentResult.templateCount = res
         }
         controller.canvas.onCountCompleted = { res in
-            taskState.currentResult.strokeCount = controller.canvas.data.elements.count
             taskState.currentResult.matchResults = res
         }
+        controller.canvas.onTouchesBegan = {
+            taskState.touching = true
+        }
+        controller.canvas.onTouchesEnded = {
+            taskState.currentResult.strokeCount = controller.canvas.data.elements.count
+            taskState.touching = false
+        }
+        updateStepNumber(controller: controller)
+        updateFailed(controller: controller)
+    }
+    
+    func updateStepNumber(controller: CanvasContainerViewController) {
+        if taskState.stepNumber == controller.stepNumber
+            || taskState.stepNumber > taskState.task.stepCount {
+            return
+        }
+        controller.setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
+        controller.stepNumber = taskState.stepNumber
+        controller.canvas.clear()
+    }
+    
+    func updateFailed(controller: CanvasContainerViewController) {
+        if !taskState.failing && controller.failing {
+            controller.canvas.clear()
+        }
+        controller.failing = taskState.failing
     }
 }
 
 class CanvasContainerViewController: UIViewController {
     var taskState: TaskState!
     var canvas: Canvas!
-    
+    var stepNumber = 1
+    var failing = false
+
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
+        setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
         do {
-            try canvas.setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
             let brush = try canvas.registerBrush(name: "main")
             brush.forceSensitive = 0.5
             brush.pointSize = 10
@@ -52,7 +79,15 @@ class CanvasContainerViewController: UIViewController {
             brush.use()
             shadowBrush.useShadow()
         } catch {
-            fatalError("Template not loaded")
+            fatalError("Brush not registered")
+        }
+    }
+    
+    func setTemplateTexture(name: String) {
+        do {
+            try canvas.setTemplateTexture(name: name)
+        } catch {
+            fatalError("Template not loaded: \(name)")
         }
     }
 }

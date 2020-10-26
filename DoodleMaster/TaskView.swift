@@ -17,28 +17,34 @@ struct TaskView: View {
     }
     
     var body: some View {
-        ProgressView(value: taskState.currentResult.overall).padding()
+        ProgressView(value: taskState.currentResult.positive)
+//        .padding()
         ZStack {
-            WebViewWrapper()
+            WebViewWrapper(taskState: taskState)
             Text(String(format: "%.2f", taskState.currentResult.overall*100))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             CanvasContainerRepresentation(taskState: taskState)
-            if taskState.stepSuccess {
+            if taskState.passing {
                 ZStack {
                     Rectangle().fill(Color.white)
                     Text("✅").font(.system(size: 100.0))
                 }
                 .zIndex(1)
-                .transition(AnyTransition.opacity.animation(.easeInOut(duration: 0.2)))
+                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+            }
+            if taskState.failing {
+                ZStack {
+                    Rectangle().fill(Color.white)
+                    Text("❌").font(.system(size: 100.0))
+                }
+                .zIndex(1)
+                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
             }
         }
         .navigationBarHidden(true)
         .navigationBarTitle(Text(""))
-//        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
-//        .prefersHomeIndicatorAutoHidden(true)
-        
     }
 }
 

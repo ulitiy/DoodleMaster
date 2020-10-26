@@ -8,20 +8,6 @@
 
 import SwiftUI
 
-struct ScoringSystem: Hashable {
-    // xa, ya, xb, yb clamp x and interpolate
-    var overlap = [0.3, 0.0, 0.7, -1.0]
-    var curvature = [0.0, 0.0, 1.0, -0.3]
-    var strokeCount = [4.0, 0.0, 8.0, -1.0]
-
-    var red = [0.0, -1.0, 1.0, 0.0] // necessary
-    var green = [0.0, 0.0, 1.0, 0.0] // neutral
-    var blue = [0.0, 0.0, 1.0, 1.0] // good
-    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad
-
-    var passingScore = 0.5
-}
-
 struct TaskStep: Hashable {
 //    var scoringSystem: ScoringSystem? = nil // no need for different for MVP
     var CommitButton = false
@@ -38,6 +24,7 @@ struct TaskStep: Hashable {
 struct Task: Hashable {
     var name: String
     var path: String // CourseN.LessonN.TaskN.StepN
+    var stepCount = 1
 //  let brushOffset
 //  let brushMultiplier
     

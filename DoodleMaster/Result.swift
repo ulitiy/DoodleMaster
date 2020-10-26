@@ -8,6 +8,20 @@
 
 import Combine
 
+struct ScoringSystem: Hashable {
+    // xa, ya, xb, yb clamp x and interpolate
+    var overlap = [0.3, 0.0, 0.7, -1.0]
+    var curvature = [0.0, 0.0, 1.0, 0]
+    var strokeCount = [4.0, 0.0, 8.0, -1.0]
+
+    var red = [0.95, -1.0, 0.98, 0.0] // necessary
+    var green = [0.0, 0.0, 1.0, 0.0] // neutral
+    var blue = [0.0, 0.0, 1.0, 1.0] // good
+    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad
+
+    var passingScore = 0.5
+}
+
 class Result: ObservableObject {
     @Published var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] {
         didSet {
@@ -28,6 +42,8 @@ class Result: ObservableObject {
     }
     
     @Published var overall = 0.0
+    @Published var passed = false
+    @Published var failed = false
     @Published var positive = 0.0
     @Published var negative = 0.0
 
@@ -69,9 +85,14 @@ class Result: ObservableObject {
         
         strokeCountK = calculateK(val: Double(strokeCount+1), scoring: scoringSystem.strokeCount)
         // Why +1? It doesn't recalculate when canvas.data.elements.count changes because it doesn't redraw
-        positive = min(1, greenK)
-        negative = max(-1, overlapK + curvatureK + strokeCountK + blueK + oneMinusAlphaK + redK)
+        positive = min(1, blueK)
+        negative = max(-1, oneMinusAlphaK + overlapK + curvatureK + strokeCountK)
         overall = max(0, positive + negative)
+        // green doesn't count anywhere
+        // red doesn't count into overall because it's not a punishment, it's a requirement
+        passed = overall + redK > scoringSystem.passingScore
+        failed = 1 + negative < scoringSystem.passingScore
+        // redK isn't a punishment, it's just a lack of stimulation
         print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) sc\(Int(100.0*strokeCountK))")
     }
 }

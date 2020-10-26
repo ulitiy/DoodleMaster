@@ -10,17 +10,32 @@ import SwiftUI
 import WebKit
 
 final class WebViewWrapper : UIViewRepresentable {
+    @ObservedObject var taskState: TaskState
+    
+    init(taskState: TaskState) {
+        self.taskState = taskState
+    }
+
     func makeUIView(context: Context) -> WKWebView  {
         let config = WKWebViewConfiguration()
         config.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
         let view = WKWebView(frame: .zero, configuration: config)
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Web/task", ofType: "html")!)
-        print(url)
         view.loadFileURL(url, allowingReadAccessTo: url)
-        view.evaluateJavaScript("task=\"1/1/1\";")
+        view.evaluateJavaScript("task=\"\(taskState.task.path)\";")
         return view
     }
     
     func updateUIView(_ uiView: WKWebView, context: Context) {
+        if taskState.failing {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                uiView.evaluateJavaScript("Restart();")
+            }
+        }
+        if taskState.passing {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                uiView.evaluateJavaScript("SetStep(\(self.taskState.stepNumber + 1));")
+            }
+        }
     }
 }

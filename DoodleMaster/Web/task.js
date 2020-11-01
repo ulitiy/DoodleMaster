@@ -3,6 +3,9 @@ function loadTask(task) {
   xhr.open("GET", `Courses/${task}.svg`, false);
   xhr.onload = function (e) {
     document.body.innerHTML = xhr.responseText;
+    let svg = document.querySelector("svg");
+    svg.removeAttribute("height");
+    svg.removeAttribute("width");
     showTemplate(1);
   };
   xhr.send();

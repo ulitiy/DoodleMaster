@@ -1,3 +1,16 @@
+body {
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 [id$="-template"],
 [id$="-input"] {
   display: none;

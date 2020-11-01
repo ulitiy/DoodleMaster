@@ -1,6 +1,6 @@
-[id$="-group"] {
-  opacity: 0;
-  transition: opacity 0.5s;
+[id$="-template"],
+[id$="-input"] {
+  display: none;
 }
 
 [id$="-draw-line"] {
@@ -9,8 +9,18 @@
   stroke-linecap: round;
 }
 
-[id$="-template"] {
-  display: none;
+[id$="-input"] {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.show [id$="-draw-line"] {
+  animation: draw 5s linear forwards;
 }
 
 @keyframes draw {
@@ -19,29 +29,11 @@
   }
 }
 
-.show-step-1 #step-1-group,
-.show-step-2 #step-2-group,
-.show-step-3 #step-3-group,
-.show-step-4 #step-4-group,
-.show-step-5 #step-5-group,
-.show-step-6 #step-6-group {
-  opacity: 1;
-}
-
-.show-step-1 #step-1-draw-line,
-.show-step-2 #step-2-draw-line,
-.show-step-3 #step-3-draw-line,
-.show-step-4 #step-4-draw-line,
-.show-step-5 #step-5-draw-line,
-.show-step-6 #step-6-draw-line {
-  animation: draw 5s linear forwards;
-}
-
-.show-steps-le-1 #step-1-draw-line {
+/* .show-steps-le-1 #step-1-draw-line {
   animation: draw 5s linear forwards;
 }
 
 .show-steps-le-2 #step-1-draw-line,
 .show-steps-le-2 #step-2-draw-line {
   animation: draw 5s linear forwards;
-}
+} */

@@ -1,34 +1,36 @@
-function LoadTask(task) {
+function loadTask(task) {
   xhr = new XMLHttpRequest();
   xhr.open("GET", `Courses/${task}.svg`, false);
   xhr.onload = function (e) {
     document.body.innerHTML = xhr.responseText;
-    SetStep(1);
+    showTemplate(1);
   };
-  // document.body.innerHTML = test_svg;
-  // SetStep(1);
   xhr.send();
 }
 
-function SetStep(step) {
-  document.body.className = `show-step-${step}`;
+let stepNumber;
+
+function hideAll() {
+  const el = document.querySelector(`.show`);
+  if (!el) return;
+  el.classList.remove("show");
 }
 
-function Restart() {
-  if(document.body.className === "") {
-    return;
-  }
-  let oldClassName = document.body.className;
-  document.body.className = "";
+function showTemplate(step) {
+  hideAll();
+  stepNumber = step;
+  document.querySelector(`#step-${step}-template`).classList.add("show");
+}
+
+function showInput(step) {
+  hideAll();
+  stepNumber = step;
+  document.querySelector(`#step-${step}-input`).classList.add("show");
+}
+
+function restart() {
+  hideAll();
   setTimeout(() => {
-    document.body.className = oldClassName;
+    showInput(stepNumber);
   }, 1000);
 }
-
-function SetStepsLE(step) {
-  document.body.className = `show-steps-le-${step}`;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  LoadTask(task);
-});

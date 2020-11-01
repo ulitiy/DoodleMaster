@@ -18,6 +18,8 @@ class TaskState: ObservableObject {
     @Published var results: [Result] = []
     @Published var stepNumber = 1
     @Published var currentResult: Result!
+    @Published var template: MTLTexture?
+    
     @Published var touching = false {
         didSet {
             if touching {
@@ -41,6 +43,10 @@ class TaskState: ObservableObject {
         self.task = task
     }
     
+    func setTemplate(temp: MTLTexture) {
+        template = temp
+    }
+    
     func resetResult() {
         let tc = currentResult?.templateCount
         currentResult = Result(scoringSystem: task.scoringSystem)
@@ -53,6 +59,7 @@ class TaskState: ObservableObject {
     func passStep() {
         if !passing { // only once
             passing = true
+            template = nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.nextStep()
             }

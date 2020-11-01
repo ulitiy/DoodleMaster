@@ -9,6 +9,7 @@
 import UIKit
 import SwiftUI
 import MaLiang
+import Combine
 
 struct CanvasContainerRepresentation: UIViewControllerRepresentable {
     @ObservedObject var taskState: TaskState
@@ -16,9 +17,15 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> CanvasContainerViewController {
         let controller = CanvasContainerViewController()
         controller.taskState = taskState
+        controller.templateSink = taskState.$template.sink { val in
+            guard let val = val else {
+                return
+            }
+            try! controller.canvas.setTemplateTexture(val)
+        }
         return controller
     }
-    
+
     func updateUIViewController(_ controller: CanvasContainerViewController, context: Context) {
         controller.canvas.onTemplateCountCompleted = { res in
             taskState.currentResult.templateCount = res
@@ -33,20 +40,23 @@ struct CanvasContainerRepresentation: UIViewControllerRepresentable {
             taskState.currentResult.strokeCount = controller.canvas.data.elements.count
             taskState.touching = false
         }
+        // TODO: rewrite with sinks
         updateStepNumber(controller: controller)
         updateFailed(controller: controller)
     }
     
+    // TODO: Move to controller
     func updateStepNumber(controller: CanvasContainerViewController) {
         if taskState.stepNumber == controller.stepNumber
             || taskState.stepNumber > taskState.task.stepCount {
             return
         }
-        controller.setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
+//        controller.setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
         controller.stepNumber = taskState.stepNumber
         controller.canvas.clear()
     }
     
+    // TODO: Move to controller
     func updateFailed(controller: CanvasContainerViewController) {
         if !taskState.failing && controller.failing {
             controller.canvas.clear()
@@ -60,11 +70,11 @@ class CanvasContainerViewController: UIViewController {
     var canvas: Canvas!
     var stepNumber = 1
     var failing = false
-
+    var templateSink: AnyCancellable?
+    
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
-        setTemplateTexture(name: "Courses/\(taskState.task.path)/\(taskState.stepNumber).temp")
         do {
             let brush = try canvas.registerBrush(name: "main")
             brush.forceSensitive = 0.5
@@ -80,14 +90,6 @@ class CanvasContainerViewController: UIViewController {
             shadowBrush.useShadow()
         } catch {
             fatalError("Brush not registered")
-        }
-    }
-    
-    func setTemplateTexture(name: String) {
-        do {
-            try canvas.setTemplateTexture(name: name)
-        } catch {
-            fatalError("Template not loaded: \(name)")
         }
     }
 }

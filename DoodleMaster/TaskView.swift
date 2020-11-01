@@ -20,7 +20,7 @@ struct TaskView: View {
         ProgressView(value: taskState.currentResult.positive)
 //        .padding()
         ZStack {
-            WebViewWrapper(taskState: taskState)
+            WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
             Text(String(format: "%.2f", taskState.currentResult.overall*100))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             CanvasContainerRepresentation(taskState: taskState)

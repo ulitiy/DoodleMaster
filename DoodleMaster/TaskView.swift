@@ -18,13 +18,12 @@ struct TaskView: View {
     
     var body: some View {
         ProgressView(value: taskState.currentResult.positive)
-//        .padding()
         ZStack {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
             Text(String(format: "%.2f", taskState.currentResult.overall*100))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             CanvasContainerRepresentation(taskState: taskState)
-            if taskState.passing {
+            if taskState.passing && taskState.taskResult == nil {
                 ZStack {
                     Rectangle().fill(Color.white)
                     Text("✅").font(.system(size: 100.0))
@@ -38,6 +37,14 @@ struct TaskView: View {
                     Text("❌").font(.system(size: 100.0))
                 }
                 .zIndex(1)
+                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+            }
+            if taskState.taskResult != nil {
+                ZStack {
+                    Rectangle().fill(Color.white)
+                    Text("Task passed").font(.system(size: 100.0))
+                }
+                .zIndex(2)
                 .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
             }
         }

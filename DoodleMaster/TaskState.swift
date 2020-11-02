@@ -19,7 +19,8 @@ class TaskState: ObservableObject {
     @Published var stepNumber = 1
     @Published var currentResult: Result!
     @Published var template: MTLTexture?
-    
+    @Published var taskResult: Result?
+
     @Published var touching = false {
         didSet {
             if touching {
@@ -56,7 +57,11 @@ class TaskState: ObservableObject {
     }
     
     func passStep() {
-        if !passing { // only once
+        if !passing && taskResult == nil { // only once
+            if self.stepNumber >= self.task.stepCount {
+                self.passTask()
+                return
+            }
             passing = true
             template = nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -94,5 +99,21 @@ class TaskState: ObservableObject {
         stepNumber += 1
         passing = false
         failing = false
+    }
+    
+    func passTask() {
+        results.append(currentResult)
+        resetResult()
+        taskResult = results.reduce(Result(scoringSystem: task.scoringSystem)) { res, val2 in
+            res.redK = res.redK + val2.redK / Double(results.count)
+            res.greenK = res.greenK + val2.greenK / Double(results.count)
+            res.blueK = res.blueK + val2.blueK / Double(results.count)
+            res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK / Double(results.count)
+            res.overlapK = res.overlapK + val2.overlapK / Double(results.count)
+            res.curvatureK = res.curvatureK + val2.curvatureK / Double(results.count)
+            res.strokeCountK = res.strokeCountK + val2.strokeCountK / Double(results.count)
+            return res
+        }
+        taskResult!.calculateSummary()
     }
 }

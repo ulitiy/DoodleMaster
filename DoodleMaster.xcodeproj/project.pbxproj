@@ -78,6 +78,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C10815C25508A8900464DF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
+				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
+				6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */,
+				6CB5E23124EA71B30002E77B /* TaskView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C10815D25508AB500464DF7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C1B596A254467E500D44A4E /* TaskState.swift */,
+				6C307127252DF25300B645C1 /* Result.swift */,
+				6C307105252876D000B645C1 /* Task.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6CB5E22124EA71B30002E77B = {
 			isa = PBXGroup;
 			children = (
@@ -99,20 +120,15 @@
 		6CB5E22C24EA71B30002E77B /* DoodleMaster */ = {
 			isa = PBXGroup;
 			children = (
+				6C10815C25508A8900464DF7 /* Views */,
+				6C10815D25508AB500464DF7 /* Models */,
 				6C4B865F253604CE000CB7E0 /* Web */,
 				6CB5E22D24EA71B30002E77B /* AppDelegate.swift */,
 				6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */,
-				6CB5E23124EA71B30002E77B /* TaskView.swift */,
-				6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */,
 				6CB5E23324EA71B40002E77B /* Assets.xcassets */,
 				6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */,
 				6CB5E23B24EA71B40002E77B /* Info.plist */,
 				6CB5E23524EA71B40002E77B /* Preview Content */,
-				6C307105252876D000B645C1 /* Task.swift */,
-				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
-				6C307127252DF25300B645C1 /* Result.swift */,
-				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
-				6C1B596A254467E500D44A4E /* TaskState.swift */,
 			);
 			path = DoodleMaster;
 			sourceTree = "<group>";

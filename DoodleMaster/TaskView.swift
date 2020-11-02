@@ -42,7 +42,8 @@ struct TaskView: View {
             if taskState.taskResult != nil {
                 ZStack {
                     Rectangle().fill(Color.white)
-                    Text("Task passed").font(.system(size: 100.0))
+                    Text("Task passed!\n\(String(format: "%.2f", taskState.taskResult!.overall*100))")
+                        .font(.system(size: 100.0))
                 }
                 .zIndex(2)
                 .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))

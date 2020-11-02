@@ -65,14 +65,14 @@ class CanvasContainerViewController: UIViewController {
         }
         // Next step
         stepNumberSink = taskState.$stepNumber.sink { val in
-            if (val <= self.taskState.stepNumber) {
+            if val <= self.taskState.stepNumber {
                 return
             }
             self.canvas.clear()
         }
         // Restart step
         failingSink = taskState.$failing.sink { val in
-            if (val) {
+            if val {
                 return
             }
             self.canvas.clear()

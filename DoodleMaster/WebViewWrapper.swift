@@ -65,7 +65,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     func watchUpdates() {
         passingSink = taskState.$passing.sink { val in
-            if (val == false) {
+            if !val {
                 return
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -76,7 +76,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             }
         }
         failingSink = taskState.$failing.sink { val in
-            if (val == false) {
+            if !val {
                 return;
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {

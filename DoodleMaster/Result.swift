@@ -85,6 +85,10 @@ class Result: ObservableObject {
         
         strokeCountK = calculateK(val: Double(strokeCount+1), scoring: scoringSystem.strokeCount)
         // Why +1? It doesn't recalculate when canvas.data.elements.count changes because it doesn't redraw
+        calculateSummary()
+    }
+    
+    func calculateSummary() {
         positive = min(1, blueK)
         negative = max(-1, oneMinusAlphaK + overlapK + curvatureK + strokeCountK)
         overall = max(0, positive + negative)

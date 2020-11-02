@@ -17,30 +17,10 @@ struct WebViewWrapper : UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> WebViewController {
         let controller = WebViewController()
         controller.taskState = taskState
-        
-        // TODO: move to controller
-        controller.passingSink = taskState.$passing.sink { val in
-            if(val == false) {
-                return
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                controller.wkWebView.evaluateJavaScript("showTemplate(\(self.taskState.stepNumber + 1));")
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                controller.takeSnapshot(step: self.taskState.stepNumber + 1)
-            }
-        }
-        
         return controller
     }
     
     func updateUIViewController(_ controller: WebViewController, context: Context) {
-        // TODO: rewrite with sinks
-        if taskState.failing {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                controller.wkWebView.evaluateJavaScript("restart();")
-            }
-        }
     }
 }
 
@@ -48,6 +28,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     var taskState: TaskState!
     var wkWebView: WKWebView!
     var passingSink: AnyCancellable?
+    var failingSink: AnyCancellable?
 
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
@@ -78,7 +59,30 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "Web/task", ofType: "html")!)
         wkWebView.loadFileURL(url, allowingReadAccessTo: url)
         wkWebView.navigationDelegate = self
+        watchUpdates()
         view.addSubview(wkWebView)
+    }
+    
+    func watchUpdates() {
+        passingSink = taskState.$passing.sink { val in
+            if (val == false) {
+                return
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.wkWebView.evaluateJavaScript("showTemplate(\(self.taskState.stepNumber + 1));")
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                self.takeSnapshot(step: self.taskState.stepNumber + 1)
+            }
+        }
+        failingSink = taskState.$failing.sink { val in
+            if (val == false) {
+                return;
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                self.wkWebView.evaluateJavaScript("restart();")
+            }
+        }
     }
     
     func takeSnapshot(step: Int) {

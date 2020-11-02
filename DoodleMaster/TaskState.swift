@@ -36,8 +36,7 @@ class TaskState: ObservableObject {
     @Published var passing = false
     @Published var failing = false
     
-    // I don't know why we have to persist this but updates don't work otherwise
-    var anyCancellable: AnyCancellable?
+    var currentResultSink: AnyCancellable?
     
     init(task: Task) {
         self.task = task
@@ -51,7 +50,7 @@ class TaskState: ObservableObject {
         let tc = currentResult?.templateCount
         currentResult = Result(scoringSystem: task.scoringSystem)
         currentResult.templateCount = tc ?? currentResult.templateCount
-        anyCancellable = currentResult.objectWillChange.sink(receiveValue: {
+        currentResultSink = currentResult.objectWillChange.sink(receiveValue: {
             self.objectWillChange.send() // update self on child update
         })
     }

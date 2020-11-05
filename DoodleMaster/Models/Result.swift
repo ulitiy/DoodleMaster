@@ -10,16 +10,16 @@ import Combine
 
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb clamp x and interpolate
-    var overlap = [0.3, 0.0, 0.7, -1.0]
+    var overlap = [0.07, 0.0, 0.15, -1.0]
     var curvature = [0.0, 0.0, 1.0, 0]
     var strokeCount = [4.0, 0.0, 8.0, -1.0]
 
-    var red = [0.95, -1.0, 0.98, 0.0] // necessary
+    var red = [0.9699, 0.0, 0.97, 0.0] // necessary, sharp line // -1, debugging
     var green = [0.0, 0.0, 1.0, 0.0] // neutral
-    var blue = [0.0, 0.0, 1.0, 1.0] // good
-    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad
+    var blue = [0.0, 0.0, 1.0, 1.0] // good, match
+    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad, deviation
 
-    var passingScore = 0.5
+    var passingScore = 0.3 // to debug
 }
 
 class Result: ObservableObject {
@@ -68,6 +68,7 @@ class Result: ObservableObject {
 
     func calculate() {
         if templateCount[1] == 0 {
+            
             return
         }
         
@@ -97,6 +98,6 @@ class Result: ObservableObject {
         passed = overall + redK > scoringSystem.passingScore
         failed = 1 + negative < scoringSystem.passingScore
         // redK isn't a punishment, it's just a lack of stimulation
-        print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) sc\(Int(100.0*strokeCountK))")
+//        print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) sc\(Int(100.0*strokeCountK))")
     }
 }

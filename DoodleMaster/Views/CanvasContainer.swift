@@ -50,39 +50,43 @@ class CanvasContainerViewController: UIViewController {
     }
     
     func watchUpdates() {
-        canvas.onTemplateCountCompleted = { res in
-            self.taskState.currentResult.templateCount = res
+        canvas.onTemplateCountCompleted = { [weak self] res in
+            self?.taskState.currentResult.templateCount = res
+            if res[1] == 0 {
+                self?.taskState.template = nil
+                print("Broken screenshot, resetting...")
+            }
         }
-        canvas.onCountCompleted = { res in
-            self.taskState.currentResult.matchResults = res
+        canvas.onCountCompleted = { [weak self] res in
+            self?.taskState.currentResult.matchResults = res
         }
-        canvas.onTouchesBegan = {
-            self.taskState.touching = true
+        canvas.onTouchesBegan = { [weak self] in
+            self?.taskState.touching = true
         }
-        canvas.onTouchesEnded = {
-            self.taskState.currentResult.strokeCount = self.canvas.data.elements.count
-            self.taskState.touching = false
+        canvas.onTouchesEnded = { [weak self] in
+            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count
+            self?.taskState.touching = false
         }
         // Next step
-        stepNumberSink = taskState.$stepNumber.sink { val in
-            if val <= self.taskState.stepNumber {
+        stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
+            if val <= self?.taskState.stepNumber ?? 0 {
                 return
             }
-            self.canvas.clear()
+            self?.canvas.clear()
         }
         // Restart step
-        failingSink = taskState.$failing.sink { val in
+        failingSink = taskState.$failing.sink { [weak self] val in
             if val {
                 return
             }
-            self.canvas.clear()
+            self?.canvas.clear()
         }
         // New step template ready
-        templateSink = taskState.$template.sink { val in
+        templateSink = taskState.$template.sink { [weak self] val in
             guard let val = val else {
                 return
             }
-            try! self.canvas.setTemplateTexture(val)
+            try! self?.canvas.setTemplateTexture(val)
         }
     }
 }

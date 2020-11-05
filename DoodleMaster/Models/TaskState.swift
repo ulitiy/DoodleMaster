@@ -43,29 +43,25 @@ class TaskState: ObservableObject {
         self.task = task
     }
     
-    func setTemplate(temp: MTLTexture) {
-        template = temp
-    }
-    
     func resetResult() {
         let tc = currentResult?.templateCount
         currentResult = Result(scoringSystem: task.scoringSystem)
         currentResult.templateCount = tc ?? currentResult.templateCount
-        currentResultSink = currentResult.objectWillChange.sink(receiveValue: {
-            self.objectWillChange.send() // update self on child update
+        currentResultSink = currentResult.objectWillChange.sink(receiveValue: { [weak self] in
+            self?.objectWillChange.send() // update self on child update
         })
     }
     
     func passStep() {
         if !passing && taskResult == nil { // only once
-            if self.stepNumber >= self.task.stepCount {
-                self.passTask()
+            if stepNumber >= task.stepCount {
+                passTask()
                 return
             }
             passing = true
             template = nil
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.nextStep()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                self?.nextStep()
             }
         }
     }
@@ -73,8 +69,8 @@ class TaskState: ObservableObject {
     func failStep() {
         if !failing { // only once
             failing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.restartStep()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                self?.restartStep()
             }
         }
     }
@@ -91,6 +87,8 @@ class TaskState: ObservableObject {
         stepNumber = 1
         passing = false
         failing = false
+        taskResult = nil
+        template = nil
     }
     
     func nextStep() {

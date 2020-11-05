@@ -18,7 +18,7 @@ struct TaskListView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 65) {
                 ForEach(tasks, id: \.self) {task in
-                    NavigationLink(destination: TaskView(task: task)) {
+                    NavigationLink(destination: LazyView(TaskView(task: task))) {
                         ZStack {
                             Circle()
                                 .stroke(lineWidth: 12)

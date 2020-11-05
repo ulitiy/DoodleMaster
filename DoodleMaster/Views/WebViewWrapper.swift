@@ -24,34 +24,33 @@ struct WebViewWrapper : UIViewControllerRepresentable {
     }
 }
 
-class WebViewController: UIViewController, WKNavigationDelegate {
+class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     var taskState: TaskState!
     var wkWebView: WKWebView!
     var passingSink: AnyCancellable?
     var failingSink: AnyCancellable?
+    var templateSink: AnyCancellable?
 
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
-        print("didFinish")
-        wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");", completionHandler: { _, _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { // 0.02 enough on mac
-                self.takeSnapshot(step: self.taskState.stepNumber)
+        wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");")
+    }
+    
+    // receives js event messages
+    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+        print("JS - \(message.name): \(message.body)")
+        if let body = message.body as? String, body == "TemplateReady" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                self?.takeSnapshot(step: self!.taskState.stepNumber)
             }
-        })
-    }
-    
-    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError: Error) {
-        print("WK Nav error")
-    }
-    
-    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError: Error) {
-        print("WK Provisional error")
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let config = WKWebViewConfiguration()
         config.preferences.setValue(true, forKey: "allowFileAccessFromFileURLs")
+        config.userContentController.add(self, name: "control")
         wkWebView = WKWebView(frame: view.bounds, configuration: config)
         wkWebView.isOpaque = false
         wkWebView.backgroundColor = UIColor.clear
@@ -64,23 +63,28 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     }
     
     func watchUpdates() {
-        passingSink = taskState.$passing.sink { val in
+        passingSink = taskState.$passing.sink { [weak self] val in
             if !val {
                 return
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.wkWebView.evaluateJavaScript("showTemplate(\(self.taskState.stepNumber + 1));")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.wkWebView.evaluateJavaScript("showTemplate(\(self!.taskState.stepNumber + 1));") // TODO: CAN BREAK HERE!
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                self.takeSnapshot(step: self.taskState.stepNumber + 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+                self?.takeSnapshot(step: self!.taskState.stepNumber + 1)
             }
         }
-        failingSink = taskState.$failing.sink { val in
+        failingSink = taskState.$failing.sink { [weak self] val in
             if !val {
                 return;
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                self.wkWebView.evaluateJavaScript("restart();")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+                self?.wkWebView.evaluateJavaScript("restart();")
+            }
+        }
+        templateSink = taskState.$template.sink { [weak self] val in
+            if val == nil {
+                self?.wkWebView.evaluateJavaScript("showTemplate(\(self!.taskState.stepNumber));")
             }
         }
     }
@@ -88,10 +92,10 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     func takeSnapshot(step: Int) {
         let config = WKSnapshotConfiguration()
         config.afterScreenUpdates = true
-        config.snapshotWidth = 320 // multiple of 32 is better
-        wkWebView.takeSnapshot(with: config, completionHandler: { img, _ in
-            self.wkWebView.evaluateJavaScript("showInput(\(step));") // here because ASAP
-            self.taskState.setTemplate(temp: self.createTexture(uiImage: img!)!)
+        config.snapshotWidth = 160 // (points, means x2 px) multiple of 32 is better
+        wkWebView.takeSnapshot(with: config, completionHandler: { [weak self] img, err in
+            self?.wkWebView.evaluateJavaScript("showInput(\(step));") // here because ASAP
+            self?.taskState.template = self!.createTexture(uiImage: img!)
         })
     }
     

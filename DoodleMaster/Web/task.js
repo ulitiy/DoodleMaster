@@ -23,6 +23,7 @@ function showTemplate(step) {
   hideAll();
   stepNumber = step;
   document.querySelector(`#step-${step}-template`).classList.add("show");
+  window.webkit.messageHandlers.control.postMessage('TemplateReady');
 }
 
 function showInput(step) {

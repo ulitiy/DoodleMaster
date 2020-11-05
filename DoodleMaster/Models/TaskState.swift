@@ -18,7 +18,7 @@ class TaskState: ObservableObject {
     @Published var results: [Result] = []
     @Published var stepNumber = 1
     @Published var currentResult: Result!
-    @Published var template: MTLTexture?
+    @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
 
     @Published var touching = false {
@@ -54,12 +54,12 @@ class TaskState: ObservableObject {
     
     func passStep() {
         if !passing && taskResult == nil { // only once
+            print("Pass step")
             if stepNumber >= task.stepCount {
                 passTask()
                 return
             }
             passing = true
-            template = nil
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 self?.nextStep()
             }
@@ -68,6 +68,7 @@ class TaskState: ObservableObject {
     
     func failStep() {
         if !failing { // only once
+            print("Fail step")
             failing = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
                 self?.restartStep()
@@ -76,25 +77,28 @@ class TaskState: ObservableObject {
     }
     
     func restartStep() {
+        print("Restart step")
         resetResult()
         passing = false
         failing = false
     }
     
     func restartTask() {
+        print("Restart task")
         results.removeAll()
         resetResult()
         stepNumber = 1
         passing = false
         failing = false
         taskResult = nil
-        template = nil
     }
     
     func nextStep() {
+        print("Next step \(stepNumber)")
         results.append(currentResult)
         resetResult()
         stepNumber += 1
+        template = nil
         passing = false
         failing = false
     }
@@ -113,5 +117,6 @@ class TaskState: ObservableObject {
             return res
         }
         taskResult!.calculateSummary()
+        print("Pass task")
     }
 }

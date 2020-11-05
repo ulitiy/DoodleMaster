@@ -27,7 +27,7 @@ struct WebViewWrapper : UIViewControllerRepresentable {
 class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     var taskState: TaskState!
     var wkWebView: WKWebView!
-    var passingSink: AnyCancellable?
+    var stepNumberSink: AnyCancellable?
     var failingSink: AnyCancellable?
     var templateSink: AnyCancellable?
 
@@ -63,17 +63,6 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     }
     
     func watchUpdates() {
-        passingSink = taskState.$passing.sink { [weak self] val in
-            if !val {
-                return
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                self?.wkWebView.evaluateJavaScript("showTemplate(\(self!.taskState.stepNumber + 1));") // TODO: CAN BREAK HERE!
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
-                self?.takeSnapshot(step: self!.taskState.stepNumber + 1)
-            }
-        }
         failingSink = taskState.$failing.sink { [weak self] val in
             if !val {
                 return;

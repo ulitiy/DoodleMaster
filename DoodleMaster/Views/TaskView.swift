@@ -39,7 +39,7 @@ struct TaskView: View {
                     .foregroundColor(.red)
                 Text(String(format: "%.2f", taskState.taskResult!.overall*100))
                 .font(.system(size: 100.0))
-                .foregroundColor(.blue)
+                .foregroundColor(.green)
                 Divider()
                 Button("OK", action: {
                     self.presentationMode.wrappedValue.dismiss()
@@ -56,7 +56,7 @@ struct TaskView: View {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
             .animation(Animation.linear(duration: 0).delay(0.1))
 
-            Text(String(format: "%.2f", taskState.currentResult.overall*100))
+            Text(formatPercent(taskState.currentResult.overall))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             Text("\(taskState.stepNumber)/\(taskState.task.stepCount)")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
@@ -66,7 +66,13 @@ struct TaskView: View {
             if taskState.passing && taskState.taskResult == nil {
                 ZStack {
                     Rectangle().fill(Color.white)
-                    Text("✅").font(.system(size: 100.0))
+                    VStack {
+                        Text("✅").font(.system(size: 100.0))
+                        Divider()
+                        Text(formatPercent(taskState.currentResult.overall))
+                        .font(.system(size: 100.0))
+                        .foregroundColor(.green)
+                    }
                 }
                 .zIndex(1)
                 .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))

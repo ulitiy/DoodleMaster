@@ -54,7 +54,7 @@ struct TaskView: View {
         ProgressView(value: taskState.currentResult.positive)
         ZStack {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
-            .animation(Animation.linear(duration: 0).delay(0.1))
+            .animation(Animation.linear(duration: 0.1).delay(0.1))
 
             Text(formatPercent(taskState.currentResult.overall))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)

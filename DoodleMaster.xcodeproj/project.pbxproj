@@ -14,6 +14,7 @@
 		6C307128252DF25400B645C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307127252DF25300B645C1 /* Result.swift */; };
 		6C3105C724EA9E2A0017F99F /* CanvasContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */; };
 		6C4B8660253604CE000CB7E0 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B865F253604CE000CB7E0 /* Web */; };
+		6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67B1E32555CF750062B12B /* ResultProgressView.swift */; };
 		6CA1D2192534ACA600CDDDFE /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */; };
 		6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22D24EA71B30002E77B /* AppDelegate.swift */; };
 		6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 		6C307127252DF25300B645C1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasContainer.swift; sourceTree = "<group>"; };
 		6C4B865F253604CE000CB7E0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+		6C67B1E32555CF750062B12B /* ResultProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProgressView.swift; sourceTree = "<group>"; };
 		6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
 		6CB5E22A24EA71B30002E77B /* DoodleMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoodleMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB5E22D24EA71B30002E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				6CB5E23124EA71B30002E77B /* TaskView.swift */,
 				6C10815E25508B6800464DF7 /* RootView.swift */,
 				6CDD7CC72551CDF700E750C2 /* LazyView.swift */,
+				6C67B1E32555CF750062B12B /* ResultProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */,
 				6CA1D2192534ACA600CDDDFE /* WebViewWrapper.swift in Sources */,
+				6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
 				6C10815F25508B6800464DF7 /* RootView.swift in Sources */,

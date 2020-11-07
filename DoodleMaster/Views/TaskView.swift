@@ -51,7 +51,7 @@ struct TaskView: View {
     }
     
     var body: some View {
-        ProgressView(value: taskState.currentResult.positive)
+        ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
         ZStack {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
             .animation(Animation.linear(duration: 0.1).delay(0.1))

@@ -8,6 +8,27 @@
 
 import SwiftUI
 
+struct ResultDetailsView: View {
+    var result: Result
+    
+    func formatPercent(_ res: Double) -> String {
+        return String(format: "%.2f", res*100)
+    }
+    
+    var body: some View {
+        Text("Match: \(formatPercent(result.blueK))")
+            .foregroundColor(.green)
+        Text("Deviation: \(formatPercent(result.oneMinusAlphaK))")
+            .foregroundColor(.red)
+        Text("Roughness: \(formatPercent(result.roughnessK))")
+            .foregroundColor(.red)
+        Text("Overlap: \(formatPercent(result.overlapK))")
+            .foregroundColor(.red)
+        Text("Stroke count: \(formatPercent(result.strokeCountK))")
+            .foregroundColor(.red)
+    }
+}
+
 struct TaskView: View {
     @StateObject var taskState: TaskState
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -29,15 +50,8 @@ struct TaskView: View {
                 Text("Task passed!\n")
                 .font(.system(size: 100.0))
                 Divider()
-                Text("Match: \(formatPercent(taskState.taskResult!.blueK))")
-                    .foregroundColor(.green)
-                Text("Deviation: \(formatPercent(taskState.taskResult!.oneMinusAlphaK))")
-                    .foregroundColor(.red)
-                Text("Overlap: \(formatPercent(taskState.taskResult!.overlapK))")
-                    .foregroundColor(.red)
-                Text("Stroke count: \(formatPercent(taskState.taskResult!.strokeCountK))")
-                    .foregroundColor(.red)
-                Text(String(format: "%.2f", taskState.taskResult!.overall*100))
+                ResultDetailsView(result: taskState.taskResult!)
+                Text(formatPercent(taskState.taskResult!.overall))
                 .font(.system(size: 100.0))
                 .foregroundColor(.green)
                 Divider()
@@ -69,6 +83,7 @@ struct TaskView: View {
                     VStack {
                         Text("✅").font(.system(size: 100.0))
                         Divider()
+                        ResultDetailsView(result: taskState.currentResult)
                         Text(formatPercent(taskState.currentResult.overall))
                         .font(.system(size: 100.0))
                         .foregroundColor(.green)

@@ -60,7 +60,7 @@ class TaskState: ObservableObject {
                 return
             }
             passing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) { [weak self] in
                 self?.nextStep()
             }
         }
@@ -112,7 +112,7 @@ class TaskState: ObservableObject {
             res.blueK = res.blueK + val2.blueK / Double(results.count)
             res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK / Double(results.count)
             res.overlapK = res.overlapK + val2.overlapK / Double(results.count)
-            res.curvatureK = res.curvatureK + val2.curvatureK / Double(results.count)
+            res.roughnessK = res.roughnessK + val2.roughnessK / Double(results.count)
             res.strokeCountK = res.strokeCountK + val2.strokeCountK / Double(results.count)
             return res
         }

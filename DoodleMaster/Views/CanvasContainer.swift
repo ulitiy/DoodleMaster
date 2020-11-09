@@ -58,6 +58,8 @@ class CanvasContainerViewController: UIViewController {
             }
         }
         canvas.onCountCompleted = { [weak self] res in
+            self?.taskState.currentResult.rippleSum = self!.canvas.rippleSum * 512 // it's just how I calculated initially, no biggie
+            self?.taskState.currentResult.rippleCount = self!.canvas.rippleCount
             self?.taskState.currentResult.matchResults = res
         }
         canvas.onTouchesBegan = { [weak self] in

@@ -86,11 +86,10 @@ class TaskState: ObservableObject {
     func restartTask() {
         print("Restart task")
         results.removeAll()
-        resetResult()
         stepNumber = 1
-        passing = false
-        failing = false
         taskResult = nil
+        restartStep()
+        template = nil
     }
     
     func nextStep() {

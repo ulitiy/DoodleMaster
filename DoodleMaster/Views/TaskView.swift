@@ -32,6 +32,7 @@ struct ResultDetailsView: View {
 struct TaskView: View {
     @StateObject var taskState: TaskState
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State private var showRestartAlert = false
     
     init(task: Task) {
         // in order to use param with @StateObject
@@ -68,7 +69,7 @@ struct TaskView: View {
         ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
         ZStack {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
-            .animation(Animation.linear(duration: 0.1).delay(0.1))
+//            .animation(Animation.linear(duration: 0).delay(0.1)) // delays both ways, unacceptable
 
             Text(formatPercent(taskState.currentResult.overall))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
@@ -76,6 +77,16 @@ struct TaskView: View {
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
 
             CanvasContainerRepresentation(taskState: taskState)
+            
+            Group {
+                Button(action: { showRestartAlert.toggle() }) {
+                    Image(systemName: "arrow.clockwise")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 50))
+                }
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .padding()
 
             if taskState.passing && taskState.taskResult == nil {
                 ZStack {
@@ -108,6 +119,9 @@ struct TaskView: View {
         .navigationBarTitle(Text(""))
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
+        .alert(isPresented: $showRestartAlert) {
+            Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
+        }
     }
 }
 

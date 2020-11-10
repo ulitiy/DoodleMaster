@@ -33,7 +33,8 @@ struct TaskView: View {
     @StateObject var taskState: TaskState
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var showRestartAlert = false
-    
+    @State private var showBackToMenuAlert = false
+
     init(task: Task) {
         // in order to use param with @StateObject
         let ts = TaskState(task: task)
@@ -78,11 +79,22 @@ struct TaskView: View {
 
             CanvasContainerRepresentation(taskState: taskState)
             
-            Group {
+            HStack {
+                Button(action: { showBackToMenuAlert.toggle() }) {
+                    Image(systemName: "chevron.left.circle")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 50))
+                }
+                .alert(isPresented: $showBackToMenuAlert) {
+                    Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: { self.presentationMode.wrappedValue.dismiss() }), secondaryButton: .default(Text("Cancel")))
+                }
                 Button(action: { showRestartAlert.toggle() }) {
                     Image(systemName: "arrow.clockwise")
                         .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
                         .font(.system(size: 50))
+                }
+                .alert(isPresented: $showRestartAlert) {
+                    Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
@@ -119,9 +131,6 @@ struct TaskView: View {
         .navigationBarTitle(Text(""))
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
-        .alert(isPresented: $showRestartAlert) {
-            Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
-        }
     }
 }
 

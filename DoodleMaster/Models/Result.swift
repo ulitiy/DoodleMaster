@@ -11,7 +11,8 @@ import Combine
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb clamp x and interpolate
     var overlap = [0.07, 0.0, 0.15, -0.8]
-    var roughness = [1, 0.0, 4, -0.3] // 0-1 very smooth 1-3 okish 3+ bad
+//    var roughness = [1, 0.0, 4, -0.3] // 0-1 very smooth 1-3 okish 3+ bad
+    var roughness = [1, 0.0, 4, 0] // 0-1 very smooth 1-3 okish 3+ bad
     var strokeCount = [4.0, 0.0, 8.0, -1.0]
 
     var red = [0.9699, 0.0, 0.97, 0.0] // necessary, sharp line // -1, debugging

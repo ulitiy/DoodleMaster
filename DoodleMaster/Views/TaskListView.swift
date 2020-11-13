@@ -10,8 +10,8 @@ import SwiftUI
 
 struct TaskListView: View {
     let tasks = [
-        Task(name: "Line", path: "Basics/1/1", stepCount: 6),
-        Task(name: "Circle", path: "Basics/1/2"),
+        Task(name: "Basics", path: "Basics/1/1", stepCount: 6),
+        Task(name: "Loomis", path: "Basics/1/2", stepCount: 8),
     ]
     
     var body: some View {

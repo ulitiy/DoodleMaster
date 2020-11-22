@@ -18,6 +18,8 @@ class TaskState: ObservableObject {
     @Published var results: [Result] = []
     @Published var stepNumber = 1
     @Published var currentResult: Result!
+    // how many elements there were in canvas.data.elements when this step started
+    @Published var stepElementsCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
 

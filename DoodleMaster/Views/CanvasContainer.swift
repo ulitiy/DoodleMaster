@@ -74,14 +74,18 @@ class CanvasContainerViewController: UIViewController {
             if val <= self?.taskState.stepNumber ?? 0 {
                 return
             }
-            self?.canvas.clear()
+            self?.taskState.stepElementsCount = self!.canvas.data.elements.count
+            // TODO: CLEAR ONLY ON singlestep TASKS, don't clear on multistep
+//            self?.canvas.clear()
         }
         // Restart step
+        // TODO: IS CALLED WHEN NOT NEEDED
         failingSink = taskState.$failing.sink { [weak self] val in
             if val {
                 return
             }
-            self?.canvas.clear()
+            self?.canvas.keepFirst(self!.taskState.stepElementsCount)
+//            self?.canvas.clear()
         }
         // New step template ready
         templateSink = taskState.$template.sink { [weak self] val in

@@ -23,8 +23,8 @@ struct ScoringSystem: Hashable {
 //    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad, deviation
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
-//    var passingScore = 0.3 // to debug
-    var passingScore = 0.9
+    var passingScore = 0.3 // to debug
+//    var passingScore = 0.9
 }
 
 class Result: ObservableObject {

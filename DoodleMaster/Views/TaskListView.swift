@@ -8,10 +8,12 @@
 
 import SwiftUI
 
+let multistep = TaskStep(clearBefore: false, showResult: false)
+
 struct TaskListView: View {
     let tasks = [
-        Task(name: "Basics", path: "Basics/1/1", stepCount: 6),
-        Task(name: "Loomis", path: "Basics/1/2", stepCount: 8),
+        Task(name: "Basics", path: "Basics/1/1", steps: Array.init(repeating: TaskStep(), count: 6)),
+        Task(name: "Loomis", path: "Basics/1/2", steps: Array.init(repeating: multistep, count: 8)),
     ]
     
     var body: some View {

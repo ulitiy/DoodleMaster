@@ -74,7 +74,7 @@ struct TaskView: View {
 
             Text(formatPercent(taskState.currentResult.overall))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
-            Text("\(taskState.stepNumber)/\(taskState.task.stepCount)")
+            Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
 
             CanvasContainerRepresentation(taskState: taskState)

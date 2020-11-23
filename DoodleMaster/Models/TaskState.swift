@@ -16,7 +16,14 @@ class TaskState: ObservableObject {
         }
     }
     @Published var results: [Result] = []
-    @Published var stepNumber = 1
+    @Published var stepNumber = 1 {
+        didSet {
+            currentStep = task.steps[stepNumber - 1]
+            nextStep = stepNumber < task.steps.count ? task.steps[stepNumber] : nil
+        }
+    }
+    @Published var currentStep: TaskStep!
+    @Published var nextStep: TaskStep?
     @Published var currentResult: Result!
     // how many elements there were in canvas.data.elements when this step started
     @Published var stepElementsCount = 0
@@ -42,12 +49,14 @@ class TaskState: ObservableObject {
     var currentResultSink: AnyCancellable?
     
     init(task: Task) {
+        currentStep = task.steps[0]
+        nextStep = task.steps[1]
         self.task = task
     }
     
     func resetResult() {
         let tc = currentResult?.templateCount
-        currentResult = Result(scoringSystem: task.scoringSystem)
+        currentResult = Result(scoringSystem: currentStep.scoringSystem)
         currentResult.templateCount = tc ?? currentResult.templateCount
         currentResultSink = currentResult.objectWillChange.sink(receiveValue: { [weak self] in
             self?.objectWillChange.send() // update self on child update
@@ -57,13 +66,13 @@ class TaskState: ObservableObject {
     func passStep() {
         if !passing && taskResult == nil { // only once
             print("Pass step")
-            if stepNumber >= task.stepCount {
+            if stepNumber >= task.steps.count {
                 passTask()
                 return
             }
             passing = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) { [weak self] in
-                self?.nextStep()
+                self?.switchNextStep()
             }
         }
     }
@@ -94,11 +103,11 @@ class TaskState: ObservableObject {
         template = nil
     }
     
-    func nextStep() {
+    func switchNextStep() {
         print("Next step \(stepNumber)")
         results.append(currentResult)
-        resetResult()
         stepNumber += 1
+        resetResult()
         template = nil
         passing = false
         failing = false
@@ -106,7 +115,6 @@ class TaskState: ObservableObject {
     
     func passTask() {
         results.append(currentResult)
-        resetResult()
         taskResult = results.reduce(Result(scoringSystem: task.scoringSystem)) { res, val2 in
             res.redK = res.redK + val2.redK / Double(results.count)
             res.greenK = res.greenK + val2.greenK / Double(results.count)

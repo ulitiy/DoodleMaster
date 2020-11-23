@@ -9,24 +9,20 @@
 import SwiftUI
 
 struct TaskStep: Hashable {
-//    var scoringSystem: ScoringSystem? = nil // no need for different for MVP
-    var CommitButton = false
-
-// only cleaning steps for MVP
-//    var cleanFinal = false
-//    var cleanShadow = false
+    var brushName = "main"
+    var brushSize = 10
+    var shadowSize = 50
+    var commitButton = false
+    var scoringSystem = ScoringSystem()
+    var clearBefore = true
+    var showResult = true
+    
 //    var dim = false
-//    var brush = false // "pencil", "pen", "brush"
 }
 
-// no undos and undo steps for MVP
-// redo steps are required
 struct Task: Hashable {
     var name: String
-    var path: String // CourseN.LessonN.TaskN.StepN
-    var stepCount = 1
-//  let brushOffset
-//  let brushMultiplier
-    
-    var scoringSystem = ScoringSystem()
+    var path: String // Course.LessonN.TaskN
+    var scoringSystem = ScoringSystem() // only for overall result
+    var steps: [TaskStep] = []
 }

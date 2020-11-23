@@ -71,28 +71,35 @@ class CanvasContainerViewController: UIViewController {
         }
         // Next step
         stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
-            if val <= self?.taskState.stepNumber ?? 0 {
+            guard let self = self else {
                 return
             }
-            self?.taskState.stepElementsCount = self!.canvas.data.elements.count
-            // TODO: CLEAR ONLY ON singlestep TASKS, don't clear on multistep
-//            self?.canvas.clear()
+            if val <= self.taskState.stepNumber {
+                return
+            }
+            self.taskState.stepElementsCount = self.canvas.data.elements.count
+            if self.taskState.currentStep.clearBefore {
+                self.canvas.clear()
+            }
         }
         // Restart step
         // TODO: IS CALLED WHEN NOT NEEDED
         failingSink = taskState.$failing.sink { [weak self] val in
-            if val {
+            guard let self = self, !val else {
                 return
             }
-            self?.canvas.keepFirst(self!.taskState.stepElementsCount)
-//            self?.canvas.clear()
+            if self.taskState.currentStep.clearBefore {
+                self.canvas.clear()
+            } else {
+                self.canvas.keepFirst(self.taskState.stepElementsCount)
+            }
         }
         // New step template ready
         templateSink = taskState.$template.sink { [weak self] val in
-            guard let val = val else {
+            guard let self = self, let val = val else {
                 return
             }
-            try! self?.canvas.setTemplateTexture(val)
+            try! self.canvas.setTemplateTexture(val)
         }
     }
 }

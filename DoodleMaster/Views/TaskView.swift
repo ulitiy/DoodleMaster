@@ -100,21 +100,21 @@ struct TaskView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
             .padding()
 
-//            if taskState.passing && taskState.taskResult == nil {
-//                ZStack {
-//                    Rectangle().fill(Color.white)
-//                    VStack {
-//                        Text("✅").font(.system(size: 100.0))
-//                        Divider()
-//                        ResultDetailsView(result: taskState.currentResult)
-//                        Text(formatPercent(taskState.currentResult.overall))
-//                        .font(.system(size: 100.0))
-//                        .foregroundColor(.green)
-//                    }
-//                }
-//                .zIndex(1)
-//                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-//            }
+            if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
+                ZStack {
+                    Rectangle().fill(Color.white)
+                    VStack {
+                        Text("✅").font(.system(size: 100.0))
+                        Divider()
+                        ResultDetailsView(result: taskState.currentResult)
+                        Text(formatPercent(taskState.currentResult.overall))
+                        .font(.system(size: 100.0))
+                        .foregroundColor(.green)
+                    }
+                }
+                .zIndex(1)
+                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+            }
             if taskState.failing {
                 ZStack {
                     Rectangle().fill(Color.white)

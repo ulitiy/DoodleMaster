@@ -40,9 +40,10 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         print("JS - \(message.name): \(message.body)")
         if let body = message.body as? String, body == "TemplateReady" {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-                self?.takeSnapshot(step: self!.taskState.stepNumber)
-            }
+            self.takeSnapshot(step: self.taskState.stepNumber)
+        }
+        if let body = message.body as? String, body == "InputReady" {
+            self.taskState.template = self.createTexture(uiImage: snapshot!)
         }
     }
     
@@ -78,13 +79,14 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         }
     }
     
+    var snapshot: UIImage?
     func takeSnapshot(step: Int) {
         let config = WKSnapshotConfiguration()
         config.afterScreenUpdates = true
         config.snapshotWidth = 160 // (points, means x2 px) multiple of 32 is better
         wkWebView.takeSnapshot(with: config, completionHandler: { [weak self] img, err in
-            self?.wkWebView.evaluateJavaScript("showInput(\(step));") // here because ASAP
-            self?.taskState.template = self!.createTexture(uiImage: img!)
+            self?.snapshot = img
+            self?.wkWebView.evaluateJavaScript("showInput(\(step));")
         })
     }
     

@@ -37,7 +37,9 @@ function showTemplate(step) {
   stepNumber = step;
   document.querySelector(`.step-${step} .template`).classList.add("show");
   if (!debugSVG) {
-    window.webkit.messageHandlers.control.postMessage('TemplateReady');
+    window.requestAnimationFrame(function() {
+      window.webkit.messageHandlers.control.postMessage('TemplateReady');
+    })
   }
 }
 
@@ -45,6 +47,9 @@ function showInput(step) {
   hideAll();
   stepNumber = step;
   document.querySelector(`.step-${step} .input`).classList.add("show");
+  window.requestAnimationFrame(function() {
+    window.webkit.messageHandlers.control.postMessage('InputReady');
+  })
 }
 
 function restart() {

@@ -11,28 +11,35 @@ svg {
   max-height: 100%;
 }
 
-[id$="-template"],
-[id$="-input"] {
+.template,
+.input {
   display: none;
 }
 
-[id$="-draw-line"] {
+.input > * {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.input > .prev {
+  transition: none;
+}
+
+.input > .draw-line {
   stroke-dashoffset: 3000;
   stroke-dasharray: 3000;
   stroke-linecap: round;
 }
 
-[id$="-input"] {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
 .show {
   display: block !important;
+}
+
+.show.input > * {
   opacity: 1 !important;
 }
 
-.show [id$="-draw-line"] {
+.show.input > .draw-line {
   animation: draw 5s linear forwards;
 }
 
@@ -41,12 +48,3 @@ svg {
     stroke-dashoffset: 0;
   }
 }
-
-/* .show-steps-le-1 #step-1-draw-line {
-  animation: draw 5s linear forwards;
-}
-
-.show-steps-le-2 #step-1-draw-line,
-.show-steps-le-2 #step-2-draw-line {
-  animation: draw 5s linear forwards;
-} */

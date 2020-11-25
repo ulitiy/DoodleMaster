@@ -14,13 +14,13 @@ struct ScoringSystem: Hashable {
     var roughness = [1.0, 0.0, 4.0, 0.0] // 0-1 very smooth 1-3 okish 3+ bad
     var strokeCount = [4.0, 0.0, 8.0, 0.0]
 
-    var red = [0.0, 0.0, 1.0, 0.0]
-//    var red = [0.9699, 0.0, 0.97, 0.0] // necessary, sharp line // -1, debugging
+    var red = [0.0, 0.0, 1.0, 0.0] // debug
+//    var red = [0.9699, 0.0, 0.97, -1] // necessary, sharp line
     var green = [0.0, 0.0, 1.0, 0.0] // neutral
     var blue = [0.0, 0.0, 1.0, 1.0] // good, match
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
-    var passingScore = 0.3 // to debug
+    var passingScore = 0.3 // debug
 //    var passingScore = 0.9
 }
 

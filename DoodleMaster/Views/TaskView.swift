@@ -72,7 +72,7 @@ struct TaskView: View {
             WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
 //            .animation(Animation.linear(duration: 0).delay(0.1)) // delays both ways, unacceptable
 
-            Text(formatPercent(taskState.currentResult.overall))
+            Text(formatPercent(taskState.currentResult.positive))
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()

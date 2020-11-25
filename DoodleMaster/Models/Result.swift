@@ -9,18 +9,15 @@
 import Combine
 
 struct ScoringSystem: Hashable {
-    // xa, ya, xb, yb clamp x and interpolate
-//    var overlap = [0.07, 0.0, 0.15, -0.8]
-    var overlap = [0.07, 0.0, 0.15, 0]
-//    var roughness = [1, 0.0, 4, -0.3] // 0-1 very smooth 1-3 okish 3+ bad
-    var roughness = [1, 0.0, 4, 0] // 0-1 very smooth 1-3 okish 3+ bad
-//    var strokeCount = [4.0, 0.0, 8.0, -1.0]
-    var strokeCount = [4.0, 0.0, 8.0, 0]
+    // xa, ya, xb, yb line coordinates, clamp x and interpolate
+    var overlap = [0.07, 0.0, 0.15, 0.0]
+    var roughness = [1.0, 0.0, 4.0, 0.0] // 0-1 very smooth 1-3 okish 3+ bad
+    var strokeCount = [4.0, 0.0, 8.0, 0.0]
 
-    var red = [0.9699, 0.0, 0.97, 0.0] // necessary, sharp line // -1, debugging
+    var red = [0.0, 0.0, 1.0, 0.0]
+//    var red = [0.9699, 0.0, 0.97, 0.0] // necessary, sharp line // -1, debugging
     var green = [0.0, 0.0, 1.0, 0.0] // neutral
     var blue = [0.0, 0.0, 1.0, 1.0] // good, match
-//    var oneMinusAlpha = [0.0, 0.0, 0.005, -1] // bad, deviation
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
     var passingScore = 0.3 // to debug
@@ -82,7 +79,6 @@ class Result: ObservableObject {
             overlapK = calculateK(val: Double(matchResults[4]) / Double(matchResults[5]), scoring: scoringSystem.overlap)
         }
         roughnessK = calculateK(val: rippleSum / Double(rippleCount), scoring: scoringSystem.roughness)
-//        strokeCountK = calculateK(val: matchResults[4] / matchResults[5], scoring: scoringSystem.strokeCount)
         if templateCount[0] > 0 {
             redK = calculateK(val: Double(matchResults[0]) / Double(templateCount[0]), scoring: scoringSystem.red)
         }
@@ -97,13 +93,14 @@ class Result: ObservableObject {
     
     func calculateSummary() {
         positive = min(1, blueK)
-        negative = min(0, max(-1, oneMinusAlphaK + overlapK + roughnessK + strokeCountK))
-        overall = max(0, positive + negative)
+        negative = min(0, max(-1, oneMinusAlphaK + overlapK + strokeCountK))
+        overall = max(0, positive + negative + roughnessK + redK)
         // green doesn't count anywhere
-        // red doesn't count into overall because it's not a punishment, it's a requirement
-        passed = overall + redK > scoringSystem.passingScore
+        passed = overall > scoringSystem.passingScore
         failed = 1 + negative < scoringSystem.passingScore
-        // redK isn't a punishment, it's just a lack of stimulation
-        print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) roK\(Int(100.0*roughnessK)) ro\(rippleSum/Double(rippleCount)) sc\(Int(100.0*strokeCountK)) neg\(negative)")
+    }
+    
+    func print() {
+        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) roK\(Int(100.0*roughnessK)) ro\(rippleSum/Double(rippleCount)) sc\(Int(100.0*strokeCountK)) neg\(negative)")
     }
 }

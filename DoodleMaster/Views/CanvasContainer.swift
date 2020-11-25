@@ -69,9 +69,14 @@ class CanvasContainerViewController: UIViewController {
             self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count
             self?.taskState.touching = false
         }
-        // Next step
+        // Next step or restart task
         stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
             guard let self = self else {
+                return
+            }
+            if val == 1 { // restart task
+                self.taskState.stepElementsCount = 0
+                self.canvas.clear()
                 return
             }
             if val <= self.taskState.stepNumber {

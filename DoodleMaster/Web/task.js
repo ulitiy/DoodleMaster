@@ -1,4 +1,4 @@
-let debugSVG = undefined;
+let debugSVG = ``;
 
 function loadTask(task) {
   xhr = new XMLHttpRequest();

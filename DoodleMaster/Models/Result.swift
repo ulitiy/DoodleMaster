@@ -98,6 +98,7 @@ class Result: ObservableObject {
         // green doesn't count anywhere
         passed = overall > scoringSystem.passingScore
         failed = 1 + negative < scoringSystem.passingScore
+        print()
     }
     
     func print() {

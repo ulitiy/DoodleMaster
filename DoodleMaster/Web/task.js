@@ -55,6 +55,8 @@ function drawLine(el) {
   el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);
   el.classList.remove(dclass);
 
+  let flip = el.classList.contains("flip");
+
   let len = el.getTotalLength() * 1.1;
   let seconds = Math.round(len/100)/10;
   el.style.strokeDasharray = len;
@@ -66,7 +68,7 @@ function drawLine(el) {
       el.classList.add(dclass);
     }
     el.style.transition = `stroke-dashoffset ${seconds}s linear`;
-    el.style.strokeDashoffset = 0;
+    el.style.strokeDashoffset = flip ? len * 2 : 0;
   }, 0);
 }
 

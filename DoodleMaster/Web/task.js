@@ -1,20 +1,18 @@
 let debugSVG = ``;
 
 function loadTask(task) {
+  if (debugSVG) {
+    loadSVG(debugSVG);
+    return
+  }
   xhr = new XMLHttpRequest();
   xhr.open("GET", `Courses/${task}.svg`, false);
-  xhr.onload = function(e) {
-    loadSVG(xhr.responseText);
-  }
-  if (debugSVG) {
-    loadSVG(debugSVG)
-  } else {
-    xhr.send();
-  }
+  xhr.onload = (e) => loadSVG(xhr.responseText);
+  xhr.send();
 }
 
 function loadSVG(text) {
-  let res = text
+  let res = text;
   res = res.replace(/\sid=/gm, " class=");
   res = res.replace(/_\d+/gm, "\"");
   document.body.innerHTML = res;
@@ -36,11 +34,9 @@ function showTemplate(step) {
   hideAll();
   stepNumber = step;
   document.querySelector(`.step-${step} .template`).classList.add("show");
-  if (!debugSVG) {
-    window.requestAnimationFrame(function() {
-      window.webkit.messageHandlers.control.postMessage('TemplateReady');
-    })
-  }
+  if (debugSVG) return;
+  window.requestAnimationFrame(() =>
+    window.webkit.messageHandlers.control.postMessage('TemplateReady'))
 }
 
 function showInput(step) {
@@ -49,18 +45,14 @@ function showInput(step) {
   document.querySelector(`.step-${step} .input`).classList.add("show");
   document.querySelectorAll(`.step-${step} .input > .draw-line`).forEach(drawLine);
   if (debugSVG) return;
-  window.requestAnimationFrame(function() {
-    window.webkit.messageHandlers.control.postMessage('InputReady');
-  })
+  window.requestAnimationFrame(() =>
+    window.webkit.messageHandlers.control.postMessage('InputReady'));
 }
 
 function drawLine(el) {
+  // remove delay, it breaks animation
   var dclass;
-  el.classList.forEach(function(cl){
-    if (cl.match(/^d\d+$/)) {
-      dclass = cl;
-    }
-  });
+  el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);
   el.classList.remove(dclass);
 
   let len = el.getTotalLength() * 1.1;
@@ -69,6 +61,7 @@ function drawLine(el) {
   el.style.strokeDashoffset = len;
 
   setTimeout(() => {
+    // bring delay back
     if (dclass) {
       el.classList.add(dclass);
     }

@@ -50,6 +50,7 @@ function showInput(step) {
 }
 
 function drawLine(el) {
+  el.style.transition = "";
   // remove delay, it breaks animation
   var dclass;
   el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);

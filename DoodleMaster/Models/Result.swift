@@ -20,7 +20,7 @@ struct ScoringSystem: Hashable {
     var blue = [0.0, 0.0, 1.0, 1.0] // good, match
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
-    var passingScore = 0.3 // debug
+    var passingScore = 0.7 // debug
 //    var passingScore = 0.9
 }
 
@@ -94,10 +94,13 @@ class Result: ObservableObject {
     func calculateSummary() {
         positive = min(1, blueK)
         negative = min(0, max(-1, oneMinusAlphaK + overlapK + strokeCountK))
-        overall = max(0, positive + negative + roughnessK + redK)
+        overall = max(0, positive + negative + redK + roughnessK)
         // green doesn't count anywhere
         passed = overall > scoringSystem.passingScore
-        failed = 1 + negative < scoringSystem.passingScore
+        // too many errors
+        // or done but too bad
+        failed = 1 + negative < scoringSystem.passingScore ||
+            1 + negative + roughnessK < scoringSystem.passingScore && positive > scoringSystem.passingScore
         print()
     }
     

@@ -12,7 +12,7 @@ let multistep = TaskStep(clearBefore: false, showResult: false)
 let lineworkStep = TaskStep(scoringSystem: ScoringSystem(
     overlap: [0.07, 0.0, 0.15, -0.8],
     roughness: [2.0, 0.0, 5.0, -0.3],
-    strokeCount: [4.0, 0.0, 8.0, -1.0],
+    strokeCount: [5.0, 0.0, 12.0, -1.0],
     oneMinusAlpha: [0.0, 0.0, 0.005, -1]
 ))
 

@@ -93,14 +93,11 @@ class Result: ObservableObject {
     
     func calculateSummary() {
         positive = min(1, blueK)
-        negative = min(0, max(-1, oneMinusAlphaK + overlapK + strokeCountK))
-        overall = max(0, positive + negative + redK + roughnessK)
+        negative = min(0, max(-1, oneMinusAlphaK + overlapK + strokeCountK + roughnessK))
+        overall = max(0, positive + negative + redK)
         // green doesn't count anywhere
         passed = overall > scoringSystem.passingScore
-        // too many errors
-        // or done but too bad
-        failed = 1 + negative < scoringSystem.passingScore ||
-            1 + negative + roughnessK < scoringSystem.passingScore && positive > scoringSystem.passingScore
+        failed = 1 + negative < scoringSystem.passingScore
         print()
     }
     

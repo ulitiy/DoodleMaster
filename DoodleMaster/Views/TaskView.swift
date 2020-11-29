@@ -12,7 +12,7 @@ struct ResultDetailsView: View {
     var result: Result
     
     func formatPercent(_ res: Double) -> String {
-        return String(format: "%.2f", res*100)
+        return String(format: "%.2f", res * 100)
     }
     
     var body: some View {
@@ -136,6 +136,6 @@ struct TaskView: View {
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView(task: Task(name: "Line", path: "Basics/1/1")).previewLayout(.fixed(width: 1366, height: 1024))
+        TaskView(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()])).previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

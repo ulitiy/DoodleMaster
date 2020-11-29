@@ -50,7 +50,7 @@ class TaskState: ObservableObject {
     
     init(task: Task) {
         currentStep = task.steps[0]
-        nextStep = task.steps[1]
+        nextStep = task.steps.count > 1 ? task.steps[1] : nil
         self.task = task
     }
     
@@ -126,6 +126,9 @@ class TaskState: ObservableObject {
             return res
         }
         taskResult!.calculateSummary()
+        if taskResult!.overall > task.result {
+            task.result = taskResult!.overall
+        }
         print("Pass task")
     }
 }

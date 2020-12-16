@@ -44,21 +44,36 @@ function showInput(step) {
   hideAll();
   stepNumber = step;
   document.querySelector(`.step-${step} .input`).classList.add("show");
-  document.querySelectorAll(`.step-${step} .input > .draw-line`).forEach(drawLine);
+  document.querySelectorAll(`.step-${step} .input .draw-line`).forEach((el) => drawLine(el));
+  document.querySelectorAll(`.step-${step} .input .draw-point`).forEach(drawPoint);
   if (debugSVG) return;
   window.requestAnimationFrame(() =>
     window.requestAnimationFrame(() =>
       window.webkit.messageHandlers.control.postMessage('InputReady')));
 }
 
+function drawPoint(el) {
+  let dashLen = 50;
+  el.style.transition = "";
+  // remove delay, it breaks animation
+  tempRemoveDelay(el)
+
+  let len = el.getTotalLength() * 1.1;
+  let seconds = Math.round(len/100)/10;
+  el.style.strokeDasharray = `${dashLen} ${len}`;
+  el.style.strokeDashoffset = len + dashLen * 2;
+
+  setTimeout(() => {
+    let flip = el.classList.contains("flip");
+    el.style.transition = `stroke-dashoffset ${seconds}s linear`;
+    el.style.strokeDashoffset = (flip ? len + dashLen : dashLen);
+  }, 0);
+}
+
 function drawLine(el) {
   el.style.transition = "";
   // remove delay, it breaks animation
-  var dclass;
-  el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);
-  el.classList.remove(dclass);
-
-  let flip = el.classList.contains("flip");
+  tempRemoveDelay(el)
 
   let len = el.getTotalLength() * 1.1;
   let seconds = Math.round(len/100)/10;
@@ -66,12 +81,21 @@ function drawLine(el) {
   el.style.strokeDashoffset = len;
 
   setTimeout(() => {
+    let flip = el.classList.contains("flip");
+    el.style.transition = `stroke-dashoffset ${seconds}s linear`;
+    el.style.strokeDashoffset = flip ? len * 2 : 0;
+  }, 0);
+}
+
+function tempRemoveDelay(el) {
+  var dclass;
+  el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);
+  el.classList.remove(dclass);
+  setTimeout(() => {
     // bring delay back
     if (dclass) {
       el.classList.add(dclass);
     }
-    el.style.transition = `stroke-dashoffset ${seconds}s linear`;
-    el.style.strokeDashoffset = flip ? len * 2 : 0;
   }, 0);
 }
 

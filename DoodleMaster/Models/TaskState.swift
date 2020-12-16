@@ -104,9 +104,9 @@ class TaskState: ObservableObject {
     }
     
     func switchNextStep() {
-        print("Next step \(stepNumber)")
         results.append(currentResult)
         stepNumber += 1
+        print("Next step \(stepNumber)")
         resetResult()
         template = nil
         passing = false

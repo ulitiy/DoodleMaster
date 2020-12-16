@@ -8,20 +8,27 @@
 
 import Combine
 
+let neutral = [0.0, 0.0, 1, 0.0]
+let any = [0.0, 0.0, 0.03, 1.0]
+let oneStroke = [1.0, 0.0, 2.0, -1.0]
+let necessary = [0.9699, 0.0, 0.97, -1]
+let smooth = [0.3, 0.0, 0.5, -1.0]
+let rough = [7.0, -1.0, 8.0, 0.0]
+
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb line coordinates, clamp x and interpolate
-    var overlap = [0.07, 0.0, 0.15, 0.0]
-    var roughness = [1.0, 0.0, 4.0, 0.0] // 0-1 very smooth 1-3 okish 3+ bad
-    var strokeCount = [4.0, 0.0, 8.0, 0.0]
+    var overlap = neutral
+    var roughness = neutral // 0-1 very smooth 1-3 okish 3+ bad
+    var strokeCount = neutral
 
-    var red = [0.0, 0.0, 1.0, 0.0] // debug
-//    var red = [0.9699, 0.0, 0.97, -1] // necessary, sharp line
-    var green = [0.0, 0.0, 1.0, 0.0] // neutral
+//    var red = neutral // debug
+    var red = necessary // necessary, sharp line
+    var green = neutral // neutral
     var blue = [0.0, 0.0, 1.0, 1.0] // good, match
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
-    var passingScore = 0.7 // debug
-//    var passingScore = 0.9
+//    var passingScore = 0.7 // debug
+    var passingScore = 0.9
 }
 
 class Result: ObservableObject {
@@ -70,8 +77,7 @@ class Result: ObservableObject {
     }
 
     func calculate() {
-        if templateCount[1] == 0 {
-            
+        if templateCount[2] == 0 { // no blue pixels, broken screenshot, wait
             return
         }
         
@@ -92,16 +98,25 @@ class Result: ObservableObject {
     }
     
     func calculateSummary() {
-        positive = min(1, blueK)
-        negative = min(0, max(-1, oneMinusAlphaK + overlapK + strokeCountK + roughnessK))
+        var p = 0.0
+        var n = 0.0
+        [blueK, oneMinusAlphaK, overlapK, strokeCountK, roughnessK].forEach { val in
+            if val >= 0 {
+                p += val
+            } else {
+                n += val
+            }
+        }
+        positive = min(1, p)
+        negative = min(0, max(-1, n))
         overall = max(0, positive + negative + redK)
         // green doesn't count anywhere
         passed = overall > scoringSystem.passingScore
+        // fixables: overlap, roughness ????????????????????????
         failed = 1 + negative < scoringSystem.passingScore
-        print()
     }
     
     func print() {
-        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Int(100.0*overlapK)) roK\(Int(100.0*roughnessK)) ro\(rippleSum/Double(rippleCount)) sc\(Int(100.0*strokeCountK)) neg\(negative)")
+        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Double(matchResults[4]) / Double(matchResults[5])) olK\(Int(100.0*overlapK)) roK\(Int(100.0*roughnessK)) ro\(rippleSum/Double(rippleCount)) sc\(Int(100.0*strokeCountK)) neg\(negative)")
     }
 }

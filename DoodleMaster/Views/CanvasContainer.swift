@@ -52,9 +52,10 @@ class CanvasContainerViewController: UIViewController {
     func watchUpdates() {
         canvas.onTemplateCountCompleted = { [weak self] res in
             self?.taskState.currentResult.templateCount = res
-            if res[1] == 0 {
+            print("Template count: \(res)")
+            if res[2] == 0 {
                 self?.taskState.template = nil
-                print("Broken screenshot, resetting...")
+                print("No blues in the screenshot, resetting...")
             }
         }
         canvas.onCountCompleted = { [weak self] res in
@@ -66,8 +67,9 @@ class CanvasContainerViewController: UIViewController {
             self?.taskState.touching = true
         }
         canvas.onTouchesEnded = { [weak self] in
-            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count
+            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count // TODO: unreliable
             self?.taskState.touching = false
+            self?.taskState.currentResult.print()
         }
         // Next step or restart task
         stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
@@ -88,9 +90,8 @@ class CanvasContainerViewController: UIViewController {
             }
         }
         // Restart step
-        // TODO: IS CALLED WHEN NOT NEEDED
         failingSink = taskState.$failing.sink { [weak self] val in
-            guard let self = self, !val else {
+            guard let self = self, self.taskState.failing, !val else {
                 return
             }
             if self.taskState.currentStep.clearBefore {

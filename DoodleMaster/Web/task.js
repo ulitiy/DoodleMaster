@@ -36,7 +36,8 @@ function showTemplate(step) {
   document.querySelector(`.step-${step} .template`).classList.add("show");
   if (debugSVG) return;
   window.requestAnimationFrame(() =>
-    window.webkit.messageHandlers.control.postMessage('TemplateReady'))
+    window.requestAnimationFrame(() =>
+      window.webkit.messageHandlers.control.postMessage('TemplateReady')));
 }
 
 function showInput(step) {
@@ -46,7 +47,8 @@ function showInput(step) {
   document.querySelectorAll(`.step-${step} .input > .draw-line`).forEach(drawLine);
   if (debugSVG) return;
   window.requestAnimationFrame(() =>
-    window.webkit.messageHandlers.control.postMessage('InputReady'));
+    window.requestAnimationFrame(() =>
+      window.webkit.messageHandlers.control.postMessage('InputReady')));
 }
 
 function drawLine(el) {

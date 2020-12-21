@@ -67,9 +67,8 @@ class CanvasContainerViewController: UIViewController {
             self?.taskState.touching = true
         }
         canvas.onTouchesEnded = { [weak self] in
-            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count // TODO: unreliable
+            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count // TODO: seems reliable
             self?.taskState.touching = false
-            self?.taskState.currentResult.print()
         }
         // Next step or restart task
         stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
@@ -85,7 +84,7 @@ class CanvasContainerViewController: UIViewController {
                 return
             }
             self.taskState.stepElementsCount = self.canvas.data.elements.count
-            if self.taskState.currentStep.clearBefore {
+            if self.taskState.task.steps[val - 1].clearBefore {
                 self.canvas.clear()
             }
         }

@@ -71,6 +71,7 @@ class TaskState: ObservableObject {
                 return
             }
             passing = true
+            currentResult.print()
             DispatchQueue.main.asyncAfter(deadline: .now() + (currentStep.showResult ? 1.6 : 0.2)) { [weak self] in
                 self?.switchNextStep()
             }

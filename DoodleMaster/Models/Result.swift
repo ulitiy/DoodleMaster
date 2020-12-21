@@ -12,8 +12,8 @@ let neutral = [0.0, 0.0, 1, 0.0]
 let any = [0.0, 0.0, 0.03, 1.0]
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let necessary = [0.9699, 0.0, 0.97, -1]
-let smooth = [0.3, 0.0, 0.5, -1.0]
-let rough = [7.0, -1.0, 8.0, 0.0]
+let smooth = [0.6, 0.0, 0.7, -1.0]
+let rough = [6.0, -1.0, 7.0, 0.0]
 
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb line coordinates, clamp x and interpolate
@@ -39,7 +39,12 @@ class Result: ObservableObject {
     }
     
     @Published var templateCount: [UInt32] = [0, 0, 0, 0]
-    @Published var strokeCount = 0
+    @Published var strokeCount = 0 {
+        didSet {
+            calculate()
+            print()
+        }
+    }
     @Published var rippleSum = 0.0
     @Published var rippleCount = 0
     // Add time
@@ -60,6 +65,7 @@ class Result: ObservableObject {
     @Published var overlapK = 0.0
     @Published var roughnessK = 0.0
     @Published var strokeCountK = 0.0
+    var strokeCountPlusOneK = 0.0
     @Published var redK = 0.0
     @Published var greenK = 0.0
     @Published var blueK = 0.0
@@ -92,31 +98,36 @@ class Result: ObservableObject {
         blueK = calculateK(val: Double(matchResults[2]) / Double(templateCount[2]), scoring: scoringSystem.blue)
         oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
         
-        strokeCountK = calculateK(val: Double(strokeCount+1), scoring: scoringSystem.strokeCount)
-        // Why +1? It doesn't recalculate when canvas.data.elements.count changes because it doesn't redraw
+        strokeCountK = calculateK(val: Double(strokeCount), scoring: scoringSystem.strokeCount)
+        strokeCountPlusOneK = calculateK(val: Double(strokeCount + 1), scoring: scoringSystem.strokeCount)
         calculateSummary()
+    }
+    
+    func addK(_ k: Double, _ p: Double, _ n: Double) -> (Double, Double) {
+        if k >= 0 {
+            return (p + k, n)
+        } else {
+            return (p, n + k)
+        }
     }
     
     func calculateSummary() {
         var p = 0.0
         var n = 0.0
-        [blueK, oneMinusAlphaK, overlapK, strokeCountK, roughnessK].forEach { val in
-            if val >= 0 {
-                p += val
-            } else {
-                n += val
-            }
+        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK].forEach {
+            (p, n) = addK($0, p, n)
         }
+        let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
+        (p, n) = addK(strokeCountK, p, n)
         positive = min(1, p)
         negative = min(0, max(-1, n))
         overall = max(0, positive + negative + redK)
-        // green doesn't count anywhere
-        passed = overall > scoringSystem.passingScore
+        passed = overall >= scoringSystem.passingScore
         // fixables: overlap, roughness ????????????????????????
-        failed = 1 + negative < scoringSystem.passingScore
+        failed = !passed && min(1 + nPlusOne, 1 + negative) < scoringSystem.passingScore
     }
     
     func print() {
-        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\(Double(matchResults[4]) / Double(matchResults[5])) olK\(Int(100.0*overlapK)) roK\(Int(100.0*roughnessK)) ro\(rippleSum/Double(rippleCount)) sc\(Int(100.0*strokeCountK)) neg\(negative)")
+        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\((Double(matchResults[4]) / Double(matchResults[5])).format(".3")) olK\(Int(100.0*overlapK)) ro\((rippleSum/Double(rippleCount)).format(".3")) roK\(Int(100.0*roughnessK)) sc\(strokeCount) scK\(Int(100.0*strokeCountK)) pos\(Int(100.0*positive)) neg\(Int(100.0*negative)) ov\(Int(100.0*overall)) p\(passed) f\(failed)")
     }
 }

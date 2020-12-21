@@ -11,20 +11,16 @@ import SwiftUI
 struct ResultDetailsView: View {
     var result: Result
     
-    func formatPercent(_ res: Double) -> String {
-        return String(format: "%.2f", res * 100)
-    }
-    
     var body: some View {
-        Text("Match: \(formatPercent(result.blueK))")
+        Text("Match: \(result.blueK.formatPercent(".2"))")
             .foregroundColor(.green)
-        Text("Deviation: \(formatPercent(result.oneMinusAlphaK))")
+        Text("Deviation: \(result.oneMinusAlphaK.formatPercent(".2"))")
             .foregroundColor(.red)
-        Text("Roughness: \(formatPercent(result.roughnessK))")
+        Text("Roughness: \(result.roughnessK.formatPercent(".2"))")
             .foregroundColor(.red)
-        Text("Overlap: \(formatPercent(result.overlapK))")
+        Text("Overlap: \(result.overlapK.formatPercent(".2"))")
             .foregroundColor(.red)
-        Text("Stroke count: \(formatPercent(result.strokeCountK))")
+        Text("Stroke count: \(result.strokeCountK.formatPercent(".2"))")
             .foregroundColor(.red)
     }
 }
@@ -76,7 +72,7 @@ struct TaskView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
-
+            
             CanvasContainerRepresentation(taskState: taskState)
             
             HStack {

@@ -16,10 +16,48 @@ let lineworkStep = TaskStep(scoringSystem: ScoringSystem(
     oneMinusAlpha: [0.0, 0.0, 0.005, -1]
 ))
 
+let checkBoxStep = TaskStep(scoringSystem: ScoringSystem(
+    blue: any,
+    oneMinusAlpha: [0.0, 0.0, 0.005, -1]
+))
+let smoothLineStep = TaskStep(scoringSystem: ScoringSystem(
+    overlap: [0.07, 0.0, 0.15, -1.0],
+    roughness: smooth,
+    strokeCount: oneStroke
+))
+let hatchingStep = TaskStep(scoringSystem: ScoringSystem(
+    overlap: [0.07, 0.0, 0.08, -1.0]
+))
+
 struct TaskListView: View {
     @StateObject var lessonState = LessonState(tasks: [
         Task(name: "Basics", path: "Basics/1/1", steps: Array.init(repeating: lineworkStep, count: 6)),
         Task(name: "Loomis", path: "Basics/1/2", steps: Array.init(repeating: multistep, count: 8)),
+        Task(name: "Intro", path: "Basics/1/3", steps: [
+            TaskStep(),
+            TaskStep(),
+            checkBoxStep,
+            checkBoxStep,
+            smoothLineStep,
+            TaskStep(scoringSystem: ScoringSystem(
+                roughness: rough,
+                strokeCount: oneStroke
+            )),
+            TaskStep(),
+            hatchingStep,
+            TaskStep(showResult: false),
+            multistep,
+            multistep,
+            multistep,
+            TaskStep(scoringSystem: ScoringSystem(
+                blue: any,
+                oneMinusAlpha: [0.0, 0.0, 0.005, -1]
+            ), clearBefore: false, showResult: false),
+            TaskStep(scoringSystem: ScoringSystem(
+                blue: any,
+                oneMinusAlpha: neutral
+            )),
+        ]),
     ])
     
     var body: some View {

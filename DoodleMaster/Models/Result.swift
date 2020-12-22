@@ -9,7 +9,7 @@
 import Combine
 
 let neutral = [0.0, 0.0, 1, 0.0]
-let any = [0.0, 0.0, 0.03, 1.0]
+let any = [0.0, 0.0, 0.03, 1.0, 1.0]
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let necessary = [0.9699, 0.0, 0.97, -1]
 let smooth = [0.6, 0.0, 0.7, -1.0]
@@ -24,11 +24,12 @@ struct ScoringSystem: Hashable {
 //    var red = neutral // debug
     var red = necessary // necessary, sharp line
     var green = neutral // neutral
-    var blue = [0.0, 0.0, 1.0, 1.0] // good, match
+    var blue = [0.0, 0.0, 1.0, 1.0, 0.95] // good, match, 5th value - minimum blue
     var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
 
 //    var passingScore = 0.7 // debug
     var passingScore = 0.9
+    var weight = 1.0
 }
 
 class Result: ObservableObject {
@@ -61,6 +62,7 @@ class Result: ObservableObject {
     @Published var failed = false
     @Published var positive = 0.0
     @Published var negative = 0.0
+    @Published var enoughBlueK = false // can override overall -> passed
 
     @Published var overlapK = 0.0
     @Published var roughnessK = 0.0
@@ -122,7 +124,8 @@ class Result: ObservableObject {
         positive = min(1, p)
         negative = min(0, max(-1, n))
         overall = max(0, positive + negative + redK)
-        passed = overall >= scoringSystem.passingScore
+        enoughBlueK = blueK >= scoringSystem.blue[4]
+        passed = enoughBlueK && overall >= scoringSystem.passingScore
         // fixables: overlap, roughness ????????????????????????
         failed = !passed && min(1 + nPlusOne, 1 + negative) < scoringSystem.passingScore
     }

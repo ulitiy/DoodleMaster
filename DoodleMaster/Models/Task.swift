@@ -13,10 +13,10 @@ struct TaskStep: Hashable {
     var brushSize = 10
     var brushOpacity = 0.3 // 0.05-0.3
     var shadowSize = 50
-    var scoringSystem = ScoringSystem()
     var clearBefore = true
     var showResult = true
     
+    var scoringSystem = ScoringSystem()
 //    var commitButton = false
 //    var dim = false
 }

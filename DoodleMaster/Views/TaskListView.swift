@@ -9,33 +9,34 @@
 import SwiftUI
 
 let multistep = TaskStep(clearBefore: false, showResult: false) // how long show result?
-let lineworkStep = TaskStep(scoringSystem: ScoringSystem(
-    overlap: [0.07, 0.0, 0.15, -0.8],
-    roughness: [3.0, 0.0, 6.0, -0.2],
-    strokeCount: [5.0, 0.0, 12.0, -1.0],
-    oneMinusAlpha: [0.0, 0.0, 0.005, -1]
-))
-
-let checkBoxStep = TaskStep(scoringSystem: ScoringSystem(
+let multistepFirst = TaskStep(showResult: false)
+let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
-    oneMinusAlpha: [0.0, 0.0, 0.005, -1]
+    oneMinusAlpha: [0.0, 0.0, 0.005, -1], // remove?
+    weight: 0
 ))
-let smoothLineStep = TaskStep(scoringSystem: ScoringSystem(
+let arrowStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(weight: 0))
+let checkBoxStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(
+    blue: any,
+    oneMinusAlpha: [0.0, 0.0, 0.005, -1], // remove?
+    weight: 0
+))
+let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
     overlap: [0.07, 0.0, 0.15, -1.0],
     roughness: smooth,
     strokeCount: oneStroke
 ))
-let hatchingStep = TaskStep(scoringSystem: ScoringSystem(
-    overlap: [0.07, 0.0, 0.08, -1.0]
+let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
+    overlap: [0.16, 0.0, 0.2, -1.0] // 0.16-0.2 ok, >0.2 - not ok
 ))
 
 struct TaskListView: View {
     @StateObject var lessonState = LessonState(tasks: [
-        Task(name: "Basics", path: "Basics/1/1", steps: Array.init(repeating: lineworkStep, count: 6)),
+        Task(name: "Basics", path: "Basics/1/1", steps: Array.init(repeating: TaskStep(), count: 6)),
         Task(name: "Loomis", path: "Basics/1/2", steps: Array.init(repeating: multistep, count: 8)),
         Task(name: "Intro", path: "Basics/1/3", steps: [
-            TaskStep(),
-            TaskStep(),
+            arrowStep,
+            arrowStep,
             checkBoxStep,
             checkBoxStep,
             smoothLineStep,
@@ -43,19 +44,17 @@ struct TaskListView: View {
                 roughness: rough,
                 strokeCount: oneStroke
             )),
-            TaskStep(),
+            TaskStep(brushSize: 40),
             hatchingStep,
-            TaskStep(showResult: false),
+            multistepFirst, // cube
             multistep,
             multistep,
             multistep,
+            multistepResult,
             TaskStep(scoringSystem: ScoringSystem(
                 blue: any,
-                oneMinusAlpha: [0.0, 0.0, 0.005, -1]
-            ), clearBefore: false, showResult: false),
-            TaskStep(scoringSystem: ScoringSystem(
-                blue: any,
-                oneMinusAlpha: neutral
+                oneMinusAlpha: neutral,
+                weight: 0
             )),
         ]),
     ])

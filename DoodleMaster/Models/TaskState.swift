@@ -116,16 +116,22 @@ class TaskState: ObservableObject {
     
     func passTask() {
         results.append(currentResult)
+        let totalWeight = task.steps.reduce(0, { res, step in
+            return res+step.scoringSystem.weight
+        })
         taskResult = results.reduce(Result(scoringSystem: task.scoringSystem)) { res, val2 in
-            res.redK = res.redK + val2.redK / Double(results.count)
-            res.greenK = res.greenK + val2.greenK / Double(results.count)
-            res.blueK = res.blueK + val2.blueK / Double(results.count)
-            res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK / Double(results.count)
-            res.overlapK = res.overlapK + val2.overlapK / Double(results.count)
-            res.roughnessK = res.roughnessK + val2.roughnessK / Double(results.count)
-            res.strokeCountK = res.strokeCountK + val2.strokeCountK / Double(results.count)
+            let weight = val2.scoringSystem.weight / totalWeight
+            res.redK = res.redK + val2.redK * weight
+            res.greenK = res.greenK + val2.greenK * weight
+            print("Step result: \(val2.overall.formatPercent(".2")) * \(weight.format(".2"))")
+            res.blueK = res.blueK + val2.blueK * weight
+            res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK * weight
+            res.overlapK = res.overlapK + val2.overlapK * weight
+            res.roughnessK = res.roughnessK + val2.roughnessK * weight
+            res.strokeCountK = res.strokeCountK + val2.strokeCountK * weight
             return res
         }
+        // *K is always correct, no formula is applied on the summary step
         taskResult!.calculateSummary()
         if taskResult!.overall > task.result {
             task.result = taskResult!.overall

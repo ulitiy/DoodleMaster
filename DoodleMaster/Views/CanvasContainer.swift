@@ -30,6 +30,7 @@ class CanvasContainerViewController: UIViewController {
     var templateSink: AnyCancellable?
     var stepNumberSink: AnyCancellable?
     var failingSink: AnyCancellable?
+    var stepSink: AnyCancellable?
 
     override func viewDidLoad() { // async later
         super.viewDidLoad()
@@ -41,12 +42,13 @@ class CanvasContainerViewController: UIViewController {
         
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0
-        shadowBrush.pointSize = 50
-        shadowBrush.opacity = 0.05 // cannot be lower because of the 1 byte precision
+        shadowBrush.pointSize = 10 // overriden by currentStep
+        shadowBrush.opacity = 0.05 // 0.05 cannot be lower because of the 1 byte precision
         watchUpdates()
         view.addSubview(canvas)
         brush.use()
         shadowBrush.useShadow()
+        setBrushes(step: taskState.currentStep)
     }
     
     func watchUpdates() {
@@ -106,5 +108,17 @@ class CanvasContainerViewController: UIViewController {
             }
             try! self.canvas.setTemplateTexture(val)
         }
+        stepSink = taskState.$currentStep.sink { [weak self] val in
+            guard let self = self, let val = val else {
+                return
+            }
+            self.setBrushes(step: val)
+        }
+    }
+    
+    func setBrushes(step: TaskStep) {
+        self.canvas.shadowBrush.pointSize = CGFloat(step.shadowSize)
+        self.canvas.currentBrush.pointSize = CGFloat(step.brushSize)
+        self.canvas.currentBrush.opacity = CGFloat(step.brushOpacity)
     }
 }

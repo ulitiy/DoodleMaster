@@ -43,7 +43,7 @@
 <path id="a_6" d="M869.5 404L869 675" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_7" d="M746 871L869 675" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="draw-line d1_2" d="M419 520L580 366" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_2" d="M869 401.5L580.5 366" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d3 flip" d="M869 401.5L580.5 366" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_8" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">Great!&#10;</tspan><tspan x="283" y="205.596">Now </tspan><tspan x="364.939" y="205.596">let&#39;s </tspan><tspan x="443.679" y="205.596">draw </tspan><tspan x="532.889" y="205.596">a </tspan><tspan x="563.021" y="205.596">box </tspan><tspan x="632.003" y="205.596">step </tspan><tspan x="713.614" y="205.596">by </tspan><tspan x="761.582" y="205.596">step.&#10;</tspan><tspan x="283" y="266.596">You </tspan><tspan x="354.253" y="266.596">can </tspan><tspan x="423.296" y="266.596">draw </tspan><tspan x="512.505" y="266.596">over </tspan><tspan x="593.329" y="266.596">your </tspan><tspan x="674.698" y="266.596">lines </tspan><tspan x="763.731" y="266.596">here.</tspan></text>
 </g>
 <g id="template_3">
@@ -68,7 +68,7 @@
 <path id="a_12" d="M419 520L419.5 813.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_13" d="M745.5 872L419.5 815.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="draw-line d1_4" d="M869.5 404L869 675" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_3" d="M746 871L869 675" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d3_2" d="M746 871L869 675" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_14" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">Great!&#10;</tspan><tspan x="283" y="205.596">Now </tspan><tspan x="364.939" y="205.596">let&#39;s </tspan><tspan x="443.679" y="205.596">draw </tspan><tspan x="532.889" y="205.596">a </tspan><tspan x="563.021" y="205.596">box </tspan><tspan x="632.003" y="205.596">step </tspan><tspan x="713.614" y="205.596">by </tspan><tspan x="761.582" y="205.596">step.&#10;</tspan><tspan x="283" y="266.596">You </tspan><tspan x="354.253" y="266.596">can </tspan><tspan x="423.296" y="266.596">draw </tspan><tspan x="512.505" y="266.596">over </tspan><tspan x="593.329" y="266.596">your </tspan><tspan x="674.698" y="266.596">lines </tspan><tspan x="763.731" y="266.596">here.</tspan></text>
 </g>
 <g id="template_4">
@@ -89,7 +89,7 @@
 <path id="a_16" d="M745.5 565.5L420 520" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_17" d="M746 565L869 404" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="draw-line d1_6" d="M419 520L419.5 813.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_4" d="M745.5 872L419.5 815.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d3 flip_2" d="M745.5 872L419.5 815.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_18" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">Great!&#10;</tspan><tspan x="283" y="205.596">Now </tspan><tspan x="364.939" y="205.596">let&#39;s </tspan><tspan x="443.679" y="205.596">draw </tspan><tspan x="532.889" y="205.596">a </tspan><tspan x="563.021" y="205.596">box </tspan><tspan x="632.003" y="205.596">step </tspan><tspan x="713.614" y="205.596">by </tspan><tspan x="761.582" y="205.596">step.&#10;</tspan><tspan x="283" y="266.596">You </tspan><tspan x="354.253" y="266.596">can </tspan><tspan x="423.296" y="266.596">draw </tspan><tspan x="512.505" y="266.596">over </tspan><tspan x="593.329" y="266.596">your </tspan><tspan x="674.698" y="266.596">lines </tspan><tspan x="763.731" y="266.596">here.</tspan></text>
 </g>
 <g id="template_5">
@@ -105,7 +105,7 @@
 <g id="step-9">
 <g id="input_6">
 <path id="draw-line d1_8" d="M745.5 564.5V871.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_5" d="M745.5 565.5L420 520" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d3_3" d="M745.5 565.5L420 520" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <path id="draw-line d5_2" d="M746 565L869 404" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 <text id="appear_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">Great!&#10;</tspan><tspan x="283" y="205.596">Now </tspan><tspan x="364.939" y="205.596">let&#39;s </tspan><tspan x="443.679" y="205.596">draw </tspan><tspan x="532.889" y="205.596">a </tspan><tspan x="563.021" y="205.596">box </tspan><tspan x="632.003" y="205.596">step </tspan><tspan x="713.614" y="205.596">by </tspan><tspan x="761.582" y="205.596">step.&#10;</tspan><tspan x="283" y="266.596">You </tspan><tspan x="354.253" y="266.596">can </tspan><tspan x="423.296" y="266.596">draw </tspan><tspan x="512.505" y="266.596">over </tspan><tspan x="593.329" y="266.596">your </tspan><tspan x="674.698" y="266.596">lines </tspan><tspan x="763.731" y="266.596">here.</tspan></text>
 </g>
@@ -194,7 +194,7 @@
 <g id="input_12">
 <g id="Group 6">
 <rect id="appear d1_7" x="1218.5" y="876.5" width="95" height="95" stroke="#999999" stroke-width="5"/>
-<path id="draw-line d3_6" d="M1232 918C1261.2 949.2 1261 959.5 1261 959.5C1261 959.5 1290 886 1312 860" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3_4" d="M1232 918C1261.2 949.2 1261 959.5 1261 959.5C1261 959.5 1290 886 1312 860" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <path id="draw-line d8 r0" d="M239.5 265.5C473 355 975.5 573.5 1232 759.5" stroke="#FF0000" stroke-width="20" stroke-miterlimit="5.75877" stroke-linecap="round"/>
 <path id="draw-line d4 r4" d="M290 814C474.48 666.216 923.953 353.118 1246 283" stroke="#FF0000" stroke-width="20" stroke-miterlimit="5.75877" stroke-linecap="round"/>
@@ -206,22 +206,29 @@
 </g>
 <g id="step-2">
 <g id="template_13">
-<path id="draw-line_9" d="M541 807L824.5 807.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d1_13" d="M759 755L825 807L759 859" stroke="#00FF00" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line_10" d="M541 807L824.5 807.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d1_14" d="M759 755L825 807L759 859" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<circle id="Ellipse 6" cx="683" cy="839.952" r="117.825" stroke="#00FF00" stroke-width="80"/>
+<circle id="Ellipse 6_2" cx="683" cy="839.952" r="117.825" stroke="#0000FF" stroke-width="10"/>
 </g>
 <g id="input_13">
-<g id="Group 8">
-<path id="draw-line d2_9" d="M541 807L824.5 807.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d3_7" d="M759 755L825 807L759 859" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d5_3" d="M683 722.126C714.217 722.126 744.158 734.514 766.25 756.571C788.341 778.628 800.776 808.549 800.825 839.766C800.874 870.984 788.533 900.944 766.511 923.07C744.489 945.196 714.587 957.678 683.37 957.776C652.153 957.874 622.173 945.58 600.013 923.593C577.852 901.606 565.323 871.724 565.176 840.507C565.029 809.29 577.276 779.291 599.228 757.096C621.18 734.901 651.043 722.325 682.26 722.128" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<text id="appear d4_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="280.507" y="635.764">Trace </tspan><tspan x="381.71" y="635.764">the </tspan><tspan x="444.214" y="635.764">circle </tspan><tspan x="545.603" y="635.764">and </tspan><tspan x="615.917" y="635.764">notice </tspan><tspan x="728.266" y="635.764">how </tspan><tspan x="805.18" y="635.764">the </tspan><tspan x="867.683" y="635.764">bar </tspan><tspan x="931.307" y="635.764">fills </tspan><tspan x="1001.17" y="635.764">up.</tspan></text>
+<g id="appear d2_3">
+<g id="a_19">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="656.971" y="513.933"> highlights your mistakes.</tspan></text>
+<text fill="#BB0000" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="595.562" y="513.933">Red</tspan></text>
 </g>
-<g id="appear_12">
-<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="414.596">This </tspan><tspan x="363.733" y="414.596">bar </tspan><tspan x="427.357" y="414.596">shows </tspan><tspan x="541.82" y="414.596">how </tspan><tspan x="618.734" y="414.596">well </tspan><tspan x="695.198" y="414.596">you </tspan><tspan x="763.272" y="414.596">are </tspan><tspan x="825.625" y="414.596">doing </tspan><tspan x="927.282" y="414.596">the </tspan><tspan x="989.785" y="414.596">task.&#10;</tspan><tspan x="389.864" y="475.596"> </tspan><tspan x="426.08" y="475.596">means </tspan><tspan x="569.82" y="475.596">you&#x2019;re </tspan><tspan x="704.847" y="475.596">doing </tspan><tspan x="832.24" y="475.596">well </tspan><tspan x="934.441" y="475.596">and </tspan><tspan x="1083" y="475.596"> </tspan><tspan x="283" y="511.596">highlights </tspan><tspan x="456.157" y="511.596">your </tspan><tspan x="537.526" y="511.596">mistakes.&#10;</tspan><tspan x="283" y="572.596">Trace </tspan><tspan x="384.203" y="572.596">the </tspan><tspan x="446.707" y="572.596">arrow </tspan><tspan x="549.696" y="572.596">and </tspan><tspan x="620.01" y="572.596">notice </tspan><tspan x="732.358" y="572.596">how </tspan><tspan x="809.272" y="572.596">it </tspan><tspan x="843.011" y="572.596">fills </tspan><tspan x="912.876" y="572.596">up.</tspan></text>
-<text fill="#BB0000" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="1030.49" y="475.596">red</tspan></text>
-<text fill="#AEA700" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="475.596">Yellow</tspan></text>
+<path id="Vector 17" d="M822.078 400.391C821.687 400 821.054 400 820.663 400.391L814.299 406.755C813.909 407.145 813.909 407.778 814.299 408.169C814.69 408.559 815.323 408.559 815.714 408.169L821.37 402.512L827.027 408.169C827.418 408.559 828.051 408.559 828.442 408.169C828.832 407.778 828.832 407.145 828.442 406.755L822.078 400.391ZM820.37 401.098C820.37 408.84 817.601 414.923 812.738 419.828C807.846 424.762 800.8 428.538 792.22 431.541C775.041 437.553 752.085 440.349 728.918 443.398C705.827 446.438 682.532 449.729 664.93 456.783C656.117 460.315 648.657 464.817 643.352 470.768C638.028 476.741 634.916 484.13 634.748 493.328L636.748 493.365C636.907 484.644 639.84 477.714 644.845 472.099C649.87 466.462 657.023 462.106 665.674 458.64C682.998 451.697 706.027 448.429 729.179 445.381C752.254 442.344 775.459 439.525 792.881 433.428C801.6 430.377 808.965 426.474 814.158 421.236C819.38 415.97 822.37 409.386 822.37 401.098H820.37Z" fill="black"/>
+<g id="a_20">
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="373.279" y="296.815"> </tspan><tspan x="383.758" y="296.815">means </tspan><tspan x="501.763" y="296.815">you&#x2019;re </tspan><tspan x="611.053" y="296.815">doing </tspan><tspan x="712.71" y="296.815">well </tspan></text>
+<text fill="#00AA00" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="278.014" y="296.815">Green</tspan></text>
 </g>
-<path id="draw-line d1 flip" d="M589 -5.0154e-06C589 254.253 351 157.988 351 376" stroke="black" stroke-width="2" stroke-linecap="round"/>
+<path id="Vector 16" d="M457.463 379.147C457.854 379.537 458.487 379.537 458.877 379.147L465.241 372.783C465.632 372.392 465.632 371.759 465.241 371.369C464.851 370.978 464.218 370.978 463.827 371.369L458.17 377.025L452.513 371.369C452.123 370.978 451.49 370.978 451.099 371.369C450.709 371.759 450.709 372.392 451.099 372.783L457.463 379.147ZM459.17 378.44C459.17 369.457 457.071 362.434 453.334 356.939C449.6 351.447 444.285 347.562 437.984 344.76C425.436 339.181 408.774 337.823 392.34 336.727C375.801 335.623 359.5 334.785 347.31 330.386C341.24 328.196 336.274 325.149 332.823 320.818C329.383 316.5 327.378 310.818 327.378 303.219H325.378C325.378 311.192 327.491 317.335 331.258 322.064C335.015 326.778 340.345 329.999 346.631 332.268C359.151 336.786 375.799 337.628 392.207 338.722C408.722 339.824 425.008 341.18 437.171 346.588C443.226 349.28 448.207 352.956 451.68 358.063C455.151 363.167 457.17 369.779 457.17 378.44H459.17Z" fill="black"/>
+<rect id="Rectangle 10" x="171" y="379.44" width="1024" height="20" fill="#C4C4C4"/>
+<rect id="Rectangle 11" x="171" y="379.44" width="570.367" height="20" fill="#00FF00"/>
+<rect id="Rectangle 12" x="741.367" y="379.44" width="143.312" height="20" fill="#FF0000"/>
+</g>
+<text id="appear_12" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="280.507" y="110.452">The </tspan><tspan x="352.039" y="110.452">bar </tspan><tspan x="416.336" y="110.452">at </tspan><tspan x="460.072" y="110.452">the </tspan><tspan x="523.249" y="110.452">top </tspan><tspan x="587.697" y="110.452">shows </tspan><tspan x="702.833" y="110.452">how </tspan><tspan x="780.42" y="110.452">well </tspan><tspan x="857.557" y="110.452">you </tspan><tspan x="926.304" y="110.452">are </tspan><tspan x="989.33" y="110.452">doing </tspan><tspan x="280.507" y="146.452">the </tspan><tspan x="343.011" y="146.452">task.</tspan></text>
+<path id="appear_13" d="M524.728 0.775559C525.118 0.385035 525.751 0.385035 526.142 0.775559L532.506 7.13952C532.896 7.53004 532.896 8.16321 532.506 8.55373C532.115 8.94426 531.482 8.94426 531.092 8.55373L525.435 2.89688L519.778 8.55373C519.387 8.94426 518.754 8.94426 518.364 8.55373C517.973 8.16321 517.973 7.53004 518.364 7.13952L524.728 0.775559ZM526.435 1.48267C526.435 11.7733 524.097 19.8084 519.943 26.0916C515.79 32.3727 509.874 36.8245 502.848 40.0379C488.85 46.4392 470.255 48.0003 451.894 49.2599C433.424 50.5269 415.199 51.49 401.566 56.5498C394.777 59.0698 389.208 62.5799 385.332 67.5835C381.465 72.5752 379.216 79.1417 379.216 87.9071H377.216C377.216 78.7803 379.566 71.7607 383.751 66.3587C387.926 60.9686 393.858 57.2775 400.871 54.6748C414.841 49.4896 433.422 48.5224 451.757 47.2646C470.201 45.9993 488.41 44.4411 502.016 38.2191C508.791 35.1207 514.376 30.8849 518.275 24.9886C522.172 19.0944 524.435 11.4624 524.435 1.48267H526.435Z" fill="black"/>
 </g>
 </g>
 <g id="step-1">
@@ -232,11 +239,11 @@
 <path id="Vector 4" d="M759 644L825 696L759 748" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g id="input_14">
-<g id="Group 8_2">
-<path id="draw-line d2_10" d="M541 696L824.5 696.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d3_8" d="M759 644L825 696L759 748" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Group 8">
+<path id="draw-line d2_9" d="M541 696L824.5 696.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3_5" d="M759 644L825 696L759 748" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<text id="appear_13" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="304.596">Welcome </tspan><tspan x="441.55" y="304.596">to </tspan><tspan x="485.128" y="304.596">Drawing </tspan><tspan x="627.604" y="304.596">Dojo!&#10;</tspan><tspan x="283" y="365.596">This </tspan><tspan x="366.233" y="365.596">app </tspan><tspan x="439.259" y="365.596">is </tspan><tspan x="481.34" y="365.596">a </tspan><tspan x="513.972" y="365.596">trainer </tspan><tspan x="634.97" y="365.596">that </tspan><tspan x="713.329" y="365.596">helps </tspan><tspan x="814.701" y="365.596">you </tspan><tspan x="885.274" y="365.596">master </tspan><tspan x="1012.11" y="365.596">your </tspan><tspan x="283" y="401.596">technical </tspan><tspan x="443.74" y="401.596">drawing </tspan><tspan x="583.369" y="401.596">skills. </tspan><tspan x="691.848" y="401.596">Let&#39;s </tspan><tspan x="779.73" y="401.596">learn </tspan><tspan x="872.608" y="401.596">it&#x2019;s </tspan><tspan x="932.422" y="401.596">basics.&#10;</tspan><tspan x="283" y="462.596">Trace </tspan><tspan x="384.203" y="462.596">the </tspan><tspan x="446.707" y="462.596">arrow </tspan><tspan x="549.696" y="462.596">to </tspan><tspan x="593.274" y="462.596">proceed.</tspan></text>
+<text id="appear_14" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="304.596">Welcome </tspan><tspan x="441.55" y="304.596">to </tspan><tspan x="485.128" y="304.596">Drawing </tspan><tspan x="627.604" y="304.596">Dojo!&#10;</tspan><tspan x="283" y="365.596">This </tspan><tspan x="366.233" y="365.596">app </tspan><tspan x="439.259" y="365.596">is </tspan><tspan x="481.34" y="365.596">a </tspan><tspan x="513.972" y="365.596">trainer </tspan><tspan x="634.97" y="365.596">that </tspan><tspan x="713.329" y="365.596">helps </tspan><tspan x="814.701" y="365.596">you </tspan><tspan x="885.274" y="365.596">master </tspan><tspan x="1012.11" y="365.596">your </tspan><tspan x="283" y="401.596">technical </tspan><tspan x="443.74" y="401.596">drawing </tspan><tspan x="583.369" y="401.596">skills. </tspan><tspan x="691.848" y="401.596">Let&#39;s </tspan><tspan x="779.73" y="401.596">learn </tspan><tspan x="872.608" y="401.596">it&#x2019;s </tspan><tspan x="932.422" y="401.596">basics.&#10;</tspan><tspan x="283" y="462.596">Trace </tspan><tspan x="384.203" y="462.596">the </tspan><tspan x="446.707" y="462.596">arrow </tspan><tspan x="549.696" y="462.596">to </tspan><tspan x="593.274" y="462.596">proceed.</tspan></text>
 </g>
 </g>
 </g>

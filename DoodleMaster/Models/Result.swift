@@ -122,7 +122,7 @@ class Result: ObservableObject {
         let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
         (p, n) = addK(strokeCountK, p, n)
         positive = min(1, p)
-        negative = min(0, max(-1, n))
+        negative = matchResults.reduce(0, +) == 0 ? 0 : min(0, max(-1, n))
         overall = max(0, positive + negative + redK)
         enoughBlueK = blueK >= scoringSystem.blue[4]
         passed = enoughBlueK && overall >= scoringSystem.passingScore

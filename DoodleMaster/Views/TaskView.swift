@@ -92,6 +92,11 @@ struct TaskView: View {
                 .alert(isPresented: $showRestartAlert) {
                     Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
                 }
+                Button(action: { taskState.skipAnimation = true }) {
+                    Image(systemName: "forward")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 50))
+                }
                 Button(action: { taskState.passStep() }) {
                     Image(systemName: "chevron.right.2")
                         .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))

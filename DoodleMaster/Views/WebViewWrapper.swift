@@ -30,6 +30,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     var stepNumberSink: AnyCancellable?
     var failingSink: AnyCancellable?
     var templateSink: AnyCancellable?
+    var skipAnimationSink: AnyCancellable?
 
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
@@ -76,6 +77,12 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             if val == nil {
                 self?.wkWebView.evaluateJavaScript("showTemplate(\(self!.taskState.stepNumber));")
             }
+        }
+        skipAnimationSink = taskState.$skipAnimation.sink { [weak self] val in
+            guard let self = self, val else {
+                return
+            }
+            self.wkWebView.evaluateJavaScript("skipAnimation();")
         }
     }
     

@@ -46,6 +46,8 @@ class TaskState: ObservableObject {
     @Published var passing = false
     @Published var failing = false
     
+    @Published var skipAnimation = false
+    
     var currentResultSink: AnyCancellable?
     
     init(task: Task) {
@@ -55,6 +57,7 @@ class TaskState: ObservableObject {
     }
     
     func resetResult() {
+        skipAnimation = false
         let tc = currentResult?.templateCount
         currentResult = Result(scoringSystem: currentStep.scoringSystem)
         currentResult.templateCount = tc ?? currentResult.templateCount

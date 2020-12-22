@@ -30,6 +30,7 @@ function hideAll() {
   const el = document.querySelector(`.show`);
   if (!el) return;
   el.classList.remove("show");
+  el.classList.remove("skip-animation");
 }
 
 function showTemplate(step) {
@@ -89,14 +90,16 @@ function drawLine(el) {
 
   setTimeout(() => {
     let flip = el.classList.contains("flip");
-    el.style.transition = `stroke-dashoffset ${duration}s linear, opacity 0.3s linear`;
+    el.style.transitionProperty = "stroke-dashoffset, opacity";
+    el.style.transitionDuration = `${duration}s, 0.3s`;
+    el.style.transitionTimingFunction = "linear";
     el.style.strokeDashoffset = flip ? len * 2 : 0;
   }, 0);
 
   if (repeatDelay == undefined) return;
 
   console.log(delay, duration, repeatDelay);
-  setTimeout(() =>{
+  setTimeout(() => {
     if (tempVersion != refreshVersion) return;
     el.classList.add("hide");
   }, duration * 1000); // there's additional delay for hide
@@ -116,6 +119,15 @@ function tempRemoveDelay(el) {
       el.classList.add(dclass);
     }
   }, 0);
+}
+
+function skipAnimation() {
+  document.querySelector(`.show`).classList.add("skip-animation");
+  document.querySelectorAll(`.input.show .draw-line`).forEach((el) => {
+    if (getRepeat(el) !== undefined) return
+    el.style.strokeDasharray = "none";
+    el.style.transition = "none";
+  });
 }
 
 function restart() {

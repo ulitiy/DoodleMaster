@@ -33,7 +33,7 @@ let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: Scorin
 
 struct TaskListView: View {
     @StateObject var lessonState = LessonState(tasks: [
-        Task(name: "Intro", path: "Basics/1/3", steps: [
+        Task(name: "Intro", path: "Basics/1/1", steps: [
             arrowStep,
             arrowStep,
             checkBoxStep,

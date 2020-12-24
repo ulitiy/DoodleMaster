@@ -282,7 +282,7 @@
 <path id="n_58" d="M825.025 641.025L825.025 829.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="n_59" d="M537.5 766.5C533.5 819.5 468 863 460.5 864.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="n_60" d="M826.5 766.5C830.5 819.5 896 863 903.5 864.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<rect id="Rectangle 6" x="1216" y="874" width="100" height="100" fill="#0000FF"/>
+<rect id="Rectangle 6" x="1191" y="849" width="150" height="150" fill="#0000FF" stroke="#00FF00" stroke-width="50"/>
 </g>
 </g>
 </g>

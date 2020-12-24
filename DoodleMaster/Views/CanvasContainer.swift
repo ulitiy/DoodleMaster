@@ -40,6 +40,14 @@ class CanvasContainerViewController: UIViewController {
         brush.pointSize = 10
         brush.opacity = 0.3
         
+        let texture = try! canvas.makeTexture(with: UIImage(named: "pencil")!.pngData()!)
+        let pencil = try! canvas.registerBrush(name: "pencil", textureID: texture.id)
+        pencil.rotation = .random
+        pencil.pointSize = 3
+        pencil.forceSensitive = 0.3
+        pencil.opacity = 1
+
+        
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0
         shadowBrush.pointSize = 10 // overriden by currentStep
@@ -117,6 +125,8 @@ class CanvasContainerViewController: UIViewController {
     }
     
     func setBrushes(step: TaskStep) {
+        let brush = self.canvas.registeredBrushes.first(where: { $0.name == step.brushName })
+        brush?.use()
         self.canvas.shadowBrush.pointSize = CGFloat(step.shadowSize)
         self.canvas.currentBrush.pointSize = CGFloat(step.brushSize)
         self.canvas.currentBrush.opacity = CGFloat(step.brushOpacity)

@@ -8,8 +8,8 @@
 
 import SwiftUI
 
-let multistep = TaskStep(clearBefore: false, showResult: false) // how long show result?
-let multistepFirst = TaskStep(showResult: false)
+let multistep = TaskStep(brushName: "pencil", clearBefore: false, showResult: false) // how long show result?
+let multistepFirst = TaskStep(brushName: "pencil", showResult: false)
 let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
     oneMinusAlpha: [0.0, 0.0, 0.005, -1], // remove?
@@ -28,13 +28,11 @@ let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
     overlap: [0.16, 0.0, 0.2, -1.0], // 0.16-0.2 ok, >0.2 - not ok
-    blue: [0.0, 0.0, 1.0, 1.0, 0.98]
+    blue: [0.0, 0.0, 1.0, 1.0, 1.0]
 ))
 
 struct TaskListView: View {
     @StateObject var lessonState = LessonState(tasks: [
-        Task(name: "Basics", path: "Basics/1/1", steps: Array.init(repeating: TaskStep(), count: 6)),
-        Task(name: "Loomis", path: "Basics/1/2", steps: Array.init(repeating: multistep, count: 8)),
         Task(name: "Intro", path: "Basics/1/3", steps: [
             arrowStep,
             arrowStep,
@@ -45,6 +43,8 @@ struct TaskListView: View {
                 roughness: rough,
                 strokeCount: oneStroke
             )),
+            TaskStep(brushSize: 7, shadowSize: 20),
+            TaskStep(),
             TaskStep(brushSize: 40),
             hatchingStep,
             multistepFirst, // cube
@@ -57,6 +57,17 @@ struct TaskListView: View {
                 oneMinusAlpha: neutral,
                 weight: 0
             )),
+        ]),
+        Task(name: "Loomis", path: "Basics/1/2", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistepResult,
         ]),
     ])
     

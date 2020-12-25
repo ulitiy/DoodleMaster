@@ -12,7 +12,7 @@ let multistep = TaskStep(brushName: "pencil", clearBefore: false, showResult: fa
 let multistepFirst = TaskStep(brushName: "pencil", showResult: false)
 let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
-    oneMinusAlpha: [0.0, 0.0, 0.005, -1], // remove?
+    oneMinusAlpha: neutral,
     weight: 0
 ))
 let arrowStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(weight: 0))

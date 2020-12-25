@@ -63,85 +63,87 @@ struct TaskView: View {
     }
     
     var body: some View {
-        ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
-        ZStack {
-            WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
-//            .animation(Animation.linear(duration: 0).delay(0.1)) // delays both ways, unacceptable
-
-            Text(formatPercent(taskState.currentResult.positive))
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
-            Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
+        VStack {
+            ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
+            ZStack {
+                WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
+                #if DEBUG
+                Text(formatPercent(taskState.currentResult.positive))
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
+                #endif
+                Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
-            
-            CanvasContainerRepresentation(taskState: taskState)
-            
-            HStack {
-                Button(action: { showBackToMenuAlert.toggle() }) {
-                    Image(systemName: "chevron.left.circle")
-                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                        .font(.system(size: 50))
-                }
                 .alert(isPresented: $showBackToMenuAlert) {
                     Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: { self.presentationMode.wrappedValue.dismiss() }), secondaryButton: .default(Text("Cancel")))
                 }
-                Button(action: { showRestartAlert.toggle() }) {
-                    Image(systemName: "arrow.clockwise")
-                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                        .font(.system(size: 50))
+                
+                CanvasContainerRepresentation(taskState: taskState)
+                
+                HStack {
+                    Menu {
+                        Button("Restart step", action: { taskState.failStep() })
+                        Button("Restart task", action: { showRestartAlert.toggle() })
+                        Toggle("Skip animations", isOn: $taskState.skipAnimation)
+                        Button("Exit to menu", action: { showBackToMenuAlert.toggle() })
+                    } label: {
+                        Image(systemName: "line.horizontal.3.circle")
+                            .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                            .font(.system(size: 50))
+                    }
+
+                    #if DEBUG
+                    Button(action: { taskState.passStep() }) {
+                        Image(systemName: "chevron.right.2")
+                            .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                            .font(.system(size: 50))
+                    }
+                    #endif
                 }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                .padding()
                 .alert(isPresented: $showRestartAlert) {
                     Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
                 }
-                Button(action: { taskState.skipAnimation = true }) {
-                    Image(systemName: "forward")
-                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                        .font(.system(size: 50))
-                }
-                Button(action: { taskState.passStep() }) {
-                    Image(systemName: "chevron.right.2")
-                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                        .font(.system(size: 50))
-                }
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .padding()
 
-            if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
-                ZStack {
-                    Rectangle().fill(Color.white)
-                    VStack {
-                        Text("✅").font(.system(size: 100.0))
-                        Divider()
-                        ResultDetailsView(result: taskState.currentResult)
-                        Text(formatPercent(taskState.currentResult.overall))
-                        .font(.system(size: 100.0))
-                        .foregroundColor(.green)
+                if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
+                    ZStack {
+                        Rectangle().fill(Color.white)
+                        VStack {
+                            Text("✅").font(.system(size: 100.0))
+                            Divider()
+                            ResultDetailsView(result: taskState.currentResult)
+                            Text(formatPercent(taskState.currentResult.overall))
+                            .font(.system(size: 100.0))
+                            .foregroundColor(.green)
+                        }
                     }
+                    .zIndex(1)
+                    .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
                 }
-                .zIndex(1)
-                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-            }
-            if taskState.failing {
-                ZStack {
-                    Rectangle().fill(Color.white)
-                    Text("❌").font(.system(size: 100.0))
+                if taskState.failing {
+                    ZStack {
+                        Rectangle().fill(Color.white)
+                        Text("❌").font(.system(size: 100.0))
+                    }
+                    .zIndex(1)
+                    .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
                 }
-                .zIndex(1)
-                .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+                if taskState.taskResult != nil {
+                    taskResult
+                }
             }
-            if taskState.taskResult != nil {
-                taskResult
-            }
+            .navigationBarHidden(true)
+            .navigationBarTitle(Text(""))
+            .edgesIgnoringSafeArea(.all)
+            .statusBar(hidden: true)
         }
-        .navigationBarHidden(true)
-        .navigationBarTitle(Text(""))
-        .edgesIgnoringSafeArea(.all)
-        .statusBar(hidden: true)
     }
 }
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()])).previewLayout(.fixed(width: 1366, height: 1024))
+        TaskView(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()]))
+            .previewDevice("iPad Pro (11-inch) (2nd generation)")
+            .previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

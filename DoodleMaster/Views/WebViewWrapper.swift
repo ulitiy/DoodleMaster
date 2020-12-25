@@ -66,10 +66,10 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     
     func watchUpdates() {
         failingSink = taskState.$failing.sink { [weak self] val in
-            if !val {
+            guard let self = self, self.taskState.failing, !val else {
                 return;
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
                 self?.wkWebView.evaluateJavaScript("restart();")
             }
         }
@@ -79,10 +79,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             }
         }
         skipAnimationSink = taskState.$skipAnimation.sink { [weak self] val in
-            guard let self = self, val else {
-                return
-            }
-            self.wkWebView.evaluateJavaScript("skipAnimation();")
+            self?.wkWebView.evaluateJavaScript("setSkipAnimation(\(val));")
         }
     }
     

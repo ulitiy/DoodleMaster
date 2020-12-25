@@ -24,6 +24,7 @@ function loadSVG(text) {
 
 let stepNumber;
 let refreshVersion = 0;
+let mustSkipAnimation = false;
 
 function hideAll() {
   refreshVersion++;
@@ -48,6 +49,9 @@ function showInput(step) {
   stepNumber = step;
   document.querySelector(`.step-${step} .input`).classList.add("show");
   document.querySelectorAll(`.step-${step} .input .draw-line`).forEach((el) => drawLine(el));
+  if (mustSkipAnimation) {
+    skipAnimation();
+  }
   if (debugSVG) return;
   window.requestAnimationFrame(() =>
     window.requestAnimationFrame(() =>
@@ -121,6 +125,12 @@ function tempRemoveDelay(el) {
   }, 0);
 }
 
+function setSkipAnimation(val) {
+  mustSkipAnimation = val;
+  if(!val) return;
+  skipAnimation();
+}
+
 function skipAnimation() {
   document.querySelector(`.show`).classList.add("skip-animation");
   document.querySelectorAll(`.input.show .draw-line`).forEach((el) => {
@@ -132,7 +142,6 @@ function skipAnimation() {
 
 function restart() {
   hideAll();
-  setTimeout(() => {
-    showInput(stepNumber);
-  }, 1000);
+  showInput(stepNumber);
+  skipAnimation();
 }

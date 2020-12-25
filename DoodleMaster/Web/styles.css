@@ -29,10 +29,10 @@ svg {
 
 .show.input .blink {
   animation-name: appear;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-  animation-iteration-count: 3;
+  animation-iteration-count: 2;
 }
 
 .show.input .appear {

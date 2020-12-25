@@ -57,7 +57,6 @@ class TaskState: ObservableObject {
     }
     
     func resetResult() {
-        skipAnimation = false
         let tc = currentResult?.templateCount
         currentResult = Result(scoringSystem: currentStep.scoringSystem)
         currentResult.templateCount = tc ?? currentResult.templateCount
@@ -85,7 +84,7 @@ class TaskState: ObservableObject {
         if !failing { // only once
             print("Fail step")
             failing = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
                 self?.restartStep()
             }
         }

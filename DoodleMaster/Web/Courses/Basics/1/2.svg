@@ -40,10 +40,10 @@
 <path id="n_2" d="M494.791 259.214C473.036 364.582 478.819 473.746 511.584 576.225" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="n_3" d="M862.312 259.718C829.046 362.024 822.683 471.155 843.834 576.634" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="n_4" d="M870.936 260.197C892.69 365.565 886.908 474.729 854.143 577.208" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="g" d="M498.66 260.28C531.66 361.77 537.972 470.031 516.991 574.668" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
-<path id="g_2" d="M499.688 260.225C478.107 364.751 483.843 473.042 516.347 574.702" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
-<path id="g_3" d="M867.067 261.264C834.067 362.754 827.754 471.014 848.736 575.651" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
-<path id="g_4" d="M866.039 261.208C887.62 365.734 881.883 474.025 849.38 575.685" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
+<path id="g" d="M498.66 260.28C531.66 361.77 537.972 470.031 516.991 574.668" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="g_2" d="M499.688 260.225C478.107 364.751 483.843 473.042 516.347 574.702" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="g_3" d="M867.067 261.264C834.067 362.754 827.754 471.014 848.736 575.651" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="g_4" d="M866.039 261.208C887.62 365.734 881.883 474.025 849.38 575.685" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
 </g>
 </g>
 <g id="step-3">
@@ -109,7 +109,7 @@
 <line id="Line 6_2" x1="994" y1="415.5" x2="920" y2="415.5" stroke="#CCCCCC" stroke-width="5" stroke-dasharray="10 10"/>
 <path id="Line 9" d="M973 580.5L849 580.5" stroke="#CCCCCC" stroke-width="5" stroke-dasharray="10 10"/>
 </g>
-<g id="blink d2">
+<g id="appear d2_3">
 <line id="Line 5_2" x1="994" y1="251.5" x2="951" y2="251.5" stroke="#555555" stroke-width="5"/>
 <line id="Line 4_2" x1="994" y1="415.815" x2="971" y2="415.815" stroke="#555555" stroke-width="5"/>
 <line id="Line 3_2" x1="994" y1="580.131" x2="971" y2="580.131" stroke="#555555" stroke-width="5"/>

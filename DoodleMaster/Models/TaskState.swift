@@ -45,6 +45,7 @@ class TaskState: ObservableObject {
     }
     @Published var passing = false
     @Published var failing = false
+    @Published var whyFailed: String?
     
     @Published var skipAnimation = false
     
@@ -75,6 +76,7 @@ class TaskState: ObservableObject {
             passing = true
             currentResult.print()
             DispatchQueue.main.asyncAfter(deadline: .now() + (currentStep.showResult ? 1.6 : 0.2)) { [weak self] in
+                self?.whyFailed = nil
                 self?.switchNextStep()
             }
         }
@@ -85,7 +87,11 @@ class TaskState: ObservableObject {
             print("Fail step")
             failing = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
-                self?.restartStep()
+                guard let self = self else {
+                    return
+                }
+                self.whyFailed = self.currentResult.whyFailed
+                self.restartStep()
             }
         }
     }

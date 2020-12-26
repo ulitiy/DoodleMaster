@@ -11,7 +11,7 @@ import Combine
 let neutral = [0.0, 0.0, 1, 0.0]
 let any = [0.0, 0.0, 0.03, 1.0, 1.0]
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
-let necessary = [0.9699, 0.0, 0.97, -1]
+let necessary = [0.9699, 0.0, 0.97, -1.0]
 let smooth = [0.6, 0.0, 0.7, -1.0]
 let rough = [6.0, -1.0, 7.0, 0.0]
 
@@ -72,6 +72,7 @@ class Result: ObservableObject {
     @Published var greenK = 0.0
     @Published var blueK = 0.0
     @Published var oneMinusAlphaK = 0.0
+    @Published var whyFailed: String?
     
     func calculateK(val: Double = 0, scoring: [Double] = [0.0, 0.0, 1.0, 0.0]) -> Double {
         var x = val
@@ -105,6 +106,15 @@ class Result: ObservableObject {
         calculateSummary()
     }
     
+    var failExplanations = [
+        "oneMinusAlphaK-falls": "Try to be more precise and match the expected image.",
+        "overlapK-falls": "Try not to draw over your lines.",
+        "roughnessK-falls": "Too rough. Try to draw fast steady lines, draw with your arm, not your wrist.",
+        "roughnessK-grows": "Too smooth. Make your lines even rougher.",
+        "strokeCountK-falls": "Try to use less strokes.",
+        "strokeCountPlusOneK-falls": "You can't use many strokes on this step.",
+    ]
+    
     func addK(_ k: Double, _ p: Double, _ n: Double) -> (Double, Double) {
         if k >= 0 {
             return (p + k, n)
@@ -113,7 +123,36 @@ class Result: ObservableObject {
         }
     }
     
+    func findWhyFailed() {
+        func comp(_ arr: [Double]) -> Double {
+            return arr[3] >= arr[1] ? 1.0 : 0.0
+        }
+        let criteria: KeyValuePairs = [ // KeyValuePairs are ordered, dictionary is not
+            "blueK": [blueK, comp(scoringSystem.blue)],
+            "greenK": [greenK, comp(scoringSystem.green)],
+            "oneMinusAlphaK": [oneMinusAlphaK, comp(scoringSystem.oneMinusAlpha)],
+            "overlapK": [overlapK, comp(scoringSystem.overlap)],
+            "roughnessK": [roughnessK, comp(scoringSystem.roughness)],
+            "strokeCountK": [strokeCountK, comp(scoringSystem.strokeCount)],
+            "strokeCountPlusOneK": [strokeCountPlusOneK, comp(scoringSystem.strokeCount)],
+        ]
+        
+        var worstFail = 0.0
+        var worstCriterion = "blueK"
+        var grows = false
+        criteria.forEach { key, val in
+            Swift.print("\(key) \(val[0])")
+            if val[0] < worstFail {
+                worstFail = val[0]
+                grows = val[1] > 0
+                worstCriterion = key
+            }
+        }
+        self.whyFailed = failExplanations[worstCriterion + (grows ? "-grows" : "-falls")]
+    }
+    
     func calculateSummary() {
+        findWhyFailed();
         var p = 0.0
         var n = 0.0
         [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK].forEach {

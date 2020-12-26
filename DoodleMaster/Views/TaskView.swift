@@ -62,49 +62,69 @@ struct TaskView: View {
         .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
     }
     
+    var overlay: some View {
+        ZStack {
+            #if DEBUG
+            Text(formatPercent(taskState.currentResult.positive))
+            .padding()
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
+            #endif
+            Text("\(taskState.stepNumber) / \(taskState.task.steps.count)")
+                .font(.system(size: 30))
+                .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))//
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
+            .alert(isPresented: $showBackToMenuAlert) {
+                Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: { self.presentationMode.wrappedValue.dismiss() }), secondaryButton: .default(Text("Cancel")))
+            }
+            if taskState.whyFailed != nil {
+                HStack {
+                    Image(systemName: "info.circle")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 40))
+                    Text(taskState.whyFailed!)
+                        .font(.system(size: 25))
+                        .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))//
+                }
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading).padding()
+            }
+            HStack {
+                Menu {
+                    Button("Restart step", action: { taskState.failStep() })
+                    Button("Restart task", action: { showRestartAlert.toggle() })
+                    Toggle("Skip animations", isOn: $taskState.skipAnimation)
+                    Button("Exit to menu", action: { showBackToMenuAlert.toggle() })
+                } label: {
+                    Image(systemName: "line.horizontal.3.circle")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 50))
+                }
+
+                #if DEBUG
+                Button(action: { taskState.passStep() }) {
+                    Image(systemName: "chevron.right.2")
+                        .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                        .font(.system(size: 50))
+                }
+                #endif
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .padding()
+            .alert(isPresented: $showRestartAlert) {
+                Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
+            }
+        }
+    }
+    
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
             ZStack {
                 WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
-                #if DEBUG
-                Text(formatPercent(taskState.currentResult.positive))
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
-                #endif
-                Text("\(taskState.stepNumber)/\(taskState.task.steps.count)")
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
-                .alert(isPresented: $showBackToMenuAlert) {
-                    Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: { self.presentationMode.wrappedValue.dismiss() }), secondaryButton: .default(Text("Cancel")))
-                }
-                
+
                 CanvasContainerRepresentation(taskState: taskState)
                 
-                HStack {
-                    Menu {
-                        Button("Restart step", action: { taskState.failStep() })
-                        Button("Restart task", action: { showRestartAlert.toggle() })
-                        Toggle("Skip animations", isOn: $taskState.skipAnimation)
-                        Button("Exit to menu", action: { showBackToMenuAlert.toggle() })
-                    } label: {
-                        Image(systemName: "line.horizontal.3.circle")
-                            .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                            .font(.system(size: 50))
-                    }
-
-                    #if DEBUG
-                    Button(action: { taskState.passStep() }) {
-                        Image(systemName: "chevron.right.2")
-                            .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                            .font(.system(size: 50))
-                    }
-                    #endif
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-                .padding()
-                .alert(isPresented: $showRestartAlert) {
-                    Alert(title: Text("Are you sure want to restart the task?"), primaryButton: .default(Text("Yes"), action: { taskState.restartTask() }), secondaryButton: .default(Text("Cancel")))
-                }
-
+                overlay
+                
                 if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
                     ZStack {
                         Rectangle().fill(Color.white)

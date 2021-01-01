@@ -69,6 +69,31 @@ struct TaskListView: View {
             multistep,
             multistepResult,
         ]),
+        Task(name: "Интро", path: "Basics/1/3", steps: [
+            arrowStep,
+            arrowStep,
+            checkBoxStep,
+            checkBoxStep,
+            smoothLineStep,
+            TaskStep(scoringSystem: ScoringSystem(
+                roughness: rough,
+                strokeCount: oneStroke
+            )),
+            TaskStep(brushSize: 7, shadowSize: 20),
+            TaskStep(),
+            TaskStep(brushSize: 40),
+            hatchingStep,
+            multistepFirst, // cube
+            multistep,
+            multistep,
+            multistep,
+            multistepResult,
+            TaskStep(scoringSystem: ScoringSystem(
+                blue: any,
+                oneMinusAlpha: neutral,
+                weight: 0
+            )),
+        ]),
     ])
     
     var body: some View {

@@ -72,28 +72,7 @@ struct TaskView: View {
             }
         }
     }
-    
-    var taskResult: some View {
-        ZStack {
-            Rectangle().fill(Color.white)
-            VStack {
-                Text("Task passed!")
-                .font(.system(size: 100.0))
-                Divider()
-                ResultDetailsView(result: taskState.taskResult!)
-                Text(taskState.taskResult!.overall.formatPercent())
-                .font(.system(size: 100.0))
-                .foregroundColor(.green)
-                Divider()
-                Button("OK", action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }).font(.system(size: 100.0))
-            }
-        }
-        .zIndex(2)
-        .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-    }
-    
+        
     var stepFail: some View {
         ZStack {
             Rectangle().fill(Color.white)
@@ -124,7 +103,7 @@ struct TaskView: View {
                 stepFail
             }
             if taskState.taskResult != nil {
-                taskResult
+                TaskResultView(taskState: taskState)
             }
         }
         .navigationBarHidden(true)

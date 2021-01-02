@@ -22,7 +22,6 @@ struct StepSuccessView: View {
                     .font(.system(size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                 ResultDetailsView(result: taskState.currentResult, time: nil)
-                // taskState.dateStarted.timeIntervalSinceNow
             }.padding(.bottom, 150)
             ZStack {
                 Button(action: { taskState.switchNextStep() }) {

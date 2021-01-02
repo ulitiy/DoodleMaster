@@ -14,7 +14,7 @@ struct ResultDetailsView: View {
     
     @ViewBuilder
     func formatRow(name: String, val: Double) -> some View {
-        if val != 0 {
+        if abs(val).formatPercent() != "0" {
             HStack {
                 Text(name)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -30,7 +30,7 @@ struct ResultDetailsView: View {
         let f = DateComponentsFormatter()
         f.zeroFormattingBehavior = .pad
         f.allowedUnits = [.minute, .second]
-        return f.string(from: time!)!
+        return f.string(from: abs(time!))!
     }
     
     var body: some View {

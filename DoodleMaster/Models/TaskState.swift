@@ -32,7 +32,7 @@ class TaskState: ObservableObject {
 
     @Published var touching = false {
         didSet {
-            if touching {
+            guard !touching else {
                 return
             }
             if self.currentResult.passed {
@@ -135,12 +135,12 @@ class TaskState: ObservableObject {
             let weight = val2.scoringSystem.weight / totalWeight
             res.redK = res.redK + val2.redK * weight
             res.greenK = res.greenK + val2.greenK * weight
-            print("Step result: \(val2.overall.formatPercent(2)) * \(weight.toString())")
             res.blueK = res.blueK + val2.blueK * weight
             res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK * weight
             res.overlapK = res.overlapK + val2.overlapK * weight
             res.roughnessK = res.roughnessK + val2.roughnessK * weight
             res.strokeCountK = res.strokeCountK + val2.strokeCountK * weight
+            print("Step result: \(val2.overall.formatPercent(3)) * \(weight.toString(3)) = \((val2.overall * weight).formatPercent(3))")
             return res
         }
         // *K is always correct, no formula is applied on the summary step
@@ -148,6 +148,8 @@ class TaskState: ObservableObject {
         if taskResult!.overall > task.result {
             task.result = taskResult!.overall
         }
-        print("Pass task")
+        print("Pass task, result:")
+        taskResult!.print()
+        print("=========")
     }
 }

@@ -141,7 +141,7 @@ class Result: ObservableObject {
         var worstCriterion = "blueK"
         var grows = false
         criteria.forEach { key, val in
-            Swift.print("\(key) \(val[0])")
+//            Swift.print("\(key) \(val[0])")
             if val[0] < worstFail {
                 worstFail = val[0]
                 grows = val[1] > 0
@@ -161,7 +161,7 @@ class Result: ObservableObject {
         let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
         (p, n) = addK(strokeCountK, p, n)
         positive = min(1, p)
-        negative = matchResults.reduce(0, +) == 0 ? 0 : min(0, max(-1, n))
+        negative = matchResults.reduce(0, +) != 0 || p > 0 ? min(0, max(-1, n)) : 0 // don't show negative if nothing happened
         overall = max(0, positive + negative + redK)
         enoughBlueK = blueK >= scoringSystem.blue[4]
         passed = enoughBlueK && overall >= scoringSystem.passingScore
@@ -170,6 +170,6 @@ class Result: ObservableObject {
     }
     
     func print() {
-        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(Int(100.0*overlapK)) ro\((rippleSum/Double(rippleCount)).toString(3)) roK\(Int(100.0*roughnessK)) sc\(strokeCount) scK\(Int(100.0*strokeCountK)) pos\(Int(100.0*positive)) neg\(Int(100.0*negative)) ov\(Int(100.0*overall)) p\(passed) f\(failed)")
+        Swift.print("b\(blueK.formatPercent(3)) r\(redK.formatPercent(3)) g\(greenK.formatPercent(3)) a\(oneMinusAlphaK.formatPercent(3)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(overlapK.formatPercent(3)) ro\((rippleSum/Double(rippleCount)).toString(3)) roK\(roughnessK.formatPercent(3)) sc\(strokeCount) scK\(strokeCountK.formatPercent(3)) pos\(positive.formatPercent(3)) neg\(negative.formatPercent(3)) ov\(overall.formatPercent(3)) p\(passed) f\(failed)")
     }
 }

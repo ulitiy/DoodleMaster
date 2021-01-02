@@ -8,23 +8,6 @@
 
 import SwiftUI
 
-struct ResultDetailsView: View {
-    var result: Result
-    
-    var body: some View {
-        Text("Match: \(result.blueK.formatPercent(".2"))")
-            .foregroundColor(.green)
-        Text("Deviation: \(result.oneMinusAlphaK.formatPercent(".2"))")
-            .foregroundColor(.red)
-        Text("Roughness: \(result.roughnessK.formatPercent(".2"))")
-            .foregroundColor(.red)
-        Text("Overlap: \(result.overlapK.formatPercent(".2"))")
-            .foregroundColor(.red)
-        Text("Stroke count: \(result.strokeCountK.formatPercent(".2"))")
-            .foregroundColor(.red)
-    }
-}
-
 struct TaskView: View {
     @StateObject var taskState: TaskState
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -37,35 +20,10 @@ struct TaskView: View {
         _taskState = StateObject(wrappedValue: ts)
     }
     
-    func formatPercent(_ res: Double) -> String {
-        return String(format: "%.2f", res*100)
-    }
-    
-    var taskResult: some View {
-        ZStack {
-            Rectangle().fill(Color.white)
-            VStack {
-                Text("Task passed!\n")
-                .font(.system(size: 100.0))
-                Divider()
-                ResultDetailsView(result: taskState.taskResult!)
-                Text(formatPercent(taskState.taskResult!.overall))
-                .font(.system(size: 100.0))
-                .foregroundColor(.green)
-                Divider()
-                Button("OK", action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }).font(.system(size: 100.0))
-            }
-        }
-        .zIndex(2)
-        .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-    }
-    
     var overlay: some View {
         ZStack {
             #if DEBUG
-            Text(formatPercent(taskState.currentResult.positive))
+            Text(taskState.currentResult.positive.formatPercent())
             .padding()
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
             #endif
@@ -94,9 +52,9 @@ struct TaskView: View {
                     Toggle("Skip animations", isOn: $taskState.skipAnimation)
                     Button("Exit to menu", action: { showBackToMenuAlert.toggle() })
                 } label: {
-                    Image(systemName: "line.horizontal.3.circle")
+                    Image(systemName: "line.horizontal.3")
                         .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
-                        .font(.system(size: 50))
+                        .font(.system(size: 50, weight: .heavy))
                 }
 
                 #if DEBUG
@@ -115,48 +73,64 @@ struct TaskView: View {
         }
     }
     
-    var body: some View {
-        VStack(spacing: 0) {
-            ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
-            ZStack {
-                WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
+    var taskResult: some View {
+        ZStack {
+            Rectangle().fill(Color.white)
+            VStack {
+                Text("Task passed!")
+                .font(.system(size: 100.0))
+                Divider()
+                ResultDetailsView(result: taskState.taskResult!)
+                Text(taskState.taskResult!.overall.formatPercent())
+                .font(.system(size: 100.0))
+                .foregroundColor(.green)
+                Divider()
+                Button("OK", action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }).font(.system(size: 100.0))
+            }
+        }
+        .zIndex(2)
+        .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+    }
+    
+    var stepFail: some View {
+        ZStack {
+            Rectangle().fill(Color.white)
+            Image(systemName: "xmark").foregroundColor(.red).font(.system(size: 130.0, weight: .bold))
+        }
+        .zIndex(1)
+        .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
 
-                CanvasContainerRepresentation(taskState: taskState)
-                
-                overlay
-                
-                if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
-                    ZStack {
-                        Rectangle().fill(Color.white)
-                        VStack {
-                            Text("✅").font(.system(size: 100.0))
-                            Divider()
-                            ResultDetailsView(result: taskState.currentResult)
-                            Text(formatPercent(taskState.currentResult.overall))
-                            .font(.system(size: 100.0))
-                            .foregroundColor(.green)
-                        }
-                    }
-                    .zIndex(1)
-                    .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-                }
-                if taskState.failing {
-                    ZStack {
-                        Rectangle().fill(Color.white)
-                        Text("❌").font(.system(size: 100.0))
-                    }
-                    .zIndex(1)
-                    .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-                }
-                if taskState.taskResult != nil {
-                    taskResult
+    }
+    
+    var body: some View {
+        ZStack {
+            VStack(spacing: 0) {
+                ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
+                ZStack {
+                    WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
+
+                    CanvasContainerRepresentation(taskState: taskState)
+                    
+                    overlay
                 }
             }
-            .navigationBarHidden(true)
-            .navigationBarTitle(Text(""))
-            .edgesIgnoringSafeArea(.all)
-            .statusBar(hidden: true)
+            
+            if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
+                StepSuccessView(taskState: taskState)
+            }
+            if taskState.failing {
+                stepFail
+            }
+            if taskState.taskResult != nil {
+                taskResult
+            }
         }
+        .navigationBarHidden(true)
+        .navigationBarTitle(Text(""))
+        .edgesIgnoringSafeArea(.all)
+        .statusBar(hidden: true)
     }
 }
 

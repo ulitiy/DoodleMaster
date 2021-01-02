@@ -127,10 +127,8 @@ struct TaskListView: View {
     }
 }
 
-#if DEBUG
 struct TaskListView_Previews: PreviewProvider {
     static var previews: some View {
         TaskListView().previewLayout(.fixed(width: 1366, height: 1024))
     }
 }
-#endif

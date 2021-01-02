@@ -46,6 +46,7 @@ class TaskState: ObservableObject {
     @Published var passing = false
     @Published var failing = false
     @Published var whyFailed: String?
+    @Published var dateStarted: Date!
     
     @Published var skipAnimation = false
     
@@ -55,6 +56,7 @@ class TaskState: ObservableObject {
         currentStep = task.steps[0]
         nextStep = task.steps.count > 1 ? task.steps[1] : nil
         self.task = task
+        dateStarted = Date()
     }
     
     func resetResult() {
@@ -75,8 +77,8 @@ class TaskState: ObservableObject {
             }
             passing = true
             currentResult.print()
-            DispatchQueue.main.asyncAfter(deadline: .now() + (currentStep.showResult ? 1.6 : 0.2)) { [weak self] in
-                self?.whyFailed = nil
+            if currentStep.showResult { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
                 self?.switchNextStep()
             }
         }
@@ -110,9 +112,11 @@ class TaskState: ObservableObject {
         taskResult = nil
         restartStep()
         template = nil
+        dateStarted = Date()
     }
     
     func switchNextStep() {
+        whyFailed = nil
         results.append(currentResult)
         stepNumber += 1
         print("Next step \(stepNumber)")
@@ -131,7 +135,7 @@ class TaskState: ObservableObject {
             let weight = val2.scoringSystem.weight / totalWeight
             res.redK = res.redK + val2.redK * weight
             res.greenK = res.greenK + val2.greenK * weight
-            print("Step result: \(val2.overall.formatPercent(".2")) * \(weight.format(".2"))")
+            print("Step result: \(val2.overall.formatPercent(2)) * \(weight.toString())")
             res.blueK = res.blueK + val2.blueK * weight
             res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK * weight
             res.overlapK = res.overlapK + val2.overlapK * weight

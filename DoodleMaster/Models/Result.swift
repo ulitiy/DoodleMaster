@@ -170,6 +170,6 @@ class Result: ObservableObject {
     }
     
     func print() {
-        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\((Double(matchResults[4]) / Double(matchResults[5])).format(".3")) olK\(Int(100.0*overlapK)) ro\((rippleSum/Double(rippleCount)).format(".3")) roK\(Int(100.0*roughnessK)) sc\(strokeCount) scK\(Int(100.0*strokeCountK)) pos\(Int(100.0*positive)) neg\(Int(100.0*negative)) ov\(Int(100.0*overall)) p\(passed) f\(failed)")
+        Swift.print("b\(Int(100.0*blueK)) r\(Int(100.0*redK)) g\(Int(100.0*greenK)) a\(Int(100.0*oneMinusAlphaK)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(Int(100.0*overlapK)) ro\((rippleSum/Double(rippleCount)).toString(3)) roK\(Int(100.0*roughnessK)) sc\(strokeCount) scK\(Int(100.0*strokeCountK)) pos\(Int(100.0*positive)) neg\(Int(100.0*negative)) ov\(Int(100.0*overall)) p\(passed) f\(failed)")
     }
 }

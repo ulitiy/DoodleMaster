@@ -42,6 +42,13 @@ struct TaskResultView: View {
             }
             .padding(60)
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomTrailing)
+            if taskState.highScore {
+                MyImageView(name: "high-score-stamp")
+                    .frame(width: 250, height: 250)
+                    .padding(.leading, 460)
+                    .padding(.bottom, 150)
+                    .transition(AnyTransition.opacity.combined(with: .scale(scale: 5, anchor: UnitPoint(x: 0.7, y: 0.5))).animation(.easeIn(duration: 0.3)))
+            }
         }
         .zIndex(2)
         .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
@@ -60,6 +67,7 @@ struct TaskResultView_Previews: PreviewProvider {
         r.strokeCountK = -0.1
         ts.dateStarted = Date() + 100
         ts.taskResult = r
+        ts.highScore = true
         return ts
     }
     

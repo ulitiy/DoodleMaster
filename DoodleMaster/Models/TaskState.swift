@@ -45,6 +45,7 @@ class TaskState: ObservableObject {
     }
     @Published var passing = false
     @Published var failing = false
+    @Published var highScore = false
     @Published var whyFailed: String?
     @Published var dateStarted: Date!
     
@@ -147,6 +148,9 @@ class TaskState: ObservableObject {
         taskResult!.calculateSummary()
         if taskResult!.overall > task.result {
             task.result = taskResult!.overall
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.highScore = true
+            }
         }
         print("Pass task, result:")
         taskResult!.print()

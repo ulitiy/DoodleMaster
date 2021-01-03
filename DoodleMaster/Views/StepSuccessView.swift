@@ -19,7 +19,7 @@ struct StepSuccessView: View {
                     .foregroundColor(.green)
                     .font(.system(size: 150.0, weight: .light))
                 Text("\(taskState.currentResult.overall.formatPercent()) %")
-                    .font(.custom("LucidaGrande", size: 70.0))
+                    .font(.custom("LithosPro-Regular", size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                 ResultDetailsView(result: taskState.currentResult, time: nil)
             }.padding(.bottom, 150)

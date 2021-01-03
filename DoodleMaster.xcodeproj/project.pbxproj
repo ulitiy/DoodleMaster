@@ -32,6 +32,7 @@
 		6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23624EA71B40002E77B /* Preview Assets.xcassets */; };
 		6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */; };
 		6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E24724EA7B8E0002E77B /* MaLiang */; };
+		6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */; };
 		6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD7CC72551CDF700E750C2 /* LazyView.swift */; };
 		6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1708D25912C13000DB2A9 /* extensions.swift */; };
 		6CF1709225924A88000DB2A9 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1709125924A88000DB2A9 /* pencil.png */; };
@@ -67,6 +68,7 @@
 		6CB5E23B24EA71B40002E77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CB5E24524EA7B720002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
 		6CB5E24724EA7B8E0002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
+		6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LithosPro-Regular.otf"; sourceTree = "<group>"; };
 		6CDD7CC72551CDF700E750C2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		6CF1708D25912C13000DB2A9 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		6CF1709125924A88000DB2A9 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 		6CB5E22C24EA71B30002E77B /* DoodleMaster */ = {
 			isa = PBXGroup;
 			children = (
-				6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */,
+				6CD9169925A1FB24005AF586 /* Fonts */,
 				6CF1709025924922000DB2A9 /* Textures */,
 				6C10815C25508A8900464DF7 /* Views */,
 				6C10815D25508AB500464DF7 /* Models */,
@@ -181,6 +183,15 @@
 				6CB5E23624EA71B40002E77B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6CD9169925A1FB24005AF586 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */,
+				6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		6CF1709025924922000DB2A9 /* Textures */ = {
@@ -258,6 +269,7 @@
 				6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */,
 				6C4B8660253604CE000CB7E0 /* Web in Resources */,
 				6CB5E23424EA71B40002E77B /* Assets.xcassets in Resources */,
+				6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -495,7 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;

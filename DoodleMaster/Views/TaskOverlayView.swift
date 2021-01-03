@@ -50,7 +50,7 @@ struct TaskOverlayView: View {
             #endif
             
             Text("\(taskState.stepNumber) / \(taskState.task.steps.count)")
-                .font(.system(size: 30))
+                .font(.custom("LucidaGrande", size: 30))
                 .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))//
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
             .alert(isPresented: $showBackToMenuAlert) {

@@ -19,14 +19,14 @@ struct StepSuccessView: View {
                     .foregroundColor(.green)
                     .font(.system(size: 150.0, weight: .light))
                 Text("\(taskState.currentResult.overall.formatPercent()) %")
-                    .font(.system(size: 70.0))
+                    .font(.custom("LucidaGrande", size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                 ResultDetailsView(result: taskState.currentResult, time: nil)
             }.padding(.bottom, 150)
             ZStack {
                 Button(action: { taskState.switchNextStep() }) {
                     Text("OK")
-                        .font(.system(size: 35))
+                        .font(.custom("LucidaGrande", size: 35))
                         .padding(.horizontal, 60)
                         .padding(.vertical, 25)
                         .overlay(RoundedRectangle(cornerRadius: 500).stroke(lineWidth: 4))

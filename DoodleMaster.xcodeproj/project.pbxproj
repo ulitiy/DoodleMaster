@@ -20,6 +20,7 @@
 		6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613925A1CF65004ADDBA /* StepFailView.swift */; };
 		6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */; };
 		6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B614125A1DC0B004ADDBA /* MyImageView.swift */; };
+		6C6B615025A1F202004ADDBA /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */; };
 		6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */; };
 		6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */; };
 		6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */; };
@@ -51,6 +52,7 @@
 		6C6B613925A1CF65004ADDBA /* StepFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFailView.swift; sourceTree = "<group>"; };
 		6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyFailedView.swift; sourceTree = "<group>"; };
 		6C6B614125A1DC0B004ADDBA /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
+		6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
 		6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSuccessView.swift; sourceTree = "<group>"; };
 		6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultView.swift; sourceTree = "<group>"; };
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		6CB5E22C24EA71B30002E77B /* DoodleMaster */ = {
 			isa = PBXGroup;
 			children = (
+				6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */,
 				6CF1709025924922000DB2A9 /* Textures */,
 				6C10815C25508A8900464DF7 /* Views */,
 				6C10815D25508AB500464DF7 /* Models */,
@@ -251,6 +254,7 @@
 				6CF1709225924A88000DB2A9 /* pencil.png in Resources */,
 				6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */,
 				6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */,
+				6C6B615025A1F202004ADDBA /* LucidaGrande.ttf in Resources */,
 				6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */,
 				6C4B8660253604CE000CB7E0 /* Web in Resources */,
 				6CB5E23424EA71B40002E77B /* Assets.xcassets in Resources */,

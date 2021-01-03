@@ -17,12 +17,13 @@ struct ResultDetailsView: View {
         if abs(val).formatPercent() != "0" {
             HStack {
                 Text(name)
+                    .kerning(2)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.gray)
                 Text("\(val > 0 ? "+" : "")\(val.formatPercent()) %")
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(val >= 0 ? .green : .red)
-            }.frame(width: 350).font(.system(size: 30))
+            }
         }
     }
     
@@ -34,7 +35,7 @@ struct ResultDetailsView: View {
     }
     
     var body: some View {
-        VStack(spacing: 7) {
+        VStack(spacing: 20) {
             formatRow(name: "Match", val: result.blueK)
             formatRow(name: "Deviation", val: result.oneMinusAlphaK)
             formatRow(name: "Roughness", val: result.roughnessK)
@@ -43,14 +44,17 @@ struct ResultDetailsView: View {
             if time != nil {
                 HStack {
                     Text("Time")
+                        .kerning(2)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.gray)
                     Text(getTime())
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .foregroundColor(.gray)
-                }.frame(width: 350).font(.system(size: 30))
+                }
             }
         }
+        .frame(width: 400)
+        .font(.custom("LucidaGrande", size: 26))
     }
 }
 

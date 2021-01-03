@@ -88,11 +88,11 @@ struct TaskListView: View {
                                 Circle()
                                     .frame(width: 200, height: 200, alignment: .leading)
                                 Text(task.name)
-                                    .font(.system(size: 50))
+                                    .font(.custom("LucidaGrande", size: 50))
                                     .foregroundColor(Color.white)
                             }
                             Text(String(format: "%.2f", task.result * 100))
-                                .font(.system(size: 30))
+                                .font(.custom("LucidaGrande", size: 30))
                         }
                     }
                 }

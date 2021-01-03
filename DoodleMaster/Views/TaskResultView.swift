@@ -18,13 +18,13 @@ struct TaskResultView: View {
             VStack {
                 MyImageView(name: "medal")
                     .frame(width: 200, height: 200)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 20)
                 Text("Task passed")
-                    .font(.system(size: 70.0))
+                    .font(.custom("LucidaGrande", size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                     .padding(.bottom, 30)
                 Text("\(taskState.taskResult!.overall.formatPercent()) %")
-                    .font(.system(size: 70.0))
+                    .font(Font.custom("LucidaGrande", size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                     .padding(30)
                 ResultDetailsView(result: taskState.taskResult!, time: taskState.dateStarted.timeIntervalSinceNow)
@@ -33,7 +33,7 @@ struct TaskResultView: View {
             ZStack {
                 Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
                     Text("OK")
-                        .font(.system(size: 35))
+                        .font(.custom("LucidaGrande", size: 35))
                         .padding(.horizontal, 60)
                         .padding(.vertical, 25)
                         .overlay(RoundedRectangle(cornerRadius: 500).stroke(lineWidth: 4))

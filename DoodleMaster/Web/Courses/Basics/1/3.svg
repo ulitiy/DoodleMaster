@@ -33,13 +33,13 @@
 <path id="a_5" d="M745.5 872L419.5 815.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_6" d="M869.5 404L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_7" d="M746 871L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d1" d="M419 520L580 366" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3 flip" d="M869 401.5L580.5 366" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line" d="M419 520L580 366" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d2 flip" d="M869 401.5L580.5 366" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_8" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">&#x41e;&#x442;&#x43b;&#x438;&#x447;&#x43d;&#x43e;!&#10;</tspan><tspan x="283" y="205.596">&#x422;&#x435;&#x43f;&#x435;&#x440;&#x44c; </tspan><tspan x="412.211" y="205.596">&#x43d;&#x430;&#x440;&#x438;&#x441;&#x443;&#x439;&#x442;&#x435; </tspan><tspan x="596.776" y="205.596">&#x43a;&#x443;&#x431; </tspan><tspan x="664.184" y="205.596">&#x43f;&#x43e; </tspan><tspan x="715.814" y="205.596">&#x448;&#x430;&#x433;&#x430;&#x43c;.&#10;</tspan><tspan x="283" y="266.596">&#x412;&#x44b; </tspan><tspan x="360.132" y="266.596">&#x43c;&#x43e;&#x436;&#x435;&#x442;&#x435; </tspan><tspan x="515.208" y="266.596">&#x431;&#x44b;&#x442;&#x44c; </tspan><tspan x="627.467" y="266.596">&#x43d;&#x435;&#x430;&#x43a;&#x43a;&#x443;&#x440;&#x430;&#x442;&#x43d;&#x44b; </tspan><tspan x="876.566" y="266.596">&#x438; </tspan><tspan x="925.418" y="266.596">&#x440;&#x438;&#x441;&#x43e;&#x432;&#x430;&#x442;&#x44c; </tspan><tspan x="283" y="302.596">&#x43f;&#x43e;&#x432;&#x435;&#x440;&#x445; </tspan><tspan x="412.483" y="302.596">&#x441;&#x432;&#x43e;&#x438;&#x445; </tspan><tspan x="521.799" y="302.596">&#x43b;&#x438;&#x43d;&#x438;&#x439;.</tspan></text>
 </g>
 <g id="template_3">
-<path id="draw-line" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d1_2" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line_2" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d1" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="draw-line d2" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 10" d="M419 520L419.5 813.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 11" d="M745.5 872L419.5 815.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
@@ -58,14 +58,14 @@
 <path id="a_11" d="M746 565L869 404" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_12" d="M419 520L419.5 813.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_13" d="M745.5 872L419.5 815.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d1_3" d="M869.5 404L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_2" d="M746 871L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line_3" d="M869.5 404L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d2_2" d="M746 871L869 675" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_14" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">&#x41e;&#x442;&#x43b;&#x438;&#x447;&#x43d;&#x43e;!&#10;</tspan><tspan x="283" y="205.596">&#x422;&#x435;&#x43f;&#x435;&#x440;&#x44c; </tspan><tspan x="412.211" y="205.596">&#x43d;&#x430;&#x440;&#x438;&#x441;&#x443;&#x439;&#x442;&#x435; </tspan><tspan x="596.776" y="205.596">&#x43a;&#x443;&#x431; </tspan><tspan x="664.184" y="205.596">&#x43f;&#x43e; </tspan><tspan x="715.814" y="205.596">&#x448;&#x430;&#x433;&#x430;&#x43c;.&#10;</tspan><tspan x="283" y="266.596">&#x412;&#x44b; </tspan><tspan x="360.132" y="266.596">&#x43c;&#x43e;&#x436;&#x435;&#x442;&#x435; </tspan><tspan x="515.208" y="266.596">&#x431;&#x44b;&#x442;&#x44c; </tspan><tspan x="627.467" y="266.596">&#x43d;&#x435;&#x430;&#x43a;&#x43a;&#x443;&#x440;&#x430;&#x442;&#x43d;&#x44b; </tspan><tspan x="876.566" y="266.596">&#x438; </tspan><tspan x="925.418" y="266.596">&#x440;&#x438;&#x441;&#x43e;&#x432;&#x430;&#x442;&#x44c; </tspan><tspan x="283" y="302.596">&#x43f;&#x43e;&#x432;&#x435;&#x440;&#x445; </tspan><tspan x="412.483" y="302.596">&#x441;&#x432;&#x43e;&#x438;&#x445; </tspan><tspan x="521.799" y="302.596">&#x43b;&#x438;&#x43d;&#x438;&#x439;.</tspan></text>
 </g>
 <g id="template_4">
-<path id="draw-line_2" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d1_4" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d2_2" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line_4" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d1_2" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d2_3" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 10_2" d="M419 520L419.5 813.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 11_2" d="M745.5 872L419.5 815.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 12_2" d="M869.5 404L869 675" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
@@ -79,14 +79,14 @@
 <path id="a_15" d="M745.5 564.5V871.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_16" d="M745.5 565.5L420 520" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="a_17" d="M746 565L869 404" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d1_5" d="M419 520L419.5 813.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3 flip_2" d="M745.5 872L419.5 815.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line_5" d="M419 520L419.5 813.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d2 flip_2" d="M745.5 872L419.5 815.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <text id="a_18" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">&#x41e;&#x442;&#x43b;&#x438;&#x447;&#x43d;&#x43e;!&#10;</tspan><tspan x="283" y="205.596">&#x422;&#x435;&#x43f;&#x435;&#x440;&#x44c; </tspan><tspan x="412.211" y="205.596">&#x43d;&#x430;&#x440;&#x438;&#x441;&#x443;&#x439;&#x442;&#x435; </tspan><tspan x="596.776" y="205.596">&#x43a;&#x443;&#x431; </tspan><tspan x="664.184" y="205.596">&#x43f;&#x43e; </tspan><tspan x="715.814" y="205.596">&#x448;&#x430;&#x433;&#x430;&#x43c;.&#10;</tspan><tspan x="283" y="266.596">&#x412;&#x44b; </tspan><tspan x="360.132" y="266.596">&#x43c;&#x43e;&#x436;&#x435;&#x442;&#x435; </tspan><tspan x="515.208" y="266.596">&#x431;&#x44b;&#x442;&#x44c; </tspan><tspan x="627.467" y="266.596">&#x43d;&#x435;&#x430;&#x43a;&#x43a;&#x443;&#x440;&#x430;&#x442;&#x43d;&#x44b; </tspan><tspan x="876.566" y="266.596">&#x438; </tspan><tspan x="925.418" y="266.596">&#x440;&#x438;&#x441;&#x43e;&#x432;&#x430;&#x442;&#x44c; </tspan><tspan x="283" y="302.596">&#x43f;&#x43e;&#x432;&#x435;&#x440;&#x445; </tspan><tspan x="412.483" y="302.596">&#x441;&#x432;&#x43e;&#x438;&#x445; </tspan><tspan x="521.799" y="302.596">&#x43b;&#x438;&#x43d;&#x438;&#x439;.</tspan></text>
 </g>
 <g id="template_5">
-<path id="draw-line_3" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d1_6" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d2_3" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line_6" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d1_3" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d2_4" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 10_3" d="M419 520L419.5 813.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 11_3" d="M745.5 872L419.5 815.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
 <path id="Vector 10_4" d="M419 520L419.5 813.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
@@ -95,18 +95,18 @@
 </g>
 <g id="step-11">
 <g id="input_6">
-<path id="draw-line d1_7" d="M745.5 564.5V871.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d3_3" d="M745.5 565.5L420 520" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d1_4" d="M745.5 564.5V871.5" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d3_2" d="M745.5 565.5L420 520" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <path id="draw-line d5_2" d="M746 565L869 404" stroke="#AAAAFF" stroke-width="7" stroke-linecap="round"/>
 <text id="appear_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">&#x41e;&#x442;&#x43b;&#x438;&#x447;&#x43d;&#x43e;!&#10;</tspan><tspan x="283" y="205.596">&#x422;&#x435;&#x43f;&#x435;&#x440;&#x44c; </tspan><tspan x="412.211" y="205.596">&#x43d;&#x430;&#x440;&#x438;&#x441;&#x443;&#x439;&#x442;&#x435; </tspan><tspan x="596.776" y="205.596">&#x43a;&#x443;&#x431; </tspan><tspan x="664.184" y="205.596">&#x43f;&#x43e; </tspan><tspan x="715.814" y="205.596">&#x448;&#x430;&#x433;&#x430;&#x43c;.&#10;</tspan><tspan x="283" y="266.596">&#x412;&#x44b; </tspan><tspan x="360.132" y="266.596">&#x43c;&#x43e;&#x436;&#x435;&#x442;&#x435; </tspan><tspan x="515.208" y="266.596">&#x431;&#x44b;&#x442;&#x44c; </tspan><tspan x="627.467" y="266.596">&#x43d;&#x435;&#x430;&#x43a;&#x43a;&#x443;&#x440;&#x430;&#x442;&#x43d;&#x44b; </tspan><tspan x="876.566" y="266.596">&#x438; </tspan><tspan x="925.418" y="266.596">&#x440;&#x438;&#x441;&#x43e;&#x432;&#x430;&#x442;&#x44c; </tspan><tspan x="283" y="302.596">&#x43f;&#x43e;&#x432;&#x435;&#x440;&#x445; </tspan><tspan x="412.483" y="302.596">&#x441;&#x432;&#x43e;&#x438;&#x445; </tspan><tspan x="521.799" y="302.596">&#x43b;&#x438;&#x43d;&#x438;&#x439;.</tspan></text>
 </g>
 <g id="template_6">
-<path id="draw-line_4" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d1_8" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line d2_4" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
-<path id="draw-line_5" d="M745.5 564.5V871.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d1_9" d="M745.5 565.5L420 520" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
-<path id="draw-line d2_5" d="M746 565L869 404" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line_7" d="M745.5 564.5V871.5" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d1_5" d="M745.5 565.5L420 520" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line d2_5" d="M746 565L869 404" stroke="#00FF00" stroke-width="100" stroke-linecap="round"/>
+<path id="draw-line_8" d="M745.5 564.5V871.5" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d1_6" d="M745.5 565.5L420 520" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
+<path id="draw-line d2_6" d="M746 565L869 404" stroke="#0000FF" stroke-width="7" stroke-linecap="round"/>
 </g>
 </g>
 <g id="step-10">
@@ -114,7 +114,7 @@
 <path id="appear d4" d="M505.375 897.5C495.875 880 501.073 674.776 505.375 589.161C496.317 575.372 847.769 577.916 860.706 583.517C873.644 589.117 860.745 905.001 860.745 905.001C790.955 901 646.662 902.187 505.375 897.5Z" stroke="black" stroke-width="5"/>
 <path id="appear d3" d="M148 518H1218.5" stroke="#999999" stroke-width="5"/>
 <path id="appear d1_3" d="M521.805 314.239C542.972 276.887 590.469 261.63 662.231 259C704.221 261.806 796.669 271.731 830.536 288.987C872.871 310.556 841.378 406.83 830.536 442.603C819.694 478.377 662.231 465.751 588.92 460.49C515.61 455.229 500.638 351.591 521.805 314.239Z" stroke="#999999" stroke-width="6"/>
-<path id="draw-line d2_6" d="M525.884 328.685L620.525 271.595M522.807 365.63L682.668 268.944M525.884 400.881L736.609 272.595M544.195 424.651L780.168 283.244M569.583 445.009L821.578 295.828M615.121 454.57L839.376 321.049M668.258 454.57L842.078 357.975M723.985 457L832.26 396.744M783.221 454.57L821.578 432.703" stroke="#00AA00" stroke-width="15" stroke-linecap="round"/>
+<path id="draw-line d2_7" d="M525.884 328.685L620.525 271.595M522.807 365.63L682.668 268.944M525.884 400.881L736.609 272.595M544.195 424.651L780.168 283.244M569.583 445.009L821.578 295.828M615.121 454.57L839.376 321.049M668.258 454.57L842.078 357.975M723.985 457L832.26 396.744M783.221 454.57L821.578 432.703" stroke="#00AA00" stroke-width="15" stroke-linecap="round"/>
 <text id="appear_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="144.596">&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; </tspan><tspan x="435.768" y="144.596">&#x443;&#x441;&#x43b;&#x43e;&#x436;&#x43d;&#x438;&#x43c; </tspan><tspan x="617.059" y="144.596">&#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435;!&#10;</tspan><tspan x="283" y="205.596">&#x417;&#x430;&#x43a;&#x440;&#x430;&#x441;&#x44c;&#x442;&#x435; </tspan><tspan x="466.99" y="205.596">&#x44d;&#x442;&#x443; </tspan><tspan x="531.068" y="205.596">&#x444;&#x438;&#x433;&#x443;&#x440;&#x443; </tspan><tspan x="658.28" y="205.596">&#x448;&#x442;&#x440;&#x438;&#x445;&#x43e;&#x432;&#x43a;&#x43e;&#x439;, </tspan><tspan x="883.24" y="205.596">&#x432;&#x43e;&#x442; </tspan><tspan x="952.041" y="205.596">&#x442;&#x430;&#x43a;:</tspan></text>
 </g>
 <g id="template_7">
@@ -144,9 +144,9 @@
 <g id="step-7">
 <g id="input_10">
 <path id="appear_9" d="M374.504 641.079H991.831" stroke="black" stroke-dasharray="10 10"/>
-<path id="draw-line d3_4" d="M819.622 584.15C819.622 578.288 816.503 570.926 808.001 568.991C797.883 566.688 785.794 572.705 775.652 594.566C764.418 618.783 768.655 638.283 783.437 639.108C796.793 639.854 810.12 627.719 811.868 623.975" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round"/>
-<path id="draw-line d2_7" d="M648.228 599.434C698.388 563.588 734.416 532.691 745.181 517.853C760.837 496.272 736.526 482.485 722.528 496.272C708.53 510.059 683.284 567.009 669.85 593.419C657.502 617.694 661.515 636.815 676.095 638.796C694.051 641.235 705.02 620.734 711.616 601.812C718.763 581.306 711.239 571.84 700.296 568.828C689.353 565.816 683.219 575.854 676.876 581.319" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round"/>
-<path id="draw-line d1_10" d="M598.465 592.463C602.069 574.743 582.653 560.917 568.877 572.771C551.658 587.588 540.127 621.25 550.038 633.263C559.95 645.277 576.669 636.968 584.077 625.855C594.068 610.869 596.492 594.419 606.12 572.771C597.877 593.361 583.234 630.36 589.984 637.368C593.319 640.83 599.829 638.736 602.399 637.368" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3_3" d="M819.622 584.15C819.622 578.288 816.503 570.926 808.001 568.991C797.883 566.688 785.794 572.705 775.652 594.566C764.418 618.783 768.655 638.283 783.437 639.108C796.793 639.854 810.12 627.719 811.868 623.975" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round"/>
+<path id="draw-line d2_8" d="M648.228 599.434C698.388 563.588 734.416 532.691 745.181 517.853C760.837 496.272 736.526 482.485 722.528 496.272C708.53 510.059 683.284 567.009 669.85 593.419C657.502 617.694 661.515 636.815 676.095 638.796C694.051 641.235 705.02 620.734 711.616 601.812C718.763 581.306 711.239 571.84 700.296 568.828C689.353 565.816 683.219 575.854 676.876 581.319" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round"/>
+<path id="draw-line d1_7" d="M598.465 592.463C602.069 574.743 582.653 560.917 568.877 572.771C551.658 587.588 540.127 621.25 550.038 633.263C559.95 645.277 576.669 636.968 584.077 625.855C594.068 610.869 596.492 594.419 606.12 572.771C597.877 593.361 583.234 630.36 589.984 637.368C593.319 640.83 599.829 638.736 602.399 637.368" stroke="#CCCCFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <text id="appear_10" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="424.509" y="199.596">&#x41d;&#x430; &#x44d;&#x442;&#x43e;&#x43c; &#x448;&#x430;&#x433;&#x435; &#x43d;&#x430;&#x43f;&#x438;&#x448;&#x435;&#x43c; &#x431;&#x443;&#x43a;&#x432;&#x44b;.</tspan></text>
 </g>
 <g id="template_10">
@@ -165,19 +165,19 @@
 <text id="appear_11" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283.168" y="199.596">&#x41f;&#x440;&#x435;&#x43a;&#x440;&#x430;&#x441;&#x43d;&#x43e;!&#10;</tspan><tspan x="283.168" y="260.596">&#x422;&#x435;&#x43f;&#x435;&#x440;&#x44c; </tspan><tspan x="465.492" y="260.596">&#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; </tspan><tspan x="666.772" y="260.596">&#x43f;&#x43e;&#x43f;&#x440;&#x43e;&#x431;&#x443;&#x435;&#x43c; </tspan><tspan x="915.076" y="260.596">&#x43d;&#x430;&#x43e;&#x431;&#x43e;&#x440;&#x43e;&#x442;, </tspan><tspan x="283.168" y="296.596">&#x43e;&#x431;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="452.783" y="296.596">&#x44d;&#x442;&#x443; </tspan><tspan x="517.99" y="296.596">&#x43b;&#x438;&#x43d;&#x438;&#x44e;, </tspan><tspan x="649.33" y="296.596">&#x43d;&#x43e; </tspan><tspan x="702.091" y="296.596">&#x441;&#x434;&#x435;&#x43b;&#x430;&#x439;&#x442;&#x435; </tspan><tspan x="870.192" y="296.596">&#x435;&#x435; </tspan><tspan x="920.258" y="296.596">&#x43d;&#x435;&#x440;&#x43e;&#x432;&#x43d;&#x43e;&#x439; </tspan><tspan x="283.168" y="332.596">&#x438; </tspan><tspan x="314.329" y="332.596">&#x437;&#x430;&#x437;&#x443;&#x431;&#x440;&#x435;&#x43d;&#x43d;&#x43e;&#x439;.</tspan></text>
 </g>
 <g id="template_11">
-<path id="draw-line_6" d="M209 813.577L1157.82 512" stroke="#00FF00" stroke-width="110" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line_7" d="M209 813.577L1157.82 512" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line_9" d="M209 813.577L1157.82 512" stroke="#00FF00" stroke-width="110" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line_10" d="M209 813.577L1157.82 512" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step-5">
 <g id="input_12">
 <path id="appear d1_7" d="M-1001.89 1198.36L2068.38 222.643" stroke="#EEEEFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="50 50"/>
-<path id="draw-line d2_8" d="M209 813.577L1157.82 512" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d2_9" d="M209 813.577L1157.82 512" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 <text id="appear_12" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="199.596">&#x412;&#x435;&#x440;&#x43d;&#x43e;!&#10;</tspan><tspan x="283" y="260.596">&#x41e;&#x431;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="455.118" y="260.596">&#x44d;&#x442;&#x443; </tspan><tspan x="519.196" y="260.596">&#x43b;&#x438;&#x43d;&#x438;&#x44e; </tspan><tspan x="640.531" y="260.596">&#x43a;&#x430;&#x43a; </tspan><tspan x="709.725" y="260.596">&#x43c;&#x43e;&#x436;&#x43d;&#x43e; </tspan><tspan x="833.814" y="260.596">&#x43f;&#x440;&#x44f;&#x43c;&#x435;&#x435;.&#10;</tspan><tspan x="283" y="321.596">&#x420;&#x438;&#x441;&#x443;&#x439;&#x442;&#x435; </tspan><tspan x="437.391" y="321.596">&#x43f;&#x43b;&#x435;&#x447;&#x43e;&#x43c; </tspan><tspan x="582.423" y="321.596">&#x438; </tspan><tspan x="621.595" y="321.596">&#x43b;&#x43e;&#x43a;&#x442;&#x435;&#x43c;, </tspan><tspan x="771.172" y="321.596">&#x430; </tspan><tspan x="809.315" y="321.596">&#x43d;&#x435; </tspan><tspan x="867.715" y="321.596">&#x43a;&#x438;&#x441;&#x442;&#x44c;&#x44e;. </tspan><tspan x="1021.8" y="321.596">&#x42d;&#x442;&#x43e; </tspan><tspan x="283" y="357.596">&#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x43e; </tspan><tspan x="423.594" y="357.596">&#x431;&#x44b;&#x442;&#x44c; </tspan><tspan x="518.162" y="357.596">&#x431;&#x44b;&#x441;&#x442;&#x440;&#x43e;&#x435; </tspan><tspan x="672.02" y="357.596">&#x438; </tspan><tspan x="703.181" y="357.596">&#x443;&#x432;&#x435;&#x440;&#x435;&#x43d;&#x43d;&#x43e;&#x435; </tspan><tspan x="891.349" y="357.596">&#x434;&#x432;&#x438;&#x436;&#x435;&#x43d;&#x438;&#x435;.</tspan></text>
 </g>
 <g id="template_12">
-<path id="draw-line d1_11" d="M-1001.89 1198.36L2068.38 222.643" stroke="#00FF00" stroke-width="150" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d1_12" d="M209 813.577L1157.82 512" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1_8" d="M-1001.89 1198.36L2068.38 222.643" stroke="#00FF00" stroke-width="150" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1_9" d="M209 813.577L1157.82 512" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step-4">
@@ -212,12 +212,12 @@
 <g id="input_14">
 <g id="Group 6">
 <rect id="appear d1_9" x="1218.5" y="876.5" width="95" height="95" stroke="#999999" stroke-width="5"/>
-<path id="draw-line d2_9" d="M1232 918C1261.2 949.2 1261 959.5 1261 959.5C1261 959.5 1290 886 1312 860" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d2_10" d="M1232 918C1261.2 949.2 1261 959.5 1261 959.5C1261 959.5 1290 886 1312 860" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <path id="appear d10" d="M1263.12 874.828C1264.67 876.402 1267.2 876.421 1268.77 874.87L1294.42 849.604C1295.99 848.054 1296.01 845.521 1294.46 843.948C1292.91 842.374 1290.38 842.355 1288.8 843.906L1266.01 866.364L1243.55 843.57C1242 841.996 1239.47 841.977 1237.89 843.528C1236.32 845.078 1236.3 847.611 1237.85 849.184L1263.12 874.828ZM917.928 278.999C1069.42 281.738 1155.7 381.91 1204.11 506.007C1252.57 630.191 1262.67 777.465 1261.97 871.991L1269.97 872.051C1270.67 777.132 1260.56 628.674 1211.57 503.099C1162.54 377.437 1074.13 273.821 918.072 271.001L917.928 278.999Z" fill="black"/>
 <path id="draw-line d6 r0" d="M239.5 265.5C473 355 975.5 573.5 1232 759.5" stroke="#FF0000" stroke-width="20" stroke-miterlimit="5.75877" stroke-linecap="round"/>
 <path id="draw-line d3 r3" d="M290 814C474.48 666.216 923.953 353.118 1246 283" stroke="#FF0000" stroke-width="20" stroke-miterlimit="5.75877" stroke-linecap="round"/>
-<text id="appear_14" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="151.596">&#x427;&#x442;&#x43e;&#x431;&#x44b; </tspan><tspan x="418.673" y="151.596">&#x43f;&#x435;&#x440;&#x435;&#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44c; </tspan><tspan x="696.186" y="151.596">&#x44d;&#x442;&#x430;&#x43f; </tspan><tspan x="799.584" y="151.596">&#x438;&#x43b;&#x438; </tspan><tspan x="889.02" y="151.596">&#x43f;&#x440;&#x43e;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44c; </tspan><tspan x="283" y="187.596">&#x430;&#x43d;&#x438;&#x43c;&#x430;&#x446;&#x438;&#x438;, </tspan><tspan x="484.834" y="187.596">&#x43f;&#x440;&#x43e;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="687.758" y="187.596">&#x43e;&#x448;&#x438;&#x431;&#x43e;&#x447;&#x43d;&#x443;&#x44e; </tspan><tspan x="907.029" y="187.596">&#x43b;&#x438;&#x43d;&#x438;&#x44e; </tspan><tspan x="1041.85" y="187.596">&#x43f;&#x43e; </tspan><tspan x="283" y="223.596">&#x44d;&#x43a;&#x440;&#x430;&#x43d;&#x443;. </tspan><tspan x="419.814" y="223.596">&#x41f;&#x43e;&#x43f;&#x440;&#x43e;&#x431;&#x443;&#x439;&#x442;&#x435;!&#10;</tspan><tspan x="283" y="284.596">&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x44c;&#x442;&#x435; </tspan><tspan x="469.745" y="284.596">&#x433;&#x430;&#x43b;&#x43e;&#x447;&#x43a;&#x443;, </tspan><tspan x="620.762" y="284.596">&#x43a;&#x43e;&#x433;&#x434;&#x430; </tspan><tspan x="727.021" y="284.596">&#x437;&#x430;&#x43a;&#x43e;&#x43d;&#x447;&#x438;&#x442;&#x435;.</tspan></text>
+<text id="appear_14" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="151.596">&#x427;&#x442;&#x43e;&#x431;&#x44b; </tspan><tspan x="418.673" y="151.596">&#x43f;&#x435;&#x440;&#x435;&#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44c; </tspan><tspan x="696.186" y="151.596">&#x44d;&#x442;&#x430;&#x43f; </tspan><tspan x="799.584" y="151.596">&#x438;&#x43b;&#x438; </tspan><tspan x="889.02" y="151.596">&#x43f;&#x440;&#x43e;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44c; </tspan><tspan x="283" y="187.596">&#x430;&#x43d;&#x438;&#x43c;&#x430;&#x446;&#x438;&#x438;, </tspan><tspan x="505.389" y="187.596">&#x43f;&#x440;&#x43e;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="728.867" y="187.596">&#x43b;&#x44e;&#x431;&#x443;&#x44e; </tspan><tspan x="887.693" y="187.596">&#x43e;&#x448;&#x438;&#x431;&#x43e;&#x447;&#x43d;&#x443;&#x44e; </tspan><tspan x="283" y="223.596">&#x43b;&#x438;&#x43d;&#x438;&#x44e;. </tspan><tspan x="415.299" y="223.596">&#x41f;&#x43e;&#x43f;&#x440;&#x43e;&#x431;&#x443;&#x439;&#x442;&#x435;!&#10;</tspan><tspan x="283" y="284.596">&#x41f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x44c;&#x442;&#x435; </tspan><tspan x="469.745" y="284.596">&#x433;&#x430;&#x43b;&#x43e;&#x447;&#x43a;&#x443;, </tspan><tspan x="620.762" y="284.596">&#x43a;&#x43e;&#x433;&#x434;&#x430; </tspan><tspan x="727.021" y="284.596">&#x437;&#x430;&#x43a;&#x43e;&#x43d;&#x447;&#x438;&#x442;&#x435;.</tspan></text>
 </g>
 <g id="template_14">
 <rect id="Rectangle 6_3" x="1191" y="849" width="150" height="150" fill="#0000FF" stroke="#00FF00" stroke-width="50"/>
@@ -225,8 +225,8 @@
 </g>
 <g id="step-2">
 <g id="input_15">
-<path id="draw-line d3_5" d="M683 683.126C714.217 683.126 744.158 695.514 766.25 717.571C788.341 739.627 800.776 769.549 800.825 800.766C800.874 831.983 788.533 861.944 766.511 884.07C744.489 906.196 714.587 918.678 683.37 918.776C652.153 918.874 622.173 906.58 600.013 884.593C577.852 862.606 565.323 832.723 565.176 801.507C565.029 770.29 577.276 740.29 599.228 718.096C621.18 695.901 651.043 683.324 682.26 683.128" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
-<text id="appear d2_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="280.507" y="553.764">&#x41e;&#x431;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="490.551" y="553.764">&#x43e;&#x43a;&#x440;&#x443;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c; </tspan><tspan x="740.445" y="553.764">&#x438; </tspan><tspan x="809.533" y="553.764">&#x437;&#x430;&#x43c;&#x435;&#x442;&#x44c;&#x442;&#x435;, </tspan><tspan x="1021.79" y="553.764">&#x43a;&#x430;&#x43a; </tspan><tspan x="280.507" y="589.764">&#x438;&#x43d;&#x434;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; </tspan><tspan x="471.187" y="589.764">&#x437;&#x430;&#x43e;&#x43f;&#x43b;&#x43d;&#x44f;&#x435;&#x442;&#x441;&#x44f;.</tspan></text>
+<path id="draw-line d3_4" d="M683 683.126C714.217 683.126 744.158 695.514 766.25 717.571C788.341 739.627 800.776 769.549 800.825 800.766C800.874 831.983 788.533 861.944 766.511 884.07C744.489 906.196 714.587 918.678 683.37 918.776C652.153 918.874 622.173 906.58 600.013 884.593C577.852 862.606 565.323 832.723 565.176 801.507C565.029 770.29 577.276 740.29 599.228 718.096C621.18 695.901 651.043 683.324 682.26 683.128" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round"/>
+<text id="appear d2_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="280.507" y="553.764">&#x41e;&#x431;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="490.551" y="553.764">&#x43e;&#x43a;&#x440;&#x443;&#x436;&#x43d;&#x43e;&#x441;&#x442;&#x44c; </tspan><tspan x="740.445" y="553.764">&#x438; </tspan><tspan x="809.533" y="553.764">&#x437;&#x430;&#x43c;&#x435;&#x442;&#x44c;&#x442;&#x435;, </tspan><tspan x="1021.79" y="553.764">&#x43a;&#x430;&#x43a; </tspan><tspan x="280.507" y="589.764">&#x438;&#x43d;&#x434;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; </tspan><tspan x="471.187" y="589.764">&#x437;&#x430;&#x43f;&#x43e;&#x43b;&#x43d;&#x44f;&#x435;&#x442;&#x441;&#x44f;.</tspan></text>
 <g id="appear_15">
 <g id="a_19">
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="675.866" y="418.818"> &#x43f;&#x43e;&#x434;&#x441;&#x432;&#x435;&#x447;&#x438;&#x432;&#x430;&#x435;&#x442; &#x432;&#x430;&#x448;&#x438; &#x43e;&#x448;&#x438;&#x431;&#x43a;&#x438;.</tspan></text>
@@ -241,7 +241,7 @@
 <path id="Rectangle 12" d="M688.112 341.44H831.424V361.44H688.112V341.44Z" fill="#FF0000"/>
 </g>
 <text id="appear_16" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="425.176" y="110.452">&#x42d;&#x442;&#x43e; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442; &#x442;&#x435;&#x43a;&#x443;&#x449;&#x435;&#x433;&#x43e; &#x44d;&#x442;&#x430;&#x43f;&#x430;</tspan></text>
-<path id="appear_17" d="M561.712 0.457665C562.102 0.067141 562.735 0.067141 563.126 0.457665L569.49 6.82163C569.88 7.21215 569.88 7.84532 569.49 8.23584C569.099 8.62636 568.466 8.62636 568.076 8.23584L562.419 2.57899L556.762 8.23584C556.371 8.62636 555.738 8.62636 555.348 8.23584C554.957 7.84532 554.957 7.21215 555.348 6.82163L561.712 0.457665ZM563.419 1.16477C563.419 17.3608 557.121 27.9547 547.66 35.4062C538.267 42.8038 525.792 47.0734 513.499 50.7899C501.121 54.5318 488.973 57.7051 479.872 62.873C475.344 65.4442 471.634 68.4772 469.055 72.2621C466.485 76.0342 465 80.6082 465 86.3352H463C463 80.2356 464.59 75.2633 467.403 71.136C470.206 67.0214 474.186 63.8018 478.884 61.1338C488.236 55.8234 500.693 52.572 512.92 48.8754C525.232 45.1534 537.362 40.9708 546.422 33.8349C555.414 26.7529 561.419 16.7321 561.419 1.16477H563.419Z" fill="black"/>
+<path id="appear_17" d="M561.712 0.457664C562.102 0.0671387 562.735 0.0671387 563.126 0.457664L569.49 6.82162C569.88 7.21215 569.88 7.84531 569.49 8.23584C569.099 8.62637 568.466 8.62637 568.076 8.23584L562.419 2.57899L556.762 8.23584C556.371 8.62637 555.738 8.62637 555.348 8.23584C554.957 7.84531 554.957 7.21215 555.348 6.82162L561.712 0.457664ZM563.419 1.16477C563.419 17.3608 557.121 27.9547 547.66 35.4062C538.267 42.8038 525.792 47.0734 513.499 50.7899C501.121 54.5318 488.973 57.7051 479.872 62.873C475.344 65.4442 471.634 68.4772 469.055 72.2621C466.485 76.0342 465 80.6082 465 86.3352H463C463 80.2356 464.59 75.2633 467.403 71.136C470.206 67.0214 474.186 63.8018 478.884 61.1338C488.236 55.8234 500.693 52.572 512.92 48.8754C525.232 45.1534 537.362 40.9708 546.422 33.8349C555.414 26.7529 561.419 16.7321 561.419 1.16477H563.419Z" fill="black"/>
 </g>
 <g id="template_15">
 <circle id="Ellipse 6" cx="683" cy="800.951" r="117.825" stroke="#00FF00" stroke-width="80"/>
@@ -251,8 +251,8 @@
 <g id="step-1">
 <g id="input_16">
 <g id="Group 8">
-<path id="draw-line d2_10" d="M541 696L824.5 696.5" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d3_6" d="M759 644L825 696L759 748" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d2_11" d="M541 696L824.5 696.5" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3_5" d="M759 644L825 696L759 748" stroke="#AAAAFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <text id="appear_18" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="31" letter-spacing="0.09em"><tspan x="283" y="304.596">&#x414;&#x43e;&#x431;&#x440;&#x43e; </tspan><tspan x="400.369" y="304.596">&#x43f;&#x43e;&#x436;&#x430;&#x43b;&#x43e;&#x432;&#x430;&#x442;&#x44c; </tspan><tspan x="616.242" y="304.596">&#x432; </tspan><tspan x="647.221" y="304.596">Drawing </tspan><tspan x="789.696" y="304.596">Dojo!&#10;</tspan><tspan x="283" y="365.596">&#x412; </tspan><tspan x="325.632" y="365.596">&#x44d;&#x442;&#x43e;&#x43c; </tspan><tspan x="427.736" y="365.596">&#x443;&#x440;&#x43e;&#x43a;&#x435; </tspan><tspan x="544.921" y="365.596">&#x432;&#x44b; </tspan><tspan x="612.806" y="365.596">&#x43f;&#x43e;&#x437;&#x43d;&#x430;&#x43a;&#x43e;&#x43c;&#x438;&#x442;&#x435;&#x441;&#x44c; </tspan><tspan x="893.839" y="365.596">&#x441; </tspan><tspan x="933.383" y="365.596">&#x442;&#x435;&#x43c;, </tspan><tspan x="1024.29" y="365.596">&#x43a;&#x430;&#x43a; </tspan><tspan x="283" y="401.596">&#x440;&#x430;&#x431;&#x43e;&#x442;&#x430;&#x435;&#x442; </tspan><tspan x="447.216" y="401.596">&#x44d;&#x442;&#x43e; </tspan><tspan x="513.474" y="401.596">&#x43f;&#x440;&#x438;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435; </tspan><tspan x="732.404" y="401.596">&#x438; </tspan><tspan x="763.565" y="401.596">&#x43a;&#x430;&#x43a;&#x438;&#x435; </tspan><tspan x="872.67" y="401.596">&#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f; </tspan><tspan x="1023.65" y="401.596">&#x43e;&#x43d;&#x43e; </tspan><tspan x="283" y="437.596">&#x43c;&#x43e;&#x436;&#x435;&#x442; </tspan><tspan x="402.367" y="437.596">&#x43f;&#x440;&#x435;&#x434;&#x43b;&#x43e;&#x436;&#x438;&#x442;&#x44c;.&#10;</tspan><tspan x="283" y="498.596">&#x41e;&#x431;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; </tspan><tspan x="455.118" y="498.596">&#x441;&#x442;&#x440;&#x435;&#x43b;&#x43a;&#x443;, </tspan><tspan x="606.68" y="498.596">&#x447;&#x442;&#x43e;&#x431;&#x44b; </tspan><tspan x="721.112" y="498.596">&#x43f;&#x440;&#x43e;&#x434;&#x43e;&#x43b;&#x436;&#x438;&#x442;&#x44c;.</tspan></text>
 </g>

@@ -19,6 +19,7 @@
 		6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */; };
 		6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613925A1CF65004ADDBA /* StepFailView.swift */; };
 		6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */; };
+		6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B614125A1DC0B004ADDBA /* MyImageView.swift */; };
 		6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */; };
 		6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */; };
 		6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */; };
@@ -49,6 +50,7 @@
 		6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverlayView.swift; sourceTree = "<group>"; };
 		6C6B613925A1CF65004ADDBA /* StepFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFailView.swift; sourceTree = "<group>"; };
 		6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyFailedView.swift; sourceTree = "<group>"; };
+		6C6B614125A1DC0B004ADDBA /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
 		6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSuccessView.swift; sourceTree = "<group>"; };
 		6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultView.swift; sourceTree = "<group>"; };
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */,
 				6C6B613925A1CF65004ADDBA /* StepFailView.swift */,
 				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
+				6C6B614125A1DC0B004ADDBA /* MyImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */,
 				6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */,
 				6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */,
+				6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
 				6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */,
 				6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */,

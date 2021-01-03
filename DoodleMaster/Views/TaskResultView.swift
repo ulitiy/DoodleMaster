@@ -16,9 +16,8 @@ struct TaskResultView: View {
         ZStack {
             Rectangle().fill(Color.white)
             VStack {
-                Image(systemName: "star.circle.fill")
-                    .foregroundColor(.green)
-                    .font(.system(size: 150.0, weight: .light))
+                MyImageView(name: "medal")
+                    .frame(width: 200, height: 200)
                     .padding(.bottom, 10)
                 Text("Task passed")
                     .font(.system(size: 70.0))
@@ -30,7 +29,7 @@ struct TaskResultView: View {
                     .padding(30)
                 ResultDetailsView(result: taskState.taskResult!, time: taskState.dateStarted.timeIntervalSinceNow)
                     .padding(30)
-            }.padding(.bottom, 150)
+            }.padding(.bottom, 50)
             ZStack {
                 Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
                     Text("OK")

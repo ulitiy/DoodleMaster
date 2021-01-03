@@ -12,7 +12,7 @@ let neutral = [0.0, 0.0, 1, 0.0]
 let any = [0.0, 0.0, 0.03, 1.0, 1.0]
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let necessary = [0.9699, 0.0, 0.97, -1.0]
-let smooth = [0.6, 0.0, 0.7, -1.0]
+let smooth = [3.0, 0.0, 4.0, -1.0] // 0.6 - 0.7 for very smooth
 let rough = [6.0, -1.0, 7.0, 0.0]
 
 struct ScoringSystem: Hashable {

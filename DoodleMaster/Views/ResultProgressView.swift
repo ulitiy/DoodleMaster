@@ -32,5 +32,6 @@ struct ResultProgressView: View {
 struct ResultProgressView_Previews: PreviewProvider {
     static var previews: some View {
         ResultProgressView(positive: 0.6, negative: -0.2)
+            .previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

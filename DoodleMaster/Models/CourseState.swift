@@ -8,7 +8,7 @@
 
 import Combine
 
-class LessonState: ObservableObject {
+class CourseState: ObservableObject {
     @Published var tasks: [Task]
     var cancellables = [AnyCancellable]()
     

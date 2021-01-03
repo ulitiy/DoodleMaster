@@ -28,36 +28,39 @@ let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
     overlap: [0.16, 0.0, 0.2, -1.0], // 0.16-0.2 ok, >0.2 - not ok
-    blue: [0.0, 0.0, 1.0, 1.0, 1.0]
+    blue: [0.0, 0.0, 1.0, 1.0, 0.97]
 ))
 
+let introSteps = [
+    arrowStep,
+    arrowStep,
+    checkBoxStep,
+    checkBoxStep,
+    smoothLineStep,
+    TaskStep(scoringSystem: ScoringSystem(
+        roughness: rough,
+        strokeCount: oneStroke
+    )),
+    TaskStep(brushSize: 7, shadowSize: 20),
+    TaskStep(),
+    TaskStep(brushSize: 40),
+    hatchingStep,
+    multistepFirst, // cube
+    multistep,
+    multistep,
+    multistep,
+    multistepResult,
+    TaskStep(scoringSystem: ScoringSystem(
+        blue: any,
+        oneMinusAlpha: neutral,
+        weight: 0
+    )),
+]
+
 struct TaskListView: View {
-    @StateObject var lessonState = LessonState(tasks: [
-        Task(name: "Intro", path: "Basics/1/1", steps: [
-            arrowStep,
-            arrowStep,
-            checkBoxStep,
-            checkBoxStep,
-            smoothLineStep,
-            TaskStep(scoringSystem: ScoringSystem(
-                roughness: rough,
-                strokeCount: oneStroke
-            )),
-            TaskStep(brushSize: 7, shadowSize: 20),
-            TaskStep(),
-            TaskStep(brushSize: 40),
-            hatchingStep,
-            multistepFirst, // cube
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-            TaskStep(scoringSystem: ScoringSystem(
-                blue: any,
-                oneMinusAlpha: neutral,
-                weight: 0
-            )),
-        ]),
+    @StateObject var lessonState = CourseState(tasks: [
+        Task(name: "Intro", path: "Basics/1/1", steps: introSteps),
+        Task(name: "Интро", path: "Basics/1/3", steps: introSteps),
         Task(name: "Loomis", path: "Basics/1/2", steps: [
             multistep,
             multistep,
@@ -68,31 +71,6 @@ struct TaskListView: View {
             multistep,
             multistep,
             multistepResult,
-        ]),
-        Task(name: "Интро", path: "Basics/1/3", steps: [
-            arrowStep,
-            arrowStep,
-            checkBoxStep,
-            checkBoxStep,
-            smoothLineStep,
-            TaskStep(scoringSystem: ScoringSystem(
-                roughness: rough,
-                strokeCount: oneStroke
-            )),
-            TaskStep(brushSize: 7, shadowSize: 20),
-            TaskStep(),
-            TaskStep(brushSize: 40),
-            hatchingStep,
-            multistepFirst, // cube
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-            TaskStep(scoringSystem: ScoringSystem(
-                blue: any,
-                oneMinusAlpha: neutral,
-                weight: 0
-            )),
         ]),
     ])
     

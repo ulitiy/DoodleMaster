@@ -11,20 +11,20 @@ import SwiftUI
 import MaLiang
 import Combine
 
-struct CanvasContainerRepresentation: UIViewControllerRepresentable {
+struct CanvasWrapper: UIViewControllerRepresentable {
     @ObservedObject var taskState: TaskState
 
-    func makeUIViewController(context: Context) -> CanvasContainerViewController {
-        let controller = CanvasContainerViewController()
+    func makeUIViewController(context: Context) -> CanvasWrapperController {
+        let controller = CanvasWrapperController()
         controller.taskState = taskState
         return controller
     }
 
-    func updateUIViewController(_ controller: CanvasContainerViewController, context: Context) {
+    func updateUIViewController(_ controller: CanvasWrapperController, context: Context) {
     }
 }
 
-class CanvasContainerViewController: UIViewController {
+class CanvasWrapperController: UIViewController {
     var taskState: TaskState!
     var canvas: Canvas!
     var templateSink: AnyCancellable?

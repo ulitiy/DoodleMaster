@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		6C10815F25508B6800464DF7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C10815E25508B6800464DF7 /* RootView.swift */; };
 		6C1B596B254467E500D44A4E /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1B596A254467E500D44A4E /* TaskState.swift */; };
-		6C244AF82573E0A6004015DE /* LessonState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C244AF72573E0A6004015DE /* LessonState.swift */; };
+		6C244AF82573E0A6004015DE /* CourseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C244AF72573E0A6004015DE /* CourseState.swift */; };
 		6C307106252876D000B645C1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307105252876D000B645C1 /* Task.swift */; };
 		6C3071092528BC3C00B645C1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3071082528BC3C00B645C1 /* TaskListView.swift */; };
 		6C307128252DF25400B645C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307127252DF25300B645C1 /* Result.swift */; };
-		6C3105C724EA9E2A0017F99F /* CanvasContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */; };
+		6C3105C724EA9E2A0017F99F /* CanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */; };
 		6C4B8660253604CE000CB7E0 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B865F253604CE000CB7E0 /* Web */; };
 		6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67B1E32555CF750062B12B /* ResultProgressView.swift */; };
+		6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */; };
+		6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613925A1CF65004ADDBA /* StepFailView.swift */; };
+		6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */; };
 		6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */; };
 		6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */; };
 		6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */; };
@@ -36,13 +39,16 @@
 /* Begin PBXFileReference section */
 		6C10815E25508B6800464DF7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6C1B596A254467E500D44A4E /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
-		6C244AF72573E0A6004015DE /* LessonState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonState.swift; sourceTree = "<group>"; };
+		6C244AF72573E0A6004015DE /* CourseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseState.swift; sourceTree = "<group>"; };
 		6C307105252876D000B645C1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		6C3071082528BC3C00B645C1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		6C307127252DF25300B645C1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasContainer.swift; sourceTree = "<group>"; };
+		6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasWrapper.swift; sourceTree = "<group>"; };
 		6C4B865F253604CE000CB7E0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		6C67B1E32555CF750062B12B /* ResultProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProgressView.swift; sourceTree = "<group>"; };
+		6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverlayView.swift; sourceTree = "<group>"; };
+		6C6B613925A1CF65004ADDBA /* StepFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFailView.swift; sourceTree = "<group>"; };
+		6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyFailedView.swift; sourceTree = "<group>"; };
 		6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSuccessView.swift; sourceTree = "<group>"; };
 		6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultView.swift; sourceTree = "<group>"; };
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
@@ -101,7 +107,7 @@
 			children = (
 				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
 				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
-				6C3105C624EA9E2A0017F99F /* CanvasContainer.swift */,
+				6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */,
 				6CB5E23124EA71B30002E77B /* TaskView.swift */,
 				6C10815E25508B6800464DF7 /* RootView.swift */,
 				6CDD7CC72551CDF700E750C2 /* LazyView.swift */,
@@ -109,6 +115,9 @@
 				6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */,
 				6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */,
 				6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */,
+				6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */,
+				6C6B613925A1CF65004ADDBA /* StepFailView.swift */,
+				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,7 +128,7 @@
 				6C1B596A254467E500D44A4E /* TaskState.swift */,
 				6C307127252DF25300B645C1 /* Result.swift */,
 				6C307105252876D000B645C1 /* Task.swift */,
-				6C244AF72573E0A6004015DE /* LessonState.swift */,
+				6C244AF72573E0A6004015DE /* CourseState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,18 +306,21 @@
 				6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */,
 				6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */,
 				6CA1D2192534ACA600CDDDFE /* WebViewWrapper.swift in Sources */,
-				6C244AF82573E0A6004015DE /* LessonState.swift in Sources */,
+				6C244AF82573E0A6004015DE /* CourseState.swift in Sources */,
+				6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */,
 				6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */,
 				6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */,
 				6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
+				6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */,
+				6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
 				6C10815F25508B6800464DF7 /* RootView.swift in Sources */,
 				6CB5E23224EA71B30002E77B /* TaskView.swift in Sources */,
 				6C307128252DF25400B645C1 /* Result.swift in Sources */,
 				6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */,
 				6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */,
-				6C3105C724EA9E2A0017F99F /* CanvasContainer.swift in Sources */,
+				6C3105C724EA9E2A0017F99F /* CanvasWrapper.swift in Sources */,
 				6C1B596B254467E500D44A4E /* TaskState.swift in Sources */,
 				6C3071092528BC3C00B645C1 /* TaskListView.swift in Sources */,
 			);

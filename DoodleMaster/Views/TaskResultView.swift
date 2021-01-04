@@ -46,7 +46,7 @@ struct TaskResultView: View {
                 MyImageView(name: "high-score-stamp")
                     .frame(width: 250, height: 250)
                     .padding(.leading, 460)
-                    .padding(.bottom, 150)
+                    .padding(.bottom, 30)
                     .transition(AnyTransition.opacity.combined(with: .scale(scale: 5, anchor: UnitPoint(x: 0.7, y: 0.5))).animation(.easeIn(duration: 0.3)))
             }
         }

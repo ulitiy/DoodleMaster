@@ -28,7 +28,7 @@ let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
     overlap: [0.16, 0.0, 0.2, -1.0], // 0.16-0.2 ok, >0.2 - not ok
-    blue: [0.0, 0.0, 1.0, 1.0, 0.97]
+    blue: [0.0, 0.0, 1.0, 1.0, 0.985]
 ))
 
 let introSteps = [

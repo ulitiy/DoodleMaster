@@ -22,13 +22,18 @@ struct TaskStep: Hashable {
 }
 
 class Task: ObservableObject {
-    @Published var name: String
-    @Published var path: String // Course.LessonN.TaskN
-    @Published var scoringSystem = ScoringSystem() // only for overall result
-    @Published var steps: [TaskStep]
-    @Published var result = 0.0 {
-        didSet {
-            UserDefaults.standard.set(result, forKey: path + ".taskResult")
+    var name: String
+    var path: String // Course.LessonN.TaskN
+    var scoringSystem = ScoringSystem() // only for overall result
+    var steps: [TaskStep]
+    var result: Double {
+        get {
+            UserDefaults.standard.double(forKey: path + ".taskResult")
+        }
+        
+        set {
+            UserDefaults.standard.set(newValue, forKey: path + ".taskResult")
+            objectWillChange.send()
         }
     }
     
@@ -36,6 +41,5 @@ class Task: ObservableObject {
         self.name = name
         self.path = path
         self.steps = steps
-        self.result = UserDefaults.standard.double(forKey: path + ".taskResult")
     }
 }

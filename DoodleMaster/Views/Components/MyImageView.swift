@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Made for resizing vector based PDF graphics bacause Image() doesn't support it
 struct MyImageView: UIViewRepresentable {
   var name: String
   var contentMode: UIView.ContentMode = .scaleAspectFit

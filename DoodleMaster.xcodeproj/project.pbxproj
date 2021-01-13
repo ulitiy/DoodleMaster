@@ -14,6 +14,7 @@
 		6C3071092528BC3C00B645C1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3071082528BC3C00B645C1 /* TaskListView.swift */; };
 		6C307128252DF25400B645C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307127252DF25300B645C1 /* Result.swift */; };
 		6C3105C724EA9E2A0017F99F /* CanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */; };
+		6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C36CFA225AF2F20001A2FDE /* CourseListView.swift */; };
 		6C4B8660253604CE000CB7E0 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B865F253604CE000CB7E0 /* Web */; };
 		6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67B1E32555CF750062B12B /* ResultProgressView.swift */; };
 		6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */; };
@@ -37,6 +38,7 @@
 		6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD7CC72551CDF700E750C2 /* LazyView.swift */; };
 		6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1708D25912C13000DB2A9 /* extensions.swift */; };
 		6CF1709225924A88000DB2A9 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1709125924A88000DB2A9 /* pencil.png */; };
+		6CF5926C25A9F8B7003E9E03 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */; };
 		D07906C5821EEF980BBDFC82 /* Pods_DoodleMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,7 @@
 		6C3071082528BC3C00B645C1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		6C307127252DF25300B645C1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasWrapper.swift; sourceTree = "<group>"; };
+		6C36CFA225AF2F20001A2FDE /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		6C4B865F253604CE000CB7E0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		6C67B1E32555CF750062B12B /* ResultProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProgressView.swift; sourceTree = "<group>"; };
 		6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverlayView.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		6CDD7CC72551CDF700E750C2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		6CF1708D25912C13000DB2A9 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		6CF1709125924A88000DB2A9 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = DoodleMaster/Views/Components/CarouselView.swift; sourceTree = SOURCE_ROOT; };
 		6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.debug.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.release.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.release.xcconfig"; sourceTree = "<group>"; };
 		FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoodleMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,21 +117,15 @@
 		6C10815C25508A8900464DF7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
-				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
-				6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */,
-				6CB5E23124EA71B30002E77B /* TaskView.swift */,
-				6C10815E25508B6800464DF7 /* RootView.swift */,
+				6C36CFA625AF2FB6001A2FDE /* Components */,
+				6C36CFA225AF2F20001A2FDE /* CourseListView.swift */,
 				6CDD7CC72551CDF700E750C2 /* LazyView.swift */,
-				6C67B1E32555CF750062B12B /* ResultProgressView.swift */,
-				6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */,
-				6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */,
-				6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */,
-				6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */,
+				6C10815E25508B6800464DF7 /* RootView.swift */,
 				6C6B613925A1CF65004ADDBA /* StepFailView.swift */,
-				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
-				6C6B614125A1DC0B004ADDBA /* MyImageView.swift */,
-				6C81834525A31A730023EF67 /* TaskMenuView.swift */,
+				6C89EA1A259F6D8300CD8741 /* StepSuccessView.swift */,
+				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
+				6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */,
+				6CB5E23124EA71B30002E77B /* TaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +139,22 @@
 				6C244AF72573E0A6004015DE /* CourseState.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6C36CFA625AF2FB6001A2FDE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */,
+				6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */,
+				6C6B614125A1DC0B004ADDBA /* MyImageView.swift */,
+				6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */,
+				6C67B1E32555CF750062B12B /* ResultProgressView.swift */,
+				6C81834525A31A730023EF67 /* TaskMenuView.swift */,
+				6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */,
+				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
+				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		6CB5E22124EA71B30002E77B = {
@@ -337,8 +351,10 @@
 				6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
 				6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */,
+				6CF5926C25A9F8B7003E9E03 /* CarouselView.swift in Sources */,
 				6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
+				6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */,
 				6C10815F25508B6800464DF7 /* RootView.swift in Sources */,
 				6CB5E23224EA71B30002E77B /* TaskView.swift in Sources */,
 				6C307128252DF25400B645C1 /* Result.swift in Sources */,
@@ -488,7 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -511,7 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;

@@ -60,9 +60,9 @@ let courses = [Course(
     path: "Basics",
     description: "Some bacics",
     tasks: [
-        Task(name: "Intro", path: "Basics/1/1", steps: introSteps),
-        Task(name: "Интро", path: "Basics/1/3", steps: introSteps),
-        Task(name: "Loomis", path: "Basics/1/2", steps: [
+        Task(name: "Intro", path: "Basics/1", steps: introSteps),
+        Task(name: "Интро", path: "Basics/3", steps: introSteps),
+        Task(name: "Loomis", path: "Basics/2", steps: [
             multistep,
             multistep,
             multistep,

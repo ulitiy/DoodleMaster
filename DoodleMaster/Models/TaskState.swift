@@ -10,7 +10,7 @@ import Combine
 import UIKit
 
 class TaskState: ObservableObject {
-    var task: Task! {
+    @Published var task: Task! { // has to be published
         didSet {
             resetResult()
         }

@@ -33,45 +33,46 @@ struct ScoringSystem: Hashable {
 }
 
 class Result: ObservableObject {
-    @Published var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] {
+    var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] {
         didSet {
             calculate()
         }
     }
     
-    @Published var templateCount: [UInt32] = [0, 0, 0, 0]
-    @Published var strokeCount = 0 {
+    var templateCount: [UInt32] = [0, 0, 0, 0]
+    var strokeCount = 0 {
         didSet {
             calculate()
             print()
         }
     }
-    @Published var rippleSum = 0.0
-    @Published var rippleCount = 0
+    var rippleSum = 0.0
+    var rippleCount = 0
     // Add time
     // Add length
 
-    @Published var scoringSystem: ScoringSystem
+    var scoringSystem: ScoringSystem
     
     init(scoringSystem: ScoringSystem) {
         self.scoringSystem = scoringSystem
     }
     
+
+    var overlapK = 0.0
+    var roughnessK = 0.0
+    var strokeCountK = 0.0
+    var strokeCountPlusOneK = 0.0
+    var redK = 0.0
+    var greenK = 0.0
+    var blueK = 0.0
+    var oneMinusAlphaK = 0.0
+    var enoughBlueK = false // can override overall -> passed
+
     @Published var overall = 0.0
     @Published var passed = false
     @Published var failed = false
     @Published var positive = 0.0
     @Published var negative = 0.0
-    @Published var enoughBlueK = false // can override overall -> passed
-
-    @Published var overlapK = 0.0
-    @Published var roughnessK = 0.0
-    @Published var strokeCountK = 0.0
-    var strokeCountPlusOneK = 0.0
-    @Published var redK = 0.0
-    @Published var greenK = 0.0
-    @Published var blueK = 0.0
-    @Published var oneMinusAlphaK = 0.0
     @Published var whyFailed: String?
     
     func calculateK(val: Double = 0, scoring: [Double] = [0.0, 0.0, 1.0, 0.0]) -> Double {

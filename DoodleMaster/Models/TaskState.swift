@@ -10,23 +10,21 @@ import Combine
 import UIKit
 
 class TaskState: ObservableObject {
-    @Published var task: Task! {
+    var task: Task! {
         didSet {
             resetResult()
         }
     }
-    @Published var results: [Result] = []
+    var results: [Result] = []
     @Published var stepNumber = 1 {
         didSet {
             currentStep = task.steps[stepNumber - 1]
-            nextStep = stepNumber < task.steps.count ? task.steps[stepNumber] : nil
         }
     }
     @Published var currentStep: TaskStep!
-    @Published var nextStep: TaskStep?
     @Published var currentResult: Result!
     // how many elements there were in canvas.data.elements when this step started
-    @Published var stepElementsCount = 0
+    var stepElementsCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
 
@@ -47,7 +45,7 @@ class TaskState: ObservableObject {
     @Published var failing = false
     @Published var highScore = false
     @Published var whyFailed: String?
-    @Published var dateStarted: Date!
+    var dateStarted: Date!
     
     @Published var skipAnimation = false
     
@@ -55,7 +53,6 @@ class TaskState: ObservableObject {
     
     init(task: Task) {
         currentStep = task.steps[0]
-        nextStep = task.steps.count > 1 ? task.steps[1] : nil
         self.task = task
         dateStarted = Date()
     }

@@ -6,8 +6,8 @@
 //  Copyright © 2021 Aleksandr Ulitin. All rights reserved.
 //
 
-let multistep = TaskStep(brushName: "pencil", clearBefore: false, showResult: false) // how long show result?
-let multistepFirst = TaskStep(brushName: "pencil", showResult: false)
+let multistep = TaskStep(brushName: "pencil", brushOpacity: 0.3, clearBefore: false, showResult: false) // how long show result?
+let multistepFirst = TaskStep(brushName: "pencil", brushOpacity: 0.3, showResult: false)
 let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
     oneMinusAlpha: neutral,
@@ -20,12 +20,12 @@ let checkBoxStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(
     weight: 0
 ))
 let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
-    overlap: [0.07, 0.0, 0.15, -1.0],
+    overlap: [0.035, 0.0, 0.075, -1.0],
     roughness: smooth,
     strokeCount: oneStroke
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
-    overlap: [0.16, 0.0, 0.2, -1.0], // 0.16-0.2 ok, >0.2 - not ok
+    overlap: [0.08, 0.0, 0.1, -1.0], // 0.16-0.2 ok, >0.2 - not ok
     blue: [0.0, 0.0, 1.0, 1.0, 0.985]
 ))
 
@@ -74,3 +74,5 @@ let courses = [Course(
             multistepResult,
         ]),
 ])]
+
+// let task1 = Task(name: "First", path: "Basics/4", steps: Array(repeating: TaskStep(shadowSize: 25, scoringSystem: ScoringSystem(passingScore:99)), count: 10))

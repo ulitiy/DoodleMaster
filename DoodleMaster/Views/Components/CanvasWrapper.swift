@@ -38,16 +38,15 @@ class CanvasWrapperController: UIViewController {
         let brush = try! canvas.registerBrush(name: "main")
         brush.forceSensitive = 0.5
         brush.pointSize = 10
-        brush.opacity = 0.3
+        brush.opacity = 0.6
         
         let texture = try! canvas.makeTexture(with: UIImage(named: "pencil")!.pngData()!)
         let pencil = try! canvas.registerBrush(name: "pencil", textureID: texture.id)
         pencil.rotation = .random
         pencil.pointSize = 3
         pencil.forceSensitive = 0.3
-        pencil.opacity = 1
+        pencil.opacity = 0.3
 
-        
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0
         shadowBrush.pointSize = 10 // overriden by currentStep

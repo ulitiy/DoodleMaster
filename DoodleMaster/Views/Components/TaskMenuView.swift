@@ -28,7 +28,12 @@ struct TaskMenuView: View {
             }
 
             #if DEBUG
-            Button(action: { taskState.passStep() }) {
+            Button(action: {
+                taskState.passStep()
+                if taskState.currentStep.showResult {
+                    taskState.switchNextStep()
+                }
+            }) {
                 Image(systemName: "chevron.right.2")
                     .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
                     .font(.system(size: 50))

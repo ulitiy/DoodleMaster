@@ -11,7 +11,7 @@ import SwiftUI
 struct RootView: View {
     var body: some View {
         NavigationView {
-            TaskListView()
+            CourseListView()
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .statusBar(hidden: true)

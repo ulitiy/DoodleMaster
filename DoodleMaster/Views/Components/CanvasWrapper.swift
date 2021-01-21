@@ -32,6 +32,7 @@ class CanvasWrapperController: UIViewController {
     var failingSink: AnyCancellable?
     var stepSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
+    var passingSink: AnyCancellable?
 
     override func viewDidLoad() { // async later
         super.viewDidLoad()
@@ -91,13 +92,19 @@ class CanvasWrapperController: UIViewController {
                 self.canvas.clear()
                 return
             }
-            if val <= self.taskState.stepNumber {
+            if val <= self.taskState.stepNumber { // restart step
                 return
             }
-            self.taskState.stepElementsCount = self.canvas.data.elements.count
             if self.taskState.task.steps[val - 1].clearBefore {
                 self.canvas.clear()
             }
+        }
+        passingSink = taskState.$passing.sink { [weak self] val in
+            guard let self = self, !self.taskState.passing, val else {
+                return
+            }
+            self.canvas.clearShadow()
+            self.taskState.stepElementsCount = self.canvas.data.elements.count // can't be done in stepNumberSink because too late, can slip stroke
         }
         // Restart step
         failingSink = taskState.$failing.sink { [weak self] val in
@@ -125,7 +132,7 @@ class CanvasWrapperController: UIViewController {
         }
         debugTemplateSink = taskState.$debugTemplate.sink { [weak self] val in
             self?.canvas.showShadow = val
-            self?.canvas.draw()
+            self?.canvas.redraw()
         }
     }
     

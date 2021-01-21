@@ -27,13 +27,13 @@ class TaskState: ObservableObject {
     var stepElementsCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
-
+    
     @Published var touching = false {
         didSet {
             guard !touching else {
                 return
             }
-            if self.currentResult.passed {
+            if self.currentResult.passed && self.template != nil { // may be no new screenshot yet?
                 self.passStep()
             }
             if self.currentResult.failed {

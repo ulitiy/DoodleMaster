@@ -20,9 +20,12 @@ struct CarouselView<Content>: View where Content: View {
     @State var cancelDrag: AnyCancellable?
 
     init(@ViewBuilder content: @escaping () -> Content) {
-        let v = Mirror(reflecting: content()).descendant("value")
-        let tm = Mirror(reflecting: v!)
-        self.maxIndex = tm.children.count - 1
+        if let v = Mirror(reflecting: content()).descendant("value") {
+            let tm = Mirror(reflecting: v)
+            self.maxIndex = tm.children.count - 1
+        } else {
+            self.maxIndex = 0
+        }
         self.content = content
     }
     
@@ -69,8 +72,11 @@ struct CarouselView<Content>: View where Content: View {
                             , including: .gesture)
                 )
             }
-            PageIndicator(index: $index, maxIndex: maxIndex)
+            if maxIndex > 0 {
+                PageIndicator(index: $index, maxIndex: maxIndex)
+            }
         }
+        .cornerRadius(40)
         .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
     }
 
@@ -114,7 +120,7 @@ struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
         HStack(spacing: 100) {
             CarouselView {
-                MyImageView(name: "1-1")
+                MyImageView(name: "thumbnails/DEBUG")
                 MyImageView(name: "1-2")
                 MyImageView(name: "1-3")
             }.frame(width: 200, height: 200).padding(.top, 100)

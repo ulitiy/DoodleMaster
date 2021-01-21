@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct TaskListView: View {
-    @StateObject var courseState = courses[0]
+    @ObservedObject var course: Course
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 65) {
-                ForEach(courseState.tasks, id: \.path) {task in
+                ForEach(course.tasks, id: \.path) {task in
                     NavigationLink(destination: LazyView(TaskView(task: task))) {
                         VStack {
                             ZStack {
@@ -37,13 +37,12 @@ struct TaskListView: View {
             .padding(.leading, 65)
             .frame(minHeight: 0, maxHeight: .infinity)
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
+        .navigationBarTitle(course.name, displayMode: .inline)
     }
 }
 
 struct TaskListView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskListView().previewLayout(.fixed(width: 1366, height: 1024))
+        TaskListView(course: courses[0]).previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

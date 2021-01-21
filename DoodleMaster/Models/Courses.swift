@@ -20,12 +20,12 @@ let checkBoxStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(
     weight: 0
 ))
 let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
-    overlap: [0.035, 0.0, 0.075, -1.0],
+    overlap: [0.04, 0.0, 0.06, -1.0],
     roughness: smooth,
     strokeCount: oneStroke
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
-    overlap: [0.08, 0.0, 0.1, -1.0], // 0.16-0.2 ok, >0.2 - not ok
+    overlap: [0.05, 0.0, 0.06, -1.0], // 0.08-0.1
     blue: [0.0, 0.0, 1.0, 1.0, 0.985]
 ))
 
@@ -55,7 +55,7 @@ let introSteps = [
     )),
 ]
 
-let courses = [Course(
+let coursesBase = [Course(
     name: "Basics",
     path: "Basics",
     description: "Some bacics",
@@ -75,4 +75,10 @@ let courses = [Course(
         ]),
 ])]
 
-// let task1 = Task(name: "First", path: "Basics/4", steps: Array(repeating: TaskStep(shadowSize: 25, scoringSystem: ScoringSystem(passingScore:99)), count: 10))
+#if DEBUG
+let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG", steps: Array.init(repeating: TaskStep(), count: 30))])]
+#else
+let courses = coursesBase
+#endif
+
+let globalState = CourseListState(courses: courses)

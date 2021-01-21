@@ -41,7 +41,6 @@ struct TaskView: View {
             }
         }
         .navigationBarHidden(true)
-        .navigationBarTitle(Text(""))
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
     }

@@ -9,21 +9,23 @@
 import SwiftUI
 
 struct CourseListView: View {
+    @StateObject var courseListState = globalState
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],
                       alignment: .center, spacing: 80) {
-                ForEach(0...20, id: \.self) { i in
-                    NavigationLink(destination: LazyView(TaskView(task: courses[0].tasks[0]))) {
+                ForEach(courseListState.courses, id: \.path) { course in
+                    NavigationLink(destination: TaskListView(course: course)) {
                         VStack {
                             CarouselView {
-                                Image("1-1").resizable().aspectRatio(contentMode: .fill)
-                                Image("1-2").resizable().aspectRatio(contentMode: .fill)
-                                Image("1-3").resizable().aspectRatio(contentMode: .fill)
-                                Image("1-4").resizable().aspectRatio(contentMode: .fill)
+                                Image("thumbnails/\(course.path)").resizable().aspectRatio(contentMode: .fill)
                             }.aspectRatio(1,contentMode: .fit)
-                            Text("Basic human body proportions")
-                                .font(.custom("LucidaGrande", size: 25))
+                            Text(course.name)
+                                .frame(maxHeight: 50)
+                                .font(.custom("LucidaGrande", size: 50))
+                                .minimumScaleFactor(0.5)
+                                .lineLimit(2)
                                 .foregroundColor(Color(hex: "303b96ff"))
                                 .multilineTextAlignment(.center)
                                 .padding(.top, 10)
@@ -33,7 +35,7 @@ struct CourseListView: View {
                 }
             }.padding(50)
         }
-        .navigationBarTitle("")
+        .navigationTitle("Courses")
         .navigationBarHidden(true)
     }
 }

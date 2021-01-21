@@ -47,6 +47,7 @@ function showTemplate(step) {
 function showInput(step) {
   hideAll();
   stepNumber = step;
+  // document.querySelector(`.step-${step} .template`).classList.add("show");
   document.querySelector(`.step-${step} .input`).classList.add("show");
   document.querySelectorAll(`.step-${step} .input .draw-line`).forEach((el) => drawLine(el));
   if (mustSkipAnimation) {

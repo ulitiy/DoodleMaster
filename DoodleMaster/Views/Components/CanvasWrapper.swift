@@ -31,6 +31,7 @@ class CanvasWrapperController: UIViewController {
     var stepNumberSink: AnyCancellable?
     var failingSink: AnyCancellable?
     var stepSink: AnyCancellable?
+    var debugTemplateSink: AnyCancellable?
 
     override func viewDidLoad() { // async later
         super.viewDidLoad()
@@ -121,6 +122,10 @@ class CanvasWrapperController: UIViewController {
                 return
             }
             self.setBrushes(step: val)
+        }
+        debugTemplateSink = taskState.$debugTemplate.sink { [weak self] val in
+            self?.canvas.showShadow = val
+            self?.canvas.draw()
         }
     }
     

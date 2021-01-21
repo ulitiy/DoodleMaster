@@ -26,7 +26,7 @@ struct TaskMenuView: View {
                     .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
                     .font(.system(size: 50, weight: .heavy))
             }
-
+            
             #if DEBUG
             Button(action: {
                 taskState.passStep()
@@ -35,6 +35,13 @@ struct TaskMenuView: View {
                 }
             }) {
                 Image(systemName: "chevron.right.2")
+                    .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
+                    .font(.system(size: 50))
+            }
+            Button(action: {
+                taskState.debugTemplate.toggle()
+            }) {
+                Image(systemName: "pencil.tip.crop.circle")
                     .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
                     .font(.system(size: 50))
             }

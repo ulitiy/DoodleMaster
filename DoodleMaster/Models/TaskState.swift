@@ -48,6 +48,7 @@ class TaskState: ObservableObject {
     var dateStarted: Date!
     
     @Published var skipAnimation = false
+    @Published var debugTemplate = false
     
     var currentResultSink: AnyCancellable?
     

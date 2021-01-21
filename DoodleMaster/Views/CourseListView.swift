@@ -11,12 +11,21 @@ import SwiftUI
 struct CourseListView: View {
     @StateObject var courseListState = globalState
     
+    @ViewBuilder
+    func destination(_ course: Course) -> some View {
+        if course.tasks.count == 1 {
+            TaskView(task: course.tasks[0])
+        } else {
+            TaskListView(course: course)
+        }
+    }
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],
                       alignment: .center, spacing: 80) {
                 ForEach(courseListState.courses, id: \.path) { course in
-                    NavigationLink(destination: TaskListView(course: course)) {
+                    NavigationLink(destination: destination(course)) {
                         VStack {
                             CarouselView {
                                 Image("thumbnails/\(course.path)").resizable().aspectRatio(contentMode: .fill)

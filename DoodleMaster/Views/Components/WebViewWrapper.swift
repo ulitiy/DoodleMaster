@@ -34,7 +34,20 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
 
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
-        wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");")
+        if taskState.task.path == "DEBUG" {
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let fileURL = dir.appendingPathComponent("debug.svg")
+                do {
+                    let fileContent = try String(contentsOf: fileURL, encoding: .utf8)
+                    print(fileContent)
+                    wkWebView.evaluateJavaScript("loadSVG(`\(fileContent)`);")
+                } catch {
+                    print("Cannot read file DEBUG")
+                }
+            }
+        } else {
+            wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");")
+        }
     }
     
     // receives js event messages

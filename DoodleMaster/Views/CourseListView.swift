@@ -28,7 +28,7 @@ struct CourseListView: View {
                     NavigationLink(destination: destination(course)) {
                         VStack {
                             CarouselView {
-                                Image("thumbnails/\(course.path)").resizable().aspectRatio(contentMode: .fill)
+                                Image("thumbnails/\(course.path)/index").resizable().aspectRatio(contentMode: .fill)
                             }.aspectRatio(1,contentMode: .fit)
                             Text(course.name)
                                 .frame(maxHeight: 50)

@@ -36,6 +36,7 @@
 		6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23624EA71B40002E77B /* Preview Assets.xcassets */; };
 		6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */; };
 		6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E24724EA7B8E0002E77B /* MaLiang */; };
+		6CD1912925BC5F1700D3C792 /* CourseDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */; };
 		6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */; };
 		6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD7CC72551CDF700E750C2 /* LazyView.swift */; };
 		6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1708D25912C13000DB2A9 /* extensions.swift */; };
@@ -77,6 +78,7 @@
 		6CB5E23B24EA71B40002E77B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CB5E24524EA7B720002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
 		6CB5E24724EA7B8E0002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
+		6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionView.swift; sourceTree = "<group>"; };
 		6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LithosPro-Regular.otf"; sourceTree = "<group>"; };
 		6CDD7CC72551CDF700E750C2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		6CF1708D25912C13000DB2A9 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */,
 				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
 				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
+				6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				6C89EA1B259F6D8300CD8741 /* StepSuccessView.swift in Sources */,
 				6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */,
 				6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */,
+				6CD1912925BC5F1700D3C792 /* CourseDescriptionView.swift in Sources */,
 				6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */,
 				6C53439925AF39DF00BE544B /* Courses.swift in Sources */,
 				6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */,
@@ -512,7 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -535,7 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;

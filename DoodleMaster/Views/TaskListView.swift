@@ -12,29 +12,42 @@ struct TaskListView: View {
     @ObservedObject var course: Course
     
     var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 65) {
+        ScrollView(.vertical) {
+            CourseDescriptionView(course: course)
+            Divider().frame(height: 4).background(Color(hex: "303b96ff"))
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 250), spacing: 30)],
+                      alignment: .center, spacing: 30) {
                 ForEach(course.tasks, id: \.path) {task in
                     NavigationLink(destination: LazyView(TaskView(task: task))) {
-                        VStack {
-                            ZStack {
-                                Circle()
-                                    .stroke(lineWidth: 12)
-                                    .foregroundColor(Color(UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)))
-                                    .frame(width: 236, height: 236)
-                                Circle()
-                                    .frame(width: 200, height: 200, alignment: .leading)
+                        Image("thumbnails/\(task.path)").resizable().aspectRatio(1,contentMode: .fit)
+                            .cornerRadius(30)
+                            .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
+                            .overlay(
                                 Text(task.name)
-                                    .font(.custom("LucidaGrande", size: 50))
-                                    .foregroundColor(Color.white)
-                            }
-                            Text(String(format: "%.2f", task.result * 100))
-                                .font(.custom("LucidaGrande", size: 30))
-                        }
-                    }
+                                    .font(.custom("LucidaGrande", size: 20))
+                                    .foregroundColor(Color(hex: "303b96ff"))
+                                    .shadow(color: .white, radius: 2)
+                                    .shadow(color: .white, radius: 2)
+                                    .shadow(color: .white, radius: 2)
+                                    .padding(10)
+                                , alignment: .bottom)
+                            .overlay(
+                                Group {
+                                    if task.result >= 0 {
+                                        Text("\(task.result.formatPercent()) %")
+                                            .font(.custom("LucidaGrande", size: 16))
+                                            .foregroundColor(Color(hex: "303b96ff"))
+                                            .shadow(color: .white, radius: 2)
+                                            .shadow(color: .white, radius: 2)
+                                            .shadow(color: .white, radius: 2)
+                                            .padding(20)
+                                    }
+                                }
+                                , alignment: .topTrailing)
+                    }.buttonStyle(PlainButtonStyle())
                 }
             }
-            .padding(.leading, 65)
+            .padding(40)
             .frame(minHeight: 0, maxHeight: .infinity)
         }
         .navigationBarTitle(course.name, displayMode: .inline)

@@ -33,25 +33,23 @@ class CanvasWrapperController: UIViewController {
     var stepSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
     var passingSink: AnyCancellable?
-
+    var brushScale = CGFloat(1)
+    
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
+        print("Canvas size: \(view.bounds)")
+        brushScale = view.bounds.height / 1024
         let brush = try! canvas.registerBrush(name: "main")
         brush.forceSensitive = 0.5
-        brush.pointSize = 10
-        brush.opacity = 0.6
         
         let texture = try! canvas.makeTexture(with: UIImage(named: "pencil")!.pngData()!)
         let pencil = try! canvas.registerBrush(name: "pencil", textureID: texture.id)
         pencil.rotation = .random
-        pencil.pointSize = 3
         pencil.forceSensitive = 0.3
-        pencil.opacity = 0.3
-
+        
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0
-        shadowBrush.pointSize = 10 // overriden by currentStep
         shadowBrush.opacity = 0.05 // 0.05 cannot be lower because of the 1 byte precision
         watchUpdates()
         view.addSubview(canvas)
@@ -139,8 +137,8 @@ class CanvasWrapperController: UIViewController {
     func setBrushes(step: TaskStep) {
         let brush = self.canvas.registeredBrushes.first(where: { $0.name == step.brushName })
         brush?.use()
-        self.canvas.shadowBrush.pointSize = CGFloat(step.shadowSize)
-        self.canvas.currentBrush.pointSize = CGFloat(step.brushSize)
+        self.canvas.shadowBrush.pointSize = CGFloat(step.shadowSize) * brushScale
+        self.canvas.currentBrush.pointSize = CGFloat(step.brushSize) * brushScale
         self.canvas.currentBrush.opacity = CGFloat(step.brushOpacity)
     }
 }

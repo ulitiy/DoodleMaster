@@ -39,9 +39,23 @@ function showTemplate(step) {
   stepNumber = step;
   document.querySelector(`.step-${step} .template`).classList.add("show");
   if (debugSVG) return;
-  window.requestAnimationFrame(() =>
-    window.requestAnimationFrame(() =>
-      window.webkit.messageHandlers.control.postMessage('TemplateReady')));
+  onRepaint(() =>
+      window.webkit.messageHandlers.control.postMessage('TemplateReady'));
+}
+
+function onRepaint(f) {
+  let svg = document.querySelector("svg");
+  svg.style.display = "none";
+  svg.style.offsetHeight;
+  svg.style.display = "block";
+  window.requestAnimationFrame(() => {
+    setTimeout(() => {
+      svg.style.display = "none";
+      svg.style.offsetHeight;
+      svg.style.display = "block";
+      window.requestAnimationFrame(f);
+    }, 50)
+  })
 }
 
 function showInput(step) {
@@ -54,9 +68,8 @@ function showInput(step) {
     skipAnimation();
   }
   if (debugSVG) return;
-  window.requestAnimationFrame(() =>
-    window.requestAnimationFrame(() =>
-      window.webkit.messageHandlers.control.postMessage('InputReady')));
+  onRepaint(() =>
+      window.webkit.messageHandlers.control.postMessage('InputReady'));
 }
 
 function getRepeat(el) {

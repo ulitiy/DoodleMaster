@@ -27,8 +27,11 @@ struct CourseListView: View {
                 ForEach(courseListState.courses, id: \.path) { course in
                     NavigationLink(destination: destination(course)) {
                         VStack {
-                            CarouselView {
+                            CarouselView(count: course.tasks.count + 1) {
                                 Image("thumbnails/\(course.path)/index").resizable().aspectRatio(contentMode: .fill)
+                                ForEach(course.tasks, id: \.path) { task in
+                                    Image("thumbnails/\(task.path)").resizable().aspectRatio(contentMode: .fill)
+                                }
                             }.aspectRatio(1,contentMode: .fit)
                             Text(course.name)
                                 .frame(maxHeight: 50)

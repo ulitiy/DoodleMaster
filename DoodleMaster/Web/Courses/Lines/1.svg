@@ -1,0 +1,213 @@
+<svg width="1366" height="1024" viewBox="0 0 1366 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="1">
+<g id="step-11">
+<g id="input">
+<rect id="prev" x="431" y="263" width="504" height="497" stroke="#C3D2ED" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3" d="M934 760H432.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2" d="M935 264.5V759.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1" d="M431.5 263H934.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line" d="M431 758V264.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template">
+<rect id="prev_2" x="431" y="263" width="504" height="497" stroke="#C3D2ED" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="s" d="M934 760H432.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_2" d="M935 264.5V759.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_3" d="M431.5 263H934.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_4" d="M431 758V264.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_5" d="M934 760H432.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_6" d="M935 264.5V759.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_7" d="M431.5 263H934.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_8" d="M431 758V264.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-10">
+<g id="input_2">
+<path id="draw-line_2" d="M234 585.5L383.5 436L533 585.5L682.5 436L832 585.5L981.5 436L1131 585.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="template_2">
+<path id="g" d="M234 585.5L383.5 436L533 585.5L682.5 436L832 585.5L981.5 436L1131 585.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="g_2" d="M234 585.5L383.5 436L533 585.5L682.5 436L832 585.5L981.5 436L1131 585.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step-9">
+<g id="input_3">
+<path id="draw-line d3_2" d="M1035 406L1247 617" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_2" d="M732 616L944 405" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_2" d="M420 406L632 617" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_3" d="M118 616L330 405" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_3">
+<path id="Vector 25" d="M1035 406L1247 617" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="Vector 24" d="M732 616L944 405" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="d" d="M420 406L632 617" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="d_2" d="M118 616L330 405" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="Vector 26" d="M1035 406L1247 617" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="Vector 27" d="M732 616L944 405" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_3" d="M420 406L632 617" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_4" d="M118 616L330 405" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-8">
+<g id="input_4">
+<path id="draw-line d4" d="M1058 415L936 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_3" d="M901 415L778 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_3" d="M744 415L621 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_3" d="M587 415L464 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_4" d="M430 415L307 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_4">
+<path id="s_9" d="M430 415L307 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_10" d="M587 415L464 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_11" d="M744 415L621 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_12" d="M901 415L778 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_13" d="M1058 415L936 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_14" d="M430 415L307 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_15" d="M587 415L464 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_16" d="M744 415L621 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_17" d="M901 415L778 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_18" d="M1058 415L936 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-7">
+<g id="input_5">
+<path id="draw-line d4_2" d="M935 415L1058 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_4" d="M778 415L901 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_4" d="M621 415L744 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_4" d="M464 415L587 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_5" d="M307 415L429 608" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_5">
+<path id="s_19" d="M935 415L1058 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_20" d="M778 415L901 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_21" d="M621 415L744 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_22" d="M464 415L587 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_23" d="M307 415L429 608" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="s_24" d="M935 415L1058 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_25" d="M778 415L901 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_26" d="M621 415L744 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_27" d="M464 415L587 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_28" d="M307 415L429 608" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-6">
+<g id="input_6">
+<path id="blink d2" d="M197 616.5H1175.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="blink d1" d="M187 510.5H1165.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_6" d="M187 405H1165.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_6">
+<path id="Vector 19" d="M71 616H1314" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="Vector 20" d="M71 510H1314" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="Vector 21" d="M71 405H1314" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="Vector 14" d="M197 616.5H1175.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="Vector 13" d="M197 510.5H1175.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="Vector 12" d="M197 405H1175.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-5">
+<g id="input_7">
+<path id="draw-line d3_5" d="M1058.87 556.495L1244 556" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_5" d="M746.244 557.331L931.378 556.836" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_5" d="M433.622 558.167L618.756 557.672" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_7" d="M121 559.003L306.134 558.508" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_6" d="M1058.87 462.495L1244 462" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_6" d="M746.244 463.331L931.378 462.836" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_6" d="M433.622 464.167L618.756 463.672" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_8" d="M121 465.003L306.134 464.508" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_7">
+<path id="d_5" d="M1058.87 556.495L1244 556" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_6" d="M746.244 557.331L931.378 556.836" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_7" d="M433.622 558.167L618.756 557.672" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_8" d="M121 559.003L306.134 558.508" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_9" d="M1058.87 462.495L1244 462" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_10" d="M746.244 463.331L931.378 462.836" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_11" d="M433.622 464.167L618.756 463.672" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_12" d="M121 465.003L306.134 464.508" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_13" d="M1058.87 556.495L1244 556" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_14" d="M746.244 557.331L931.378 556.836" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_15" d="M433.622 558.167L618.756 557.672" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_16" d="M121 559.003L306.134 558.508" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_17" d="M1058.87 462.495L1244 462" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_18" d="M746.244 463.331L931.378 462.836" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_19" d="M433.622 464.167L618.756 463.672" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="d_20" d="M121 465.003L306.134 464.508" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-4">
+<g id="input_8">
+<path id="draw-line d4_3" d="M892.5 419V603.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_7" d="M787.5 419V603.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_7" d="M682.5 419V603.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_7" d="M577.5 419V603.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line " d="M473 419V603.5" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_8">
+<path id="vector1" d="M892.5 419V603.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="vector1_2" d="M787.5 419V603.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="vector1_3" d="M682.5 419V603.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="vector1_4" d="M577.5 419V603.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="vector1_5" d="M473 419V603.5" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="vector" d="M892.5 419V603.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="vector_2" d="M787.5 419V603.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="vector_3" d="M682.5 419V603.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="vector_4" d="M577.5 419V603.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="vector_5" d="M473 419V603.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-3">
+<g id="input_9">
+<path id="draw-line d4_4" d="M1014 511L1210 511" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_8" d="M773.5 511H919" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_8" d="M590 511H680" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_8" d="M330 511L495 511" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_9" d="M136 511H235" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_9">
+<path id="g_3" d="M1014 511L1210 511" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="g_4" d="M773.5 511H919" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="g_5" d="M590 511H680" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="g_6" d="M330 511L495 511" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="g_7" d="M136 511H235" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="s_29" d="M1014 511L1210 511" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_30" d="M773.5 511H919" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_31" d="M590 511H680" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_32" d="M330 511L495 511" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="s_33" d="M136 511H235" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-2">
+<g id="input_10">
+<path id="draw-line d5" d="M1117 511H1225" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d4_5" d="M919 511H1027" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3_9" d="M711 511H819" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_9" d="M513 511H621" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_9" d="M316 511H424" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line_10" d="M118 511H226" stroke="#85A7E8" stroke-width="8" stroke-linecap="round"/>
+</g>
+<g id="template_10">
+<path id="v" d="M1106 511H1214" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="v_2" d="M909 511H1017" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="v_3" d="M711 511H819" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="v_4" d="M513 511H621" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="v_5" d="M316 511H424" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="d_21" d="M118 511H226" stroke="#00FF00" stroke-width="80" stroke-linecap="square"/>
+<path id="v_6" d="M1106 511H1214" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="v_7" d="M909 511H1017" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="v_8" d="M711 511H819" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="v_9" d="M513 511H621" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="v_10" d="M316 511H424" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+<path id="v_11" d="M118 511H226" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step-1">
+<g id="input_11">
+<path id="draw-line_11" d="M283 511H1106.5" stroke="#85A7E8" stroke-width="6" stroke-linecap="round"/>
+</g>
+<g id="template_11">
+<path id="Vector 3" d="M191 511L1203 511" stroke="#00FF00" stroke-width="80" stroke-linecap="round"/>
+<path id="Vector 2" d="M283 511H1106.5" stroke="#0000FF" stroke-width="10" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</svg>

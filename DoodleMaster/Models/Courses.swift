@@ -55,7 +55,7 @@ let introSteps = [
     )),
 ]
 
-let coursesBase = [Course(
+let basics = Course(
     name: "Basics",
     path: "Basics",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -73,7 +73,62 @@ let coursesBase = [Course(
             multistep,
             multistepResult,
         ]),
-])]
+])
+
+let lines = Course(
+    name: "Lines",
+    path: "Lines",
+    description: "Line work is one of the basic skills for an artist. It's a common mistake to draw many hairy, chicken scratchy lines. It results in jagged look and lack of flow. In this course you can learn how to draw steady lines confidently. Try to use your whole arm and draw with your elbow and shoulder, not just your wrist.",
+    tasks: [
+        Task(name: "Straight lines", path: "Lines/1", steps: Array.init(repeating: TaskStep(), count: 11)),
+        Task(name: "Star", path: "Lines/2", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistepResult,
+        ]),
+        Task(name: "Swan", path: "Lines/3", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistepResult,
+        ]),
+        Task(name: "House", path: "Lines/4", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistepResult,
+        ]),
+        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: TaskStep(), count: 15)),
+    ]
+)
+
+let coursesBase = [basics, lines]
 
 #if DEBUG
 let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG", steps: Array.init(repeating: TaskStep(), count: 30))])]

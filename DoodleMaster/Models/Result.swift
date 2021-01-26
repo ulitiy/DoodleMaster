@@ -14,6 +14,7 @@ let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let necessary = [0.9699, 0.0, 0.97, -1.0]
 let smooth = [3.0, 0.0, 4.0, -1.0] // 0.6 - 0.7 for very smooth
 let rough = [6.0, -1.0, 7.0, 0.0]
+let punish = [0.0, 0.0, 0.01, -1]
 
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb line coordinates, clamp x and interpolate
@@ -22,10 +23,10 @@ struct ScoringSystem: Hashable {
     var strokeCount = neutral
 
 //    var red = neutral // debug
-    var red = necessary // necessary, sharp line
+    var red = punish // necessary, sharp line
     var green = neutral // neutral
     var blue = [0.0, 0.0, 1.0, 1.0, 0.95] // good, match, 5th value - minimum blue
-    var oneMinusAlpha = [0.0, 0.0, 0.01, -1] // bad, deviation
+    var oneMinusAlpha = punish
 
 //    var passingScore = 0.7 // debug
     var passingScore = 0.9
@@ -156,14 +157,14 @@ class Result: ObservableObject {
         findWhyFailed();
         var p = 0.0
         var n = 0.0
-        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK].forEach {
+        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK, redK].forEach {
             (p, n) = addK($0, p, n)
         }
         let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
         (p, n) = addK(strokeCountK, p, n)
         positive = min(1, p)
         negative = matchResults.reduce(0, +) != 0 || p > 0 ? min(0, max(-1, n)) : 0 // don't show negative if nothing happened
-        overall = max(0, positive + negative + redK)
+        overall = max(0, positive + negative) // + redK
         enoughBlueK = blueK >= scoringSystem.blue[4]
         passed = enoughBlueK && overall >= scoringSystem.passingScore
         // fixables: overlap, roughness ????????????????????????

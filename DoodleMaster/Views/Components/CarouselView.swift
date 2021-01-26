@@ -19,12 +19,16 @@ struct CarouselView<Content>: View where Content: View {
     @State var index = 0
     @State var cancelDrag: AnyCancellable?
 
-    init(@ViewBuilder content: @escaping () -> Content) {
-        if let v = Mirror(reflecting: content()).descendant("value") {
-            let tm = Mirror(reflecting: v)
-            self.maxIndex = tm.children.count - 1
+    init(count: Int?, @ViewBuilder content: @escaping () -> Content) {
+        if count != nil {
+            self.maxIndex = count! - 1
         } else {
-            self.maxIndex = 0
+            if let v = Mirror(reflecting: content()).descendant("value") {
+                let tm = Mirror(reflecting: v)
+                self.maxIndex = tm.children.count - 1
+            } else {
+                self.maxIndex = 0
+            }
         }
         self.content = content
     }
@@ -34,7 +38,6 @@ struct CarouselView<Content>: View where Content: View {
         let predictedEndOffset = -CGFloat(self.index) * geometry.size.width + value.predictedEndTranslation.width
         let predictedIndex = Int(round(predictedEndOffset / -(geometry.size.width+0.0001)))
         self.index = self.clampedIndex(from: predictedIndex)
-        print(index)
         withAnimation(.easeOut) { // animation only on false!
             self.dragging = false
         }
@@ -119,12 +122,12 @@ struct PageIndicator: View {
 struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
         HStack(spacing: 100) {
-            CarouselView {
+            CarouselView(count: nil) {
                 MyImageView(name: "thumbnails/DEBUG")
                 MyImageView(name: "1-2")
                 MyImageView(name: "1-3")
             }.frame(width: 200, height: 200).padding(.top, 100)
-            CarouselView {
+            CarouselView(count: nil) {
                 MyImageView(name: "1-1")
                 MyImageView(name: "1-2")
                 MyImageView(name: "1-3")

@@ -7,8 +7,8 @@
 //
 
 let smoothStep = TaskStep(scoringSystem: ScoringSystem(roughness: smooth))
-let multistep = TaskStep(brushName: "pencil", brushOpacity: 0.3, clearBefore: false, showResult: false, scoringSystem: ScoringSystem(roughness: smooth)) // how long show result?
-let multistepFirst = TaskStep(brushName: "pencil", brushOpacity: 0.3, showResult: false, scoringSystem: ScoringSystem(roughness: smooth))
+let multistep = TaskStep(brushName: "pencil", brushOpacity: 0.8, clearBefore: false, showResult: false, scoringSystem: ScoringSystem(roughness: smooth)) // how long show result?
+let multistepFirst = TaskStep(brushName: "pencil", brushOpacity: 0.8, showResult: false, scoringSystem: ScoringSystem(roughness: smooth))
 let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
     oneMinusAlpha: neutral,
@@ -99,14 +99,6 @@ let lines = Course(
             multistep,
             multistep,
             multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
             multistepResult,
         ]),
         Task(name: "House", path: "Lines/4", steps: [
@@ -121,11 +113,32 @@ let lines = Course(
             multistep,
             multistep,
             multistep,
+            multistepResult,
+        ]),
+        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: smoothStep, count: 17)),
+        Task(name: "Fish", path: "Lines/6", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
             multistep,
             multistep,
             multistepResult,
         ]),
-        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: smoothStep, count: 15)),
+        Task(name: "Butterfly", path: "Lines/7", steps: [
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            multistep,
+            TaskStep(),
+            multistepResult,
+        ]),
     ]
 )
 

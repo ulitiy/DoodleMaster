@@ -108,10 +108,14 @@ struct PageIndicator: View {
                     Circle()
                         .fill(index == self.index ? Color(hex: "303b96ff")! : Color(hex: "bbbbbbff")!)
                         .frame(width: 9.2, height: 9.2)
+                        .shadow(color: .white, radius: 2)
+                        .shadow(color: .white, radius: 2)
                 } else {
                     Circle()
                         .stroke(Color(hex: "303b96ff")!, lineWidth: 1.2)
                         .frame(width: 8, height: 8)
+                        .shadow(color: .white, radius: 2)
+                        .shadow(color: .white, radius: 2)
                 }
             }
         }

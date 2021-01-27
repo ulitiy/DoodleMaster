@@ -13,7 +13,7 @@ struct CourseDescriptionView: View {
 
     var body: some View {
         HStack {
-            Image("thumbnails/\(course.path)")
+            Image("thumbnails/\(course.path)/index")
                 .resizable()
                 .frame(width: 300, height: 300)
                 .aspectRatio(1,contentMode: .fit)

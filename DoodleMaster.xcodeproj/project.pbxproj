@@ -68,7 +68,7 @@
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
 		6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
 		6CAE185625B06C9B008AFD31 /* CourseListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListState.swift; sourceTree = "<group>"; };
-		6CB5E22A24EA71B30002E77B /* DoodleMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoodleMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB5E22A24EA71B30002E77B /* Art Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB5E22D24EA71B30002E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6CB5E23124EA71B30002E77B /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		6CB5E22B24EA71B30002E77B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6CB5E22A24EA71B30002E77B /* DoodleMaster.app */,
+				6CB5E22A24EA71B30002E77B /* Art Workout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6CB5E22924EA71B30002E77B /* DoodleMaster */ = {
+		6CB5E22924EA71B30002E77B /* ArtWorkout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CB5E23E24EA71B40002E77B /* Build configuration list for PBXNativeTarget "DoodleMaster" */;
+			buildConfigurationList = 6CB5E23E24EA71B40002E77B /* Build configuration list for PBXNativeTarget "ArtWorkout" */;
 			buildPhases = (
 				266B1787443F8011323F4DE3 /* [CP] Check Pods Manifest.lock */,
 				6CB5E22624EA71B30002E77B /* Sources */,
@@ -245,9 +245,9 @@
 			);
 			dependencies = (
 			);
-			name = DoodleMaster;
+			name = ArtWorkout;
 			productName = DoodleMaster;
-			productReference = 6CB5E22A24EA71B30002E77B /* DoodleMaster.app */;
+			productReference = 6CB5E22A24EA71B30002E77B /* Art Workout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +278,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6CB5E22924EA71B30002E77B /* DoodleMaster */,
+				6CB5E22924EA71B30002E77B /* ArtWorkout */,
 			);
 		};
 /* End PBXProject section */
@@ -516,7 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -527,7 +527,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.doodlemaster;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -539,7 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -550,7 +550,7 @@
 				);
 				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.doodlemaster;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6CB5E23E24EA71B40002E77B /* Build configuration list for PBXNativeTarget "DoodleMaster" */ = {
+		6CB5E23E24EA71B40002E77B /* Build configuration list for PBXNativeTarget "ArtWorkout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6CB5E23F24EA71B40002E77B /* Debug */,

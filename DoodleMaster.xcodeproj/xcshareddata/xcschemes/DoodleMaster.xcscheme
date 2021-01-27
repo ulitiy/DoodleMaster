@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6CB5E22924EA71B30002E77B"
-               BuildableName = "DoodleMaster.app"
-               BlueprintName = "DoodleMaster"
+               BuildableName = "Art Workout.app"
+               BlueprintName = "ArtWorkout"
                ReferencedContainer = "container:DoodleMaster.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CB5E22924EA71B30002E77B"
-            BuildableName = "DoodleMaster.app"
-            BlueprintName = "DoodleMaster"
+            BuildableName = "Art Workout.app"
+            BlueprintName = "ArtWorkout"
             ReferencedContainer = "container:DoodleMaster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,8 +79,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6CB5E22924EA71B30002E77B"
-            BuildableName = "DoodleMaster.app"
-            BlueprintName = "DoodleMaster"
+            BuildableName = "Art Workout.app"
+            BlueprintName = "ArtWorkout"
             ReferencedContainer = "container:DoodleMaster.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -46,6 +46,7 @@ class CanvasWrapperController: UIViewController {
         let texture = try! canvas.makeTexture(with: UIImage(named: "pencil")!.pngData()!)
         let pencil = try! canvas.registerBrush(name: "pencil", textureID: texture.id)
         pencil.rotation = .random
+        pencil.pointStep = 2
         pencil.forceSensitive = 0.3
         
         let shadowBrush = try! canvas.registerBrush(name: "shadow")

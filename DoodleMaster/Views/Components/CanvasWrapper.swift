@@ -69,8 +69,8 @@ class CanvasWrapperController: UIViewController {
         }
         canvas.onCountCompleted = { [weak self] res in
             guard let self = self, self.taskState.touching else { return }
-            self.taskState.currentResult.rippleSum = self.canvas.rippleSum * 512 // it's just how I calculated initially, no biggie
-            self.taskState.currentResult.rippleCount = self.canvas.rippleCount
+            self.taskState.currentResult.rippleSum = self.canvas.rippleSum
+            self.taskState.currentResult.ripplePageCount = self.canvas.ripplePageCount
             self.taskState.currentResult.matchResults = res
         }
         canvas.onTouchesBegan = { [weak self] in

@@ -12,8 +12,9 @@ let neutral = [0.0, 0.0, 1, 0.0]
 let any = [0.0, 0.0, 0.03, 1.0, 1.0]
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let necessary = [0.9699, 0.0, 0.97, -1.0]
-let smooth = [3.0, 0.0, 4.0, -1.0] // 0.6 - 0.7 for very smooth
-let rough = [6.0, -1.0, 7.0, 0.0]
+let smoothPunish = [150, 0.0, 400, -0.5]
+let rough = [300.0, -1.0, 400.0, 0.0]
+let smooth = [20.0, 0.0, 500.0, -0.2]
 let punish = [0.0, 0.0, 0.01, -1]
 
 struct ScoringSystem: Hashable {
@@ -28,8 +29,7 @@ struct ScoringSystem: Hashable {
     var blue = [0.0, 0.0, 1.0, 1.0, 0.95] // good, match, 5th value - minimum blue
     var oneMinusAlpha = punish
 
-//    var passingScore = 0.7 // debug
-    var passingScore = 0.9
+    var passingScore = 0.7
     var weight = 1.0
 }
 
@@ -48,7 +48,7 @@ class Result: ObservableObject {
         }
     }
     var rippleSum = 0.0
-    var rippleCount = 0
+    var ripplePageCount = 0
     // Add time
     // Add length
 
@@ -95,7 +95,7 @@ class Result: ObservableObject {
         if matchResults[5] > 0 {
             overlapK = calculateK(val: Double(matchResults[4]) / Double(matchResults[5]), scoring: scoringSystem.overlap)
         }
-        roughnessK = calculateK(val: rippleSum / Double(rippleCount), scoring: scoringSystem.roughness)
+        roughnessK = calculateK(val: rippleSum / Double(ripplePageCount), scoring: scoringSystem.roughness)
         if templateCount[0] > 0 {
             redK = calculateK(val: Double(matchResults[0]) / Double(templateCount[0]), scoring: scoringSystem.red)
         }
@@ -110,6 +110,7 @@ class Result: ObservableObject {
     
     var failExplanations = [
         "oneMinusAlphaK-falls": "Try to be more precise and match the expected image.",
+        "redK-falls": "Try to be more precise and match the expected image.",
         "overlapK-falls": "Try not to draw over your lines.",
         "roughnessK-falls": "Too rough. Try to draw fast steady lines, draw with your arm, not your wrist.",
         "roughnessK-grows": "Too smooth. Make your lines even rougher.",
@@ -133,6 +134,7 @@ class Result: ObservableObject {
             "blueK": [blueK, comp(scoringSystem.blue)],
             "greenK": [greenK, comp(scoringSystem.green)],
             "oneMinusAlphaK": [oneMinusAlphaK, comp(scoringSystem.oneMinusAlpha)],
+            "redK": [redK, comp(scoringSystem.red)],
             "overlapK": [overlapK, comp(scoringSystem.overlap)],
             "roughnessK": [roughnessK, comp(scoringSystem.roughness)],
             "strokeCountK": [strokeCountK, comp(scoringSystem.strokeCount)],
@@ -172,6 +174,6 @@ class Result: ObservableObject {
     }
     
     func print() {
-        Swift.print("b\(blueK.formatPercent(3)) r\(redK.formatPercent(3)) g\(greenK.formatPercent(3)) a\(oneMinusAlphaK.formatPercent(3)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(overlapK.formatPercent(3)) ro\((rippleSum/Double(rippleCount)).toString(3)) roK\(roughnessK.formatPercent(3)) sc\(strokeCount) scK\(strokeCountK.formatPercent(3)) pos\(positive.formatPercent(3)) neg\(negative.formatPercent(3)) ov\(overall.formatPercent(3)) p\(passed) f\(failed)")
+        Swift.print("b\(blueK.formatPercent(3)) r\(redK.formatPercent(3)) g\(greenK.formatPercent(3)) a\(oneMinusAlphaK.formatPercent(3)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(overlapK.formatPercent(3)) ro\((rippleSum/Double(ripplePageCount)).toString(3)) roK\(roughnessK.formatPercent(3)) sc\(strokeCount) scK\(strokeCountK.formatPercent(3)) pos\(positive.formatPercent(3)) neg\(negative.formatPercent(3)) ov\(overall.formatPercent(3)) p\(passed) f\(failed)")
     }
 }

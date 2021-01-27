@@ -6,8 +6,9 @@
 //  Copyright © 2021 Aleksandr Ulitin. All rights reserved.
 //
 
-let multistep = TaskStep(brushName: "pencil", brushOpacity: 0.3, clearBefore: false, showResult: false) // how long show result?
-let multistepFirst = TaskStep(brushName: "pencil", brushOpacity: 0.3, showResult: false)
+let smoothStep = TaskStep(scoringSystem: ScoringSystem(roughness: smooth))
+let multistep = TaskStep(brushName: "pencil", brushOpacity: 0.3, clearBefore: false, showResult: false, scoringSystem: ScoringSystem(roughness: smooth)) // how long show result?
+let multistepFirst = TaskStep(brushName: "pencil", brushOpacity: 0.3, showResult: false, scoringSystem: ScoringSystem(roughness: smooth))
 let multistepResult = TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
     blue: any,
     oneMinusAlpha: neutral,
@@ -21,7 +22,7 @@ let checkBoxStep = TaskStep(showResult: false, scoringSystem: ScoringSystem(
 ))
 let smoothLineStep = TaskStep(shadowSize: 80, scoringSystem: ScoringSystem(
     overlap: [0.04, 0.0, 0.06, -1.0],
-    roughness: smooth,
+    roughness: smoothPunish,
     strokeCount: oneStroke
 ))
 let hatchingStep = TaskStep(brushSize: 15, shadowSize: 80, scoringSystem: ScoringSystem(
@@ -80,7 +81,7 @@ let lines = Course(
     path: "Lines",
     description: "Line work is one of the basic skills for an artist. It's a common mistake to draw many hairy, chicken scratchy lines. It results in jagged look and lack of flow. In this course you can learn how to draw steady lines confidently. Try to use your whole arm and draw with your elbow and shoulder, not just your wrist.",
     tasks: [
-        Task(name: "Straight lines", path: "Lines/1", steps: Array.init(repeating: TaskStep(), count: 11)),
+        Task(name: "Straight lines", path: "Lines/1", steps: Array.init(repeating: smoothStep, count: 11)),
         Task(name: "Star", path: "Lines/2", steps: [
             multistep,
             multistep,
@@ -124,7 +125,7 @@ let lines = Course(
             multistep,
             multistepResult,
         ]),
-        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: TaskStep(), count: 15)),
+        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: smoothStep, count: 15)),
     ]
 )
 

@@ -38,7 +38,7 @@ class CanvasWrapperController: UIViewController {
     override func viewDidLoad() { // async later
         super.viewDidLoad()
         canvas = Canvas(frame: view.bounds)
-        print("Canvas size: \(view.bounds)")
+//        print("Canvas size: \(view.bounds)")
         brushScale = view.bounds.height / 1024
         let brush = try! canvas.registerBrush(name: "main")
         brush.forceSensitive = 0.5
@@ -62,7 +62,7 @@ class CanvasWrapperController: UIViewController {
     func watchUpdates() {
         canvas.onTemplateCountCompleted = { [weak self] res in
             self?.taskState.currentResult.templateCount = res
-            print("Template count: \(res)")
+//            print("Template count: \(res)")
             if res[2] == 0 {
                 self?.taskState.template = nil
                 print("No blues in the screenshot, resetting...")

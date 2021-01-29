@@ -23,7 +23,6 @@ struct ScoringSystem: Hashable {
     var roughness = neutral // 0-1 very smooth 1-3 okish 3+ bad
     var strokeCount = neutral
 
-//    var red = neutral // debug
     var red = punish // necessary, sharp line
     var green = neutral // neutral
     var blue = [0.0, 0.0, 1.0, 1.0, 0.95] // good, match, 5th value - minimum blue
@@ -34,7 +33,7 @@ struct ScoringSystem: Hashable {
 }
 
 class Result: ObservableObject {
-    var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] {
+    var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] { // r g b a ol pixels drawn
         didSet {
             calculate()
         }
@@ -174,6 +173,10 @@ class Result: ObservableObject {
     }
     
     func print() {
-        Swift.print("b\(blueK.formatPercent(3)) r\(redK.formatPercent(3)) g\(greenK.formatPercent(3)) a\(oneMinusAlphaK.formatPercent(3)) ol\((Double(matchResults[4]) / Double(matchResults[5])).toString(3)) olK\(overlapK.formatPercent(3)) ro\((rippleSum/Double(ripplePageCount)).toString(3)) roK\(roughnessK.formatPercent(3)) sc\(strokeCount) scK\(strokeCountK.formatPercent(3)) pos\(positive.formatPercent(3)) neg\(negative.formatPercent(3)) ov\(overall.formatPercent(3)) p\(passed) f\(failed)")
+        Swift.print(toString())
+    }
+    
+    func toString() -> String {
+        return "b\t\t\(blueK.formatPercent())\nr\t\t\(redK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
     }
 }

@@ -17,12 +17,6 @@ struct TaskOverlayView: View {
             // top left
             TaskMenuView(taskState: taskState)
             
-            // top center
-            #if DEBUG
-            Text(taskState.currentResult.positive.formatPercent())
-            .padding()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
-            #endif
             
             // top right
             VStack(alignment: .trailing, spacing: 10) {
@@ -42,6 +36,15 @@ struct TaskOverlayView: View {
             if taskState.whyFailed != nil {
                 WhyFailedView(whyFailed: taskState.whyFailed!)
             }
+
+            #if DEBUG
+            if taskState.debugTemplate {
+                Text(taskState.currentResult.toString())
+                    .padding()
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
+                    .allowsHitTesting(false)
+            }
+            #endif
         }
         .onReceive(taskState.$passing, perform: { val in
             guard val, !taskState.currentStep.showResult else { return }

@@ -50,7 +50,7 @@ struct TaskListView: View {
             .padding(40)
             .frame(minHeight: 0, maxHeight: .infinity)
         }
-        .navigationBarTitle(course.name, displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 

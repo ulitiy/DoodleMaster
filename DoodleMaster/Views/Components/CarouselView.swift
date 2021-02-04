@@ -60,7 +60,7 @@ struct CarouselView<Content>: View where Content: View {
                     Rectangle()
                         .opacity(0.00001)
                         .gesture(
-                            DragGesture(minimumDistance: 20).onChanged { value in
+                            DragGesture(minimumDistance: 30).onChanged { value in
                                 self.dragging = true
                                 self.offset = -CGFloat(self.index) * geometry.size.width + max(min(value.translation.width, geometry.size.width), -geometry.size.width)
                                 let just = Just<Bool>(true).delay(for: .seconds(1), scheduler: RunLoop.main)

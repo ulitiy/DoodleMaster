@@ -81,71 +81,40 @@ let lines = Course(
     path: "Lines",
     description: "Line work is one of the basic skills for an artist. It's a common mistake to draw many hairy, chicken scratchy lines. It results in jagged look and lack of flow. In this course you can learn how to draw steady lines confidently. Try to use your whole arm and draw with your elbow and shoulder, not just your wrist.",
     tasks: [
-        Task(name: "Straight lines", path: "Lines/1", steps: Array.init(repeating: smoothStep, count: 11)),
-        Task(name: "Star", path: "Lines/2", steps: [
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-        ]),
-        Task(name: "Swan", path: "Lines/3", steps: [
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-        ]),
-        Task(name: "House", path: "Lines/4", steps: [
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-        ]),
-        Task(name: "Curved lines", path: "Lines/5", steps: Array.init(repeating: smoothStep, count: 17)),
-        Task(name: "Fish", path: "Lines/6", steps: [
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistepResult,
-        ]),
-        Task(name: "Butterfly", path: "Lines/7", steps: [
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            multistep,
-            TaskStep(),
-            multistepResult,
-        ]),
+        Task(name: "Straight lines", path: "Lines/1", steps: [TaskStep](repeating: smoothStep, count: 11)),
+        Task(name: "Star", path: "Lines/2", steps: [TaskStep](repeating: multistep, count: 5) + [multistepResult]),
+        Task(name: "Swan", path: "Lines/3", steps: [TaskStep](repeating: multistep, count: 8) + [multistepResult]),
+        Task(name: "House", path: "Lines/4", steps: [TaskStep](repeating: multistep, count: 11) + [multistepResult]),
+        Task(name: "Curved lines", path: "Lines/5", steps: [TaskStep](repeating: smoothStep, count: 17)),
+        Task(name: "Fish", path: "Lines/6", steps: [TaskStep](repeating: multistep, count: 7) + [multistepResult]),
+        Task(name: "Butterfly", path: "Lines/7", steps: [TaskStep](repeating: multistep, count: 9) + [TaskStep(), multistepResult]),
+        Task(name: "Shapes", path: "Lines/8", steps:
+                [TaskStep](repeating: smoothStep, count: 5) +
+                [multistepFirst, multistep, multistep] +
+                [TaskStep](repeating: smoothStep, count: 5)
+        ),
+        Task(name: "Lollipop", path: "Lines/9", steps: [TaskStep](repeating: multistep, count: 3) + [multistepResult]),
+        Task(name: "Sky city", path: "Lines/10", steps: [TaskStep](repeating: multistep, count: 17) + [multistepResult]),
+        Task(name: "Balloon dog", path: "Lines/11", steps:
+                [TaskStep](repeating: smoothStep, count: 3) +
+                [multistepFirst] + [TaskStep](repeating: multistep, count: 9) +
+                [multistepFirst] + [TaskStep](repeating: multistep, count: 6) + [multistepResult]
+        ),
+        Task(name: "Shape pattern", path: "Lines/12", steps: [TaskStep](repeating: multistep, count: 12) + [multistepResult]),
+        Task(name: "Penguin", path: "Lines/13", steps: [TaskStep](repeating: multistep, count: 14) + [multistepResult]),
+        Task(name: "Oblique projection", path: "Lines/14", steps:
+                [TaskStep](repeating: multistep, count: 6) +
+                [multistepFirst, multistep, multistep] +
+                [multistepFirst, multistep] +
+                [multistepFirst, multistep, multistep]
+        ),
     ]
 )
 
 let coursesBase = [basics, lines]
 
 #if DEBUG
-let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG", steps: Array.init(repeating: TaskStep(), count: 30))])]
+let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG", steps: [TaskStep](repeating: TaskStep(), count: 30))])]
 #else
 let courses = coursesBase
 #endif

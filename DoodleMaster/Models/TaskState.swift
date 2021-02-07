@@ -16,9 +16,9 @@ class TaskState: ObservableObject {
         }
     }
     var results: [Result] = []
-    @Published var stepNumber = 1 {
+    @Published var stepNumber = 0 {
         didSet {
-            currentStep = task.steps[stepNumber - 1]
+            currentStep = task.steps[stepNumber]
         }
     }
     @Published var currentStep: TaskStep!
@@ -70,7 +70,7 @@ class TaskState: ObservableObject {
     func passStep() {
         if !passing && taskResult == nil { // only once
             print("Pass step")
-            if stepNumber >= task.steps.count {
+            if stepNumber >= task.steps.count - 1 {
                 passTask()
                 return
             }

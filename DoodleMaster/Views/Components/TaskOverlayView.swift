@@ -20,7 +20,7 @@ struct TaskOverlayView: View {
             
             // top right
             VStack(alignment: .trailing, spacing: 10) {
-                Text("\(taskState.stepNumber) / \(taskState.task.steps.count)")
+                Text("\(taskState.stepNumber + 1) / \(taskState.task.steps.count)")
                     .font(.custom("LucidaGrande", size: 30))
                     .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                 if showCheckmark {

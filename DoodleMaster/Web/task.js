@@ -19,7 +19,6 @@ function loadSVG(text) {
   let svg = document.querySelector("svg");
   svg.removeAttribute("height");
   svg.removeAttribute("width");
-  showTemplate(0);
 }
 
 let stepNumber;
@@ -27,6 +26,11 @@ let refreshVersion = 0;
 let mustSkipAnimation = false;
 shadowSize = 10;
 
+function getStepSettings(step) {
+  const el = document.querySelector(`.step:nth-child(${countSteps() - step})`);
+  let template = [...el.classList].find((c) => c.startsWith("s-")) || "default";
+  return template.replace(/^s-/, "");
+}
 
 function hideAll() {
   refreshVersion++;

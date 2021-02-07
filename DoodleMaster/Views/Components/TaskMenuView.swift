@@ -65,6 +65,6 @@ struct TaskMenuView: View {
 
 struct TaskMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskMenuView(taskState: TaskState(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()])))
+        TaskMenuView(taskState: TaskState(task: Task(name: "Line", path: "Basics/1/1")))
     }
 }

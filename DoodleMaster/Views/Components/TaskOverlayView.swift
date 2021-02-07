@@ -17,10 +17,9 @@ struct TaskOverlayView: View {
             // top left
             TaskMenuView(taskState: taskState)
             
-            
             // top right
             VStack(alignment: .trailing, spacing: 10) {
-                Text("\(taskState.stepNumber + 1) / \(taskState.task.steps.count)")
+                Text("\(taskState.stepNumber + 1) / \(taskState.stepCount)")
                     .font(.custom("LucidaGrande", size: 30))
                     .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
                 if showCheckmark {
@@ -58,7 +57,7 @@ struct TaskOverlayView: View {
 
 struct TaskOverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskOverlayView(taskState: TaskState(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()])))
+        TaskOverlayView(taskState: TaskState(task: Task(name: "Line", path: "Basics/1/1")))
             .previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

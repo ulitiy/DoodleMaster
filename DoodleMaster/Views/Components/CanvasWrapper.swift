@@ -28,7 +28,6 @@ class CanvasWrapperController: UIViewController {
     var taskState: TaskState!
     var canvas: Canvas!
     var templateSink: AnyCancellable?
-    var stepNumberSink: AnyCancellable?
     var failingSink: AnyCancellable?
     var stepSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
@@ -81,23 +80,6 @@ class CanvasWrapperController: UIViewController {
             self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count // TODO: seems reliable
             self?.taskState.touching = false
         }
-        // Next step or restart task
-        stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
-            guard let self = self else {
-                return
-            }
-            if val == 1 { // restart task
-                self.taskState.stepElementsCount = 0
-                self.canvas.clear()
-                return
-            }
-            if val <= self.taskState.stepNumber { // restart step
-                return
-            }
-            if self.taskState.task.steps[val - 1].clearBefore {
-                self.canvas.clear()
-            }
-        }
         passingSink = taskState.$passing.sink { [weak self] val in
             guard let self = self, !self.taskState.passing, val else {
                 return
@@ -128,6 +110,9 @@ class CanvasWrapperController: UIViewController {
                 return
             }
             self.setBrushes(step: val)
+            if val.clearBefore {
+                self.canvas.clear()
+            }
         }
         debugTemplateSink = taskState.$debugTemplate.sink { [weak self] val in
             self?.canvas.showShadow = val

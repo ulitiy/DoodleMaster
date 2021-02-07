@@ -36,18 +36,35 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
+        print("WebView ready")
         if taskState.task.path == "DEBUG" {
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                 let fileURL = dir.appendingPathComponent("debug.svg")
                 do {
                     let fileContent = try String(contentsOf: fileURL, encoding: .utf8)
-                    wkWebView.evaluateJavaScript("loadSVG(`\(fileContent)`);")
+                    wkWebView.evaluateJavaScript("loadSVG(`\(fileContent)`);") { _, _ in
+                        self.getTaskSettings()
+                    }
                 } catch {
-                    print("Cannot read file DEBUG")
+                    print("Cannot read debug.svg")
                 }
             }
         } else {
-            wkWebView.evaluateJavaScript("setShadowSize(\(taskState.currentStep.shadowSize * brushScale)); loadTask(\"\(taskState.task.path)\");") // shouldn't show template
+            wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");") { _, _ in
+                self.getTaskSettings()
+            }
+        }
+    }
+    
+    func getTaskSettings() {
+        self.wkWebView.evaluateJavaScript("countSteps();") { res, _ in
+            guard let res = res as? Int else {
+                return
+            }
+            self.taskState.stepCount = res
+        }
+        self.getStepSettings(self.taskState.stepNumber) {
+            self.wkWebView.evaluateJavaScript("setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(self.taskState.stepNumber));")
         }
     }
     
@@ -104,9 +121,26 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         }
         debugTemplateSink = taskState.$debugTemplate.sink { [weak self] val in
             guard let self = self, self.taskState.debugTemplate != val else {
-                return;
+                return
             }
             self.wkWebView.evaluateJavaScript(val ? "showTemplate(\(self.taskState.stepNumber));" : "showInput(\(self.taskState.stepNumber));")
+        }
+        stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
+            guard let self = self, !self.wkWebView.isLoading else {
+                return
+            }
+            self.getStepSettings(val) {}
+        }
+    }
+    
+    func getStepSettings(_ step: Int, cl: @escaping () -> Void) {
+        self.wkWebView.evaluateJavaScript("getStepSettings(\(step));") { res, _ in
+            guard let res = res as? String else {
+                return
+            }
+            self.taskState.currentStep = stepTemplates[res]
+            print("Using step template \(res)")
+            cl()
         }
     }
     
@@ -118,7 +152,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         print("Taking screenshot...")
         wkWebView.takeSnapshot(with: config, completionHandler: { [weak self] img, err in
             guard let self = self else {
-                return;
+                return
             }
             self.snapshot = img
             if !self.taskState.debugTemplate {

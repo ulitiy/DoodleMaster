@@ -10,21 +10,20 @@ import Combine
 import UIKit
 
 class TaskState: ObservableObject {
-    @Published var task: Task! { // has to be published
+    @Published var task: Task! // has to be published
+
+    var results: [Result] = []
+    @Published var stepNumber = 0
+    @Published var currentStep: TaskStep! {
         didSet {
             resetResult()
         }
     }
-    var results: [Result] = []
-    @Published var stepNumber = 0 {
-        didSet {
-            currentStep = task.steps[stepNumber]
-        }
-    }
-    @Published var currentStep: TaskStep!
     @Published var currentResult: Result!
     // how many elements there were in canvas.data.elements when this step started
+    var totalWeight = 0.0
     var stepElementsCount = 0
+    @Published var stepCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
     
@@ -33,10 +32,10 @@ class TaskState: ObservableObject {
             guard !touching else {
                 return
             }
-            if self.currentResult.passed && self.template != nil { // may be no new screenshot yet?
+            if currentResult.passed && self.template != nil { // may be no new screenshot yet?
                 self.passStep()
             }
-            if self.currentResult.failed {
+            if currentResult.failed {
                 self.failStep()
             }
         }
@@ -53,9 +52,9 @@ class TaskState: ObservableObject {
     var currentResultSink: AnyCancellable?
     
     init(task: Task) {
-        currentStep = task.steps[0]
         self.task = task
-        dateStarted = Date()
+        currentStep = TaskStep()
+        dateStarted = Date() // TODO: issue here when not lazy loaded?
     }
     
     func resetResult() {
@@ -70,7 +69,7 @@ class TaskState: ObservableObject {
     func passStep() {
         if !passing && taskResult == nil { // only once
             print("Pass step")
-            if stepNumber >= task.steps.count - 1 {
+            if stepNumber >= stepCount - 1 {
                 passTask()
                 return
             }
@@ -108,6 +107,8 @@ class TaskState: ObservableObject {
         print("Restart task")
         results.removeAll()
         stepNumber = 1
+        totalWeight = 0
+        stepElementsCount = 0
         taskResult = nil
         restartStep()
         template = nil
@@ -116,6 +117,7 @@ class TaskState: ObservableObject {
     
     func switchNextStep() {
         whyFailed = nil
+        totalWeight += currentStep.scoringSystem.weight
         results.append(currentResult)
         stepNumber += 1
         print("Next step \(stepNumber)")
@@ -126,13 +128,10 @@ class TaskState: ObservableObject {
     }
     
     func passTask() {
+        totalWeight += currentStep.scoringSystem.weight
         results.append(currentResult)
-        let totalWeight = task.steps.reduce(0, { res, step in
-            return res+step.scoringSystem.weight
-        })
         taskResult = results.reduce(Result(scoringSystem: task.scoringSystem)) { res, val2 in
             let weight = val2.scoringSystem.weight / totalWeight
-            res.red = res.red + val2.red * weight
             res.greenK = res.greenK + val2.greenK * weight
             res.blueK = res.blueK + val2.blueK * weight
             res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK * weight

@@ -48,7 +48,7 @@ struct TaskView: View {
 
 struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskView(task: Task(name: "Line", path: "Basics/1/1", steps: [TaskStep()]))
+        TaskView(task: Task(name: "Line", path: "Basics/1/1"))
             .previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

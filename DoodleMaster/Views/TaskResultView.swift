@@ -57,7 +57,7 @@ struct TaskResultView: View {
 
 struct TaskResultView_Previews: PreviewProvider {
     static func makeTaskState() -> TaskState {
-        let ts = TaskState(task: Task(name: "", path: "", steps: [TaskStep()]))
+        let ts = TaskState(task: Task(name: "", path: ""))
         let r = Result(scoringSystem: ScoringSystem())
         r.overall = 0.9876
         r.blueK = 0.98765

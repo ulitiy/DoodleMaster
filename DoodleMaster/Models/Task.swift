@@ -23,9 +23,8 @@ struct TaskStep: Hashable {
 
 class Task: ObservableObject {
     var name: String
-    var path: String // Course.LessonN.TaskN
+    var path: String // Course.TaskN
     var scoringSystem = ScoringSystem() // only for overall result
-    var steps: [TaskStep]
     var result: Double {
         get {
             UserDefaults.standard.double(forKey: path + ".taskResult")
@@ -37,9 +36,8 @@ class Task: ObservableObject {
         }
     }
     
-    init(name: String, path: String, steps: [TaskStep]) {
+    init(name: String, path: String) {
         self.name = name
         self.path = path
-        self.steps = steps
     }
 }

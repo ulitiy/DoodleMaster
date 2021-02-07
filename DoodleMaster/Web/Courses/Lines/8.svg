@@ -1,7 +1,7 @@
 <svg width="1366" height="1024" viewBox="0 0 1366 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="8">
-<g id="step-13">
-<g id="input">
+<g id="step">
+<g id="input rgb-template">
 <path id="draw-line d5" d="M867.802 564.904C926.223 617.714 930.835 707.875 878.104 766.282C835.917 813.012 763.839 816.64 717.099 774.39C679.705 740.591 676.752 682.884 710.505 645.507C737.509 615.603 783.638 613.276 813.55 640.32C837.481 661.951 839.366 698.883 817.775 722.804C800.499 741.945 770.968 743.428 751.822 726.126C736.505 712.279 735.301 688.644 749.119 673.336C760.174 661.088 779.071 660.132 791.326 671.212C801.13 680.072 801.896 695.198 793.058 704.995C785.982 712.836 773.883 713.444 766.049 706.353" stroke="#6685D4" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
 <path id="draw-line d4" d="M804.663 455.462L982.343 293.138L935.538 529.307L834.891 309.575L1044.78 428.006L804.784 455.89" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line d3" d="M687 444C716.823 444 741 468.177 741 498C741 527.823 716.823 552 687 552C657.177 552 633 527.823 633 498C633 468.502 656.652 444.529 686.025 444.009" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
@@ -9,23 +9,9 @@
 <path id="draw-line d1" d="M442.889 835.229L413.739 540L612.385 760.503L321.151 697.721L592.985 577.878L443.4 835.426" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line" d="M450 310C500.258 310 541 350.742 541 401C541 451.258 500.258 492 450 492C399.742 492 359 451.258 359 401C359 351.291 398.857 310.891 448.357 310.015" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
-<g id="template">
-<path id="d" d="M867.802 564.904C926.223 617.714 930.835 707.875 878.104 766.282C835.917 813.012 763.839 816.64 717.099 774.39C679.705 740.591 676.752 682.884 710.505 645.507C737.509 615.603 783.638 613.276 813.55 640.32C837.481 661.951 839.366 698.883 817.775 722.804C800.499 741.945 770.968 743.428 751.822 726.126C736.505 712.279 735.301 688.644 749.119 673.336C760.174 661.088 779.071 660.132 791.326 671.212C801.13 680.072 801.896 695.198 793.058 704.995C785.982 712.836 773.883 713.444 766.049 706.353" stroke="#00FF00" stroke-width="65" stroke-miterlimit="10" stroke-linecap="round"/>
-<path id="d_2" d="M804.663 455.462L982.343 293.138L935.538 529.307L834.891 309.575L1044.78 428.006L804.784 455.89" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_3" d="M687 444C716.823 444 741 468.177 741 498C741 527.823 716.823 552 687 552C657.177 552 633 527.823 633 498C633 468.502 656.652 444.529 686.025 444.009" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="d_4" d="M789.871 269.017C759.529 214.43 690.699 194.728 636.137 225.011C592.483 249.238 576.778 304.274 601.052 347.947C620.471 382.887 664.524 395.497 699.442 376.111C727.379 360.602 737.434 325.381 721.895 297.431C709.467 275.071 681.273 267.003 658.927 279.402C641.047 289.323 634.615 311.872 644.555 329.76C652.511 344.072 670.555 349.233 684.855 341.299C696.296 334.95 700.418 320.522 694.051 309.071C688.961 299.911 677.412 296.611 668.261 301.686C660.937 305.749 658.302 314.987 662.378 322.309" stroke="#00FF00" stroke-width="65" stroke-miterlimit="10" stroke-linecap="round"/>
-<path id="d_5" d="M442.889 835.229L413.739 540L612.385 760.503L321.151 697.721L592.985 577.878L443.4 835.426" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_6" d="M450 310C500.258 310 541 350.742 541 401C541 451.258 500.258 492 450 492C399.742 492 359 451.258 359 401C359 351.291 398.857 310.891 448.357 310.015" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="d_7" d="M867.802 564.904C926.223 617.714 930.835 707.875 878.104 766.282C835.917 813.012 763.839 816.64 717.099 774.39C679.705 740.591 676.752 682.884 710.505 645.507C737.509 615.603 783.638 613.276 813.55 640.32C837.481 661.951 839.366 698.883 817.775 722.804C800.499 741.945 770.968 743.428 751.822 726.126C736.505 712.279 735.301 688.644 749.119 673.336C760.174 661.088 779.071 660.132 791.326 671.212C801.13 680.072 801.896 695.198 793.058 704.995C785.982 712.836 773.883 713.444 766.049 706.353" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
-<path id="d_8" d="M804.663 455.462L982.343 293.138L935.538 529.307L834.891 309.575L1044.78 428.006L804.784 455.89" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_9" d="M687 444C716.823 444 741 468.177 741 498C741 527.823 716.823 552 687 552C657.177 552 633 527.823 633 498C633 468.502 656.652 444.529 686.025 444.009" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="d_10" d="M789.871 269.017C759.529 214.43 690.699 194.728 636.137 225.011C592.483 249.238 576.778 304.274 601.052 347.947C620.471 382.887 664.524 395.497 699.442 376.111C727.379 360.602 737.434 325.381 721.895 297.431C709.467 275.071 681.273 267.003 658.927 279.402C641.047 289.323 634.615 311.872 644.555 329.76C652.511 344.072 670.555 349.233 684.855 341.299C696.296 334.95 700.418 320.522 694.051 309.071C688.961 299.911 677.412 296.611 668.261 301.686C660.937 305.749 658.302 314.987 662.378 322.309" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
-<path id="d_11" d="M442.889 835.229L413.739 540L612.385 760.503L321.151 697.721L592.985 577.878L443.4 835.426" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_12" d="M450 310C500.258 310 541 350.742 541 401C541 451.258 500.258 492 450 492C399.742 492 359 451.258 359 401C359 351.291 398.857 310.891 448.357 310.015" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
 </g>
-</g>
-<g id="step-12">
-<g id="input_2">
+<g id="step_2">
+<g id="input rgb-template_2">
 <path id="draw-line d6" d="M792.189 866.67L784.872 704.217L884.883 647.941L1019.94 738.512L793.094 866.16" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line d5_2" d="M870 495.542L1047.15 370.729L1060.88 587L870.504 495.783" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line d4_2" d="M663 267.402L780.503 199.892L866.415 252.96L858.646 388.253L663.778 267.882" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -34,150 +20,80 @@
 <path id="draw-line d1_2" d="M412.218 746.147L532.776 648.572L433.572 526L311 625.205L409.481 746.882" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line_2" d="M324.41 455.991L382.363 227.574L599.136 319.999L325.135 455.633" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g id="template_2">
-<path id="d_13" d="M792.189 866.67L784.872 704.217L884.883 647.941L1019.94 738.512L793.094 866.16" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_14" d="M870 495.542L1047.15 370.729L1060.88 587L870.504 495.783" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_15" d="M663 267.402L780.503 199.892L866.415 252.96L858.646 388.253L663.778 267.882" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_16" d="M596.268 612H792V413H593V610.547" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_17" d="M547 844.025L631.573 700.749L692.613 855.522L547.384 844.055" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_18" d="M412.218 746.147L532.776 648.572L433.572 526L311 625.205L409.481 746.882" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_19" d="M324.41 455.991L382.363 227.574L599.136 319.999L325.135 455.633" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_20" d="M792.189 866.67L784.872 704.217L884.883 647.941L1019.94 738.512L793.094 866.16" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_21" d="M870 495.542L1047.15 370.729L1060.88 587L870.504 495.783" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_22" d="M663 267.402L780.503 199.892L866.415 252.96L858.646 388.253L663.778 267.882" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_23" d="M596.268 612H792V413H593V610.547" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_24" d="M547 844.025L631.573 700.749L692.613 855.522L547.384 844.055" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_25" d="M412.218 746.147L532.776 648.572L433.572 526L311 625.205L409.481 746.882" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_26" d="M324.41 455.991L382.363 227.574L599.136 319.999L325.135 455.633" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-</g>
-<g id="step-11">
-<g id="input_3">
+<g id="step_3">
+<g id="input rgb-template_3">
 <path id="draw-line_3" d="M850.715 382.861C887.833 490.994 830.385 608.787 722.404 645.957C636.013 675.697 541.922 629.679 512.225 543.167C488.464 473.958 525.232 398.565 594.345 374.785C649.637 355.758 709.858 385.203 728.859 440.573C744.064 484.866 720.528 533.114 676.31 548.341C640.928 560.525 602.381 541.667 590.214 506.235C580.483 477.884 595.549 447.009 623.846 437.264C646.487 429.468 671.158 441.526 678.943 464.213C685.173 482.357 675.526 502.113 657.422 508.352C642.93 513.344 627.136 505.618 622.166 491.106" stroke="#6685D4" stroke-width="8" stroke-miterlimit="10" stroke-linecap="round"/>
 </g>
-<g id="template_3">
-<path id="Vector" d="M850.715 382.861C887.833 490.994 830.385 608.787 722.404 645.957C636.013 675.697 541.922 629.679 512.225 543.167C488.464 473.958 525.232 398.565 594.345 374.785C649.637 355.758 709.858 385.203 728.859 440.573C744.064 484.866 720.528 533.114 676.31 548.341C640.928 560.525 602.381 541.667 590.214 506.235C580.483 477.884 595.549 447.009 623.846 437.264C646.487 429.468 671.158 441.526 678.943 464.213C685.173 482.357 675.526 502.113 657.422 508.352C642.93 513.344 627.136 505.618 622.166 491.106" stroke="#00FF00" stroke-width="65" stroke-miterlimit="10" stroke-linecap="round"/>
-<path id="Vector_2" d="M850.715 382.861C887.833 490.994 830.385 608.787 722.404 645.957C636.013 675.697 541.922 629.679 512.225 543.167C488.464 473.958 525.232 398.565 594.345 374.785C649.637 355.758 709.858 385.203 728.859 440.573C744.064 484.866 720.528 533.114 676.31 548.341C640.928 560.525 602.381 541.667 590.214 506.235C580.483 477.884 595.549 447.009 623.846 437.264C646.487 429.468 671.158 441.526 678.943 464.213C685.173 482.357 675.526 502.113 657.422 508.352C642.93 513.344 627.136 505.618 622.166 491.106" stroke="#0000FF" stroke-width="5" stroke-miterlimit="10" stroke-linecap="round"/>
 </g>
-</g>
-<g id="step-10">
-<g id="input_4">
+<g id="step_4">
+<g id="input rgb-template_4">
 <path id="draw-line_4" d="M682.5 374C758.991 374 821 436.009 821 512.5C821 588.991 758.991 651 682.5 651C606.009 651 544 588.991 544 512.5C544 436.844 604.662 375.356 680 374.022" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
-<g id="template_4">
-<path id="Ellipse 2" d="M682.5 374C758.991 374 821 436.009 821 512.5C821 588.991 758.991 651 682.5 651C606.009 651 544 588.991 544 512.5C544 436.844 604.662 375.356 680 374.022" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Ellipse 3" d="M682.5 374C758.991 374 821 436.009 821 512.5C821 588.991 758.991 651 682.5 651C606.009 651 544 588.991 544 512.5C544 436.844 604.662 375.356 680 374.022" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
 </g>
-</g>
-<g id="step-9">
-<g id="input_5">
+<g id="step_5">
+<g id="input rgb-template_5">
 <path id="draw-line_5" d="M563.5 670L682.5 305L802 670L491.5 443.5H874L564 670.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<g id="template_5">
-<path id="Vector 17" d="M563.5 670L682.5 305L802 670L491.5 443.5H874L564 670.5" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector 18" d="M563.5 670L682.5 305L802 670L491.5 443.5H874L564 670.5" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-</g>
-<g id="step-8">
-<g id="input_6">
+<g id="step s-multistep">
+<g id="input">
 <g id="ref">
 <path id="&#208;&#178;" d="M564.461 669.38L682.81 305L800.785 669.38" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_2" d="M800.412 669.007L490.167 443.509H874.333" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_3" d="M873.96 443.883L563.715 670.5" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<path id="draw-line_6" d="M873.96 443.883L563.715 670.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_6">
-<path id="d_27" d="M873.96 443.883L563.715 670.5" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_28" d="M873.96 443.883L563.715 670.5" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template" d="M873.96 443.883L563.715 670.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-7">
-<g id="input_7">
+<g id="step s-multistep_2">
+<g id="input_2">
 <g id="ref_2">
 <path id="&#208;&#178;_4" d="M564.461 669.38L682.81 305L800.785 669.38" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_5" d="M800.412 669.007L490.167 443.509H874.333" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_6" d="M873.96 443.883L563.715 670.5" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<path id="draw-line " d="M800.412 669.007L490.167 443.509H874.333" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_7">
-<path id="d_29" d="M800.412 669.007L490.167 443.509H874.333" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_30" d="M800.412 669.007L490.167 443.509H874.333" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_2" d="M800.412 669.007L490.167 443.509H874.333" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-6">
-<g id="input_8">
+<g id="step s-multistep-first">
+<g id="input_3">
 <g id="ref_3">
 <path id="&#208;&#178;_7" d="M564.461 669.38L682.81 305L800.785 669.38" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_8" d="M800.412 669.007L490.167 443.509H874.333" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="&#208;&#178;_9" d="M873.96 443.883L563.715 670.5" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<path id="draw-line _2" d="M564.461 669.38L682.81 305L800.785 669.38" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_8">
-<path id="d_31" d="M564.461 670.38L682.81 306L800.785 670.38" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="d_32" d="M564.461 670.38L682.81 306L800.785 670.38" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_3" d="M564.461 669.38L682.81 305L800.785 669.38" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-5">
-<g id="input_9">
-<path id="draw-line_7" d="M431 643L572.062 382H792.938L934 643H433" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_9">
-<path id="Vector 14" d="M431 643L572.062 382H792.938L934 643H433" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector 15" d="M431 643L572.062 382H792.938L934 643H433" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="step_6">
+<g id="input rgb-template_6">
+<path id="draw-line_6" d="M431 643L572.062 382H792.938L934 643H433" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-4">
-<g id="input flip">
-<path id="draw-line_8" d="M550.5 649H820V375H546V647" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_10">
-<path id="Rectangle 3" d="M550.5 649H820V375H546V647" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Rectangle 4" d="M550.5 649H820V375H546V647" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="step_7">
+<g id="input rgb-template_7">
+<path id="draw-line flip" d="M550.5 649H820V375H546V647" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-3">
-<g id="input_10">
+<g id="step_8">
+<g id="input rgb-template_8">
 <path id="draw-line d3_3" d="M819.5 649L546 649" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line d2_3" d="M822 648.5L822 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line d1_3" d="M819.5 375L546 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line _3" d="M544 375V648.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_11">
-<path id="Vector 3" d="M544 375V648.5" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 4" d="M819.5 375L546 375" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 5" d="M822 648.5L822 375" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 6" d="M819.5 649L546 649" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 7" d="M544 375V648.5" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="Vector 8" d="M819.5 375L546 375" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="Vector 9" d="M822 648.5L822 375" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="Vector 10" d="M819.5 649L546 649" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
+<path id="draw-line " d="M544 375V648.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-2">
-<g id="input_11">
-<path id="draw-line_9" d="M493 645L682.5 380L872 645H494" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<g id="template_12">
-<path id="Vector 11" d="M493 645L682.5 380L872 645H494" stroke="#00FF00" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector 12" d="M493 645L682.5 380L872 645H494" stroke="#0000FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="step_9">
+<g id="input rgb-template_9">
+<path id="draw-line_7" d="M493 645L682.5 380L872 645H494" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step-1">
-<g id="input_12">
+<g id="step_10">
+<g id="input rgb-template_10">
 <path id="draw-line d2_4" d="M847.5 609L520.5 609" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line d1_4" d="M682.5 391L847.5 608.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line_10" d="M519 608.5L681.5 392" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-</g>
-<g id="template_13">
-<path id="Vector 9_2" d="M847.5 609L520.5 609" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 8_2" d="M682.5 391L847.5 608.5" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 7_2" d="M519 608.5L681.5 392" stroke="#00FF00" stroke-width="65" stroke-linecap="round"/>
-<path id="Vector 10_2" d="M847.5 609L520.5 609" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="Vector 11_2" d="M682.5 391L847.5 608.5" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
-<path id="Vector 12_2" d="M519 608.5L681.5 392" stroke="#0000FF" stroke-width="5" stroke-linecap="round"/>
+<path id="draw-line_8" d="M519 608.5L681.5 392" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
 </g>

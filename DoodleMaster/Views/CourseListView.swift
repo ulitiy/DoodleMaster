@@ -14,7 +14,7 @@ struct CourseListView: View {
     @ViewBuilder
     func destination(_ course: Course) -> some View {
         if course.tasks.count == 1 {
-            TaskView(task: course.tasks[0])
+            LazyView(TaskView(task: course.tasks[0]))
         } else {
             TaskListView(course: course)
         }

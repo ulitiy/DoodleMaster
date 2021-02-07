@@ -41,8 +41,7 @@ function showTemplate(step) {
   stepNumber = step;
   createTemplate(step);
   document.querySelector(`.step-${step} .template`).classList.add("show");
-  document.querySelectorAll(`.step-${step} .rgb-template`).forEach((el) => makeRGBTemplate(el, step))
-  makeTemplate(document.querySelector(`.step-${step} .g-template`), step, "#00F", shadowSize);
+  makeRGBTemplates(step);
   if (debugSVG) return;
   onRepaint(() =>
       window.webkit.messageHandlers.control.postMessage('TemplateReady'));
@@ -75,7 +74,6 @@ function onRepaint(f) {
 function showInput(step) {
   hideAll();
   stepNumber = step;
-  // document.querySelector(`.step-${step} .template`).classList.add("show");
   document.querySelector(`.step-${step} .input`).classList.add("show");
   document.querySelectorAll(`.step-${step} .input .draw-line`).forEach((el) => drawLine(el));
   if (mustSkipAnimation) {
@@ -178,15 +176,21 @@ function setShadowSize(size) {
   shadowSize = size;
 }
 
-function makeRGBTemplate(el, step) {
-  makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5); // was 1.9 but reduced for dashes
-  makeTemplate(el, step, "#00F", shadowSize * 0.87); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
-  makeTemplate(el, step, "#F00", 5); // ~1.5px in 320*256 resolution of template on GPU
+function makeRGBTemplates(step) {
+  document.querySelectorAll(`.step-${step} .g-template, .step-${step} .g-template path`).forEach((el) => 
+    makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5));
+
+  document.querySelectorAll(`.step-${step} path.rgb-template, .step-${step} .rgb-template path`).forEach((el) => 
+    makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5)); // was 1.9 but reduced for dashes
+  document.querySelectorAll(`.step-${step} path.rgb-template, .step-${step} .rgb-template path`).forEach((el) => 
+    makeTemplate(el, step, "#00F", shadowSize * 0.87)); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
+  document.querySelectorAll(`.step-${step} path.rgb-template, .step-${step} .rgb-template path`).forEach((el) => 
+    makeTemplate(el, step, "#F00", 5)); // ~1.5px in 320*256 resolution of template on GPU
+  document.querySelectorAll(`.step-${step} path.rgb-template, .step-${step} .rgb-template path`).forEach((el) =>
+    el.classList.remove("rgb-template", "g-template"));
 }
 
 function makeTemplate(el, step, color, size) {
-  if(!el) return;
-  el.classList.remove("rgb-template", "g-template");
   const n = el.cloneNode();
   document.querySelector(`.step-${step} .template`).appendChild(n);
   n.setAttribute("stroke", color)

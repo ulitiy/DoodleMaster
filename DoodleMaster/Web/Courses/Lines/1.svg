@@ -71,27 +71,27 @@
 </g>
 <g id="step-3">
 <g id="input_9">
-<path id="draw-line d8 rgb-template" d="M1137 512H1205" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d7 rgb-template" d="M998 512H1066" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d6 rgb-template" d="M858 512H926" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d5 rgb-template" d="M719 512H786" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d4 rgb-template_3" d="M580 512H647" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d3 rgb-template_6" d="M440 512H508" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d2 rgb-template_6" d="M300 512H368" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d7 rgb-template" d="M1137 512H1205" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d6 rgb-template" d="M998 512H1066" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d5 rgb-template" d="M858 512H926" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d4 rgb-template_3" d="M719 512H786" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d3 rgb-template_6" d="M580 512H647" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_6" d="M440 512H508" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_6" d="M300 512H368" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line rgb-template_7" d="M161 512H229" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
 <g id="step-2">
-<g id="input_10">
-<path id="draw-line d3  rgb-template_2" d="M1051 512H1262" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d2  rgb-template_3" d="M736 512H947" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d1  rgb-template_3" d="M418 512H629" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line rgb-template_8" d="M103 512H314" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<g id="input rgb-template">
+<path id="draw-line d3" d="M1051 512H1262" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2" d="M736 512H947" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1" d="M418 512H629" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line" d="M103 512H314" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
 <g id="step-1">
-<g id="input_11">
-<path id="draw-line rgb-template_9" d="M283 511H1106.5" stroke="#6685D4" stroke-width="6" stroke-linecap="round"/>
+<g id="input_10">
+<path id="draw-line rgb-template_8" d="M283 511H1106.5" stroke="#6685D4" stroke-width="6" stroke-linecap="round"/>
 </g>
 </g>
 </g>

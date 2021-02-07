@@ -179,7 +179,7 @@ function setShadowSize(size) {
 }
 
 function makeRGBTemplate(el, step) {
-  makeTemplate(el, step, "#0F0", shadowSize * 1.9);
+  makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5); // was 1.9 but reduced for dashes
   makeTemplate(el, step, "#00F", shadowSize * 0.87); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
   makeTemplate(el, step, "#F00", 5); // ~1.5px in 320*256 resolution of template on GPU
 }

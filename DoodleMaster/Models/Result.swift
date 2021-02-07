@@ -25,7 +25,7 @@ struct ScoringSystem: Hashable {
     var oneMinusAlpha = punish
 
     var minRed = 0.97
-    var maxNegative = 0.3
+    var maxNegative = -0.2
     var weight = 1.0
 }
 
@@ -160,8 +160,8 @@ class Result: ObservableObject {
         negative = (matchResults.reduce(0, +) != 0 || p > 0) ? min(0, max(-1, n)) : 0 // don't show negative if nothing happened
         overall = max(0, positive + negative)
         enoughRed = red >= scoringSystem.minRed
-        passed = enoughRed && negative <= scoringSystem.maxNegative
-        failed = !passed && max(nPlusOne, negative) > scoringSystem.maxNegative
+        passed = enoughRed && negative >= scoringSystem.maxNegative
+        failed = !passed && min(nPlusOne, negative) < scoringSystem.maxNegative
     }
     
     func print() {
@@ -169,6 +169,6 @@ class Result: ObservableObject {
     }
     
     func toString() -> String {
-        return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
+        return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\ner\t\t\(enoughRed)\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
     }
 }

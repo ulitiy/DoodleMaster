@@ -25,6 +25,8 @@ function loadSVG(text) {
 let stepNumber;
 let refreshVersion = 0;
 let mustSkipAnimation = false;
+shadowSize = 10;
+
 
 function hideAll() {
   refreshVersion++;
@@ -37,10 +39,22 @@ function hideAll() {
 function showTemplate(step) {
   hideAll();
   stepNumber = step;
+  createTemplate(step);
   document.querySelector(`.step-${step} .template`).classList.add("show");
+  document.querySelectorAll(`.step-${step} .rgb-template`).forEach((el) => makeRGBTemplate(el, step))
+  makeTemplate(document.querySelector(`.step-${step} .g-template`), step, "#00F", shadowSize);
   if (debugSVG) return;
   onRepaint(() =>
       window.webkit.messageHandlers.control.postMessage('TemplateReady'));
+}
+
+function createTemplate(step) {
+  let el = document.querySelector(`.step-${step} .template`);
+  if(el) return;
+
+  el = document.createElementNS('http://www.w3.org/2000/svg', "g");
+  el.classList.add("template");
+  document.querySelector(`.step-${step}`).appendChild(el);
 }
 
 function onRepaint(f) {
@@ -54,7 +68,7 @@ function onRepaint(f) {
       svg.style.offsetHeight;
       svg.style.display = "block";
       window.requestAnimationFrame(f);
-    }, 50)
+    }, 100)
   })
 }
 
@@ -158,4 +172,23 @@ function restart() {
   hideAll();
   showInput(stepNumber);
   skipAnimation();
+}
+
+function setShadowSize(size) {
+  shadowSize = size;
+}
+
+function makeRGBTemplate(el, step) {
+  makeTemplate(el, step, "#0F0", shadowSize * 1.9);
+  makeTemplate(el, step, "#00F", shadowSize * 0.87); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
+  makeTemplate(el, step, "#F00", 5); // ~1.5px in 320*256 resolution of template on GPU
+}
+
+function makeTemplate(el, step, color, size) {
+  if(!el) return;
+  el.classList.remove("rgb-template", "g-template");
+  const n = el.cloneNode();
+  document.querySelector(`.step-${step} .template`).appendChild(n);
+  n.setAttribute("stroke", color)
+  n.setAttribute("stroke-width", size)
 }

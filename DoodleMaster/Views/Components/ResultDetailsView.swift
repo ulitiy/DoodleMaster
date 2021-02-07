@@ -38,8 +38,8 @@ struct ResultDetailsView: View {
         VStack(spacing: 20) {
             formatRow(name: "Match", val: result.blueK)
             formatRow(name: "Deviation", val: result.oneMinusAlphaK)
-            formatRow(name: "Roughness", val: result.roughnessK)
-            formatRow(name: "Overlap", val: result.overlapK)
+            formatRow(name: "Smoothness bonus", val: result.roughnessK)
+            formatRow(name: "Stroke overlap", val: result.overlapK)
             formatRow(name: "Stroke count", val: result.strokeCountK)
             if time != nil {
                 HStack {

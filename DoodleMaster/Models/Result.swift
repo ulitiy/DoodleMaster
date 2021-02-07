@@ -9,31 +9,28 @@
 import Combine
 
 let neutral = [0.0, 0.0, 1, 0.0]
-let any = [0.0, 0.0, 0.03, 1.0, 1.0]
+let any = 0.03
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
-let necessary = [0.9699, 0.0, 0.97, -1.0]
-let smoothPunish = [150, 0.0, 400, -0.5]
-let rough = [300.0, -1.0, 400.0, 0.0]
-let smooth = [20.0, 0.0, 500.0, -0.2]
+let smooth = [0.0, 0.3, 300.0, 0.0]
 let punish = [0.0, 0.0, 0.01, -1]
 
 struct ScoringSystem: Hashable {
     // xa, ya, xb, yb line coordinates, clamp x and interpolate
     var overlap = neutral
-    var roughness = neutral // 0-1 very smooth 1-3 okish 3+ bad
+    var roughness = smooth
     var strokeCount = neutral
 
-    var red = punish // necessary, sharp line
-    var green = neutral // neutral
-    var blue = [0.0, 0.0, 1.0, 1.0, 0.95] // good, match, 5th value - minimum blue
+    var green = neutral
+    var blue = [0.0, 0.0, 1.0, 1.0]
     var oneMinusAlpha = punish
 
-    var passingScore = 0.7
+    var minRed = 0.97
+    var maxNegative = 0.3
     var weight = 1.0
 }
 
 class Result: ObservableObject {
-    var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] { // r g b a ol pixels drawn
+    var matchResults: [UInt32] = [0, 0, 0, 0, 0, 0] { // r g b a ol pixelsDrawn
         didSet {
             calculate()
         }
@@ -62,11 +59,11 @@ class Result: ObservableObject {
     var roughnessK = 0.0
     var strokeCountK = 0.0
     var strokeCountPlusOneK = 0.0
-    var redK = 0.0
+    var red = 0.0 // not redk
     var greenK = 0.0
     var blueK = 0.0
     var oneMinusAlphaK = 0.0
-    var enoughBlueK = false // can override overall -> passed
+    var enoughRed = false
 
     @Published var overall = 0.0
     @Published var passed = false
@@ -87,20 +84,18 @@ class Result: ObservableObject {
     }
 
     func calculate() {
-        if templateCount[2] == 0 { // no blue pixels, broken screenshot, wait
+        if templateCount[0] == 0 { // no red pixels, broken screenshot, wait
             return
         }
-        
+        red = Double(matchResults[0]) / Double(templateCount[0])
+        blueK = calculateK(val: Double(matchResults[2]) / Double(templateCount[2]), scoring: scoringSystem.blue)
+        greenK = calculateK(val: Double(matchResults[1]) / Double(templateCount[1]), scoring: scoringSystem.green)
+        oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
+
         if matchResults[5] > 0 {
             overlapK = calculateK(val: Double(matchResults[4]) / Double(matchResults[5]), scoring: scoringSystem.overlap)
         }
         roughnessK = calculateK(val: rippleSum / Double(ripplePageCount), scoring: scoringSystem.roughness)
-        if templateCount[0] > 0 {
-            redK = calculateK(val: Double(matchResults[0]) / Double(templateCount[0]), scoring: scoringSystem.red)
-        }
-        greenK = calculateK(val: Double(matchResults[1]) / Double(templateCount[1]), scoring: scoringSystem.green)
-        blueK = calculateK(val: Double(matchResults[2]) / Double(templateCount[2]), scoring: scoringSystem.blue)
-        oneMinusAlphaK = calculateK(val: Double(matchResults[3]) / Double(templateCount[3]), scoring: scoringSystem.oneMinusAlpha)
         
         strokeCountK = calculateK(val: Double(strokeCount), scoring: scoringSystem.strokeCount)
         strokeCountPlusOneK = calculateK(val: Double(strokeCount + 1), scoring: scoringSystem.strokeCount)
@@ -109,12 +104,11 @@ class Result: ObservableObject {
     
     var failExplanations = [
         "oneMinusAlphaK-falls": "Try to be more precise and match the expected image.",
-        "redK-falls": "Try to be more precise and match the expected image.",
         "overlapK-falls": "Try not to draw over your lines.",
         "roughnessK-falls": "Too rough. Try to draw fast steady lines, draw with your arm, not your wrist.",
         "roughnessK-grows": "Too smooth. Make your lines even rougher.",
-        "strokeCountK-falls": "Try to use less strokes.",
-        "strokeCountPlusOneK-falls": "You can't use many strokes on this step.",
+        "strokeCountK-falls": "Try to use minimum amount of strokes to complete this step.",
+        "strokeCountPlusOneK-falls": "Try to use minimum amount of strokes to complete this step.",
     ]
     
     func addK(_ k: Double, _ p: Double, _ n: Double) -> (Double, Double) {
@@ -133,7 +127,6 @@ class Result: ObservableObject {
             "blueK": [blueK, comp(scoringSystem.blue)],
             "greenK": [greenK, comp(scoringSystem.green)],
             "oneMinusAlphaK": [oneMinusAlphaK, comp(scoringSystem.oneMinusAlpha)],
-            "redK": [redK, comp(scoringSystem.red)],
             "overlapK": [overlapK, comp(scoringSystem.overlap)],
             "roughnessK": [roughnessK, comp(scoringSystem.roughness)],
             "strokeCountK": [strokeCountK, comp(scoringSystem.strokeCount)],
@@ -144,7 +137,6 @@ class Result: ObservableObject {
         var worstCriterion = "blueK"
         var grows = false
         criteria.forEach { key, val in
-//            Swift.print("\(key) \(val[0])")
             if val[0] < worstFail {
                 worstFail = val[0]
                 grows = val[1] > 0
@@ -158,18 +150,18 @@ class Result: ObservableObject {
         findWhyFailed();
         var p = 0.0
         var n = 0.0
-        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK, redK].forEach {
+        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK].forEach {
             (p, n) = addK($0, p, n)
         }
         let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
         (p, n) = addK(strokeCountK, p, n)
-        positive = min(1, p)
-        negative = matchResults.reduce(0, +) != 0 || p > 0 ? min(0, max(-1, n)) : 0 // don't show negative if nothing happened
-        overall = max(0, positive + negative) // + redK
-        enoughBlueK = blueK >= scoringSystem.blue[4]
-        passed = enoughBlueK && overall >= scoringSystem.passingScore
-        // fixables: overlap, roughness ????????????????????????
-        failed = !passed && min(1 + nPlusOne, 1 + negative) < scoringSystem.passingScore
+        let red = Double(matchResults[0]) / Double(templateCount[0])
+        positive = p
+        negative = (matchResults.reduce(0, +) != 0 || p > 0) ? min(0, max(-1, n)) : 0 // don't show negative if nothing happened
+        overall = max(0, positive + negative)
+        enoughRed = red >= scoringSystem.minRed
+        passed = enoughRed && negative <= scoringSystem.maxNegative
+        failed = !passed && max(nPlusOne, negative) > scoringSystem.maxNegative
     }
     
     func print() {
@@ -177,6 +169,6 @@ class Result: ObservableObject {
     }
     
     func toString() -> String {
-        return "b\t\t\(blueK.formatPercent())\nr\t\t\(redK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
+        return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
     }
 }

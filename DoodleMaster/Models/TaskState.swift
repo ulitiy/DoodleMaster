@@ -132,7 +132,7 @@ class TaskState: ObservableObject {
         })
         taskResult = results.reduce(Result(scoringSystem: task.scoringSystem)) { res, val2 in
             let weight = val2.scoringSystem.weight / totalWeight
-            res.redK = res.redK + val2.redK * weight
+            res.red = res.red + val2.red * weight
             res.greenK = res.greenK + val2.greenK * weight
             res.blueK = res.blueK + val2.blueK * weight
             res.oneMinusAlphaK = res.oneMinusAlphaK + val2.oneMinusAlphaK * weight

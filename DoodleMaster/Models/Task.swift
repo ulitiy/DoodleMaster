@@ -10,9 +10,9 @@ import SwiftUI
 
 struct TaskStep: Hashable {
     var brushName = "main"
-    var brushSize = 10
+    var brushSize = 10.0
     var brushOpacity = 1.0
-    var shadowSize = 50
+    var shadowSize = 50.0
     var clearBefore = true
     var showResult = true
     

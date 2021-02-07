@@ -32,6 +32,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     var templateSink: AnyCancellable?
     var skipAnimationSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
+    var brushScale = 1.0
     
     func webView(_ webView: WKWebView,
       didFinish navigation: WKNavigation!) {
@@ -46,7 +47,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
                 }
             }
         } else {
-            wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");")
+            wkWebView.evaluateJavaScript("setShadowSize(\(taskState.currentStep.shadowSize * brushScale)); loadTask(\"\(taskState.task.path)\");") // shouldn't show template
         }
     }
     
@@ -74,6 +75,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         wkWebView.loadFileURL(url, allowingReadAccessTo: url)
         wkWebView.navigationDelegate = self
         watchUpdates()
+        brushScale = Double(view.bounds.height) / 1024
         view.addSubview(wkWebView)
     }
     
@@ -94,7 +96,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
         }
         templateSink = taskState.$template.sink { [weak self] val in
             if val == nil {
-                self?.wkWebView.evaluateJavaScript("showTemplate(\(self!.taskState.stepNumber));")
+                self?.wkWebView.evaluateJavaScript("setShadowSize(\(self!.taskState.currentStep.shadowSize * self!.brushScale)); showTemplate(\(self!.taskState.stepNumber));")
             }
         }
         skipAnimationSink = taskState.$skipAnimation.sink { [weak self] val in
@@ -120,9 +122,9 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             }
             self.snapshot = img
             if !self.taskState.debugTemplate {
-                self.wkWebView.evaluateJavaScript("showInput(\(step));")
+                self.wkWebView.evaluateJavaScript("showInput(\(step));") // standard behavior
             } else {
-                self.taskState.template = self.createTexture(uiImage: self.snapshot!) // because we skip InputReady event
+                self.taskState.template = self.createTexture(uiImage: self.snapshot!) // debug behavior. Because we skip InputReady event
             }
         })
     }

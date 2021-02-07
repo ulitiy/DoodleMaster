@@ -20,7 +20,7 @@ struct TaskView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
-                ResultProgressView(positive: taskState.currentResult.positive, negative: taskState.currentResult.negative)
+                ResultProgressView(positive: taskState.currentResult.blueK, negative: taskState.currentResult.oneMinusAlphaK) // otherwise we get >100%
                 ZStack {
                     WebViewWrapper(taskState: taskState).opacity((taskState.template != nil) ? 1 : 0)
 

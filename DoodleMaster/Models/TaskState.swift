@@ -106,7 +106,7 @@ class TaskState: ObservableObject {
     func restartTask() {
         print("Restart task")
         results.removeAll()
-        stepNumber = 1
+        stepNumber = 0
         totalWeight = 0
         stepElementsCount = 0
         taskResult = nil

@@ -46,8 +46,8 @@ let lines = Course(
     description: "Line work is one of the basic skills for an artist. It's a common mistake to draw many hairy, chicken scratchy lines. It results in jagged look and lack of flow. In this course you can learn how to draw steady lines confidently. Try to use your whole arm and draw with your elbow and shoulder, not just your wrist.",
     tasks: [
         Task(name: "Straight lines", path: "Lines/1"),
-//        Task(name: "Star", path: "Lines/2", steps: [TaskStep](repeating: multistep, count: 5) + [multistepResult]),
-//        Task(name: "Swan", path: "Lines/3", steps: [TaskStep](repeating: multistep, count: 8) + [multistepResult]),
+        Task(name: "Star", path: "Lines/2"),
+        Task(name: "Swan", path: "Lines/3"),
 //        Task(name: "House", path: "Lines/4", steps: [TaskStep](repeating: multistep, count: 11) + [multistepResult]),
 //        Task(name: "Curved lines", path: "Lines/5", steps: [TaskStep](repeating:  TaskStep(), count: 17)),
 //        Task(name: "Fish", path: "Lines/6", steps: [TaskStep](repeating: multistep, count: 7) + [multistepResult]),

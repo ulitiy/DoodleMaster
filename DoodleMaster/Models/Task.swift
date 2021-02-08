@@ -17,8 +17,6 @@ struct TaskStep: Hashable {
     var showResult = true
     
     var scoringSystem = ScoringSystem()
-//    var commitButton = false
-//    var dim = false
 }
 
 class Task: ObservableObject {

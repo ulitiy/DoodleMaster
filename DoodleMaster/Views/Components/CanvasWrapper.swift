@@ -61,10 +61,9 @@ class CanvasWrapperController: UIViewController {
     func watchUpdates() {
         canvas.onTemplateCountCompleted = { [weak self] res in
             self?.taskState.currentResult.templateCount = res
-//            print("Template count: \(res)")
-            if res[2] == 0 {
+            if res[0] == 0 {
                 self?.taskState.template = nil
-                print("No blues in the screenshot, resetting...")
+                print("No red in the screenshot, resetting...")
             }
         }
         canvas.onCountCompleted = { [weak self] res in

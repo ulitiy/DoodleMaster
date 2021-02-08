@@ -190,8 +190,11 @@ function makeRGBTemplates(step) {
     makeTemplate(el, step, "#00F", shadowSize * 0.87)); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
   document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) => 
     makeTemplate(el, step, "#F00", 5)); // ~1.5px in 320*256 resolution of template on GPU
+
   document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) =>
-    el.classList.remove("rgb-template", "g-template"));
+    el.classList.remove("rgb-template"));
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .g-template, .step:nth-child(${countSteps() - step}) .g-template path`).forEach((el) => 
+    el.classList.remove("g-template"));
 }
 
 function makeTemplate(el, step, color, size) {

@@ -78,5 +78,3 @@ let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: ""
 #else
 let courses = coursesBase
 #endif
-
-let globalState = CourseListState(courses: courses)

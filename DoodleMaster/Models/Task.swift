@@ -30,6 +30,7 @@ class Task: ObservableObject {
         
         set {
             UserDefaults.standard.set(newValue, forKey: path + ".taskResult")
+            print("Setting \(newValue) for \(path + ".taskResult")")
             objectWillChange.send()
         }
     }

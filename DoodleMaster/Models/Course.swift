@@ -15,33 +15,37 @@ class Course: ObservableObject {
     var description: String
     var tasks: [Task]
     var cancellables = [AnyCancellable]()
-    var passed: Bool {
+    var tasksPassed: Int {
         get {
-            UserDefaults.standard.bool(forKey: path + ".coursePassed")
+            UserDefaults.standard.integer(forKey: path + ".tasksPassed")
         }
         
         set {
-            UserDefaults.standard.set(newValue, forKey: path + ".coursePassed")
+            UserDefaults.standard.set(newValue, forKey: path + ".tasksPassed")
+            print("Setting \(newValue) for \(path + ".tasksPassed")")
+            percentPassed = Double(tasksPassed) / Double(tasks.count)
             objectWillChange.send()
         }
     }
+    @Published var percentPassed = 0.0
     
     init(name: String, path: String, description: String, tasks: [Task]) {
         self.name = name
         self.path = path
         self.description = description
         self.tasks = tasks
+        percentPassed = Double(tasksPassed) / Double(tasks.count)
         tasks.forEach { val in
             cancellables.append(val.objectWillChange.sink(receiveValue: { self.objectWillChange.send() }))
         }
         cancellables.append(objectWillChange.sink {
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                let p = tasks.first(where: {
-                    $0.result == 0
-                }) == nil
-                if self.passed != p {
-                    self.passed = p // true
+                let p = tasks.filter {
+                    $0.result > 0
+                }.count
+                if self.tasksPassed != p {
+                    self.tasksPassed = p
                 }
             }
         })

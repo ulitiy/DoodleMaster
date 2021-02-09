@@ -44,7 +44,7 @@ function showTemplate(step) {
   hideAll();
   stepNumber = step;
   createTemplate(step);
-  document.querySelector(`.step:nth-child(${countSteps() - step}) .template`).classList.add("show");
+  document.querySelector(`.step:nth-child(${countSteps() - step})>.template`).classList.add("show");
   makeRGBTemplates(step);
   if (debugSVG) return;
   onRepaint(() =>
@@ -78,8 +78,8 @@ function onRepaint(f) {
 function showInput(step) {
   hideAll();
   stepNumber = step;
-  document.querySelector(`.step:nth-child(${countSteps() - step}) .input`).classList.add("show");
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .input .draw-line`).forEach((el) => drawLine(el));
+  document.querySelector(`.step:nth-child(${countSteps() - step})>.input`).classList.add("show");
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step})>.input .draw-line`).forEach((el) => drawLine(el));
   if (mustSkipAnimation) {
     skipAnimation();
   }
@@ -181,25 +181,23 @@ function setShadowSize(size) {
 }
 
 function makeRGBTemplates(step) {
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .g-template, .step:nth-child(${countSteps() - step}) .g-template path`).forEach((el) => 
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .g-template:empty, .step:nth-child(${countSteps() - step}) .g-template :empty`).forEach((el) => 
     makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5));
 
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) => 
-    makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5)); // was 1.9 but reduced for dashes
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) => 
-    makeTemplate(el, step, "#00F", shadowSize * 0.87)); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) => 
-    makeTemplate(el, step, "#F00", 5)); // ~1.5px in 320*256 resolution of template on GPU
+  const els = document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .rgb-template:empty, .step:nth-child(${countSteps() - step}) .rgb-template :empty`);
+  els.forEach((el) => makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5)); // was 1.9 but reduced for dashes
+  els.forEach((el) => makeTemplate(el, step, "#00F", shadowSize * 0.87)); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
+  els.forEach((el) => makeTemplate(el, step, "#F00", 5)); // ~1.5px in 320*256 resolution of template on GPU
 
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) path.rgb-template, .step:nth-child(${countSteps() - step}) .rgb-template path`).forEach((el) =>
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .rgb-template`).forEach((el) =>
     el.classList.remove("rgb-template"));
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .g-template, .step:nth-child(${countSteps() - step}) .g-template path`).forEach((el) => 
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .g-template`).forEach((el) => 
     el.classList.remove("g-template"));
 }
 
 function makeTemplate(el, step, color, size) {
   const n = el.cloneNode();
-  n.classList.remove("rgb-template", "g-template");
+  n.classList.remove("rgb-template", "g-template", "input", "template");
   document.querySelector(`.step:nth-child(${countSteps() - step}) .template`).appendChild(n);
   n.setAttribute("stroke", color)
   n.setAttribute("stroke-width", size)

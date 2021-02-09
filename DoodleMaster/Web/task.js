@@ -199,6 +199,7 @@ function makeRGBTemplates(step) {
 
 function makeTemplate(el, step, color, size) {
   const n = el.cloneNode();
+  n.classList.remove("rgb-template", "g-template");
   document.querySelector(`.step:nth-child(${countSteps() - step}) .template`).appendChild(n);
   n.setAttribute("stroke", color)
   n.setAttribute("stroke-width", size)

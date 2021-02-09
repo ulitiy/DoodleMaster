@@ -56,19 +56,9 @@ let lines = Course(
         Task(name: "Shapes", path: "lines/shape"),
         Task(name: "Lollipop", path: "lines/candy"),
         Task(name: "Town", path: "lines/town"),
-//        Task(name: "Balloon dog", path: "lines/11", steps:
-//                [TaskStep](repeating:  TaskStep(), count: 3) +
-//                [multistepFirst] + [TaskStep](repeating: multistep, count: 9) +
-//                [multistepFirst] + [TaskStep](repeating: multistep, count: 6) + [multistepResult]
-//        ),
-//        Task(name: "Shape pattern", path: "lines/12", steps: [TaskStep](repeating: multistep, count: 12) + [multistepResult]),
-//        Task(name: "Penguin", path: "lines/13", steps: [TaskStep](repeating: multistep, count: 14) + [multistepResult]),
-//        Task(name: "Oblique projection", path: "lines/14", steps:
-//                [TaskStep](repeating: multistep, count: 6) +
-//                [multistepFirst, multistep, multistep] +
-//                [multistepFirst, multistep] +
-//                [multistepFirst, multistep, multistep]
-//        ),
+        Task(name: "Balloon dog", path: "lines/balloon"),
+        Task(name: "Shape pattern", path: "lines/pattern"),
+        Task(name: "Penguin", path: "lines/penguin"),
     ]
 )
 

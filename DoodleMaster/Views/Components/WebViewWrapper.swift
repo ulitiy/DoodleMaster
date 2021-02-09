@@ -138,7 +138,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             guard let res = res as? String else {
                 return
             }
-            self.taskState.currentStep = stepTemplates[res]
+            self.taskState.currentStep = stepTemplates[res] ?? stepTemplates["default"]
             print("Using step template \(res)")
             cl()
         }

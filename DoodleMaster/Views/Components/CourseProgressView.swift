@@ -18,8 +18,8 @@ struct CourseProgressView: View {
                     p.addArc(
                         center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
                         radius: geometry.size.width / 2 - 5,
-                        startAngle: .radians(0),
-                        endAngle: .radians(2 * .pi),
+                        startAngle: .radians(1.5 * .pi),
+                        endAngle: .radians(1.5 * .pi + 2 * .pi * value),
                         clockwise: true)
                 }
                 .strokedPath(.init(lineWidth: 12))

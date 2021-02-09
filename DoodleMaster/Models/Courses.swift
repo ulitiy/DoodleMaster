@@ -9,6 +9,7 @@
 let stepTemplates = [
     "default": TaskStep(),
     "multistep": TaskStep(brushName: "pencil", brushOpacity: 0.8, clearBefore: false, showResult: false),
+    "multistep-brush": TaskStep(clearBefore: false, showResult: false),
     "multistep-first": TaskStep(brushName: "pencil", brushOpacity: 0.8, showResult: false),
     "multistep-result": TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
         oneMinusAlpha: neutral,
@@ -42,27 +43,27 @@ let stepTemplates = [
 
 let lines = Course(
     name: "Lines",
-    path: "Lines",
+    path: "lines",
     description: "Line work is one of the basic skills for an artist. It's a common mistake to draw many hairy, chicken scratchy lines. It results in jagged look and lack of flow. In this course you can learn how to draw steady lines confidently. Try to use your whole arm and draw with your elbow and shoulder, not just your wrist.",
     tasks: [
-        Task(name: "Straight lines", path: "Lines/1"),
-        Task(name: "Star", path: "Lines/2"),
-        Task(name: "Swan", path: "Lines/3"),
-//        Task(name: "House", path: "Lines/4", steps: [TaskStep](repeating: multistep, count: 11) + [multistepResult]),
-//        Task(name: "Curved lines", path: "Lines/5", steps: [TaskStep](repeating:  TaskStep(), count: 17)),
-//        Task(name: "Fish", path: "Lines/6", steps: [TaskStep](repeating: multistep, count: 7) + [multistepResult]),
-//        Task(name: "Butterfly", path: "Lines/7", steps: [TaskStep](repeating: multistep, count: 9) + [TaskStep(), multistepResult]),
-        Task(name: "Shapes", path: "Lines/8")
-//        Task(name: "Lollipop", path: "Lines/9", steps: [TaskStep](repeating: multistep, count: 3) + [multistepResult]),
-//        Task(name: "Sky city", path: "Lines/10", steps: [TaskStep](repeating: multistep, count: 17) + [multistepResult]),
-//        Task(name: "Balloon dog", path: "Lines/11", steps:
+        Task(name: "Straight lines", path: "lines/line"),
+        Task(name: "Star", path: "lines/star"),
+        Task(name: "Crane", path: "lines/crane"),
+        Task(name: "House", path: "lines/house"),
+        Task(name: "Curved lines", path: "lines/wave"),
+        Task(name: "Fish", path: "lines/fish"),
+        Task(name: "Butterfly", path: "lines/butterfly"),
+        Task(name: "Shapes", path: "lines/shape"),
+        Task(name: "Lollipop", path: "lines/candy"),
+        Task(name: "Town", path: "lines/town"),
+//        Task(name: "Balloon dog", path: "lines/11", steps:
 //                [TaskStep](repeating:  TaskStep(), count: 3) +
 //                [multistepFirst] + [TaskStep](repeating: multistep, count: 9) +
 //                [multistepFirst] + [TaskStep](repeating: multistep, count: 6) + [multistepResult]
 //        ),
-//        Task(name: "Shape pattern", path: "Lines/12", steps: [TaskStep](repeating: multistep, count: 12) + [multistepResult]),
-//        Task(name: "Penguin", path: "Lines/13", steps: [TaskStep](repeating: multistep, count: 14) + [multistepResult]),
-//        Task(name: "Oblique projection", path: "Lines/14", steps:
+//        Task(name: "Shape pattern", path: "lines/12", steps: [TaskStep](repeating: multistep, count: 12) + [multistepResult]),
+//        Task(name: "Penguin", path: "lines/13", steps: [TaskStep](repeating: multistep, count: 14) + [multistepResult]),
+//        Task(name: "Oblique projection", path: "lines/14", steps:
 //                [TaskStep](repeating: multistep, count: 6) +
 //                [multistepFirst, multistep, multistep] +
 //                [multistepFirst, multistep] +

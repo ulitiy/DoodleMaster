@@ -6,7 +6,7 @@ function loadTask(task) {
     return
   }
   xhr = new XMLHttpRequest();
-  xhr.open("GET", `Courses/${task}.svg`, false);
+  xhr.open("GET", `courses/${task}.svg`, false);
   xhr.onload = (e) => loadSVG(xhr.responseText);
   xhr.send();
 }

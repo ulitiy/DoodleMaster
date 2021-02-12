@@ -52,6 +52,7 @@ struct TaskResultView: View {
         }
         .zIndex(2)
         .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
+
     }
 }
 

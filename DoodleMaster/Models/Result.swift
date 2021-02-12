@@ -171,4 +171,21 @@ class Result: ObservableObject {
     func toString() -> String {
         return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\ner\t\t\(enoughRed)\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
     }
+    
+    func toDictionary() -> Dictionary<String, Double> {
+        let ro = ripplePageCount > 0 ? rippleSum / Double(ripplePageCount) : 0
+        return [
+            "red": red,
+            "greenK": greenK,
+            "blueK": blueK,
+            "oneMinusAlphaK": oneMinusAlphaK,
+            "roughness": ro,
+            "roughnessK": roughnessK,
+            "overlapK": overlapK,
+            "strokeCountK": strokeCountK,
+            "positive": positive,
+            "negative": negative,
+            "overall": overall,
+        ]
+    }
 }

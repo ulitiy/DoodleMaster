@@ -41,13 +41,16 @@
 		6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */; };
 		6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD7CC72551CDF700E750C2 /* LazyView.swift */; };
 		6CF01E9425D1AAD5004E8695 /* CourseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */; };
+		6CF01EA125D3E7F8004E8695 /* TaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF01EA025D3E7F8004E8695 /* TaskListItemView.swift */; };
 		6CF1708E25912C13000DB2A9 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1708D25912C13000DB2A9 /* extensions.swift */; };
 		6CF1709225924A88000DB2A9 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1709125924A88000DB2A9 /* pencil.png */; };
 		6CF5926C25A9F8B7003E9E03 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */; };
-		D07906C5821EEF980BBDFC82 /* Pods_DoodleMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */; };
+		8BAF34280AE0F60CAD83F50B /* Pods_ArtWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137F8F74534ED895A2AA6E84 /* Pods_ArtWorkout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		137F8F74534ED895A2AA6E84 /* Pods_ArtWorkout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtWorkout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BBCB6FC0E58D356569BD119 /* Pods-ArtWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWorkout.debug.xcconfig"; path = "Target Support Files/Pods-ArtWorkout/Pods-ArtWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		6C10815E25508B6800464DF7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		6C1B596A254467E500D44A4E /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
 		6C244AF72573E0A6004015DE /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -85,12 +88,13 @@
 		6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LithosPro-Regular.otf"; sourceTree = "<group>"; };
 		6CDD7CC72551CDF700E750C2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListItemView.swift; sourceTree = "<group>"; };
+		6CF01EA025D3E7F8004E8695 /* TaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListItemView.swift; sourceTree = "<group>"; };
 		6CF1708D25912C13000DB2A9 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		6CF1709125924A88000DB2A9 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = DoodleMaster/Views/Components/CarouselView.swift; sourceTree = SOURCE_ROOT; };
 		6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.debug.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.debug.xcconfig"; sourceTree = "<group>"; };
 		A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoodleMaster.release.xcconfig"; path = "Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster.release.xcconfig"; sourceTree = "<group>"; };
-		FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoodleMaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F559AAD8313753A67566B9B5 /* Pods-ArtWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtWorkout.release.xcconfig"; path = "Target Support Files/Pods-ArtWorkout/Pods-ArtWorkout.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D07906C5821EEF980BBDFC82 /* Pods_DoodleMaster.framework in Frameworks */,
+				8BAF34280AE0F60CAD83F50B /* Pods_ArtWorkout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +114,8 @@
 			children = (
 				6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */,
 				A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */,
+				3BBCB6FC0E58D356569BD119 /* Pods-ArtWorkout.debug.xcconfig */,
+				F559AAD8313753A67566B9B5 /* Pods-ArtWorkout.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -119,7 +125,7 @@
 			children = (
 				6CB5E24524EA7B720002E77B /* MaLiang */,
 				6CB5E24724EA7B8E0002E77B /* MaLiang */,
-				FE0F85B8B79C173B5CFFC7B0 /* Pods_DoodleMaster.framework */,
+				137F8F74534ED895A2AA6E84 /* Pods_ArtWorkout.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 				6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */,
 				6C5A88F425D1647F00A7FD02 /* CourseProgressView.swift */,
 				6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */,
+				6CF01EA025D3E7F8004E8695 /* TaskListItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,7 +330,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DoodleMaster-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ArtWorkout-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -336,15 +343,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ArtWorkout/Pods-ArtWorkout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ArtWorkout/Pods-ArtWorkout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoodleMaster/Pods-DoodleMaster-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtWorkout/Pods-ArtWorkout-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -370,6 +377,7 @@
 				6CF01E9425D1AAD5004E8695 /* CourseListItemView.swift in Sources */,
 				6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */,
 				6CF5926C25A9F8B7003E9E03 /* CarouselView.swift in Sources */,
+				6CF01EA125D3E7F8004E8695 /* TaskListItemView.swift in Sources */,
 				6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */,
 				6C5A88F525D1647F00A7FD02 /* CourseProgressView.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
@@ -520,11 +528,11 @@
 		};
 		6CB5E23F24EA71B40002E77B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DF4032C3D9C4B591B33B725 /* Pods-DoodleMaster.debug.xcconfig */;
+			baseConfigurationReference = 3BBCB6FC0E58D356569BD119 /* Pods-ArtWorkout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -533,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
@@ -543,11 +551,11 @@
 		};
 		6CB5E24024EA71B40002E77B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A63DDCAC882B24748BF10D54 /* Pods-DoodleMaster.release.xcconfig */;
+			baseConfigurationReference = F559AAD8313753A67566B9B5 /* Pods-ArtWorkout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 26;
+				CURRENT_PROJECT_VERSION = 27;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -556,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Amplitude_iOS
 
 struct TaskView: View {
     @StateObject var taskState: TaskState
@@ -43,6 +44,13 @@ struct TaskView: View {
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)
+        .onAppear() {
+            Amplitude.instance().logEvent("task_open", withEventProperties: [
+                "path": taskState.task.path,
+                "name": taskState.task.name,
+                "result": taskState.task.result,
+            ])
+        }
     }
 }
 

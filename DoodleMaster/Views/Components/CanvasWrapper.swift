@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import MaLiang
 import Combine
+import Amplitude_iOS
 
 struct CanvasWrapper: UIViewControllerRepresentable {
     @ObservedObject var taskState: TaskState
@@ -76,8 +77,12 @@ class CanvasWrapperController: UIViewController {
             self?.taskState.touching = true
         }
         canvas.onTouchesEnded = { [weak self] in
-            self?.taskState.currentResult.strokeCount = self!.canvas.data.elements.count // TODO: seems reliable
-            self?.taskState.touching = false
+            guard let self = self else { return }
+            self.taskState.currentResult.strokeCount = self.canvas.data.elements.count // TODO: seems reliable
+            self.taskState.touching = false
+            if self.canvas.isPencilMode {
+                Amplitude.instance().setUserProperties(["has_apple_pencil": true])
+            }
         }
         passingSink = taskState.$passing.sink { [weak self] val in
             guard let self = self, !self.taskState.passing, val else {

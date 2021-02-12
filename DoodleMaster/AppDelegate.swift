@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Amplitude_iOS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        #if DEBUG
+        let ampKey = "09c613f412411a5b9ca77af4998e42aa"
+        #else
+        let ampKey = "1a64c17f87207932581f2165901698fd"
+        #endif
+        Amplitude.instance().trackingSessionEvents = true
+        Amplitude.instance().initializeApiKey(ampKey)
         return true
     }
 

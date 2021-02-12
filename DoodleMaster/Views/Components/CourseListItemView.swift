@@ -7,9 +7,11 @@
 //
 
 import SwiftUI
+import Amplitude_iOS
 
 struct CourseListItemView: View {
     @ObservedObject var course: Course
+    @State var openCourse: Bool?
     
     @ViewBuilder
     func destination(_ course: Course) -> some View {
@@ -21,7 +23,7 @@ struct CourseListItemView: View {
     }
     
     var body: some View {
-        NavigationLink(destination: destination(course)) {
+        NavigationLink(destination: destination(course), tag: true, selection: $openCourse) {
             VStack {
                 ZStack {
                     CarouselView(count: course.tasks.count + 1) {
@@ -53,6 +55,15 @@ struct CourseListItemView: View {
                     .foregroundColor(Color(hex: "303b96ff"))
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
+            }
+            .onTapGesture {
+                Amplitude.instance().logEvent("course_open", withEventProperties: [
+                    "path": course.path,
+                    "name": course.name,
+                    "tasks_count": course.tasks.count,
+                    "tasks_passed": course.tasksPassed,
+                ])
+                openCourse = true
             }
         }
         .buttonStyle(PlainButtonStyle())

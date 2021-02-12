@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Amplitude_iOS
 
 struct TaskMenuView: View {
     @ObservedObject var taskState: TaskState
@@ -55,7 +56,15 @@ struct TaskMenuView: View {
             ZStack {
             }
             .alert(isPresented: $showBackToMenuAlert) {
-                Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: { self.presentationMode.wrappedValue.dismiss() }), secondaryButton: .default(Text("Cancel")))
+                Alert(title: Text("Are you sure want to return to menu?"), primaryButton: .default(Text("Yes"), action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                    Amplitude.instance().logEvent("task_exit", withEventProperties: [
+                        "task_path": taskState.task.path,
+                        "step_number": taskState.stepNumber,
+                        "name": taskState.task.name,
+                        "times_failed": taskState.timesFailed,
+                    ])
+                }), secondaryButton: .default(Text("Cancel")))
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)

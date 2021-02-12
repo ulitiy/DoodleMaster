@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Combine
+import Amplitude_iOS
 
 class Course: ObservableObject {
     var name: String
@@ -27,7 +28,17 @@ class Course: ObservableObject {
             objectWillChange.send()
         }
     }
-    @Published var percentPassed = 0.0
+    @Published var percentPassed = 0.0 {
+        willSet(val) {
+            if percentPassed != 1 && val == 1 {
+                Amplitude.instance().logEvent("course_pass", withEventProperties: [
+                    "path": path,
+                    "name": name,
+                    "tasks_count": tasks.count,
+                ])
+            }
+        }
+    }
     
     init(name: String, path: String, description: String, tasks: [Task]) {
         self.name = name

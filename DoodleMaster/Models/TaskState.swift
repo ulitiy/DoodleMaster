@@ -8,6 +8,7 @@
 
 import Combine
 import UIKit
+import Amplitude_iOS
 
 class TaskState: ObservableObject {
     @Published var task: Task! // has to be published
@@ -22,6 +23,7 @@ class TaskState: ObservableObject {
     @Published var currentResult: Result!
     // how many elements there were in canvas.data.elements when this step started
     var totalWeight = 0.0
+    var timesFailed = 0
     var stepElementsCount = 0
     @Published var stepCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
@@ -75,6 +77,13 @@ class TaskState: ObservableObject {
             }
             passing = true
 //            currentResult.print()
+            Amplitude.instance().logEvent("step_pass", withEventProperties: [
+                "task_path": task.path,
+                "step_number": stepNumber,
+                "name": task.name,
+                "result_details": currentResult.toDictionary(),
+                "times_failed": timesFailed,
+            ])
             if currentStep.showResult { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
                 self?.switchNextStep()
@@ -86,6 +95,7 @@ class TaskState: ObservableObject {
         if !failing { // only once
             print("Fail step")
             failing = true
+            timesFailed += 1
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
                 guard let self = self else {
                     return
@@ -93,6 +103,13 @@ class TaskState: ObservableObject {
                 self.whyFailed = self.currentResult.whyFailed
                 self.restartStep()
             }
+            Amplitude.instance().logEvent("step_fail", withEventProperties: [
+                "task_path": task.path,
+                "step_number": stepNumber,
+                "name": task.name,
+                "result_details": currentResult.toDictionary(),
+                "times_failed": timesFailed,
+            ])
         }
     }
     
@@ -106,6 +123,7 @@ class TaskState: ObservableObject {
     func restartTask() {
         print("Restart task")
         results.removeAll()
+        timesFailed = 0
         stepNumber = 0
         totalWeight = 0
         stepElementsCount = 0
@@ -125,6 +143,7 @@ class TaskState: ObservableObject {
         template = nil
         passing = false
         failing = false
+        timesFailed = 0
     }
     
     func passTask() {
@@ -152,5 +171,12 @@ class TaskState: ObservableObject {
         print("Pass task, result:")
         taskResult!.print()
         print("=========")
+        Amplitude.instance().logEvent("task_pass", withEventProperties: [
+            "path": task.path,
+            "name": task.name,
+            "highscore": highScore,
+            "result": taskResult!.toDictionary(),
+            "time": abs(dateStarted.timeIntervalSinceNow),
+        ])
     }
 }

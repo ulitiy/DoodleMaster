@@ -1,16 +1,23 @@
 PODS:
+  - Amplitude-iOS (4.9.3)
   - MaLiang (2.8.0)
 
 DEPENDENCIES:
+  - Amplitude-iOS (~> 4.9.3)
   - MaLiang (from `MaLiang`)
+
+SPEC REPOS:
+  trunk:
+    - Amplitude-iOS
 
 EXTERNAL SOURCES:
   MaLiang:
     :path: MaLiang
 
 SPEC CHECKSUMS:
+  Amplitude-iOS: 122e026c44db8460e5efcf84859aa290a0ae9786
   MaLiang: 6130188df48cacf7698647fe9e8421d630ee1858
 
-PODFILE CHECKSUM: b8cab26ccad837d7aac4e3bd65d6e9f72c1f9574
+PODFILE CHECKSUM: e700b1a8c1acf91384a6a011f0c4af06af05f12c
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

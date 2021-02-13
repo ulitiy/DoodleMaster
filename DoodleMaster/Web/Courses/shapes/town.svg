@@ -398,7 +398,7 @@
 <path id="Vector 40_13" d="M717.717 794.22V667.033H796.33V794.22H718.725" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <path id="draw-line d1 rgb-template" d="M898 859V736.386C898 736.386 902.703 693 944.089 693C985.475 693 993 736.386 993 736.386V819.415" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line rgb-template_5" d="M419 860V754.375C419 754.375 423.01 717 458.297 717C493.584 717 500 754.375 500 754.375V860H419.802" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_5" d="M419 860V754.375C419 754.375 423.01 717 458.297 717C493.584 717 500 754.375 500 754.375V860" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step s-multistep_8">

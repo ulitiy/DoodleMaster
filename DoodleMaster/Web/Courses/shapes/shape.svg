@@ -78,9 +78,9 @@
 </g>
 <g id="step_8">
 <g id="input rgb-template_8">
-<path id="draw-line d3_3" d="M819.5 649L546 649" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d2_3" d="M822 648.5L822 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="draw-line d1_3" d="M819.5 375L546 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d3 flip" d="M819.5 649L546 649" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d2 flip" d="M822 648.5L822 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1 flip" d="M819.5 375L546 375" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line " d="M544 375V648.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
@@ -91,8 +91,8 @@
 </g>
 <g id="step_10">
 <g id="input rgb-template_10">
-<path id="draw-line d2_4" d="M847.5 609L520.5 609" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
-<path id="draw-line d1_4" d="M682.5 391L847.5 608.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2_3" d="M847.5 609L520.5 609" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1_3" d="M682.5 391L847.5 608.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line_8" d="M519 608.5L681.5 392" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>

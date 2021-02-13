@@ -9,7 +9,6 @@
 import Combine
 
 let neutral = [0.0, 0.0, 1, 0.0]
-let any = 0.03
 let oneStroke = [1.0, 0.0, 2.0, -1.0]
 let smooth = [0.0, 0.3, 300.0, 0.0]
 let punish = [0.0, 0.0, 0.01, -1]
@@ -24,7 +23,7 @@ struct ScoringSystem: Hashable {
     var blue = [0.0, 0.0, 1.0, 1.0]
     var oneMinusAlpha = punish
 
-    var minRed = 0.97
+    var minRed = 0.99
     var maxNegative = -0.2
     var weight = 1.0
 }

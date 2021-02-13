@@ -77,15 +77,17 @@ function onRepaint(f) {
 
 function showInput(step) {
   hideAll();
-  stepNumber = step;
-  document.querySelector(`.step:nth-child(${countSteps() - step})>.input`).classList.add("show");
-  document.querySelectorAll(`.step:nth-child(${countSteps() - step})>.input .draw-line`).forEach((el) => drawLine(el));
-  if (mustSkipAnimation) {
-    skipAnimation();
-  }
-  if (debugSVG) return;
-  onRepaint(() =>
-      window.webkit.messageHandlers.control.postMessage('InputReady'));
+  onRepaint(() => {
+      if (!debugSVG) {
+        window.webkit.messageHandlers.control.postMessage('InputReady')
+      }
+      stepNumber = step;
+      document.querySelector(`.step:nth-child(${countSteps() - step})>.input`).classList.add("show");
+      document.querySelectorAll(`.step:nth-child(${countSteps() - step})>.input .draw-line`).forEach((el) => drawLine(el));
+      if (mustSkipAnimation) {
+        skipAnimation();
+      }
+    });
 }
 
 function getRepeat(el) {
@@ -116,8 +118,9 @@ function drawLine(el) {
   // remove delay, it breaks animation
   tempRemoveDelay(el);
 
-  let len = el.getTotalLength() * 1.1;
+  let len = el.getTotalLength() * 1.02;
   let duration = Math.round(len/100)/10;
+  duration = duration >= 0.9 ? duration : 0.9;
   el.style.strokeDasharray = len;
   el.style.strokeDashoffset = len;
   el.classList.remove("hide");

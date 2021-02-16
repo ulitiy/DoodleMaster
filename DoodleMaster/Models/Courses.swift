@@ -22,6 +22,10 @@ let stepTemplates = [
         minRed: 0.03,
         weight: 0.0
     )),
+    "cursive": TaskStep(brushName: "pen", brushSize: 3.0, brushOpacity: 0.9, shadowSize: 7, scoringSystem: ScoringSystem( // 4-5 + 20%
+        roughness: [0.0, 0.0, 1.0, 0],
+        oneMinusAlpha: neutral
+    )),
 ]
 
 let lines = Course(

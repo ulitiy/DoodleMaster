@@ -532,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -541,7 +541,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
@@ -555,7 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 28;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -564,7 +564,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;

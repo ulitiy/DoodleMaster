@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CourseListView: View {
     @StateObject var courseListState = CourseListState(courses: courses)
-        
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],

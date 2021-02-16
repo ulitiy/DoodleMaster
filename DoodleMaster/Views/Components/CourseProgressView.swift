@@ -22,7 +22,7 @@ struct CourseProgressView: View {
                         endAngle: .radians(1.5 * .pi + 2 * .pi * value),
                         clockwise: true)
                 }
-                .strokedPath(.init(lineWidth: 12))
+                .strokedPath(.init(lineWidth: 7))
                 .foregroundColor(Color(hex: "303b96ff"))
                 Path { p in
                     p.addArc(
@@ -32,7 +32,7 @@ struct CourseProgressView: View {
                         endAngle: .radians(1.5 * .pi + 2 * .pi * value),
                         clockwise: false)
                 }
-                .strokedPath(.init(lineWidth: 12))
+                .strokedPath(.init(lineWidth: 7))
                 .foregroundColor(Color(hex: "00ea7aff"))
             }
         }

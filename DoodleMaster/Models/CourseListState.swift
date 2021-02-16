@@ -9,9 +9,13 @@
 import Combine
 
 class CourseListState: ObservableObject {
+    var cancellables = [AnyCancellable]()
     var courses: [Course]
     
     init(courses: [Course]) {
         self.courses = courses
+        courses.forEach { val in
+            cancellables.append(val.objectWillChange.sink(receiveValue: { self.objectWillChange.send() }))
+        }
     }
 }

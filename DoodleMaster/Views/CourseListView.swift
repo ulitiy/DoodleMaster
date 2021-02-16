@@ -12,16 +12,23 @@ struct CourseListView: View {
     @StateObject var courseListState = CourseListState(courses: courses)
     
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],
-                      alignment: .center, spacing: 80) {
-                ForEach(courseListState.courses, id: \.path) { course in
-                    CourseListItemView(course: course)
+        ZStack {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],
+                          alignment: .center, spacing: 80) {
+                    ForEach(courseListState.courses, id: \.path) { course in
+                        CourseListItemView(course: course)
+                    }
+                }.padding(50)
+            }
+            .navigationTitle("Courses")
+            .navigationBarHidden(true)
+            ForEach(courseListState.courses, id: \.path) { course in
+                if course.firstTimePassed {
+                    CoursePassedView(course: course)
                 }
-            }.padding(50)
+            }
         }
-        .navigationTitle("Courses")
-        .navigationBarHidden(true)
     }
 }
 

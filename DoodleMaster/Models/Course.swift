@@ -31,6 +31,7 @@ class Course: ObservableObject {
     @Published var percentPassed = 0.0 {
         willSet(val) {
             if percentPassed != 1 && val == 1 {
+                firstTimePassed = true
                 Amplitude.instance().logEvent("course_pass", withEventProperties: [
                     "path": path,
                     "name": name,
@@ -39,6 +40,7 @@ class Course: ObservableObject {
             }
         }
     }
+    @Published var firstTimePassed = false
     
     init(name: String, path: String, description: String, tasks: [Task]) {
         self.name = name

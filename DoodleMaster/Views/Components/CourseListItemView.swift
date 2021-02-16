@@ -34,17 +34,18 @@ struct CourseListItemView: View {
                     }.aspectRatio(1, contentMode: .fit)
                     ZStack {
                         if course.percentPassed > 0 && course.percentPassed < 1 {
-                            CourseProgressView(value: course.percentPassed)
-                                .frame(width: 70, height: 70)
-                                .padding(20)
+                            CourseProgressView(value: 0.5) //course.percentPassed)
+                                .frame(width: 50, height: 50)
+                                .padding(16)
                         }
                         if course.percentPassed == 1 {
-                            Image(systemName: "star.circle.fill")
-                                .font(.system(size: 75))
-                                .foregroundColor(.yellow)
+                            MyImageView(name: "cup")
+                                .frame(width: 50, height: 50)
+                                .padding(16)
                         }
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                    .aspectRatio(1, contentMode: .fit)
                     .allowsHitTesting(false)
                 }
                 Text(course.name)
@@ -56,7 +57,8 @@ struct CourseListItemView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 10)
             }
-            .onTapGesture {
+            .aspectRatio(1, contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+            .onTapGesture {                                     // comment this out to fix preview
                 Amplitude.instance().logEvent("course_open", withEventProperties: [
                     "path": course.path,
                     "name": course.name,
@@ -73,5 +75,6 @@ struct CourseListItemView: View {
 struct CourseListItemView_Previews: PreviewProvider {
     static var previews: some View {
         CourseListItemView(course: lines)
+            .previewLayout(.fixed(width: 290, height: 300))
     }
 }

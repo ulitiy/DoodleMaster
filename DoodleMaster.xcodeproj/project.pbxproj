@@ -14,6 +14,7 @@
 		6C3071092528BC3C00B645C1 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3071082528BC3C00B645C1 /* TaskListView.swift */; };
 		6C307128252DF25400B645C1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C307127252DF25300B645C1 /* Result.swift */; };
 		6C3105C724EA9E2A0017F99F /* CanvasWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */; };
+		6C338E8F25DBCE480064B555 /* CoursePassedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C338E8E25DBCE480064B555 /* CoursePassedView.swift */; };
 		6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C36CFA225AF2F20001A2FDE /* CourseListView.swift */; };
 		6C4B8660253604CE000CB7E0 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B865F253604CE000CB7E0 /* Web */; };
 		6C53439925AF39DF00BE544B /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53439825AF39DF00BE544B /* Courses.swift */; };
@@ -58,6 +59,7 @@
 		6C3071082528BC3C00B645C1 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		6C307127252DF25300B645C1 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		6C3105C624EA9E2A0017F99F /* CanvasWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasWrapper.swift; sourceTree = "<group>"; };
+		6C338E8E25DBCE480064B555 /* CoursePassedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursePassedView.swift; sourceTree = "<group>"; };
 		6C36CFA225AF2F20001A2FDE /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		6C4B865F253604CE000CB7E0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		6C53439825AF39DF00BE544B /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				6C3071082528BC3C00B645C1 /* TaskListView.swift */,
 				6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */,
 				6CB5E23124EA71B30002E77B /* TaskView.swift */,
+				6C338E8E25DBCE480064B555 /* CoursePassedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				6C5A88F525D1647F00A7FD02 /* CourseProgressView.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
 				6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */,
+				6C338E8F25DBCE480064B555 /* CoursePassedView.swift in Sources */,
 				6C10815F25508B6800464DF7 /* RootView.swift in Sources */,
 				6CB5E23224EA71B30002E77B /* TaskView.swift in Sources */,
 				6C307128252DF25400B645C1 /* Result.swift in Sources */,
@@ -545,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -568,7 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

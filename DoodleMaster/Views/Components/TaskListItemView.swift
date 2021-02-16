@@ -15,7 +15,10 @@ struct TaskListItemView: View {
         NavigationLink(destination: LazyView(TaskView(task: task))) {
             Image("thumbnails/\(task.path)").resizable().aspectRatio(1,contentMode: .fit)
                 .cornerRadius(30)
-                .overlay(RoundedRectangle(cornerRadius: 30).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 30)
+                        .stroke(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "00aa66ff")!, lineWidth: 4)
+                )
                 .overlay(
                     Text(task.name)
                         .font(.custom("LucidaGrande", size: 20))
@@ -30,7 +33,7 @@ struct TaskListItemView: View {
                         if task.result > 0 {
                             Text("\(task.result.formatPercent()) %")
                                 .font(.custom("LucidaGrande", size: 16))
-                                .foregroundColor(Color(hex: "303b96ff"))
+                                .foregroundColor(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "00aa66ff")!)
                                 .shadow(color: .white, radius: 2)
                                 .shadow(color: .white, radius: 2)
                                 .shadow(color: .white, radius: 2)

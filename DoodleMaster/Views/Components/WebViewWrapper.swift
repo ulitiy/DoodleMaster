@@ -148,7 +148,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     func takeSnapshot(step: Int) {
         let config = WKSnapshotConfiguration()
         config.afterScreenUpdates = true
-        config.snapshotWidth = 160 // (points, means x2 px) multiple of 32 is better
+        config.snapshotWidth = 512 // (points, means x2 px) multiple of 32 is better
         print("Taking screenshot...")
         wkWebView.takeSnapshot(with: config, completionHandler: { [weak self] img, err in
             guard let self = self else {

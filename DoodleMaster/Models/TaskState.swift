@@ -10,6 +10,12 @@ import Combine
 import UIKit
 import Amplitude_iOS
 
+enum MatchState {
+    case requested
+    case inProgress
+    case idle
+}
+
 class TaskState: ObservableObject {
     @Published var task: Task! // has to be published
 
@@ -29,16 +35,31 @@ class TaskState: ObservableObject {
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?
     
+    var matchTimer: Timer?
+    
     @Published var touching = false {
         didSet {
-            guard !touching else {
+            if touching {
+                print("Touching")
+                matchTimer?.invalidate() // necessary to invalidate accidental timer
+                matchTimer = Timer.scheduledTimer(withTimeInterval: 0.03 , repeats: true) { [weak self] _ in // 0.03 x 512pts @ 60fps 60%gpu, 0.02 x 512pts @ 60fps 71% gpu
+                    self?.requestMatchCount()
+                }
                 return
             }
-            if currentResult.passed && self.template != nil { // may be no new screenshot yet?
-                self.passStep()
-            }
-            if currentResult.failed {
-                self.failStep()
+            print("NTouching")
+            matchTimer?.invalidate()
+            matchTimer = nil
+            requestMatchCount()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) { [weak self] in // TODO: needs refactoring but works well
+                guard let self = self else { return }
+                self.currentResult.print()
+                if self.currentResult.passed && self.template != nil { // may be no new screenshot yet?
+                    self.passStep()
+                }
+                if self.currentResult.failed {
+                    self.failStep()
+                }
             }
         }
     }
@@ -50,6 +71,7 @@ class TaskState: ObservableObject {
     
     @Published var skipAnimation = false
     @Published var debugTemplate = false
+    @Published var matchState = MatchState.idle
     
     var currentResultSink: AnyCancellable?
     
@@ -57,6 +79,10 @@ class TaskState: ObservableObject {
         self.task = task
         currentStep = TaskStep()
         dateStarted = Date() // TODO: issue here when not lazy loaded?
+    }
+    
+    func requestMatchCount() {
+        matchState = .requested
     }
     
     func resetResult() {

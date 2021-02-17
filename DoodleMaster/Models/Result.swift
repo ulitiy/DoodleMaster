@@ -39,7 +39,6 @@ class Result: ObservableObject {
     var strokeCount = 0 {
         didSet {
             calculate()
-            print()
         }
     }
     var rippleSum = 0.0

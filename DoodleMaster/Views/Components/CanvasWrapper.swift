@@ -33,6 +33,7 @@ class CanvasWrapperController: UIViewController {
     var stepSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
     var passingSink: AnyCancellable?
+    var matchState: AnyCancellable?
     var brushScale = CGFloat(1)
     
     override func viewDidLoad() { // async later
@@ -70,12 +71,19 @@ class CanvasWrapperController: UIViewController {
                 print("No red in the screenshot, resetting...")
             }
         }
+        matchState = taskState.$matchState.sink { [weak self] val in
+            if val == .requested {
+                self?.taskState.matchState = .inProgress
+                try! self?.canvas.countMatchPixels()
+            }
+        }
         canvas.onCountCompleted = { [weak self] res in
             guard let self = self, self.taskState.touching else { return }
             self.taskState.currentResult.rippleSum = self.canvas.rippleSum
             self.taskState.currentResult.ripplePageCount = self.canvas.ripplePageCount
             self.taskState.currentResult.matchResults = res
         }
+        
         canvas.onTouchesBegan = { [weak self] in
             self?.taskState.touching = true
         }

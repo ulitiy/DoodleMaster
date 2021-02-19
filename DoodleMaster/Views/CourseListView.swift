@@ -23,11 +23,6 @@ struct CourseListView: View {
             }
             .navigationTitle("Courses")
             .navigationBarHidden(true)
-            ForEach(courseListState.courses, id: \.path) { course in
-                if course.firstTimePassed {
-                    CoursePassedView(course: course)
-                }
-            }
         }
     }
 }

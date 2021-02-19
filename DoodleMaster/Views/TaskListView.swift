@@ -13,19 +13,24 @@ struct TaskListView: View {
     @ObservedObject var course: Course
     
     var body: some View {
-        ScrollView(.vertical) {
-            CourseDescriptionView(course: course)
-            Divider().frame(height: 4).background(Color(hex: "303b96ff"))
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 250), spacing: 30)],
-                      alignment: .center, spacing: 30) {
-                ForEach(course.tasks, id: \.path) {task in
-                    TaskListItemView(task: task)
+        ZStack {
+            ScrollView(.vertical) {
+                CourseDescriptionView(course: course)
+                Divider().frame(height: 4).background(Color(hex: "303b96ff"))
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 200, maximum: 250), spacing: 30)],
+                          alignment: .center, spacing: 30) {
+                    ForEach(course.tasks, id: \.path) {task in
+                        TaskListItemView(task: task)
+                    }
                 }
+                .padding(40)
+                .frame(minHeight: 0, maxHeight: .infinity)
             }
-            .padding(40)
-            .frame(minHeight: 0, maxHeight: .infinity)
+            .navigationBarHidden(true)
+            if course.firstTimePassed {
+                CoursePassedView(course: course)
+            }
         }
-        .navigationBarHidden(true)
     }
 }
 

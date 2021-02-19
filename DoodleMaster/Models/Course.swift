@@ -30,7 +30,7 @@ class Course: ObservableObject {
     }
     @Published var percentPassed = 0.0 {
         willSet(val) {
-            if percentPassed != 1 && val == 1 {
+            if percentPassed > 0 && percentPassed < 1 && val == 1 { // 0->1 means startup or 1-task course, no need for congrats
                 firstTimePassed = true
                 Amplitude.instance().logEvent("course_pass", withEventProperties: [
                     "path": path,

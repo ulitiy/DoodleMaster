@@ -34,7 +34,7 @@ struct CourseListItemView: View {
                     }.aspectRatio(1, contentMode: .fit)
                     ZStack {
                         if course.percentPassed > 0 && course.percentPassed < 1 {
-                            CourseProgressView(value: 0.5) //course.percentPassed)
+                            CourseProgressView(value: course.percentPassed)
                                 .frame(width: 50, height: 50)
                                 .padding(16)
                         }

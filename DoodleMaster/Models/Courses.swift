@@ -24,7 +24,7 @@ let stepTemplates = [
     )),
     "handwriting": TaskStep(brushName: "pen", brushSize: 3.0, brushOpacity: 0.9, shadowSize: 11.1, scoringSystem: ScoringSystem( // 11.1 - perfect
         roughness: [0.0, 0.0, 1.0, 0],
-        oneMinusAlpha: [0.0, 0.0, 0.001, -1]
+        oneMinusAlpha: [0.0, 0.0, 0.0025, -1]
     )),
 ]
 
@@ -66,6 +66,7 @@ let perspective = Course(
         Task(name: "1-point perspective", path: "perspective/1-point-perspective"),
         Task(name: "Rails", path: "perspective/rails"),
         Task(name: "2-point perspective", path: "perspective/2-point-perspective"),
+        Task(name: "Cubes", path: "perspective/cubes"),
     ]
 )
 
@@ -75,7 +76,6 @@ let handwriting = Course(
     description: "This course contains a lot of handwriting practice, line by line from the greatest children's poems.",
     tasks: [
         Task(name: "From a Railway Carriage", path: "handwriting/from-a-railway-carriage", text: [
-            "_",
             "Faster than fairies, faster than witches,",
             "Bridges and houses, hedges and ditches;",
             "And charging along like troops in a battle,",

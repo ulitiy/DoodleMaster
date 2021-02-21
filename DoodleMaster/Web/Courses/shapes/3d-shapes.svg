@@ -15,7 +15,7 @@
 <path id="d_2" d="M548 704C548 704 588.341 767.5 681.5 767.5C779.5 767.5 819 704 819 704" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round"/>
 <path id="d_3" d="M556.5 641C556.5 641 588.841 700 682 700C775.159 700 808 641 808 641" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round"/>
 <path id="fd" d="M591 589.5C591 589.5 612.994 629.5 682 629.5C751.006 629.5 771 589.5 771 589.5" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round"/>
-<circle id="d_4" cx="683" cy="691" r="141" stroke="#95AEEC" stroke-width="8"/>
+<circle id="d_4" cx="683" cy="691" r="141" stroke="#6685D4" stroke-width="8"/>
 </g>
 <path id="draw-line rgb-template" d="M720.834 559C720.834 559 776.333 589.5 792.833 672C809.338 754.523 743.834 816.5 743.834 816.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line rgb-template_2" d="M696.834 550.5C696.834 550.5 732.334 617.5 739.834 694C747.59 773.121 714.334 827 714.334 827" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
@@ -47,8 +47,8 @@
 <path id="Vector 29" d="M452.344 661.662L682.374 764.633" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="Vector 30" d="M913 661L682.97 763.97" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<circle id="d_5" cx="683" cy="691" r="141" stroke="#98B2F4" stroke-width="8"/>
-<path id="d_6" d="M682 554V827.5" stroke="#98B2F4" stroke-width="8" stroke-linecap="round"/>
+<circle id="d_5" cx="683" cy="691" r="141" stroke="#6685D4" stroke-width="8"/>
+<path id="d_6" d="M682 554V827.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line d2 rgb-template" d="M548 704C548 704 588.341 767.5 681.5 767.5C779.5 767.5 819 704 819 704" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line d1 rgb-template" d="M556.5 641C556.5 641 588.841 700 682 700C775.159 700 808 641 808 641" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 <path id="draw-line rgb-template_5" d="M591 589.5C591 589.5 612.994 629.5 682 629.5C751.006 629.5 771 589.5 771 589.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
@@ -147,9 +147,9 @@
 <path id="Vector 7" d="M1027 723.5L1077 747.5L1027 773" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <g id="ref_10">
-<path id="&#208;&#178;" d="M849 748.799V481.092H581.293V748.799H847.801" stroke="#829CE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="&#208;&#178;_2" d="M581.293 481.092L483.266 382.799V650.507L581.293 748.799" stroke="#829CE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="&#208;&#178;_3" d="M849 478.694L750.707 382H483L581.293 478.694" stroke="#829CE0" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="&#208;&#178;" d="M849 748.799V481.092H581.293V748.799H847.801" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="&#208;&#178;_2" d="M581.293 481.092L483.266 382.799V650.507L581.293 748.799" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="&#208;&#178;_3" d="M849 478.694L750.707 382H483L581.293 478.694" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <path id="d_11" d="M849 748.799V481.092H581.293V748.799H847.801" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="d_12" d="M581.293 481.092L483.266 382.799V650.507L581.293 748.799" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>

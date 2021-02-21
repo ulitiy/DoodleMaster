@@ -1,0 +1,178 @@
+<svg width="1366" height="1024" viewBox="0 0 1366 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cubes">
+<g id="step s-multistep-brush">
+<g id="input">
+<g id="ref">
+<path id="Vector 1" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d2 rgb-template" d="M380 505L380 622" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template" d="M487 683.5L86.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template" d="M247 646.5L1290.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_2">
+<g id="input_2">
+<g id="ref_2">
+<path id="Vector 1_2" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_2" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_2" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_2" d="M87 451L487 525.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_2" d="M244 513.5L1291 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_3">
+<g id="input_3">
+<g id="ref_3">
+<path id="Vector 1_3" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_3" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_3" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_3" d="M487 684L487 525" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_3" d="M244 645L244 514" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_4">
+<g id="input_4">
+<g id="ref_4">
+<path id="Vector 1_4" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_4" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_4" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d2 rgb-template_2" d="M316 542L87 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_4" d="M316 542L1290.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_4" d="M316 734.5V541.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-first-brush">
+<g id="input_5">
+<g id="ref_5">
+<path id="Vector 1_5" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_5" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_5" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<circle id="Ellipse 4" cx="316" cy="734" r="12" fill="#C4C4C4"/>
+<path id="draw-line d1 rgb-template_5" d="M315.5 733.5L1290.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_5" d="M315 733.5L86 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_5">
+<g id="input_6">
+<g id="ref_6">
+<path id="Vector 1_6" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_6" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_6" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line rgb-template_6" d="M915 590V693" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_6">
+<g id="input_7">
+<g id="ref_7">
+<path id="Vector 1_7" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_7" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_7" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_6" d="M777.5 782L1291 450.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_7" d="M1042 730L921.19 694.743L86 451.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_7">
+<g id="input_8">
+<g id="ref_8">
+<path id="Vector 1_8" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_8" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_8" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_7" d="M777 640.5L1291 450.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_8" d="M1041 611L85.5 451.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_8">
+<g id="input_9">
+<g id="ref_9">
+<path id="Vector 1_9" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_9" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_9" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_8" d="M1042 611L1042 730" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_9" d="M777 640.5V782" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_9">
+<g id="input_10">
+<g id="ref_10">
+<path id="Vector 1_10" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_10" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_10" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d2 rgb-template_3" d="M930 682L1291 450.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_9" d="M929.5 682L85.5 451.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_10" d="M930 855L930 682" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-first-brush_2">
+<g id="input_11">
+<g id="ref_11">
+<path id="Vector 1_11" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_11" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_11" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<circle id="Ellipse 3" cx="930" cy="856" r="12" fill="#C4C4C4"/>
+<path id="draw-line d1 rgb-template_10" d="M1290.5 451L930 855.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_11" d="M930 855.5L85.5 451.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="Vector 1_12" d="M6 451H1362" stroke="#6685D4" stroke-width="8"/>
+<circle id="Ellipse 1_12" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_12" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+</g>
+<g id="step s-multistep-brush_10">
+<g id="input_12">
+<g id="ref_12">
+<path id="Vector 1_13" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_13" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_13" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d1 rgb-template_11" d="M572 314.5L1291 451.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_12" d="M817 314.5L86.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_11">
+<g id="input_13">
+<g id="ref_13">
+<path id="Vector 1_14" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_14" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_14" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line rgb-template_13" d="M572 189V314" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_12" d="M817 189V314" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_12">
+<g id="input_14">
+<g id="ref_14">
+<path id="Vector 1_15" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_15" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_15" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<path id="draw-line d2 rgb-template_4" d="M696 122.5L1291.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_13" d="M696 122.5L86 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_14" d="M696 280L696 122" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_13">
+<g id="input_15">
+<g id="ref_15">
+<path id="Vector 1_16" d="M6 451H1362" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_16" cx="86" cy="451" r="12" fill="#C4C4C4"/>
+<circle id="Ellipse 2_16" cx="1291" cy="451" r="12" fill="#C4C4C4"/>
+</g>
+<circle id="Ellipse 5" cx="696" cy="280" r="12" fill="#C4C4C4"/>
+<path id="draw-line d1 rgb-template_14" d="M696 279.5L86.5 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_15" d="M696 279.5L1291 451" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</svg>

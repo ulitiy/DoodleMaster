@@ -87,28 +87,21 @@ function onRepaint(f) {
   svg.style.offsetHeight;
   svg.style.display = "block";
   window.requestAnimationFrame(() => {
-    setTimeout(() => {
-      svg.style.display = "none";
-      svg.style.offsetHeight;
-      svg.style.display = "block";
-      window.requestAnimationFrame(f);
-    }, 100)
+    svg.style.display = "none";
+    svg.style.offsetHeight;
+    svg.style.display = "block";
+    window.requestAnimationFrame(f);
   })
 }
 
 function showInput(step) {
   hideAll();
-  onRepaint(() => {
-      if (window.webkit) {
-        window.webkit.messageHandlers.control.postMessage('InputReady')
-      }
-      stepNumber = step;
-      document.querySelector(`.step:nth-child(${countSteps() - step})>.input`).classList.add("show");
-      document.querySelectorAll(`.step:nth-child(${countSteps() - step})>.input .draw-line`).forEach((el) => drawLine(el));
-      if (mustSkipAnimation) {
-        skipAnimation();
-      }
-    });
+  stepNumber = step;
+  document.querySelector(`.step:nth-child(${countSteps() - step})>.input`).classList.add("show");
+  document.querySelectorAll(`.step:nth-child(${countSteps() - step})>.input .draw-line`).forEach((el) => drawLine(el));
+  if (mustSkipAnimation) {
+    skipAnimation();
+  }
 }
 
 function getRepeat(el) {
@@ -175,7 +168,9 @@ function tempRemoveDelay(el) {
     // bring delay back
     if (dclass) {
       el.classList.add(dclass);
+      return;
     }
+    el.classList.add("d0");
   }, 0);
 }
 
@@ -192,12 +187,6 @@ function skipAnimation() {
     el.style.strokeDasharray = "none";
     el.style.transition = "none";
   });
-}
-
-function restart() {
-  hideAll();
-  showInput(stepNumber);
-  skipAnimation();
 }
 
 function setShadowSize(size) {

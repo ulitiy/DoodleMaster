@@ -22,9 +22,9 @@ let stepTemplates = [
         minRed: 0.03,
         weight: 0.0
     )),
-    "cursive": TaskStep(brushName: "pen", brushSize: 3.0, brushOpacity: 0.9, shadowSize: 9.3, scoringSystem: ScoringSystem(
+    "handwriting": TaskStep(brushName: "pen", brushSize: 3.0, brushOpacity: 0.9, shadowSize: 11.1, scoringSystem: ScoringSystem( // 11.1 - perfect
         roughness: [0.0, 0.0, 1.0, 0],
-        oneMinusAlpha: neutral
+        oneMinusAlpha: [0.0, 0.0, 0.001, -1]
     )),
 ]
 
@@ -69,7 +69,34 @@ let perspective = Course(
     ]
 )
 
-let coursesBase = [lines, shapes, perspective]
+let handwriting = Course(
+    name: "Handwriting",
+    path: "handwriting",
+    description: "This course contains a lot of handwriting practice, line by line from the greatest children's poems.",
+    tasks: [
+        Task(name: "From a Railway Carriage", path: "handwriting/from-a-railway-carriage", text: [
+            "_",
+            "Faster than fairies, faster than witches,",
+            "Bridges and houses, hedges and ditches;",
+            "And charging along like troops in a battle,",
+            "All through the meadows the horses and cattle:",
+            "All of the sights of the hill and the plain",
+            "Fly as thick as driving rain;",
+            "And ever again, in the wink of an eye,",
+            "Painted stations whistle by.",
+            "Here is a child who clambers and scrambles,",
+            "All by himself and gathering brambles;",
+            "Here is a tramp who stands and gazes;",
+            "And there is the green for stringing the daisies!",
+            "Here is a cart run away in the road",
+            "Lumping along with man and load;",
+            "And here is a mill and there is a river:",
+            "Each a glimpse and gone for ever!",
+        ]),
+    ]
+)
+
+let coursesBase = [lines, shapes, perspective, handwriting]
 
 #if DEBUG
 let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG")])]

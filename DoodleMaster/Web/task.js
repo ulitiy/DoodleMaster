@@ -1,14 +1,16 @@
 let debugSVG = ``;
 
 function loadTask(task) {
-  if (debugSVG) {
-    loadSVG(debugSVG);
-    return
+  try {
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", `courses/${task}.svg`, false);
+    xhr.onload = (e) => loadSVG(xhr.responseText);
+    xhr.send();
+  } catch (error) {
+    if (debugSVG) {
+      loadSVG(debugSVG);
+    }
   }
-  xhr = new XMLHttpRequest();
-  xhr.open("GET", `courses/${task}.svg`, false);
-  xhr.onload = (e) => loadSVG(xhr.responseText);
-  xhr.send();
 }
 
 function loadSVG(text) {
@@ -19,6 +21,25 @@ function loadSVG(text) {
   let svg = document.querySelector("svg");
   svg.removeAttribute("height");
   svg.removeAttribute("width");
+}
+
+function loadTextTask(texts) {
+  let textTask = document.createElement("div");
+  textTask.className = "text-task"
+  document.body.append(textTask);
+  texts.forEach((text) => {
+    let step = document.createElement("div");
+    textTask.prepend(step);
+    step.className = "step s-handwriting";
+    step.innerHTML = `
+      <div class="template">
+        <div class="green">${text}</div>
+        <div class="blue">${text}</div>
+        <div class="red">${text}</div>
+      </div>
+      <div class="input">${text}</div>
+    `;
+  })
 }
 
 let stepNumber;
@@ -46,7 +67,7 @@ function showTemplate(step) {
   createTemplate(step);
   document.querySelector(`.step:nth-child(${countSteps() - step})>.template`).classList.add("show");
   makeRGBTemplates(step);
-  if (debugSVG) return;
+  if (!window.webkit) return;
   onRepaint(() =>
       window.webkit.messageHandlers.control.postMessage('TemplateReady'));
 }
@@ -57,11 +78,11 @@ function createTemplate(step) {
 
   el = document.createElementNS('http://www.w3.org/2000/svg', "g");
   el.classList.add("template");
-  document.querySelector(`.step:nth-child(${countSteps() - step})`).appendChild(el);
+  document.querySelector(`.step:nth-child(${countSteps() - step})`).append(el);
 }
 
 function onRepaint(f) {
-  let svg = document.querySelector("svg");
+  let svg = document.querySelector("svg, .text-task");
   svg.style.display = "none";
   svg.style.offsetHeight;
   svg.style.display = "block";
@@ -78,7 +99,7 @@ function onRepaint(f) {
 function showInput(step) {
   hideAll();
   onRepaint(() => {
-      if (!debugSVG) {
+      if (window.webkit) {
         window.webkit.messageHandlers.control.postMessage('InputReady')
       }
       stepNumber = step;
@@ -201,7 +222,7 @@ function makeRGBTemplates(step) {
 function makeTemplate(el, step, color, size) {
   const n = el.cloneNode();
   n.classList.remove("rgb-template", "g-template", "input", "template");
-  document.querySelector(`.step:nth-child(${countSteps() - step}) .template`).appendChild(n);
+  document.querySelector(`.step:nth-child(${countSteps() - step}) .template`).append(n);
   n.setAttribute("stroke", color)
   n.setAttribute("stroke-width", size)
 }

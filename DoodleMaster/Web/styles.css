@@ -11,6 +11,39 @@ svg {
   max-height: 100%;
 }
 
+.text-task {
+  font-family: "Learning Curve";
+  font-size: 21mm;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: pre;
+  color: #6685d4;
+}
+
+.text-task .template > *,
+.text-task .input {
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-task .red {
+  color: red;
+  -webkit-text-stroke: blue 0.5px;
+}
+
+.text-task .blue {
+  -webkit-text-stroke: blue 6.5px;
+}
+
+.text-task .green {
+  -webkit-text-stroke: #0f0 14px;
+}
+
 .step > * {
   display: none;
 }

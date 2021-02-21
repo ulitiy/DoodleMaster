@@ -3,3 +3,9 @@
   font-weight: 400;
   src: url(Roboto/Roboto-Regular.ttf);
 }
+
+@font-face {
+  font-family: "Learning Curve";
+  font-weight: 400;
+  src: url(LearningCurve-Regular.otf);
+}

@@ -50,6 +50,12 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
                 }
             }
         } else {
+            if taskState.task.text != nil {
+                wkWebView.evaluateJavaScript("loadTextTask(\(taskState.task.text!));") { _, err in
+                    self.getTaskSettings()
+                }
+                return
+            }
             wkWebView.evaluateJavaScript("loadTask(\"\(taskState.task.path)\");") { _, _ in
                 self.getTaskSettings()
             }

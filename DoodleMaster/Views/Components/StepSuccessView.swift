@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct StepSuccessView: View {
-    @ObservedObject var taskState: TaskState
+    var taskState: TaskState // not observable to keep the values intact
     
     var body: some View {
         ZStack {

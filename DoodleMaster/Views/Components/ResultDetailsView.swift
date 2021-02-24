@@ -13,16 +13,25 @@ struct ResultDetailsView: View {
     var time: TimeInterval?
     
     @ViewBuilder
-    func formatRow(name: String, val: Double) -> some View {
+    func formatRow(name: String, val: Double, max: Int) -> some View {
         if abs(val).formatPercent() != "0" {
             HStack {
                 Text(name)
                     .kerning(2)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .foregroundColor(.gray)
-                Text("\(val > 0 ? "+" : "")\(val.formatPercent()) %")
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .foregroundColor(val >= 0 ? .green : .red)
+                    .font(.custom("LucidaGrande", size: 25))
+                Text("\((val*1000).rounded().toString())")
+                    .frame(maxWidth: 70, alignment: .center)
+                    .foregroundColor(Color(hue: 0.4 * val * 1000 / Double(max), saturation: 1, brightness: 0.75))
+                    .font(.custom("LucidaGrande", size: 25))
+                Text("/")
+                    .foregroundColor(.gray)
+                    .font(.custom("LucidaGrande", size: 25))
+                Text(String(max))
+                    .frame(maxWidth: 70, alignment: .center)
+                    .foregroundColor(.gray)
+                    .font(.custom("LucidaGrande", size: 25))
             }
         }
     }
@@ -36,11 +45,8 @@ struct ResultDetailsView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            formatRow(name: "Match", val: result.blueK)
-            formatRow(name: "Deviation", val: result.oneMinusAlphaK)
-            formatRow(name: "Smoothness bonus", val: result.roughnessK)
-            formatRow(name: "Stroke overlap", val: result.overlapK)
-            formatRow(name: "Stroke count", val: result.strokeCountK)
+            formatRow(name: "Match", val: result.blueK + result.oneMinusAlphaK, max: 1000)
+            formatRow(name: "Smoothness", val: result.roughnessK, max: 300)
             if time != nil {
                 HStack {
                     Text("Time")
@@ -48,7 +54,7 @@ struct ResultDetailsView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.gray)
                     Text(getTime())
-                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .frame(maxWidth: 170, alignment: .center)
                         .foregroundColor(.gray)
                 }
             }
@@ -62,7 +68,7 @@ struct ResultDetailsView_Previews: PreviewProvider {
     static func makeResult() -> Result {
         let r = Result(scoringSystem: ScoringSystem())
         r.blueK = 0.98765
-        r.oneMinusAlphaK = -0.1234
+        r.roughnessK = 0.1234
         return r
     }
     

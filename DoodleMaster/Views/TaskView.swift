@@ -33,7 +33,7 @@ struct TaskView: View {
             }
             
             if taskState.currentStep.showResult && taskState.passing && taskState.taskResult == nil {
-                StepSuccessView(taskState: taskState)
+                StepResultView(taskState: taskState)
             }
             if taskState.failing {
                 StepFailView()

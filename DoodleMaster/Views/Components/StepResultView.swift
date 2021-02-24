@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct StepSuccessView: View {
+struct StepResultView: View {
     var taskState: TaskState // not observable to keep the values intact
     
     var body: some View {
@@ -18,9 +18,17 @@ struct StepSuccessView: View {
                 Image(systemName: "checkmark.circle")
                     .foregroundColor(.green)
                     .font(.system(size: 150.0, weight: .light))
-                Text("\(taskState.currentResult.overall.formatPercent()) %")
-                    .font(.custom("LithosPro-Regular", size: 70.0))
-                    .foregroundColor(Color(hex: "303b96ff"))
+                HStack(alignment: .bottom) {
+                    Text("\((taskState.currentResult!.overall * 1000).rounded().toString())")
+                        .font(Font.custom("LithosPro-Regular", size: 70.0))
+                        .foregroundColor(Color(hex: "303b96ff"))
+                        .padding(.leading, 90)
+
+                    Text("/ 1300")
+                        .foregroundColor(.gray)
+                        .font(.custom("LucidaGrande", size: 25))
+                        .padding(.bottom, 18)
+                }
                 ResultDetailsView(result: taskState.currentResult, time: nil)
             }.padding(.bottom, 150)
             ZStack {
@@ -55,7 +63,7 @@ struct StepSuccessView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        StepSuccessView(taskState: makeTaskState())
+        StepResultView(taskState: makeTaskState())
             .previewDevice("iPad Pro (11-inch) (2nd generation)")
             .previewLayout(.fixed(width: 1366, height: 1024))
     }

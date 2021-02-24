@@ -41,7 +41,11 @@ svg {
 }
 
 .text-task .green {
-  -webkit-text-stroke: #0f0 14px;
+  -webkit-text-stroke: #0f0 13px; /* don't punish if close */
+}
+
+.text-task .green-alpha {
+  -webkit-text-stroke: #00ff0077 22px; /* don't allow to cheat */
 }
 
 .step > * {

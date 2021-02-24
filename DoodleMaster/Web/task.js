@@ -33,6 +33,7 @@ function loadTextTask(texts) {
     step.className = "step s-handwriting";
     step.innerHTML = `
       <div class="template">
+        <div class="green-alpha">${text}</div>
         <div class="green">${text}</div>
         <div class="blue">${text}</div>
         <div class="red">${text}</div>

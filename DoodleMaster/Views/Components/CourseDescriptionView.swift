@@ -44,7 +44,7 @@ struct CourseDescriptionView: View {
                         .minimumScaleFactor(0.7)
                         .lineLimit(10)
                 }.frame(height: 300, alignment: .topLeading)
-            }.frame(maxWidth: 1000).padding(40)
+            }.frame(maxWidth: 1000).padding(60)
         }
     }
 }

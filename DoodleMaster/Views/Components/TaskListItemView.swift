@@ -22,6 +22,7 @@ struct TaskListItemView: View {
                 .overlay(
                     Text(task.name)
                         .font(.custom("LucidaGrande", size: 20))
+                        .multilineTextAlignment(.center)
                         .foregroundColor(Color(hex: "303b96ff"))
                         .shadow(color: .white, radius: 2)
                         .shadow(color: .white, radius: 2)

@@ -19,7 +19,7 @@ struct StepResultView: View {
                     .foregroundColor(.green)
                     .font(.system(size: 150.0, weight: .light))
                 HStack(alignment: .bottom) {
-                    Text("\((taskState.currentResult!.overall * 1000).rounded().toString())")
+                    Text("\(taskState.currentResult!.overall.formatScore())")
                         .font(Font.custom("LithosPro-Regular", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
                         .padding(.leading, 90)

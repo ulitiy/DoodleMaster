@@ -24,7 +24,7 @@ struct TaskResultView: View {
                     .foregroundColor(Color(hex: "303b96ff"))
                     .padding(.bottom, 30)
                 HStack(alignment: .bottom) {
-                    Text("\((taskState.taskResult!.overall * 1000).rounded().toString())")
+                    Text("\(taskState.taskResult!.overall.formatScore())")
                         .font(Font.custom("LithosPro-Regular", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
                         .padding(.leading, 90)
@@ -60,7 +60,6 @@ struct TaskResultView: View {
         }
         .zIndex(2)
         .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))
-
     }
 }
 

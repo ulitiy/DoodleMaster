@@ -18,6 +18,10 @@ extension Double {
     func formatPercent(_ d: Int = 1) -> String {
         (self * 100).toString(d)
     }
+    
+    func formatScore() -> String {
+        (self.rounded() * 1000).toString(0)
+    }
 }
 
 extension Color {

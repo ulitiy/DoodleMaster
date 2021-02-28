@@ -74,7 +74,7 @@ let perspective = Course(
 let handwriting = Course(
     name: "Handwriting",
     path: "handwriting",
-    description: "This course contains a lot of handwriting practice from popular children's poems.",
+    description: "This course contains handwriting practice from popular children's poems.",
     tasks: [
         Task(name: "From a Railway Carriage pt.1", path: "handwriting/from-a-railway-carriage-1", text: [
             "Faster than fairies, faster than witches,",

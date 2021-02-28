@@ -63,6 +63,10 @@ svg {
   opacity: 0;
 }
 
+.input .draw-line {
+  stroke-linecap: round;
+}
+
 .input .blink,
 .input .appear,
 .input .draw-line.d0 {

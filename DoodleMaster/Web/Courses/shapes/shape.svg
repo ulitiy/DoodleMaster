@@ -33,7 +33,7 @@
 </g>
 <g id="step_5">
 <g id="input rgb-template_5">
-<path id="draw-line_5" d="M563.5 670L682.5 305L802 670L491.5 443.5H874L564 670.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line_5" d="M540.661 704.904L682.452 270L824.839 704.904L454.872 435.025H910.628L541.257 705.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step s-multistep">
@@ -73,7 +73,7 @@
 </g>
 <g id="step_7">
 <g id="input rgb-template_7">
-<path id="draw-line flip" d="M550.5 649H820V375H546V647" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line flip" d="M460.712 515.712L683 738L909 512L683 286L458.65 510.35" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step_8">
@@ -86,7 +86,7 @@
 </g>
 <g id="step_9">
 <g id="input rgb-template_9">
-<path id="draw-line_7" d="M493 645L682.5 380L872 645H494" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line_7" d="M493 380L682.5 645L872 380H494" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step_10">

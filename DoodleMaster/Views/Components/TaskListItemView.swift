@@ -32,7 +32,7 @@ struct TaskListItemView: View {
                 .overlay(
                     Group {
                         if task.result > 0 {
-                            Text("\(task.result.formatPercent()) %")
+                            Text("\(task.result.formatScore())")
                                 .font(.custom("LucidaGrande", size: 16))
                                 .foregroundColor(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "00aa66ff")!)
                                 .shadow(color: .white, radius: 2)

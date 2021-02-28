@@ -14,25 +14,23 @@ struct ResultDetailsView: View {
     
     @ViewBuilder
     func formatRow(name: String, val: Double, max: Int) -> some View {
-        if abs(val).formatPercent() != "0" {
-            HStack {
-                Text(name)
-                    .kerning(2)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .foregroundColor(.gray)
-                    .font(.custom("LucidaGrande", size: 25))
-                Text("\((val*1000).rounded().toString())")
-                    .frame(maxWidth: 70, alignment: .center)
-                    .foregroundColor(Color(hue: 0.4 * val * 1000 / Double(max), saturation: 1, brightness: 0.75))
-                    .font(.custom("LucidaGrande", size: 25))
-                Text("/")
-                    .foregroundColor(.gray)
-                    .font(.custom("LucidaGrande", size: 25))
-                Text(String(max))
-                    .frame(maxWidth: 70, alignment: .center)
-                    .foregroundColor(.gray)
-                    .font(.custom("LucidaGrande", size: 25))
-            }
+        HStack {
+            Text(name)
+                .kerning(2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.gray)
+                .font(.custom("LucidaGrande", size: 25))
+            Text("\((val*1000).rounded().toString())")
+                .frame(maxWidth: 70, alignment: .center)
+                .foregroundColor(Color(hue: 0.4 * val * 1000 / Double(max), saturation: 1, brightness: 0.75))
+                .font(.custom("LucidaGrande", size: 25))
+            Text("/")
+                .foregroundColor(.gray)
+                .font(.custom("LucidaGrande", size: 25))
+            Text(String(max))
+                .frame(maxWidth: 70, alignment: .center)
+                .foregroundColor(.gray)
+                .font(.custom("LucidaGrande", size: 25))
         }
     }
     

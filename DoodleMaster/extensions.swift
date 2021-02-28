@@ -20,7 +20,7 @@ extension Double {
     }
     
     func formatScore() -> String {
-        (self.rounded() * 1000).toString(0)
+        (self * 1000).rounded().toString(0)
     }
 }
 

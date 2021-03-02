@@ -1,0 +1,301 @@
+<svg width="1366" height="1024" viewBox="0 0 1366 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="3-point" clip-path="url(#clip0)">
+<g id="step s-multistep-result">
+<g id="input">
+<rect id="appear d1" x="1200.5" y="881.5" width="95" height="95" stroke="#999999" stroke-width="5"/>
+<path id="draw-line d2" d="M1214 923C1243.2 954.2 1243 964.5 1243 964.5C1243 964.5 1272 891 1294 865" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="template">
+<rect id="Rectangle 6" x="1173" y="854" width="150" height="150" fill="#FF0000" stroke="#00FF00" stroke-width="50"/>
+</g>
+</g>
+<g id="step s-multistep-brush">
+<g id="input_2">
+<g id="ref">
+<g id="ref_2">
+<path id="Vector 1" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template" d="M434.5 781L682 779.5L941.5 781" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_2">
+<g id="input_3">
+<g id="ref_3">
+<g id="ref_4">
+<path id="Vector 1_2" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_2" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_2" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_2" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_2" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_2" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_2" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_2" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_2" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_2" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_2" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_2" d="M448.5 752.5L682 728.5L929 753" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_3">
+<g id="input_4">
+<g id="ref_5">
+<g id="ref_6">
+<path id="Vector 1_3" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_3" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_3" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_3" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_3" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_3" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_3" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_3" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_3" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_3" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_3" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_3" d="M473 682L682 617.5L902.5 683.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_4">
+<g id="input_5">
+<g id="ref_7">
+<g id="ref_8">
+<path id="Vector 1_4" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_4" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_4" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_4" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_4" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_4" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_4" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_4" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_4" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_4" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_4" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_4" d="M499.5 606.5L682.5 516L873 608.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_5">
+<g id="input_6">
+<g id="ref_9">
+<g id="ref_10">
+<path id="Vector 1_5" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_5" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_5" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_5" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_5" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_5" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_5" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_5" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_5" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_5" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_5" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_5" d="M531 523.5L682 423.5L843.5 529" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_6">
+<g id="input_7">
+<g id="ref_11">
+<g id="ref_12">
+<path id="Vector 1_6" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_6" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_6" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_6" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_6" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_6" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_6" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_6" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_6" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_6" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_6" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_6" d="M564 437L682.5 341.5L811 446" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_7">
+<g id="input_8">
+<g id="ref_13">
+<g id="ref_14">
+<path id="Vector 1_7" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_7" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_7" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_7" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_7" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_7" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_7" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_7" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_7" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_7" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_7" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_7" d="M587.5 369L682.5 283L782.5 374" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_8">
+<g id="input_9">
+<g id="ref_15">
+<g id="ref_16">
+<path id="Vector 1_8" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_8" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_8" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_8" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_8" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_8" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_8" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_8" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_8" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_8" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_8" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_8" d="M728.5 276L881 807.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_9" d="M703 248L787 815" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_9">
+<g id="input_10">
+<g id="ref_17">
+<g id="ref_18">
+<path id="Vector 1_9" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_9" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_9" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_9" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_9" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_9" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_9" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_9" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_9" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_9" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_9" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_10" d="M663.5 245.5L583 815" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_11" d="M641 269L487 807.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_10">
+<g id="input_11">
+<g id="ref_19">
+<g id="ref_20">
+<path id="Vector 1_10" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_10" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_10" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_10" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_10" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_10" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_10" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_10" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_10" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_10" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_10" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_12" d="M427 804.5L684.5 824.5L950.5 803.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_11">
+<g id="input_12">
+<g id="ref_21">
+<g id="ref_22">
+<path id="Vector 1_11" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_11" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_11" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_11" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_11" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_11" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_11" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_11" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_11" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_11" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_11" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_13" d="M682.5 226L754.5 300.5L960.5 826" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_12">
+<g id="input_13">
+<g id="ref_23">
+<g id="ref_24">
+<path id="Vector 1_12" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_12" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_12" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_12" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_12" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_12" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_12" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_12" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_12" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_12" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_12" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_14" d="M417 827.5L616.5 294L681.5 226.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_13">
+<g id="input_14">
+<g id="ref_25">
+<g id="ref_26">
+<path id="Vector 1_13" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_13" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_13" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_13" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_13" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_13" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_13" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_13" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_13" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_13" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_13" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_15" d="M145 781.5L683 872.5L1230 780.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_14">
+<g id="input_15">
+<g id="ref_27">
+<g id="ref_28">
+<path id="Vector 1_14" d="M73 780.792H1292.5" stroke="#CBD8F1" stroke-width="8"/>
+<circle id="Ellipse 1_14" cx="144.947" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 2_14" cx="1228.65" cy="780.792" r="10.792" fill="#C4C4C4"/>
+<circle id="Ellipse 3_14" cx="682.792" cy="115.792" r="10.792" fill="#C4C4C4"/>
+</g>
+<path id="Vector 25_14" d="M145.5 782L681.5 423L1229.5 781.5M145.5 782L681.5 516L1229.5 781.5M145.5 782L681.5 617.5L1229.5 781.5M145.5 782L681.5 729.5L1229.5 781.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 26_14" d="M144.5 782L681.5 180L1229.5 781M144.5 782L681.5 226.5L1229.5 781M144.5 782L681.5 283L1229.5 781M144.5 782L681.5 341.5L1229.5 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 28_14" d="M436.5 777.5L682 115L942 777.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 29_14" d="M1100.5 781L683.5 117L276 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 31_14" d="M587.5 781L682.5 114L782 781" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 32_14" d="M682.5 115V779.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+<path id="Vector 38_14" d="M145 781.5L684.5 824.5L1230 780.5" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<path id="draw-line rgb-template_16" d="M683 227L683 873" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="When you look up, a third perspective point appears." d="M342.825 923.276L343.235 926.089L343.836 923.555L348.055 908.672H350.428L354.544 923.555L355.13 926.133L355.584 923.262L358.895 908.672H361.722L356.551 930H353.987L349.593 914.458L349.256 912.832L348.919 914.458L344.363 930H341.8L336.644 908.672H339.456L342.825 923.276ZM367.142 916.069C368.343 914.595 369.905 913.857 371.829 913.857C375.179 913.857 376.868 915.747 376.897 919.526V930H374.188V919.512C374.178 918.369 373.914 917.524 373.396 916.978C372.889 916.431 372.093 916.157 371.009 916.157C370.13 916.157 369.358 916.392 368.694 916.86C368.03 917.329 367.513 917.944 367.142 918.706V930H364.432V907.5H367.142V916.069ZM387.532 930.293C385.384 930.293 383.636 929.59 382.288 928.184C380.94 926.768 380.267 924.878 380.267 922.515V922.017C380.267 920.444 380.564 919.043 381.16 917.812C381.766 916.572 382.605 915.605 383.68 914.912C384.764 914.209 385.936 913.857 387.195 913.857C389.256 913.857 390.857 914.536 392 915.894C393.143 917.251 393.714 919.194 393.714 921.724V922.852H382.977C383.016 924.414 383.47 925.679 384.339 926.646C385.218 927.603 386.331 928.081 387.679 928.081C388.636 928.081 389.446 927.886 390.11 927.495C390.774 927.104 391.355 926.587 391.854 925.942L393.509 927.231C392.181 929.272 390.188 930.293 387.532 930.293ZM387.195 916.084C386.102 916.084 385.184 916.484 384.441 917.285C383.699 918.076 383.24 919.189 383.064 920.625H391.004V920.42C390.926 919.043 390.555 917.979 389.891 917.227C389.227 916.465 388.328 916.084 387.195 916.084ZM399.427 914.15L399.515 916.143C400.726 914.619 402.308 913.857 404.261 913.857C407.61 913.857 409.3 915.747 409.329 919.526V930H406.619V919.512C406.609 918.369 406.346 917.524 405.828 916.978C405.32 916.431 404.524 916.157 403.44 916.157C402.562 916.157 401.79 916.392 401.126 916.86C400.462 917.329 399.944 917.944 399.573 918.706V930H396.863V914.15H399.427ZM426.043 926.03L429.734 914.15H432.635L426.263 932.446C425.276 935.083 423.709 936.401 421.561 936.401L421.048 936.357L420.037 936.167V933.97L420.77 934.028C421.688 934.028 422.4 933.843 422.908 933.472C423.426 933.101 423.851 932.422 424.183 931.436L424.783 929.824L419.129 914.15H422.088L426.043 926.03ZM434.114 921.929C434.114 920.376 434.417 918.979 435.022 917.739C435.638 916.499 436.487 915.542 437.571 914.868C438.665 914.194 439.91 913.857 441.307 913.857C443.465 913.857 445.208 914.604 446.536 916.099C447.874 917.593 448.543 919.58 448.543 922.061V922.251C448.543 923.794 448.245 925.181 447.649 926.411C447.063 927.632 446.219 928.584 445.115 929.268C444.021 929.951 442.762 930.293 441.336 930.293C439.188 930.293 437.444 929.546 436.106 928.052C434.778 926.558 434.114 924.58 434.114 922.119V921.929ZM436.839 922.251C436.839 924.009 437.244 925.42 438.055 926.484C438.875 927.549 439.969 928.081 441.336 928.081C442.713 928.081 443.807 927.544 444.617 926.47C445.428 925.386 445.833 923.872 445.833 921.929C445.833 920.19 445.418 918.784 444.588 917.71C443.768 916.626 442.674 916.084 441.307 916.084C439.969 916.084 438.89 916.616 438.069 917.681C437.249 918.745 436.839 920.269 436.839 922.251ZM461.727 928.433C460.672 929.673 459.124 930.293 457.083 930.293C455.394 930.293 454.104 929.805 453.216 928.828C452.337 927.842 451.893 926.387 451.883 924.463V914.15H454.593V924.39C454.593 926.792 455.569 927.993 457.522 927.993C459.593 927.993 460.97 927.222 461.653 925.679V914.15H464.363V930H461.785L461.727 928.433ZM478.88 930H476.17V907.5H478.88V930ZM482.513 921.929C482.513 920.376 482.815 918.979 483.421 917.739C484.036 916.499 484.886 915.542 485.97 914.868C487.063 914.194 488.309 913.857 489.705 913.857C491.863 913.857 493.606 914.604 494.935 916.099C496.272 917.593 496.941 919.58 496.941 922.061V922.251C496.941 923.794 496.644 925.181 496.048 926.411C495.462 927.632 494.617 928.584 493.514 929.268C492.42 929.951 491.16 930.293 489.734 930.293C487.586 930.293 485.843 929.546 484.505 928.052C483.177 926.558 482.513 924.58 482.513 922.119V921.929ZM485.237 922.251C485.237 924.009 485.643 925.42 486.453 926.484C487.273 927.549 488.367 928.081 489.734 928.081C491.111 928.081 492.205 927.544 493.016 926.47C493.826 925.386 494.231 923.872 494.231 921.929C494.231 920.19 493.816 918.784 492.986 917.71C492.166 916.626 491.072 916.084 489.705 916.084C488.367 916.084 487.288 916.616 486.468 917.681C485.647 918.745 485.237 920.269 485.237 922.251ZM499.622 921.929C499.622 920.376 499.925 918.979 500.53 917.739C501.146 916.499 501.995 915.542 503.079 914.868C504.173 914.194 505.418 913.857 506.814 913.857C508.973 913.857 510.716 914.604 512.044 916.099C513.382 917.593 514.051 919.58 514.051 922.061V922.251C514.051 923.794 513.753 925.181 513.157 926.411C512.571 927.632 511.727 928.584 510.623 929.268C509.529 929.951 508.27 930.293 506.844 930.293C504.695 930.293 502.952 929.546 501.614 928.052C500.286 926.558 499.622 924.58 499.622 922.119V921.929ZM502.347 922.251C502.347 924.009 502.752 925.42 503.562 926.484C504.383 927.549 505.477 928.081 506.844 928.081C508.221 928.081 509.314 927.544 510.125 926.47C510.936 925.386 511.341 923.872 511.341 921.929C511.341 920.19 510.926 918.784 510.096 917.71C509.275 916.626 508.182 916.084 506.814 916.084C505.477 916.084 504.397 916.616 503.577 917.681C502.757 918.745 502.347 920.269 502.347 922.251ZM521.873 922.661L520.174 924.434V930H517.464V907.5H520.174V921.108L521.624 919.365L526.561 914.15H529.856L523.689 920.771L530.574 930H527.396L521.873 922.661ZM549.881 928.433C548.826 929.673 547.278 930.293 545.237 930.293C543.548 930.293 542.259 929.805 541.37 928.828C540.491 927.842 540.047 926.387 540.037 924.463V914.15H542.747V924.39C542.747 926.792 543.724 927.993 545.677 927.993C547.747 927.993 549.124 927.222 549.808 925.679V914.15H552.518V930H549.939L549.881 928.433ZM570.037 922.251C570.037 924.663 569.485 926.606 568.382 928.081C567.278 929.556 565.784 930.293 563.899 930.293C561.976 930.293 560.462 929.683 559.358 928.462V936.094H556.648V914.15H559.124L559.256 915.908C560.359 914.541 561.893 913.857 563.855 913.857C565.76 913.857 567.264 914.575 568.367 916.011C569.48 917.446 570.037 919.443 570.037 922.002V922.251ZM567.327 921.943C567.327 920.156 566.946 918.745 566.185 917.71C565.423 916.675 564.378 916.157 563.05 916.157C561.409 916.157 560.179 916.885 559.358 918.34V925.913C560.169 927.358 561.409 928.081 563.079 928.081C564.378 928.081 565.408 927.568 566.17 926.543C566.941 925.508 567.327 923.975 567.327 921.943ZM573.406 934.248L571.868 933.193C572.786 931.914 573.265 930.596 573.304 929.238V926.792H575.955V928.916C575.955 929.902 575.711 930.889 575.223 931.875C574.744 932.861 574.139 933.652 573.406 934.248ZM596.609 930C596.453 929.688 596.326 929.131 596.229 928.33C594.969 929.639 593.465 930.293 591.717 930.293C590.154 930.293 588.87 929.854 587.864 928.975C586.868 928.086 586.37 926.963 586.37 925.605C586.37 923.955 586.995 922.676 588.245 921.768C589.505 920.85 591.272 920.391 593.548 920.391H596.185V919.146C596.185 918.198 595.901 917.446 595.335 916.89C594.769 916.323 593.934 916.04 592.83 916.04C591.863 916.04 591.053 916.284 590.398 916.772C589.744 917.261 589.417 917.852 589.417 918.545H586.692C586.692 917.754 586.971 916.992 587.527 916.26C588.094 915.518 588.855 914.932 589.812 914.502C590.779 914.072 591.839 913.857 592.991 913.857C594.817 913.857 596.248 914.316 597.283 915.234C598.318 916.143 598.855 917.397 598.895 918.999V926.294C598.895 927.749 599.08 928.906 599.451 929.766V930H596.609ZM592.112 927.935C592.962 927.935 593.768 927.715 594.529 927.275C595.291 926.836 595.843 926.265 596.185 925.562V922.31H594.061C590.74 922.31 589.08 923.281 589.08 925.225C589.08 926.074 589.363 926.738 589.93 927.217C590.496 927.695 591.224 927.935 592.112 927.935ZM614.261 910.312V914.15H617.22V916.245H614.261V926.074C614.261 926.709 614.393 927.188 614.656 927.51C614.92 927.822 615.369 927.979 616.004 927.979C616.316 927.979 616.746 927.92 617.293 927.803V930C616.58 930.195 615.887 930.293 615.213 930.293C614.002 930.293 613.089 929.927 612.474 929.194C611.858 928.462 611.551 927.422 611.551 926.074V916.245H608.665V914.15H611.551V910.312H614.261ZM623.108 916.069C624.31 914.595 625.872 913.857 627.796 913.857C631.146 913.857 632.835 915.747 632.864 919.526V930H630.154V919.512C630.145 918.369 629.881 917.524 629.363 916.978C628.855 916.431 628.06 916.157 626.976 916.157C626.097 916.157 625.325 916.392 624.661 916.86C623.997 917.329 623.479 917.944 623.108 918.706V930H620.398V907.5H623.108V916.069ZM639.866 930H637.156V914.15H639.866V930ZM636.937 909.946C636.937 909.507 637.068 909.136 637.332 908.833C637.605 908.53 638.006 908.379 638.533 908.379C639.061 908.379 639.461 908.53 639.734 908.833C640.008 909.136 640.145 909.507 640.145 909.946C640.145 910.386 640.008 910.752 639.734 911.045C639.461 911.338 639.061 911.484 638.533 911.484C638.006 911.484 637.605 911.338 637.332 911.045C637.068 910.752 636.937 910.386 636.937 909.946ZM651.878 916.582C651.468 916.514 651.023 916.479 650.545 916.479C648.768 916.479 647.562 917.236 646.927 918.75V930H644.217V914.15H646.854L646.897 915.981C647.786 914.565 649.046 913.857 650.677 913.857C651.204 913.857 651.604 913.926 651.878 914.062V916.582ZM653.431 921.943C653.431 919.512 654.007 917.559 655.159 916.084C656.312 914.6 657.82 913.857 659.686 913.857C661.541 913.857 663.011 914.492 664.095 915.762V907.5H666.805V930H664.314L664.183 928.301C663.099 929.629 661.59 930.293 659.656 930.293C657.82 930.293 656.321 929.541 655.159 928.037C654.007 926.533 653.431 924.57 653.431 922.148V921.943ZM656.141 922.251C656.141 924.048 656.512 925.454 657.254 926.47C657.996 927.485 659.021 927.993 660.33 927.993C662.049 927.993 663.304 927.222 664.095 925.679V918.398C663.284 916.904 662.039 916.157 660.359 916.157C659.031 916.157 657.996 916.67 657.254 917.695C656.512 918.721 656.141 920.239 656.141 922.251ZM691.854 922.251C691.854 924.663 691.302 926.606 690.198 928.081C689.095 929.556 687.601 930.293 685.716 930.293C683.792 930.293 682.278 929.683 681.175 928.462V936.094H678.465V914.15H680.94L681.072 915.908C682.176 914.541 683.709 913.857 685.672 913.857C687.576 913.857 689.08 914.575 690.184 916.011C691.297 917.446 691.854 919.443 691.854 922.002V922.251ZM689.144 921.943C689.144 920.156 688.763 918.745 688.001 917.71C687.239 916.675 686.194 916.157 684.866 916.157C683.226 916.157 681.995 916.885 681.175 918.34V925.913C681.985 927.358 683.226 928.081 684.896 928.081C686.194 928.081 687.225 927.568 687.986 926.543C688.758 925.508 689.144 923.975 689.144 921.943ZM701.888 930.293C699.739 930.293 697.991 929.59 696.644 928.184C695.296 926.768 694.622 924.878 694.622 922.515V922.017C694.622 920.444 694.92 919.043 695.516 917.812C696.121 916.572 696.961 915.605 698.035 914.912C699.119 914.209 700.291 913.857 701.551 913.857C703.611 913.857 705.213 914.536 706.355 915.894C707.498 917.251 708.069 919.194 708.069 921.724V922.852H697.332C697.371 924.414 697.825 925.679 698.694 926.646C699.573 927.603 700.687 928.081 702.034 928.081C702.991 928.081 703.802 927.886 704.466 927.495C705.13 927.104 705.711 926.587 706.209 925.942L707.864 927.231C706.536 929.272 704.544 930.293 701.888 930.293ZM701.551 916.084C700.457 916.084 699.539 916.484 698.797 917.285C698.055 918.076 697.596 919.189 697.42 920.625H705.359V920.42C705.281 919.043 704.91 917.979 704.246 917.227C703.582 916.465 702.684 916.084 701.551 916.084ZM718.88 916.582C718.47 916.514 718.025 916.479 717.547 916.479C715.77 916.479 714.563 917.236 713.929 918.75V930H711.219V914.15H713.855L713.899 915.981C714.788 914.565 716.048 913.857 717.679 913.857C718.206 913.857 718.606 913.926 718.88 914.062V916.582ZM730.613 925.796C730.613 925.063 730.335 924.497 729.778 924.097C729.231 923.687 728.27 923.335 726.893 923.042C725.525 922.749 724.437 922.397 723.626 921.987C722.825 921.577 722.229 921.089 721.839 920.522C721.458 919.956 721.268 919.282 721.268 918.501C721.268 917.202 721.814 916.104 722.908 915.205C724.012 914.307 725.418 913.857 727.127 913.857C728.924 913.857 730.379 914.321 731.492 915.249C732.615 916.177 733.177 917.363 733.177 918.809H730.452C730.452 918.066 730.135 917.427 729.5 916.89C728.875 916.353 728.084 916.084 727.127 916.084C726.141 916.084 725.369 916.299 724.812 916.729C724.256 917.158 723.978 917.72 723.978 918.413C723.978 919.067 724.236 919.561 724.754 919.893C725.271 920.225 726.204 920.542 727.552 920.845C728.909 921.147 730.008 921.509 730.848 921.929C731.688 922.349 732.308 922.856 732.708 923.452C733.118 924.038 733.323 924.756 733.323 925.605C733.323 927.021 732.757 928.159 731.624 929.019C730.491 929.868 729.021 930.293 727.215 930.293C725.945 930.293 724.822 930.068 723.846 929.619C722.869 929.17 722.103 928.545 721.546 927.744C720.999 926.934 720.726 926.06 720.726 925.122H723.436C723.484 926.03 723.846 926.753 724.52 927.29C725.203 927.817 726.102 928.081 727.215 928.081C728.24 928.081 729.061 927.876 729.676 927.466C730.301 927.046 730.613 926.489 730.613 925.796ZM750.242 922.251C750.242 924.663 749.69 926.606 748.587 928.081C747.483 929.556 745.989 930.293 744.104 930.293C742.181 930.293 740.667 929.683 739.563 928.462V936.094H736.854V914.15H739.329L739.461 915.908C740.564 914.541 742.098 913.857 744.061 913.857C745.965 913.857 747.469 914.575 748.572 916.011C749.686 917.446 750.242 919.443 750.242 922.002V922.251ZM747.532 921.943C747.532 920.156 747.151 918.745 746.39 917.71C745.628 916.675 744.583 916.157 743.255 916.157C741.614 916.157 740.384 916.885 739.563 918.34V925.913C740.374 927.358 741.614 928.081 743.284 928.081C744.583 928.081 745.613 927.568 746.375 926.543C747.146 925.508 747.532 923.975 747.532 921.943ZM760.276 930.293C758.128 930.293 756.38 929.59 755.032 928.184C753.685 926.768 753.011 924.878 753.011 922.515V922.017C753.011 920.444 753.309 919.043 753.904 917.812C754.51 916.572 755.35 915.605 756.424 914.912C757.508 914.209 758.68 913.857 759.939 913.857C762 913.857 763.602 914.536 764.744 915.894C765.887 917.251 766.458 919.194 766.458 921.724V922.852H755.721C755.76 924.414 756.214 925.679 757.083 926.646C757.962 927.603 759.075 928.081 760.423 928.081C761.38 928.081 762.19 927.886 762.854 927.495C763.519 927.104 764.1 926.587 764.598 925.942L766.253 927.231C764.925 929.272 762.933 930.293 760.276 930.293ZM759.939 916.084C758.846 916.084 757.928 916.484 757.186 917.285C756.443 918.076 755.984 919.189 755.809 920.625H763.748V920.42C763.67 919.043 763.299 917.979 762.635 917.227C761.971 916.465 761.072 916.084 759.939 916.084ZM775.965 928.081C776.932 928.081 777.776 927.788 778.499 927.202C779.222 926.616 779.622 925.884 779.7 925.005H782.264C782.215 925.913 781.902 926.777 781.326 927.598C780.75 928.418 779.979 929.072 779.012 929.561C778.055 930.049 777.039 930.293 775.965 930.293C773.807 930.293 772.088 929.575 770.809 928.14C769.539 926.694 768.904 924.722 768.904 922.222V921.768C768.904 920.225 769.188 918.853 769.754 917.651C770.32 916.45 771.131 915.518 772.186 914.854C773.25 914.189 774.505 913.857 775.95 913.857C777.728 913.857 779.202 914.39 780.374 915.454C781.556 916.519 782.186 917.9 782.264 919.6H779.7C779.622 918.574 779.231 917.734 778.528 917.08C777.835 916.416 776.976 916.084 775.95 916.084C774.573 916.084 773.504 916.582 772.742 917.578C771.99 918.564 771.614 919.995 771.614 921.87V922.383C771.614 924.209 771.99 925.615 772.742 926.602C773.494 927.588 774.568 928.081 775.965 928.081ZM788.987 910.312V914.15H791.946V916.245H788.987V926.074C788.987 926.709 789.119 927.188 789.383 927.51C789.646 927.822 790.096 927.979 790.73 927.979C791.043 927.979 791.473 927.92 792.02 927.803V930C791.307 930.195 790.613 930.293 789.939 930.293C788.729 930.293 787.815 929.927 787.2 929.194C786.585 928.462 786.277 927.422 786.277 926.074V916.245H783.392V914.15H786.277V910.312H788.987ZM798.069 930H795.359V914.15H798.069V930ZM795.14 909.946C795.14 909.507 795.271 909.136 795.535 908.833C795.809 908.53 796.209 908.379 796.736 908.379C797.264 908.379 797.664 908.53 797.938 908.833C798.211 909.136 798.348 909.507 798.348 909.946C798.348 910.386 798.211 910.752 797.938 911.045C797.664 911.338 797.264 911.484 796.736 911.484C796.209 911.484 795.809 911.338 795.535 911.045C795.271 910.752 795.14 910.386 795.14 909.946ZM807.649 926.323L811.575 914.15H814.344L808.66 930H806.595L800.853 914.15H803.621L807.649 926.323ZM823.323 930.293C821.175 930.293 819.427 929.59 818.079 928.184C816.731 926.768 816.058 924.878 816.058 922.515V922.017C816.058 920.444 816.355 919.043 816.951 917.812C817.557 916.572 818.396 915.605 819.471 914.912C820.555 914.209 821.727 913.857 822.986 913.857C825.047 913.857 826.648 914.536 827.791 915.894C828.934 917.251 829.505 919.194 829.505 921.724V922.852H818.768C818.807 924.414 819.261 925.679 820.13 926.646C821.009 927.603 822.122 928.081 823.47 928.081C824.427 928.081 825.237 927.886 825.901 927.495C826.565 927.104 827.146 926.587 827.645 925.942L829.3 927.231C827.972 929.272 825.979 930.293 823.323 930.293ZM822.986 916.084C821.893 916.084 820.975 916.484 820.232 917.285C819.49 918.076 819.031 919.189 818.855 920.625H826.795V920.42C826.717 919.043 826.346 917.979 825.682 917.227C825.018 916.465 824.119 916.084 822.986 916.084ZM853.484 922.251C853.484 924.663 852.933 926.606 851.829 928.081C850.726 929.556 849.231 930.293 847.347 930.293C845.423 930.293 843.909 929.683 842.806 928.462V936.094H840.096V914.15H842.571L842.703 915.908C843.807 914.541 845.34 913.857 847.303 913.857C849.207 913.857 850.711 914.575 851.814 916.011C852.928 917.446 853.484 919.443 853.484 922.002V922.251ZM850.774 921.943C850.774 920.156 850.394 918.745 849.632 917.71C848.87 916.675 847.825 916.157 846.497 916.157C844.856 916.157 843.626 916.885 842.806 918.34V925.913C843.616 927.358 844.856 928.081 846.526 928.081C847.825 928.081 848.855 927.568 849.617 926.543C850.389 925.508 850.774 923.975 850.774 921.943ZM856.224 921.929C856.224 920.376 856.526 918.979 857.132 917.739C857.747 916.499 858.597 915.542 859.681 914.868C860.774 914.194 862.02 913.857 863.416 913.857C865.574 913.857 867.317 914.604 868.646 916.099C869.983 917.593 870.652 919.58 870.652 922.061V922.251C870.652 923.794 870.354 925.181 869.759 926.411C869.173 927.632 868.328 928.584 867.225 929.268C866.131 929.951 864.871 930.293 863.445 930.293C861.297 930.293 859.554 929.546 858.216 928.052C856.888 926.558 856.224 924.58 856.224 922.119V921.929ZM858.948 922.251C858.948 924.009 859.354 925.42 860.164 926.484C860.984 927.549 862.078 928.081 863.445 928.081C864.822 928.081 865.916 927.544 866.727 926.47C867.537 925.386 867.942 923.872 867.942 921.929C867.942 920.19 867.527 918.784 866.697 917.71C865.877 916.626 864.783 916.084 863.416 916.084C862.078 916.084 860.999 916.616 860.179 917.681C859.358 918.745 858.948 920.269 858.948 922.251ZM876.995 930H874.285V914.15H876.995V930ZM874.065 909.946C874.065 909.507 874.197 909.136 874.461 908.833C874.734 908.53 875.135 908.379 875.662 908.379C876.189 908.379 876.59 908.53 876.863 908.833C877.137 909.136 877.273 909.507 877.273 909.946C877.273 910.386 877.137 910.752 876.863 911.045C876.59 911.338 876.189 911.484 875.662 911.484C875.135 911.484 874.734 911.338 874.461 911.045C874.197 910.752 874.065 910.386 874.065 909.946ZM883.909 914.15L883.997 916.143C885.208 914.619 886.79 913.857 888.743 913.857C892.093 913.857 893.782 915.747 893.812 919.526V930H891.102V919.512C891.092 918.369 890.828 917.524 890.311 916.978C889.803 916.431 889.007 916.157 887.923 916.157C887.044 916.157 886.272 916.392 885.608 916.86C884.944 917.329 884.427 917.944 884.056 918.706V930H881.346V914.15H883.909ZM901.575 910.312V914.15H904.534V916.245H901.575V926.074C901.575 926.709 901.707 927.188 901.971 927.51C902.234 927.822 902.684 927.979 903.318 927.979C903.631 927.979 904.061 927.92 904.607 927.803V930C903.895 930.195 903.201 930.293 902.527 930.293C901.316 930.293 900.403 929.927 899.788 929.194C899.173 928.462 898.865 927.422 898.865 926.074V916.245H895.979V914.15H898.865V910.312H901.575ZM924.939 930C924.783 929.688 924.656 929.131 924.559 928.33C923.299 929.639 921.795 930.293 920.047 930.293C918.484 930.293 917.2 929.854 916.194 928.975C915.198 928.086 914.7 926.963 914.7 925.605C914.7 923.955 915.325 922.676 916.575 921.768C917.835 920.85 919.603 920.391 921.878 920.391H924.515V919.146C924.515 918.198 924.231 917.446 923.665 916.89C923.099 916.323 922.264 916.04 921.16 916.04C920.193 916.04 919.383 916.284 918.729 916.772C918.074 917.261 917.747 917.852 917.747 918.545H915.022C915.022 917.754 915.301 916.992 915.857 916.26C916.424 915.518 917.186 914.932 918.143 914.502C919.109 914.072 920.169 913.857 921.321 913.857C923.147 913.857 924.578 914.316 925.613 915.234C926.648 916.143 927.186 917.397 927.225 918.999V926.294C927.225 927.749 927.41 928.906 927.781 929.766V930H924.939ZM920.442 927.935C921.292 927.935 922.098 927.715 922.859 927.275C923.621 926.836 924.173 926.265 924.515 925.562V922.31H922.391C919.07 922.31 917.41 923.281 917.41 925.225C917.41 926.074 917.693 926.738 918.26 927.217C918.826 927.695 919.554 927.935 920.442 927.935ZM944.861 922.251C944.861 924.663 944.31 926.606 943.206 928.081C942.103 929.556 940.608 930.293 938.724 930.293C936.8 930.293 935.286 929.683 934.183 928.462V936.094H931.473V914.15H933.948L934.08 915.908C935.184 914.541 936.717 913.857 938.68 913.857C940.584 913.857 942.088 914.575 943.191 916.011C944.305 917.446 944.861 919.443 944.861 922.002V922.251ZM942.151 921.943C942.151 920.156 941.771 918.745 941.009 917.71C940.247 916.675 939.202 916.157 937.874 916.157C936.233 916.157 935.003 916.885 934.183 918.34V925.913C934.993 927.358 936.233 928.081 937.903 928.081C939.202 928.081 940.232 927.568 940.994 926.543C941.766 925.508 942.151 923.975 942.151 921.943ZM961.707 922.251C961.707 924.663 961.155 926.606 960.052 928.081C958.948 929.556 957.454 930.293 955.569 930.293C953.646 930.293 952.132 929.683 951.028 928.462V936.094H948.318V914.15H950.794L950.926 915.908C952.029 914.541 953.562 913.857 955.525 913.857C957.43 913.857 958.934 914.575 960.037 916.011C961.15 917.446 961.707 919.443 961.707 922.002V922.251ZM958.997 921.943C958.997 920.156 958.616 918.745 957.854 917.71C957.093 916.675 956.048 916.157 954.72 916.157C953.079 916.157 951.849 916.885 951.028 918.34V925.913C951.839 927.358 953.079 928.081 954.749 928.081C956.048 928.081 957.078 927.568 957.84 926.543C958.611 925.508 958.997 923.975 958.997 921.943ZM971.741 930.293C969.593 930.293 967.845 929.59 966.497 928.184C965.149 926.768 964.476 924.878 964.476 922.515V922.017C964.476 920.444 964.773 919.043 965.369 917.812C965.975 916.572 966.814 915.605 967.889 914.912C968.973 914.209 970.145 913.857 971.404 913.857C973.465 913.857 975.066 914.536 976.209 915.894C977.352 917.251 977.923 919.194 977.923 921.724V922.852H967.186C967.225 924.414 967.679 925.679 968.548 926.646C969.427 927.603 970.54 928.081 971.888 928.081C972.845 928.081 973.655 927.886 974.319 927.495C974.983 927.104 975.564 926.587 976.062 925.942L977.718 927.231C976.39 929.272 974.397 930.293 971.741 930.293ZM971.404 916.084C970.311 916.084 969.393 916.484 968.65 917.285C967.908 918.076 967.449 919.189 967.273 920.625H975.213V920.42C975.135 919.043 974.764 917.979 974.1 917.227C973.436 916.465 972.537 916.084 971.404 916.084ZM990.857 930C990.701 929.688 990.574 929.131 990.477 928.33C989.217 929.639 987.713 930.293 985.965 930.293C984.402 930.293 983.118 929.854 982.112 928.975C981.116 928.086 980.618 926.963 980.618 925.605C980.618 923.955 981.243 922.676 982.493 921.768C983.753 920.85 985.521 920.391 987.796 920.391H990.433V919.146C990.433 918.198 990.149 917.446 989.583 916.89C989.017 916.323 988.182 916.04 987.078 916.04C986.111 916.04 985.301 916.284 984.646 916.772C983.992 917.261 983.665 917.852 983.665 918.545H980.94C980.94 917.754 981.219 916.992 981.775 916.26C982.342 915.518 983.104 914.932 984.061 914.502C985.027 914.072 986.087 913.857 987.239 913.857C989.065 913.857 990.496 914.316 991.531 915.234C992.566 916.143 993.104 917.397 993.143 918.999V926.294C993.143 927.749 993.328 928.906 993.699 929.766V930H990.857ZM986.36 927.935C987.21 927.935 988.016 927.715 988.777 927.275C989.539 926.836 990.091 926.265 990.433 925.562V922.31H988.309C984.988 922.31 983.328 923.281 983.328 925.225C983.328 926.074 983.611 926.738 984.178 927.217C984.744 927.695 985.472 927.935 986.36 927.935ZM1005.05 916.582C1004.64 916.514 1004.2 916.479 1003.72 916.479C1001.94 916.479 1000.74 917.236 1000.1 918.75V930H997.391V914.15H1000.03L1000.07 915.981C1000.96 914.565 1002.22 913.857 1003.85 913.857C1004.38 913.857 1004.78 913.926 1005.05 914.062V916.582ZM1016.79 925.796C1016.79 925.063 1016.51 924.497 1015.95 924.097C1015.4 923.687 1014.44 923.335 1013.06 923.042C1011.7 922.749 1010.61 922.397 1009.8 921.987C1009 921.577 1008.4 921.089 1008.01 920.522C1007.63 919.956 1007.44 919.282 1007.44 918.501C1007.44 917.202 1007.99 916.104 1009.08 915.205C1010.18 914.307 1011.59 913.857 1013.3 913.857C1015.1 913.857 1016.55 914.321 1017.66 915.249C1018.79 916.177 1019.35 917.363 1019.35 918.809H1016.62C1016.62 918.066 1016.31 917.427 1015.67 916.89C1015.05 916.353 1014.26 916.084 1013.3 916.084C1012.31 916.084 1011.54 916.299 1010.98 916.729C1010.43 917.158 1010.15 917.72 1010.15 918.413C1010.15 919.067 1010.41 919.561 1010.93 919.893C1011.44 920.225 1012.38 920.542 1013.72 920.845C1015.08 921.147 1016.18 921.509 1017.02 921.929C1017.86 922.349 1018.48 922.856 1018.88 923.452C1019.29 924.038 1019.5 924.756 1019.5 925.605C1019.5 927.021 1018.93 928.159 1017.8 929.019C1016.66 929.868 1015.19 930.293 1013.39 930.293C1012.12 930.293 1010.99 930.068 1010.02 929.619C1009.04 929.17 1008.27 928.545 1007.72 927.744C1007.17 926.934 1006.9 926.06 1006.9 925.122H1009.61C1009.66 926.03 1010.02 926.753 1010.69 927.29C1011.38 927.817 1012.27 928.081 1013.39 928.081C1014.41 928.081 1015.23 927.876 1015.85 927.466C1016.47 927.046 1016.79 926.489 1016.79 925.796ZM1023.08 928.579C1023.08 928.11 1023.22 927.72 1023.49 927.407C1023.78 927.095 1024.2 926.938 1024.75 926.938C1025.31 926.938 1025.73 927.095 1026.01 927.407C1026.31 927.72 1026.45 928.11 1026.45 928.579C1026.45 929.028 1026.31 929.404 1026.01 929.707C1025.73 930.01 1025.31 930.161 1024.75 930.161C1024.2 930.161 1023.78 930.01 1023.49 929.707C1023.22 929.404 1023.08 929.028 1023.08 928.579Z" fill="black"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1366" height="1024" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -64,7 +64,7 @@
 <path id="Vector 8_3" d="M1030.22 691.005L683 846.435" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="Vector 9_3" d="M1007.25 730.434L1039.57 685.365L983.469 687.02" stroke="#CBD8F1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-<circle id="draw-line d1 rgb-template_2" cx="683" cy="691" r="141" stroke="#6685D4" stroke-width="8"/>
+<circle id="draw-line d1 rgb-template_2" cx="683" cy="691" r="141" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
 <g id="step s-multistep-brush_3">

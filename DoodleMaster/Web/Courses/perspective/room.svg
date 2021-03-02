@@ -1,0 +1,303 @@
+<svg width="1366" height="1024" viewBox="0 0 1366 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="room" clip-path="url(#clip0)">
+<g id="step s-multistep-result">
+<g id="input">
+<rect id="appear d1" x="1221" y="880.5" width="95" height="95" stroke="#999999" stroke-width="5"/>
+<path id="draw-line d2" d="M1234.5 922C1263.7 953.2 1263.5 963.5 1263.5 963.5C1263.5 963.5 1292.5 890 1314.5 864" stroke="#0000FF" stroke-opacity="0.1" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g id="template">
+<rect id="Rectangle 6" x="1193.5" y="853" width="150" height="150" fill="#FF0000" stroke="#00FF00" stroke-width="50"/>
+</g>
+</g>
+<g id="step s-multistep-brush">
+<g id="input_2">
+<g id="ref">
+<path id="Vector 16" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d1 rgb-template" d="M584.84 602.352H526.702V395.544H815.734V602.352H755.934" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template" d="M584.425 623.116H497.632V374.78H844.804V623.116H754.689" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_2">
+<g id="input_3">
+<g id="ref_2">
+<path id="Vector 16_2" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_2" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_2" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_2" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_2" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_2" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_2" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_2" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d2 rgb-template" d="M614.74 128.936C614.74 160.128 640.026 185.414 671.218 185.414C702.41 185.414 727.696 160.128 727.696 128.936H615.157" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1 rgb-template_2" d="M637.165 237.739C637.165 256.546 652.411 271.792 671.218 271.792C690.025 271.792 705.271 256.546 705.271 237.739H637.456" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_2" d="M553.695 697.035H552.234C542.781 697.035 533.967 701.804 528.795 709.717L420.463 875.474C408.292 894.098 421.653 918.793 443.901 918.793H893.529C915.61 918.793 929.002 894.428 917.168 875.786L811.926 710.007C806.798 701.929 797.894 697.035 788.326 697.035V697.035" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_3">
+<g id="input_4">
+<g id="ref_3">
+<path id="Vector 16_3" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_3" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_3" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_3" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_3" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_3" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_3" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_3" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d1 rgb-template_3" d="M771.3 672.534H570.306" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_3" d="M670.667 603.182H701.623C710.31 603.182 717.6 609.733 718.526 618.371L721.112 642.51C722.189 652.558 714.314 661.321 704.209 661.321H632.684C622.482 661.321 614.578 652.399 615.808 642.272L618.739 618.133C619.775 609.6 627.019 603.182 635.615 603.182H669.244" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_4">
+<g id="input_5">
+<g id="ref_4">
+<path id="Vector 16_4" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_4" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_4" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_4" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_4" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_4" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_4" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_4" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d2 rgb-template_2" d="M535.838 799.193V816.635H548.296V799.193" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d2 rgb-template_3" d="M797.462 799.193V816.635H809.92V799.193" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1 rgb-template_4" d="M822.794 753.928L755.519 644.71" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_4" d="M522.134 754.343L585.671 644.71" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_5">
+<g id="input_6">
+<g id="ref_5">
+<path id="Vector 16_5" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_5" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_5" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_5" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_5" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_5" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_5" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_5" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line rgb-template_5" d="M521.718 755.174V799.193H824.04V755.174H522.641" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_6">
+<g id="input_7">
+<g id="ref_6">
+<path id="Vector 16_6" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_6" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_6" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_6" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_6" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_6" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_6" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_6" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d1 rgb-template_5" d="M755.118 590.256L735.666 572.227H606.143L585.267 590.256" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="draw-line rgb-template_6" x="584.84" y="589.894" width="170.263" height="54.8165" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_7">
+<g id="input_8">
+<g id="ref_7">
+<path id="Vector 16_7" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_7" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_7" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_7" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_7" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_7" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_7" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_7" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line rgb-template_7" d="M1050 382L1050 638" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_8" d="M1082 374L1082 647" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_8">
+<g id="input_9">
+<g id="ref_8">
+<path id="Vector 16_8" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_8" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_8" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_8" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_8" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_8" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_8" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_8" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d2 rgb-template_4" d="M963.573 624.362H1000L1137 664" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1 rgb-template_6" d="M999 396L999 622" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_9" d="M965.649 395.129H998.5L1137.5 352.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_9">
+<g id="input_10">
+<g id="ref_9">
+<path id="Vector 16_9" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_9" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_9" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_9" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_9" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_9" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_9" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_9" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line rgb-template_10" d="M964.403 394.714V623.946L1137.99 690.806V327.439L965.234 394.392" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_10">
+<g id="input_11">
+<g id="ref_10">
+<path id="Vector 16_10" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_10" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_10" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_10" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_10" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_10" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_10" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_10" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d2 rgb-template_5" d="M1152.52 738.978V872.282H1074.45" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line d1 rgb-template_7" d="M1075.28 737.732H1151.69L961.912 652.185H922.876" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_11" d="M922.876 652.185V739.238L1073.21 871.866V739.238L924.537 653.147" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_11">
+<g id="input_12">
+<g id="ref_11">
+<path id="Vector 16_11" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_11" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_11" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_11" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_11" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_11" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_11" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_11" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d2 rgb-template_6" d="M348.963 352.355L348.963 808.329" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_8" d="M272.552 312.073L392.567 369.382V764.31L274.213 881.833" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="draw-line rgb-template_12" d="M177.869 311.658V882.248H272.552V311.658H178.7" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_12">
+<g id="input_13">
+<g id="ref_12">
+<path id="Vector 16_12" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_12" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_12" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_12" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_12" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_12" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_12" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_12" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d3 rgb-template" d="M907.095 353.601L1249.28 108.173" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_7" d="M907.095 671.288L1245.96 912.564" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_9" d="M432.849 671.288L93.9834 912.564" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_13" d="M437.417 352.771L95.2292 107.342" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_13">
+<g id="input_14">
+<g id="ref_13">
+<path id="Vector 16_13" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_13" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_13" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_13" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_13" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_13" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_13" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_13" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d3 rgb-template_2" d="M438.248 333.253L107.272 83.6713" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_8" d="M904.188 334.914L1238.49 84.5018" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_10" d="M905.434 684.992L1240.15 935.819" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_14" d="M438.248 683.331L104.365 933.327" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep">
+<g id="input_15">
+<g id="ref_14">
+<path id="Vector 16_14" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_14" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_14" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_14" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_14" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_14" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_14" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_14" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d3 rgb-template_3" d="M766.316 686.238L900.451 934.989" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_9" d="M576.12 686.238L440.324 936.65" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_11" d="M574.458 333.253L439.909 83.256" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_15" d="M767.147 333.253L901.281 84.5018" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep_2">
+<g id="input_16">
+<g id="ref_15">
+<path id="Vector 16_15" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_15" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_15" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_15" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_15" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_15" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_15" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_15" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d3 rgb-template_4" d="M904.604 417.554L1238.49 286.742" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_10" d="M904.188 601.937L1238.49 731.918" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_12" d="M437.417 601.521L104.365 730.257" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_16" d="M437.002 417.969L102.704 287.157" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep_3">
+<g id="input_17">
+<g id="ref_16">
+<path id="Vector 16_16" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_16" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_16" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_16" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_16" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_16" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_16" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_16" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line d3 rgb-template_5" d="M904.188 510.16H1237.66" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d2 rgb-template_11" d="M671.218 686.238V937.895" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line d1 rgb-template_13" d="M437.002 509.745H103.119" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+<path id="draw-line rgb-template_17" d="M670.803 333.253V84.5018" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
+</g>
+</g>
+<g id="step s-multistep-brush_14">
+<g id="input_18">
+<g id="ref_17">
+<path id="Vector 16_17" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 17_17" d="M99.3819 77.8574L1277.11 963.643" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 18_17" d="M902.112 83.256L430.773 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 19_17" d="M439.909 83.256L911.248 955.337" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 20_17" d="M1238.9 286.742L101.043 732.333" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 21_17" d="M1238.9 732.333L101.043 286.742" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 13_17" d="M103.95 510.16H1246.79" stroke="#CBD8F1" stroke-width="6"/>
+<path id="Vector 12_17" d="M671.218 84.9171V945.786" stroke="#CBD8F1" stroke-width="6" stroke-linecap="round"/>
+</g>
+<path id="draw-line rgb-template_18" d="M437.002 333.253V685.407H904.603V333.253H437.832" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1366" height="1024" fill="white"/>
+</clipPath>
+</defs>
+</svg>

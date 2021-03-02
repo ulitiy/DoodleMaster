@@ -62,12 +62,15 @@ let shapes = Course(
 let perspective = Course(
     name: "Perspective",
     path: "perspective",
-    description: "--------------",
+    description: "In this course you will learn how to draw with 1, 2 and 3 vanishing points.",
     tasks: [
-        Task(name: "1-point perspective", path: "perspective/1-point-perspective"),
+        Task(name: "1-point perspective", path: "perspective/1-point"),
         Task(name: "Rails", path: "perspective/rails"),
-        Task(name: "2-point perspective", path: "perspective/2-point-perspective"),
+        Task(name: "2-point perspective", path: "perspective/2-point"),
         Task(name: "Cubes", path: "perspective/cubes"),
+        Task(name: "City", path: "perspective/city"),
+        Task(name: "Room", path: "perspective/room"),
+        Task(name: "3-point perspective", path: "perspective/3-point"),
     ]
 )
 

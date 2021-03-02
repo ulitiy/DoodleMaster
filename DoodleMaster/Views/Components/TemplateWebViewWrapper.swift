@@ -112,20 +112,10 @@ class TemplateWebViewController: WebViewController {
         let d = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm, width: cgImage.width, height: cgImage.height, mipmapped: false)
         let tex = device.makeTexture(descriptor: d)!
         
-        swapColors(context.data!, count: context.width * context.height)
         tex.replace(region: MTLRegionMake2D(0, 0, context.width, context.height),
                     mipmapLevel: 0,
                     withBytes: context.data!,
                     bytesPerRow: context.width * 4)
         return tex
-    }
-    
-    func swapColors(_ pointer: UnsafeMutableRawPointer, count: Int) {
-        let ptr = pointer.assumingMemoryBound(to: UInt8.self)
-        for i in 0...count {
-            let r = ptr[i * 4]
-            ptr[i *  4] = ptr[i * 4 + 2]
-            ptr[i * 4 + 2] = r
-        }
     }
 }

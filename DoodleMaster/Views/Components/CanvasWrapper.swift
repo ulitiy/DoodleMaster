@@ -71,6 +71,7 @@ class CanvasWrapperController: UIViewController {
                 self?.taskState.template = nil
                 print("No red in the screenshot, resetting...")
             }
+            self?.canvas.keepFirst(self!.taskState.stepElementsCount)
         }
         matchState = taskState.$matchState.sink { [weak self] val in
             if val == .requested {

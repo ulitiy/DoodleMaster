@@ -52,6 +52,7 @@ class CanvasWrapperController: UIViewController {
         pencil.rotation = .random
         pencil.pointStep = 2
         pencil.forceSensitive = 0.3
+        pencil.color = UIColor(white: 0.3, alpha: 1)
         
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0

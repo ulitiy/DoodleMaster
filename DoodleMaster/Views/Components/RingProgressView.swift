@@ -39,7 +39,7 @@ struct RingProgressView: View {
     }
 }
 
-struct CourseProgressView_Previews: PreviewProvider {
+struct RingProgressView_Previews: PreviewProvider {
     static var previews: some View {
         RingProgressView(value: 0.3)
     }

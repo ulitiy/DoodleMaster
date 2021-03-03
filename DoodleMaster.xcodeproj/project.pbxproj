@@ -19,7 +19,7 @@
 		6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C36CFA225AF2F20001A2FDE /* CourseListView.swift */; };
 		6C4B8660253604CE000CB7E0 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 6C4B865F253604CE000CB7E0 /* Web */; };
 		6C53439925AF39DF00BE544B /* Courses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53439825AF39DF00BE544B /* Courses.swift */; };
-		6C5A88F525D1647F00A7FD02 /* CourseProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A88F425D1647F00A7FD02 /* CourseProgressView.swift */; };
+		6C5A88F525D1647F00A7FD02 /* RingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5A88F425D1647F00A7FD02 /* RingProgressView.swift */; };
 		6C67B1E42555CF750062B12B /* ResultProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C67B1E32555CF750062B12B /* ResultProgressView.swift */; };
 		6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */; };
 		6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613925A1CF65004ADDBA /* StepFailView.swift */; };
@@ -30,6 +30,7 @@
 		6C89EA1B259F6D8300CD8741 /* StepResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1A259F6D8300CD8741 /* StepResultView.swift */; };
 		6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */; };
 		6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */; };
+		6C9D600325EF7C0900EF96D9 /* CourseProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D600225EF7C0900EF96D9 /* CourseProgressView.swift */; };
 		6CA1D2192534ACA600CDDDFE /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */; };
 		6CAE185725B06C9B008AFD31 /* CourseListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE185625B06C9B008AFD31 /* CourseListState.swift */; };
 		6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22D24EA71B30002E77B /* AppDelegate.swift */; };
@@ -65,7 +66,7 @@
 		6C36CFA225AF2F20001A2FDE /* CourseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListView.swift; sourceTree = "<group>"; };
 		6C4B865F253604CE000CB7E0 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 		6C53439825AF39DF00BE544B /* Courses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Courses.swift; sourceTree = "<group>"; };
-		6C5A88F425D1647F00A7FD02 /* CourseProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressView.swift; sourceTree = "<group>"; };
+		6C5A88F425D1647F00A7FD02 /* RingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgressView.swift; sourceTree = "<group>"; };
 		6C67B1E32555CF750062B12B /* ResultProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultProgressView.swift; sourceTree = "<group>"; };
 		6C6B613625A1CCE2004ADDBA /* TaskOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOverlayView.swift; sourceTree = "<group>"; };
 		6C6B613925A1CF65004ADDBA /* StepFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFailView.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		6C89EA1A259F6D8300CD8741 /* StepResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepResultView.swift; sourceTree = "<group>"; };
 		6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultView.swift; sourceTree = "<group>"; };
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
+		6C9D600225EF7C0900EF96D9 /* CourseProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressView.swift; sourceTree = "<group>"; };
 		6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
 		6CAE185625B06C9B008AFD31 /* CourseListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListState.swift; sourceTree = "<group>"; };
 		6CB5E22A24EA71B30002E77B /* Art Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +171,7 @@
 				6CF5926B25A9F8B7003E9E03 /* CarouselView.swift */,
 				6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */,
 				6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */,
-				6C5A88F425D1647F00A7FD02 /* CourseProgressView.swift */,
+				6C5A88F425D1647F00A7FD02 /* RingProgressView.swift */,
 				6C6B614125A1DC0B004ADDBA /* MyImageView.swift */,
 				6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */,
 				6C67B1E32555CF750062B12B /* ResultProgressView.swift */,
@@ -181,6 +183,7 @@
 				6C24DDBF25E292EA00832992 /* TemplateWebViewWrapper.swift */,
 				6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */,
 				6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */,
+				6C9D600225EF7C0900EF96D9 /* CourseProgressView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -384,9 +387,10 @@
 				6CF01E9425D1AAD5004E8695 /* CourseListItemView.swift in Sources */,
 				6C6B613725A1CCE2004ADDBA /* TaskOverlayView.swift in Sources */,
 				6CF5926C25A9F8B7003E9E03 /* CarouselView.swift in Sources */,
+				6C9D600325EF7C0900EF96D9 /* CourseProgressView.swift in Sources */,
 				6CF01EA125D3E7F8004E8695 /* TaskListItemView.swift in Sources */,
 				6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */,
-				6C5A88F525D1647F00A7FD02 /* CourseProgressView.swift in Sources */,
+				6C5A88F525D1647F00A7FD02 /* RingProgressView.swift in Sources */,
 				6C307106252876D000B645C1 /* Task.swift in Sources */,
 				6C36CFA325AF2F20001A2FDE /* CourseListView.swift in Sources */,
 				6C338E8F25DBCE480064B555 /* CoursePassedView.swift in Sources */,

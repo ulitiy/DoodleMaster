@@ -25,13 +25,16 @@ struct CourseDescriptionView: View {
             .padding(.top, 40)
             .padding(.leading, 20)
             HStack {
-                Image("thumbnails/\(course.path)/index")
-                    .resizable()
-                    .frame(width: 300, height: 300)
-                    .aspectRatio(1,contentMode: .fit)
-                    .cornerRadius(40)
-                    .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
-                    .padding(.trailing, 50)
+                ZStack {
+                    Image("thumbnails/\(course.path)/index")
+                        .resizable()
+                        .aspectRatio(1,contentMode: .fit)
+                        .cornerRadius(40)
+                        .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
+                    CourseProgressView(course: course)
+                }
+                .frame(width: 300, height: 300)
+                .padding(.trailing, 50)
                 VStack(alignment: .leading, spacing: 20) {
                     Text(course.name)
                         .font(.custom("LithosPro-Regular", size: 50.0))

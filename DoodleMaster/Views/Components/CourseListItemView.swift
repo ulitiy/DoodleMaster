@@ -32,21 +32,7 @@ struct CourseListItemView: View {
                             Image("thumbnails/\(task.path)").resizable().aspectRatio(contentMode: .fill)
                         }
                     }.aspectRatio(1, contentMode: .fit)
-                    ZStack {
-                        if course.percentPassed > 0 && course.percentPassed < 1 {
-                            RingProgressView(value: course.percentPassed)
-                                .frame(width: 50, height: 50)
-                                .padding(16)
-                        }
-                        if course.percentPassed == 1 {
-                            MyImageView(name: "cup")
-                                .frame(width: 50, height: 50)
-                                .padding(16)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-                    .aspectRatio(1, contentMode: .fit)
-                    .allowsHitTesting(false)
+                    CourseProgressView(course: course)
                 }
                 Text(course.name)
                     .frame(maxHeight: 50)

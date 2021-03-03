@@ -11,31 +11,31 @@
 <rect id="Rectangle 6" x="1192" y="850" width="150" height="150" fill="#FF0000" stroke="#00FF00" stroke-width="50"/>
 </g>
 </g>
-<g id="step s-multistep">
+<g id="step s-multistep-brush">
 <g id="input_2">
 <path id="prev" d="M617.014 448.837L684.774 283L749.372 448.837H926L781.445 552.634L855.53 743.525L684.774 620.639L510.857 743.525L580.424 552.634L444 448.837H616.111" stroke="#CBD4E7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line rgb-template" d="M580 552.5L444 449H615" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep_2">
+<g id="step s-multistep-brush_2">
 <g id="input_3">
 <path id="prev_2" d="M617.014 448.837L684.774 283L749.372 448.837H926L781.445 552.634L855.53 743.525L684.774 620.639L510.857 743.525L580.424 552.634L444 448.837H616.111" stroke="#CBD4E7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line rgb-template_2" d="M685 620.5L510.5 743.5L581 553" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep_3">
+<g id="step s-multistep-brush_3">
 <g id="input_4">
 <path id="prev_3" d="M617.014 448.837L684.774 283L749.372 448.837H926L781.445 552.634L855.53 743.525L684.774 620.639L510.857 743.525L580.424 552.634L444 448.837H616.111" stroke="#CBD4E7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line rgb-template_3" d="M782.5 553.5L855.5 743.5L685 621" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep_4">
+<g id="step s-multistep-brush_4">
 <g id="input_5">
 <path id="prev_4" d="M617.014 448.837L684.774 283L749.372 448.837H926L781.445 552.634L855.53 743.525L684.774 620.639L510.857 743.525L580.424 552.634L444 448.837H616.111" stroke="#CBD4E7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line rgb-template_4" d="M750 448.5L924.5 449.5L782 552.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep ">
+<g id="step s-multistep-brush_5">
 <g id="input_6">
 <path id="prev_5" d="M617.014 448.837L684.774 283L749.372 448.837H926L781.445 552.634L855.53 743.525L684.774 620.639L510.857 743.525L580.424 552.634L444 448.837H616.111" stroke="#CBD4E7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 <path id="draw-line rgb-template_5" d="M617 448L684.5 283L750 448" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>

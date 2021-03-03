@@ -66,10 +66,9 @@ let perspective = Course(
     tasks: [
         Task(name: "1-point perspective", path: "perspective/1-point"),
         Task(name: "Rails", path: "perspective/rails"),
-        Task(name: "2-point perspective", path: "perspective/2-point"),
-        Task(name: "Cubes", path: "perspective/cubes"),
-        Task(name: "City", path: "perspective/city"),
         Task(name: "Room", path: "perspective/room"),
+        Task(name: "2-point perspective", path: "perspective/2-point"),
+        Task(name: "City", path: "perspective/city"),
         Task(name: "3-point perspective", path: "perspective/3-point"),
     ]
 )

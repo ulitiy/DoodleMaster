@@ -53,29 +53,22 @@ class TemplateWebViewController: WebViewController {
     
     override func watchUpdates() {
         templateSink = taskState.$template.sink { [weak self] val in
-            if val == nil {
-                self?.wkWebView.evaluateJavaScript("setShadowSize(\(self!.taskState.currentStep.shadowSize * self!.brushScale)); showTemplate(\(self!.taskState.stepNumber));")
-            }
-        }
-        stepNumberSink = taskState.$stepNumber.sink { [weak self] val in // duplicates WVW
-            guard let self = self, !self.wkWebView.isLoading else {
+            guard let self = self, !self.wkWebView.isLoading, val == nil else {
                 return
             }
-            self.onStepNumberChange(val)
+            self.getStepSettings(self.taskState.stepNumber) {
+                self.wkWebView.evaluateJavaScript("setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(self.taskState.stepNumber));")
+            }
         }
-    }
-    
-    override func onStepNumberChange(_ val: Int) {
-        self.getStepSettings(val) {}
     }
     
     func getStepSettings(_ step: Int, cl: @escaping () -> Void) {
         self.wkWebView.evaluateJavaScript("getStepSettings(\(step));") { res, _ in
-            guard let res = res as? String else {
+            guard let res = res as? Dictionary<String, Any> else {
                 return
             }
-            self.taskState.currentStep = stepTemplates[res] ?? stepTemplates["default"]
             print("Using step template \(res)")
+            self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "default"] ?? stepTemplates["default"], shadowSize: res["shadowSize"] as? Double) // default here for incorrect values
             cl()
         }
     }

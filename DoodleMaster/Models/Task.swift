@@ -17,6 +17,17 @@ struct TaskStep: Hashable {
     var showResult = true
     
     var scoringSystem = ScoringSystem()
+    
+    init(template: TaskStep? = nil, brushName: String? = nil, brushSize: Double? = nil, brushOpacity: Double? = nil, shadowSize: Double? = nil,
+         clearBefore: Bool? = nil, showResult: Bool? = nil, scoringSystem: ScoringSystem? = nil) {
+        self.brushName = brushName ?? template?.brushName ?? "main"
+        self.brushSize = brushSize ?? template?.brushSize ?? 10.0
+        self.brushOpacity = brushOpacity ?? template?.brushOpacity ?? 1.0
+        self.shadowSize = shadowSize ?? template?.shadowSize ?? 50.0
+        self.clearBefore = clearBefore ?? template?.clearBefore ?? true
+        self.showResult = showResult ?? template?.showResult ?? true
+        self.scoringSystem = scoringSystem ?? template?.scoringSystem ?? ScoringSystem()
+    }
 }
 
 class Task: ObservableObject {

@@ -1,4 +1,4 @@
-let debugSVG = ``;
+const debugSVG = ``;
 
 function loadTask(task) {
   try {
@@ -18,17 +18,17 @@ function loadSVG(text) {
   res = res.replace(/\sid=/gm, " class=");
   res = res.replace(/_\d+/gm, "\"");
   document.body.innerHTML = res;
-  let svg = document.querySelector("svg");
+  const svg = document.querySelector("svg");
   svg.removeAttribute("height");
   svg.removeAttribute("width");
 }
 
 function loadTextTask(texts) {
-  let textTask = document.createElement("div");
+  const textTask = document.createElement("div");
   textTask.className = "text-task"
   document.body.append(textTask);
   texts.forEach((text) => {
-    let step = document.createElement("div");
+    const step = document.createElement("div");
     textTask.prepend(step);
     step.className = "step s-handwriting";
     step.innerHTML = `
@@ -48,10 +48,19 @@ let refreshVersion = 0;
 let mustSkipAnimation = false;
 shadowSize = 10;
 
+function stripSettings(parent, prefix) {
+  const s = [...parent.classList].find((c) => c.startsWith(prefix));
+  return s ? s.replace(prefix, "") : null;
+}
+
 function getStepSettings(step) {
-  const el = document.querySelector(`.step:nth-child(${countSteps() - step})`);
-  let template = [...el.classList].find((c) => c.startsWith("s-")) || "default";
-  return template.replace(/^s-/, "");
+  const parent = document.querySelector(`.step:nth-child(${countSteps() - step})`);
+  const shadowSize = stripSettings(parent, "shadow-size-");
+  return {
+    template: stripSettings(parent, "s-"),
+    shadowSize: shadowSize ? parseInt(shadowSize) : null,
+    brushName: stripSettings(parent, "brush-name-"),
+  };
 }
 
 function hideAll() {
@@ -83,7 +92,7 @@ function createTemplate(step) {
 }
 
 function onRepaint(f) {
-  let svg = document.querySelector("svg, .text-task");
+  const svg = document.querySelector("svg, .text-task");
   svg.style.display = "none";
   svg.style.offsetHeight;
   svg.style.display = "block";
@@ -106,7 +115,7 @@ function showInput(step) {
 }
 
 function getRepeat(el) {
-  for (var cl of el.classList.values()) {
+  for (let cl of el.classList.values()) {
     const match = cl.match(/^r(\d+)$/);
     if (match) {
       return parseInt(match[1]);
@@ -116,7 +125,7 @@ function getRepeat(el) {
 }
 
 function getDelay(el) {
-  for (var cl of el.classList.values()) {
+  for (let cl of el.classList.values()) {
     const match = cl.match(/^d(\d+)$/);
     if (match) {
       return parseInt(match[1]);
@@ -133,7 +142,7 @@ function drawLine(el) {
   // remove delay, it breaks animation
   tempRemoveDelay(el);
 
-  let len = el.getTotalLength() * 1.02;
+  const len = el.getTotalLength() * 1.02;
   let duration = Math.round(len/100)/10;
   duration = duration >= 0.9 ? duration : 0.9;
   el.style.strokeDasharray = len;
@@ -162,7 +171,7 @@ function drawLine(el) {
 }
 
 function tempRemoveDelay(el) {
-  var dclass;
+  let dclass;
   el.classList.forEach((cl) => dclass = cl.match(/^d\d+$/) ? cl : dclass);
   el.classList.remove(dclass);
   setTimeout(() => {
@@ -199,9 +208,9 @@ function makeRGBTemplates(step) {
     makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5));
 
   const els = document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .rgb-template:empty, .step:nth-child(${countSteps() - step}) .rgb-template :empty`);
-  els.forEach((el) => makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 5)); // was 1.9 but reduced for dashes
+  els.forEach((el) => makeTemplate(el, step, "#0F0", shadowSize * 1.7 - 2)); // was 1.9 but reduced for dashes
   els.forEach((el) => makeTemplate(el, step, "#00F", shadowSize * 0.87)); // 0.87 can be barely 100%. 0.85 easy, 0.9 impossible
-  els.forEach((el) => makeTemplate(el, step, "#F00", 5)); // ~1.5px in 320*256 resolution of template on GPU
+  els.forEach((el) => makeTemplate(el, step, "#F00", 2));
 
   document.querySelectorAll(`.step:nth-child(${countSteps() - step}) .rgb-template`).forEach((el) =>
     el.classList.remove("rgb-template"));

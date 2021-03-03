@@ -18,7 +18,7 @@ struct WhyFailedView: View {
                 .font(.system(size: 40))
             Text(whyFailed)
                 .font(.custom("LucidaGrande", size: 25))
-                .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))//
+                .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading).padding()
     }

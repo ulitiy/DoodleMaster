@@ -31,11 +31,6 @@ struct TaskOverlayView: View {
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topTrailing).padding()
 
-            // bottom left
-            if taskState.whyFailed != nil {
-                WhyFailedView(whyFailed: taskState.whyFailed!)
-            }
-
             #if DEBUG
             if taskState.debugTemplate {
                 Text(taskState.currentResult.toString())

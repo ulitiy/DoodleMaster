@@ -25,6 +25,10 @@ struct TaskView: View {
                 ZStack {
                     TemplateWebViewWrapper(taskState: taskState).opacity(0)
                     WebViewWrapper(taskState: taskState)
+                    
+                    if taskState.whyFailed != nil {
+                        WhyFailedView(whyFailed: taskState.whyFailed!)
+                    }
 
                     CanvasWrapper(taskState: taskState)
                     

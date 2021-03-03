@@ -1,5 +1,5 @@
 //
-//  CourseProgressView.swift
+//  RingProgressView.swift
 //  ArtWorkout
 //
 //  Created by Aleksandr Ulitin on 08.02.2021.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CourseProgressView: View {
+struct RingProgressView: View {
     var value: Double
     
     var body: some View {
@@ -41,6 +41,6 @@ struct CourseProgressView: View {
 
 struct CourseProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseProgressView(value: 0.3)
+        RingProgressView(value: 0.3)
     }
 }

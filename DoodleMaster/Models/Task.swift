@@ -11,7 +11,6 @@ import SwiftUI
 struct TaskStep: Hashable {
     var brushName = "main"
     var brushSize = 10.0
-    var brushOpacity = 1.0
     var shadowSize = 50.0
     var clearBefore = true
     var showResult = true
@@ -22,11 +21,21 @@ struct TaskStep: Hashable {
          clearBefore: Bool? = nil, showResult: Bool? = nil, scoringSystem: ScoringSystem? = nil) {
         self.brushName = brushName ?? template?.brushName ?? "main"
         self.brushSize = brushSize ?? template?.brushSize ?? 10.0
-        self.brushOpacity = brushOpacity ?? template?.brushOpacity ?? 1.0
         self.shadowSize = shadowSize ?? template?.shadowSize ?? 50.0
         self.clearBefore = clearBefore ?? template?.clearBefore ?? true
         self.showResult = showResult ?? template?.showResult ?? true
         self.scoringSystem = scoringSystem ?? template?.scoringSystem ?? ScoringSystem()
+    }
+    
+    init(template: TaskStep? = nil, dictionary: Dictionary<String, Any>) {
+        self.init(
+            template: stepTemplates[dictionary["template"] as? String ?? "default"] ?? stepTemplates["default"], // default here for incorrect values
+            brushName: dictionary["brushName"] as? String,
+            brushSize: dictionary["brushSize"] as? Double,
+            shadowSize: dictionary["shadowSize"] as? Double,
+            clearBefore: dictionary["clearBefore"] as? Bool,
+            showResult: dictionary["showResult"] as? Bool
+            )
     }
 }
 

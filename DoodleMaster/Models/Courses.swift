@@ -8,9 +8,9 @@
 
 let stepTemplates = [
     "default": TaskStep(),
-    "multistep": TaskStep(brushName: "pencil", brushOpacity: 0.8, clearBefore: false, showResult: false),
+    "multistep": TaskStep(brushName: "pencil", clearBefore: false, showResult: false),
     "multistep-brush": TaskStep(clearBefore: false, showResult: false),
-    "multistep-first": TaskStep(brushName: "pencil", brushOpacity: 0.8, showResult: false),
+    "multistep-first": TaskStep(brushName: "pencil", showResult: false),
     "multistep-first-brush": TaskStep(showResult: false),
     "multistep-brush-first": TaskStep(showResult: false),
     "multistep-result": TaskStep(clearBefore: false, showResult: false, scoringSystem: ScoringSystem(
@@ -23,7 +23,7 @@ let stepTemplates = [
         minRed: 0.03,
         weight: 0.0
     )),
-    "handwriting": TaskStep(brushName: "pen", brushSize: 3.0, brushOpacity: 0.9, shadowSize: 11.1, scoringSystem: ScoringSystem( // 11.1 - perfect
+    "handwriting": TaskStep(brushName: "pen", brushSize: 3.0, shadowSize: 11.1, scoringSystem: ScoringSystem( // 11.1 - perfect
         roughness: [0.0, 0.0, 1.0, 0],
         oneMinusAlpha: [0.0, 0.0, 0.002, -1]
     )),
@@ -73,6 +73,14 @@ let perspective = Course(
     ]
 )
 
+let letters = Course(
+    name: "Letters",
+    path: "letters",
+    description: "In this course you will learn how to write A-Z cursive letters step by step",
+    tasks: [
+        Task(name: "Letters Aa-Hh", path: "letters/a-h"),
+    ])
+
 let handwriting = Course(
     name: "Handwriting",
     path: "handwriting",
@@ -101,7 +109,7 @@ let handwriting = Course(
     ]
 )
 
-let coursesBase = [lines, shapes, perspective, handwriting]
+let coursesBase = [lines, shapes, perspective, letters, handwriting]
 
 #if DEBUG
 let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG")])]

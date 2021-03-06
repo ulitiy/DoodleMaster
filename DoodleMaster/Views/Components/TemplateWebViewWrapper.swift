@@ -67,8 +67,8 @@ class TemplateWebViewController: WebViewController {
             guard let res = res as? Dictionary<String, Any> else {
                 return
             }
-            print("Using step template \(res)")
-            self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "default"] ?? stepTemplates["default"], shadowSize: res["shadowSize"] as? Double) // default here for incorrect values
+            print("Using step settings \(res)")
+            self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "default"] ?? stepTemplates["default"], dictionary: res) // default here for incorrect values
             cl()
         }
     }

@@ -42,21 +42,24 @@ class CanvasWrapperController: UIViewController {
 //        print("Canvas size: \(view.bounds)")
         brushScale = view.bounds.height / 1024
         let brush = try! canvas.registerBrush(name: "main")
+        brush.opacity = 1
         brush.forceSensitive = 0.5
         
         let pen = try! canvas.registerBrush(name: "pen")
+        pen.opacity = 0.9
         pen.forceSensitive = 0.1
-        
+
         let texture = try! canvas.makeTexture(with: UIImage(named: "pencil")!.pngData()!)
         let pencil = try! canvas.registerBrush(name: "pencil", textureID: texture.id)
         pencil.rotation = .random
         pencil.pointStep = 2
-        pencil.forceSensitive = 0.3
+        pencil.forceSensitive = 0.1
+        pencil.opacity = 1
         pencil.color = UIColor(white: 0.3, alpha: 1)
         
         let shadowBrush = try! canvas.registerBrush(name: "shadow")
         shadowBrush.forceSensitive = 0
-        shadowBrush.opacity = 0.05 // 0.05 cannot be lower because of the 1 byte precision
+        shadowBrush.opacity = 0.2 // 0.05 cannot be lower because of the 1 byte precision
         watchUpdates()
         view.addSubview(canvas)
         brush.use()
@@ -142,6 +145,5 @@ class CanvasWrapperController: UIViewController {
         brush?.use()
         self.canvas.shadowBrush.pointSize = CGFloat(step.shadowSize) * brushScale
         self.canvas.currentBrush.pointSize = CGFloat(step.brushSize) * brushScale
-        self.canvas.currentBrush.opacity = CGFloat(step.brushOpacity)
     }
 }

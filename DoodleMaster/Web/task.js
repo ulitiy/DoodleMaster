@@ -48,18 +48,42 @@ let refreshVersion = 0;
 let mustSkipAnimation = false;
 shadowSize = 10;
 
-function stripSettings(parent, prefix) {
-  const s = [...parent.classList].find((c) => c.startsWith(prefix));
-  return s ? s.replace(prefix, "") : null;
+function stripSettings(el, prefix) {
+  let s = [...el.classList].find((c) => c.startsWith(prefix));
+  if (!s) {
+    return null;
+  }
+  if (prefix.charAt(prefix.length - 1) != "-") {
+    return true;
+  }
+  s = s.replace(prefix, "");
+  if (!isNaN(s)) {
+    return parseFloat(s);
+  }
+  return s;
+}
+
+function getTaskSettings() {
+  const el = document.querySelector(`.step`);
+  return getElementSettings(el.parentNode());
 }
 
 function getStepSettings(step) {
-  const parent = document.querySelector(`.step:nth-child(${countSteps() - step})`);
-  const shadowSize = stripSettings(parent, "shadow-size-");
+  const el = document.querySelector(`.step:nth-child(${countSteps() - step})`);
+  return getElementSettings(el);
+}
+
+function getElementSettings(el) {
   return {
-    template: stripSettings(parent, "s-"),
-    shadowSize: shadowSize ? parseInt(shadowSize) : null,
-    brushName: stripSettings(parent, "brush-name-"),
+    template: stripSettings(el, "s-"),
+    shadowSize: stripSettings(el, "shadow-size-"),
+    brushName: stripSettings(el, "brush-name-"),
+    brushSize: stripSettings(el, "brush-size-"),
+    brushColor: stripSettings(el, "brush-color-"),
+    clearBefore: stripSettings(el, "clear-before"),
+    showResult: stripSettings(el, "show-result"),
+    fixedSize: stripSettings(el, "fixed-size"),
+    eraseBrush: stripSettings(el, "erase-brush-")
   };
 }
 

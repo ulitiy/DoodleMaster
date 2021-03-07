@@ -18,9 +18,17 @@ function loadSVG(text) {
   res = res.replace(/\sid=/gm, " class=");
   res = res.replace(/_\d+/gm, "\"");
   document.body.innerHTML = res;
+
   const svg = document.querySelector("svg");
+  const el = document.querySelector(`.settings`);
+  const fixedSize = stripSettings(el, "fixed-size");
+
+  if (fixedSize) {
+    return;
+  }
   svg.removeAttribute("height");
   svg.removeAttribute("width");
+  svg.style = "max-width: 100%; max-height: 100%;"
 }
 
 function loadTextTask(texts) {
@@ -64,8 +72,8 @@ function stripSettings(el, prefix) {
 }
 
 function getTaskSettings() {
-  const el = document.querySelector(`.step`);
-  return getElementSettings(el.parentNode());
+  const el = document.querySelector(`.settings`);
+  return getElementSettings(el);
 }
 
 function getStepSettings(step) {
@@ -82,8 +90,7 @@ function getElementSettings(el) {
     brushColor: stripSettings(el, "brush-color-"),
     clearBefore: stripSettings(el, "clear-before"),
     showResult: stripSettings(el, "show-result"),
-    fixedSize: stripSettings(el, "fixed-size"),
-    eraseBrush: stripSettings(el, "erase-brush-")
+    eraseBrush: stripSettings(el, "erase-brush-"),
   };
 }
 

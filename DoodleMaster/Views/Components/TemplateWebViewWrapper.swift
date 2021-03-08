@@ -79,6 +79,7 @@ class TemplateWebViewController: WebViewController {
     func getTaskSettings(_ cl: @escaping () -> Void) {
         self.wkWebView.evaluateJavaScript("getTaskSettings();") { res, _ in
             guard let res = res as? Dictionary<String, Any> else {
+                cl()
                 return
             }
             print("Using task settings \(res)")

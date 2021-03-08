@@ -22,6 +22,7 @@ struct ScoringSystem: Hashable {
     var green = neutral
     var blue = [0.0, 0.0, 1.0, 1.0]
     var oneMinusAlpha = punish
+    var attemptNumber = [1.0, 0.05, 2.0, 0.0]
 
     var minRed = 0.99
     var maxNegative = -0.2
@@ -62,6 +63,8 @@ class Result: ObservableObject {
     var blueK = 0.0
     var oneMinusAlphaK = 0.0
     var enoughRed = false
+    var attemptNumber = 1
+    var attemptK = 0.0
 
     @Published var overall = 0.0
     @Published var passed = false
@@ -97,6 +100,7 @@ class Result: ObservableObject {
         
         strokeCountK = calculateK(val: Double(strokeCount), scoring: scoringSystem.strokeCount)
         strokeCountPlusOneK = calculateK(val: Double(strokeCount + 1), scoring: scoringSystem.strokeCount)
+        attemptK = calculateK(val: Double(attemptNumber), scoring: scoringSystem.attemptNumber)
         calculateSummary()
     }
     
@@ -148,7 +152,7 @@ class Result: ObservableObject {
         findWhyFailed();
         var p = 0.0
         var n = 0.0
-        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK].forEach {
+        [blueK, greenK, oneMinusAlphaK, overlapK, roughnessK, attemptK].forEach {
             (p, n) = addK($0, p, n)
         }
         let (_, nPlusOne) = addK(strokeCountPlusOneK, p, n)
@@ -167,7 +171,7 @@ class Result: ObservableObject {
     }
     
     func toString() -> String {
-        return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\ner\t\t\(enoughRed)\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
+        return "r\t\t\(red.formatPercent())\nb\t\t\(blueK.formatPercent())\ng\t\t\(greenK.formatPercent())\na\t\t\(oneMinusAlphaK.formatPercent())\nol\t\t\((Double(matchResults[4]) / Double(matchResults[5])).toString(3))\nolK\t\t\(overlapK.formatPercent())\nro\t\t\((rippleSum/Double(ripplePageCount)).toString())\nroK\t\t\(roughnessK.formatPercent())\nsc\t\t\(strokeCount)\nscK\t\(strokeCountK.formatPercent())\nan\t\t\(attemptNumber)\nanK\t\(attemptK.formatPercent())\npos\t\(positive.formatPercent())\nneg\t\(negative.formatPercent())\nov\t\t\(overall.formatPercent())\ner\t\t\(enoughRed)\np\t\t\(passed)\nf\t\t\(failed)\nmr\t\t\(matchResults)\ntc\t\t\(templateCount)"
     }
     
     func toDictionary() -> Dictionary<String, Double> {

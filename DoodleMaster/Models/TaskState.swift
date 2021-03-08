@@ -29,7 +29,6 @@ class TaskState: ObservableObject {
     @Published var currentResult: Result!
     // how many elements there were in canvas.data.elements when this step started
     var totalWeight = 0.0
-    var timesFailed = 0
     var stepElementsCount = 0
     var defaultStep = TaskStep()
     @Published var stepCount = 0
@@ -109,7 +108,7 @@ class TaskState: ObservableObject {
                 "step_number": stepNumber,
                 "name": task.name,
                 "result_details": currentResult.toDictionary(),
-                "times_failed": timesFailed,
+                "attempt_number": currentResult.attemptNumber,
             ])
             if currentStep.showResult { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
@@ -122,7 +121,6 @@ class TaskState: ObservableObject {
         if !failing { // only once
             print("Fail step")
             failing = true
-            timesFailed += 1
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
                 guard let self = self else {
                     return
@@ -135,14 +133,16 @@ class TaskState: ObservableObject {
                 "step_number": stepNumber,
                 "name": task.name,
                 "result_details": currentResult.toDictionary(),
-                "times_failed": timesFailed,
+                "attempt_number": currentResult.attemptNumber,
             ])
         }
     }
     
     func restartStep() {
         print("Restart step")
+        let r = currentResult
         resetResult()
+        currentResult.attemptNumber = r!.attemptNumber + 1
         passing = false
         failing = false
     }
@@ -150,12 +150,12 @@ class TaskState: ObservableObject {
     func restartTask() {
         print("Restart task")
         results.removeAll()
-        timesFailed = 0
         stepNumber = 0
         totalWeight = 0
         stepElementsCount = 0
         taskResult = nil
         restartStep()
+        currentResult.attemptNumber = 1
         template = nil
         dateStarted = Date()
     }
@@ -170,7 +170,6 @@ class TaskState: ObservableObject {
         template = nil
         passing = false
         failing = false
-        timesFailed = 0
     }
     
     func passTask() {
@@ -184,6 +183,7 @@ class TaskState: ObservableObject {
             res.overlapK = res.overlapK + val2.overlapK * weight
             res.roughnessK = res.roughnessK + val2.roughnessK * weight
             res.strokeCountK = res.strokeCountK + val2.strokeCountK * weight
+            res.attemptK = res.attemptK + val2.attemptK * weight
             print("Step result: \(val2.overall.formatPercent(3)) * \(weight.toString(3)) = \((val2.overall * weight).formatPercent(3))")
             return res
         }

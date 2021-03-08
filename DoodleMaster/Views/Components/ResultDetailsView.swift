@@ -45,6 +45,7 @@ struct ResultDetailsView: View {
         VStack(spacing: 20) {
             formatRow(name: "Match", val: result.blueK + result.oneMinusAlphaK, max: 1000)
             formatRow(name: "Smoothness", val: result.roughnessK, max: 300)
+            formatRow(name: "First try", val: result.attemptK, max: 50)
             if time != nil {
                 HStack {
                     Text("Time")

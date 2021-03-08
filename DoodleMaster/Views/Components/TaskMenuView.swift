@@ -62,7 +62,7 @@ struct TaskMenuView: View {
                         "task_path": taskState.task.path,
                         "step_number": taskState.stepNumber,
                         "name": taskState.task.name,
-                        "times_failed": taskState.timesFailed,
+                        "attempt_number": taskState.currentResult.attemptNumber,
                     ])
                 }), secondaryButton: .default(Text("Cancel")))
             }

@@ -29,7 +29,7 @@ struct TaskStep: Hashable {
     
     init(template: TaskStep? = nil, dictionary: Dictionary<String, Any>) {
         self.init(
-            template: stepTemplates[dictionary["template"] as? String ?? "default"] ?? stepTemplates["default"], // default here for incorrect values
+            template: template,
             brushName: dictionary["brushName"] as? String,
             brushSize: dictionary["brushSize"] as? Double,
             shadowSize: dictionary["shadowSize"] as? Double,

@@ -27,20 +27,22 @@ struct TemplateWebViewWrapper : UIViewControllerRepresentable {
 class TemplateWebViewController: WebViewController {
     var templateSink: AnyCancellable?
 
-    func getTaskSettings() {
+    func getTaskDetails() {
         self.wkWebView.evaluateJavaScript("countSteps();") { res, _ in
             guard let res = res as? Int else {
                 return
             }
             self.taskState.stepCount = res
         }
-        self.getStepSettings(self.taskState.stepNumber) {
-            self.wkWebView.evaluateJavaScript("setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(self.taskState.stepNumber));")
+        self.getTaskSettings {
+            self.getStepSettings(self.taskState.stepNumber) {
+                self.wkWebView.evaluateJavaScript("setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(self.taskState.stepNumber));")
+            }
         }
     }
     
     override func onTaskLoaded() {
-        self.getTaskSettings()
+        self.getTaskDetails()
     }
     
     // receives js event messages
@@ -68,11 +70,24 @@ class TemplateWebViewController: WebViewController {
                 return
             }
             print("Using step settings \(res)")
-            self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "default"] ?? stepTemplates["default"], dictionary: res) // default here for incorrect values
+            self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "none"] ?? self.taskState.defaultStep, dictionary: res)
+            print("Translated into \(self.taskState.currentStep!)")
             cl()
         }
     }
-
+    
+    func getTaskSettings(_ cl: @escaping () -> Void) {
+        self.wkWebView.evaluateJavaScript("getTaskSettings();") { res, _ in
+            guard let res = res as? Dictionary<String, Any> else {
+                return
+            }
+            print("Using task settings \(res)")
+            self.taskState.defaultStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "none"] ?? stepTemplates["default"], dictionary: res)
+            print("Translated into \(self.taskState.defaultStep)")
+            cl()
+        }
+    }
+    
     var snapshot: UIImage?
     func takeSnapshot(step: Int) {
         let config = WKSnapshotConfiguration()

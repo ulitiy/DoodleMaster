@@ -31,6 +31,7 @@ class TaskState: ObservableObject {
     var totalWeight = 0.0
     var timesFailed = 0
     var stepElementsCount = 0
+    var defaultStep = TaskStep()
     @Published var stepCount = 0
     @Published var template: MTLTexture? // is updated by Web when assigned to nil
     @Published var taskResult: Result?

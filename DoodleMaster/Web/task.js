@@ -28,7 +28,7 @@ function loadSVG(text) {
   }
   svg.removeAttribute("height");
   svg.removeAttribute("width");
-  svg.style = "max-width: 100%; max-height: 100%;"
+  svg.className = "fixed-size";
 }
 
 function loadTextTask(texts) {

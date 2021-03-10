@@ -73,7 +73,9 @@ function stripSettings(el, prefix) {
 
 function getTaskSettings() {
   const el = document.querySelector(`.settings`);
-  return getElementSettings(el);
+  const res = el ? getElementSettings(el) : {};
+  res.stepCount = countSteps();
+  return res;
 }
 
 function getStepSettings(step) {

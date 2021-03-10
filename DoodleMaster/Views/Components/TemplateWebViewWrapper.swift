@@ -26,23 +26,13 @@ struct TemplateWebViewWrapper : UIViewControllerRepresentable {
 
 class TemplateWebViewController: WebViewController {
     var templateSink: AnyCancellable?
-
-    func getTaskDetails() {
-        self.wkWebView.evaluateJavaScript("countSteps();") { res, _ in
-            guard let res = res as? Int else {
-                return
-            }
-            self.taskState.stepCount = res
-        }
+    
+    override func onTaskLoaded() {
         self.getTaskSettings {
             self.getStepSettings(self.taskState.stepNumber) {
                 self.wkWebView.evaluateJavaScript("setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(self.taskState.stepNumber));")
             }
         }
-    }
-    
-    override func onTaskLoaded() {
-        self.getTaskDetails()
     }
     
     // receives js event messages
@@ -66,10 +56,10 @@ class TemplateWebViewController: WebViewController {
     
     func getStepSettings(_ step: Int, cl: @escaping () -> Void) {
         self.wkWebView.evaluateJavaScript("getStepSettings(\(step));") { res, _ in
+            print("Using step settings \(String(describing: res))")
             guard let res = res as? Dictionary<String, Any> else {
                 return
             }
-            print("Using step settings \(res)")
             self.taskState.currentStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "none"] ?? self.taskState.defaultStep, dictionary: res)
             print("Translated into \(self.taskState.currentStep!)")
             cl()
@@ -78,11 +68,12 @@ class TemplateWebViewController: WebViewController {
     
     func getTaskSettings(_ cl: @escaping () -> Void) {
         self.wkWebView.evaluateJavaScript("getTaskSettings();") { res, _ in
+            print("Using task settings \(String(describing: res))")
             guard let res = res as? Dictionary<String, Any> else {
                 cl()
                 return
             }
-            print("Using task settings \(res)")
+            self.taskState.stepCount = res["stepCount"] as! Int;
             self.taskState.defaultStep = TaskStep(template: stepTemplates[res["template"] as? String ?? "none"] ?? stepTemplates["default"], dictionary: res)
             print("Translated into \(self.taskState.defaultStep)")
             cl()

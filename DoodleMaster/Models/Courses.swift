@@ -73,6 +73,22 @@ let perspective = Course(
     ]
 )
 
+let flowers = Course(
+    name: "Flowers",
+    path: "flowers",
+    description: "In this course you will learn how to draw flowers, leaves and cactuses.",
+    tasks: [
+        Task(name: "Flower 1", path: "flowers/flower1"),
+        Task(name: "Flower 2", path: "flowers/flower2"),
+        Task(name: "Flower 3", path: "flowers/flower3"),
+        Task(name: "Leaves", path: "flowers/leaves"),
+        Task(name: "Vase", path: "flowers/vase"),
+        Task(name: "Branch", path: "flowers/branch"),
+        Task(name: "Texture", path: "flowers/texture"),
+        Task(name: "Cactus", path: "flowers/cactus"),
+    ]
+)
+
 let letters = Course(
     name: "Letters",
     path: "letters",
@@ -82,7 +98,7 @@ let letters = Course(
     ])
 
 let handwriting = Course(
-    name: "Handwriting",
+    name: "Handwriting practice",
     path: "handwriting",
     description: "This course contains handwriting practice from popular children's poems.",
     tasks: [
@@ -109,7 +125,7 @@ let handwriting = Course(
     ]
 )
 
-let coursesBase = [lines, shapes, perspective, letters, handwriting]
+let coursesBase = [lines, shapes, perspective, flowers, handwriting]
 
 #if DEBUG
 let courses = coursesBase + [Course(name: "Test", path: "DEBUG", description: "", tasks: [Task(name: "Test", path: "DEBUG")])]

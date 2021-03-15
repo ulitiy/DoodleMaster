@@ -26,8 +26,9 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>LithosPro-Regular.otf</string>
-		<string>LucidaGrande.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -67,6 +68,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
+	<string>Dark</string>
 </dict>
 </plist>

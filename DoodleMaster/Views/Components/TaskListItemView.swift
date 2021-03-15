@@ -14,27 +14,33 @@ struct TaskListItemView: View {
     var body: some View {
         NavigationLink(destination: LazyView(TaskView(task: task))) {
             Image("thumbnails/\(task.path)").resizable().aspectRatio(1,contentMode: .fit)
-                .cornerRadius(30)
+                .background(Color.white)
+                .cornerRadius(30-1)
+                .padding(3)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "00aa66ff")!, lineWidth: 4)
+                    RoundedRectangle(cornerRadius: 30+3)
+                        .stroke(task.result == 0 ? Color(hex: "537fc9ff")! : Color(hex: "3eb93cff")!, lineWidth: 6)
                 )
                 .overlay(
                     Text(task.name)
-                        .font(.custom("LucidaGrande", size: 20))
+                        .frame(maxHeight: 25, alignment: .center)
+                        .font(.custom("Helvetica", size: 20))
+                        .minimumScaleFactor(0.4)
+                        .lineLimit(1)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color(hex: "303b96ff"))
+                        .foregroundColor(Color(hex: "537fc9ff"))
                         .shadow(color: .white, radius: 2)
                         .shadow(color: .white, radius: 2)
                         .shadow(color: .white, radius: 2)
-                        .padding(10)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 20)
                     , alignment: .bottom)
                 .overlay(
                     Group {
                         if task.result > 0 {
                             Text("\(task.result.formatScore())")
-                                .font(.custom("LucidaGrande", size: 16))
-                                .foregroundColor(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "00aa66ff")!)
+                                .font(.custom("Helvetica", size: 16))
+                                .foregroundColor(task.result == 0 ? Color(hex: "303b96ff")! : Color(hex: "3eb93cff")!)
                                 .shadow(color: .white, radius: 2)
                                 .shadow(color: .white, radius: 2)
                                 .shadow(color: .white, radius: 2)
@@ -48,6 +54,6 @@ struct TaskListItemView: View {
 
 struct TaskListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskListItemView(task: courses[0].tasks[0])
+        TaskListItemView(task: handwriting.tasks[0]).previewLayout(.fixed(width: 250, height: 250))
     }
 }

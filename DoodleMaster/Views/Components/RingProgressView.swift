@@ -22,8 +22,8 @@ struct RingProgressView: View {
                         endAngle: .radians(1.5 * .pi + 2 * .pi * value),
                         clockwise: true)
                 }
-                .strokedPath(.init(lineWidth: 7))
-                .foregroundColor(Color(hex: "303b96ff"))
+                .strokedPath(.init(lineWidth: 6))
+                .foregroundColor(Color(hex: "537fc9ff"))
                 Path { p in
                     p.addArc(
                         center: CGPoint(x: geometry.size.width / 2, y: geometry.size.height / 2),
@@ -32,8 +32,8 @@ struct RingProgressView: View {
                         endAngle: .radians(1.5 * .pi + 2 * .pi * value),
                         clockwise: false)
                 }
-                .strokedPath(.init(lineWidth: 7))
-                .foregroundColor(Color(hex: "00ea7aff"))
+                .strokedPath(.init(lineWidth: 6))
+                .foregroundColor(Color(hex: "53EE50ff"))
             }
         }
     }

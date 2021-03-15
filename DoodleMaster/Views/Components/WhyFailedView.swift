@@ -17,7 +17,7 @@ struct WhyFailedView: View {
                 .foregroundColor(Color(UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)))
                 .font(.system(size: 40))
             Text(whyFailed)
-                .font(.custom("LucidaGrande", size: 25))
+                .font(.custom("Helvetica", size: 25))
                 .foregroundColor(Color(red: 0.4, green: 0.4, blue: 0.4))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading).padding()

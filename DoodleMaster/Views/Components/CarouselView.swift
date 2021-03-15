@@ -79,8 +79,10 @@ struct CarouselView<Content>: View where Content: View {
                 PageIndicator(index: $index, maxIndex: maxIndex)
             }
         }
-        .cornerRadius(40)
-        .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
+        .background(Color.white)
+        .cornerRadius(40-1)
+        .padding(3.5)
+        .overlay(RoundedRectangle(cornerRadius: 40+3.5).stroke(Color(hex: "537fc9ff")!, lineWidth: 7))
     }
 
     func offset(in geometry: GeometryProxy) -> CGFloat {
@@ -106,13 +108,13 @@ struct PageIndicator: View {
             ForEach(0...maxIndex, id: \.self) { index in
                 if index == self.index {
                     Circle()
-                        .fill(index == self.index ? Color(hex: "303b96ff")! : Color(hex: "bbbbbbff")!)
+                        .fill(index == self.index ? Color(hex: "537fc9ff")! : Color(hex: "bbbbbbff")!)
                         .frame(width: 9.2, height: 9.2)
                         .shadow(color: .white, radius: 2)
                         .shadow(color: .white, radius: 2)
                 } else {
                     Circle()
-                        .stroke(Color(hex: "303b96ff")!, lineWidth: 1.2)
+                        .stroke(Color(hex: "537fc9ff")!, lineWidth: 1.2)
                         .frame(width: 8, height: 8)
                         .shadow(color: .white, radius: 2)
                         .shadow(color: .white, radius: 2)

@@ -19,18 +19,18 @@ struct ResultDetailsView: View {
                 .kerning(2)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.gray)
-                .font(.custom("LucidaGrande", size: 25))
+                .font(.custom("Helvetica", size: 25))
             Text("\((val*1000).rounded().toString())")
                 .frame(maxWidth: 70, alignment: .center)
                 .foregroundColor(Color(hue: 0.4 * val * 1000 / Double(max), saturation: 1, brightness: 0.75))
-                .font(.custom("LucidaGrande", size: 25))
+                .font(.custom("Helvetica", size: 25))
             Text("/")
                 .foregroundColor(.gray)
-                .font(.custom("LucidaGrande", size: 25))
+                .font(.custom("Helvetica", size: 25))
             Text(String(max))
                 .frame(maxWidth: 70, alignment: .center)
                 .foregroundColor(.gray)
-                .font(.custom("LucidaGrande", size: 25))
+                .font(.custom("Helvetica", size: 25))
         }
     }
     
@@ -59,7 +59,7 @@ struct ResultDetailsView: View {
             }
         }
         .frame(width: 400)
-        .font(.custom("LucidaGrande", size: 26))
+        .font(.custom("Helvetica", size: 26))
     }
 }
 

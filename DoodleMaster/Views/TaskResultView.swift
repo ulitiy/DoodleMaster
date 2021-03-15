@@ -20,19 +20,19 @@ struct TaskResultView: View {
                     .frame(width: 200, height: 200)
                     .padding(.bottom, 30)
                 Text("Task passed")
-                    .font(.custom("LithosPro-Regular", size: 70.0))
+                    .font(.custom("Montserrat-Medium", size: 70.0))
                     .foregroundColor(Color(hex: "303b96ff"))
                     .padding(.bottom, 30)
                 HStack(alignment: .bottom) {
                     Text("\(taskState.taskResult!.overall.formatScore())")
-                        .font(Font.custom("LithosPro-Regular", size: 70.0))
+                        .font(Font.custom("Montserrat-Medium", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
                         .padding(.leading, 90)
 
-                    Text("/ 1300")
+                    Text("/ 1350")
                         .foregroundColor(.gray)
-                        .font(.custom("LucidaGrande", size: 25))
-                        .padding(.bottom, 18)
+                        .font(.custom("Helvetica", size: 25))
+                        .padding(.bottom, 13)
                 }
                 .padding(30)
                 ResultDetailsView(result: taskState.taskResult!, time: taskState.dateStarted.timeIntervalSinceNow)
@@ -41,7 +41,7 @@ struct TaskResultView: View {
             ZStack {
                 Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
                     Text("OK")
-                        .font(.custom("LucidaGrande", size: 35))
+                        .font(.custom("Helvetica", size: 35))
                         .padding(.horizontal, 60)
                         .padding(.vertical, 25)
                         .overlay(RoundedRectangle(cornerRadius: 500).stroke(lineWidth: 4))
@@ -54,7 +54,7 @@ struct TaskResultView: View {
                 MyImageView(name: "high-score-stamp")
                     .frame(width: 250, height: 250)
                     .padding(.leading, 460)
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 90)
                     .transition(AnyTransition.opacity.combined(with: .scale(scale: 5, anchor: UnitPoint(x: 0.7, y: 0.5))).animation(.easeIn(duration: 0.3)))
             }
         }

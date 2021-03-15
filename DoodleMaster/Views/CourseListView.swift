@@ -12,18 +12,18 @@ struct CourseListView: View {
     @StateObject var courseListState = CourseListState(courses: courses)
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300, maximum: 400), spacing: 80)],
-                          alignment: .center, spacing: 80) {
-                    ForEach(courseListState.courses, id: \.path) { course in
-                        CourseListItemView(course: course)
-                    }
-                }.padding(50)
-            }
-            .navigationTitle("Courses")
-            .navigationBarHidden(true)
+        ScrollView {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 260, maximum: 300), spacing: 80)],
+                      alignment: .center, spacing: 25) {
+                ForEach(courseListState.courses, id: \.path) { course in
+                    CourseListItemView(course: course).frame(width: 300, height: 420)
+                }
+            }.padding(60)
         }
+        .background(LinearGradient(gradient: Gradient(colors: [Color(white: 0.25), Color(white:0.05)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        .navigationTitle("Courses")
+        .navigationBarHidden(true)
+        .statusBar(hidden: true)
     }
 }
 
@@ -32,5 +32,8 @@ struct CourseListView_Previews: PreviewProvider {
         CourseListView()
             .previewDevice("iPad (8th generation)")
             .previewLayout(.fixed(width: 1366, height: 1024))
+        CourseListView()
+            .previewDevice("iPad (8th generation)")
+            .previewLayout(.fixed(width: 1080, height: 810))
     }
 }

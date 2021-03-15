@@ -15,13 +15,13 @@ struct CourseProgressView: View {
         ZStack {
             if course.percentPassed > 0 && course.percentPassed < 1 {
                 RingProgressView(value: course.percentPassed)
-                    .frame(width: 50, height: 50)
-                    .padding(16)
+                    .frame(width: 45, height: 45)
+                    .padding(20)
             }
             if course.percentPassed == 1 {
                 MyImageView(name: "cup")
-                    .frame(width: 50, height: 50)
-                    .padding(16)
+                    .frame(width: 45, height: 45)
+                    .padding(20)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)

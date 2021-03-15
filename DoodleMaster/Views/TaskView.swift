@@ -46,6 +46,7 @@ struct TaskView: View {
                 TaskResultView(taskState: taskState)
             }
         }
+        .background(Color.white)
         .navigationBarHidden(true)
         .edgesIgnoringSafeArea(.all)
         .statusBar(hidden: true)

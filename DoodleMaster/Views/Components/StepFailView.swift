@@ -12,7 +12,7 @@ struct StepFailView: View {
     var body: some View {
         ZStack {
             Rectangle().fill(Color.white)
-            Image(systemName: "xmark").foregroundColor(.red).font(.system(size: 130.0, weight: .bold))
+            Image(systemName: "xmark").foregroundColor(.red).font(.system(size: 180.0, weight: .bold))
         }
         .zIndex(1)
         .transition(AnyTransition.opacity.combined(with: .scale).animation(.easeInOut(duration: 0.2)))

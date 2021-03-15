@@ -20,21 +20,21 @@ struct StepResultView: View {
                     .font(.system(size: 150.0, weight: .light))
                 HStack(alignment: .bottom) {
                     Text("\(taskState.currentResult!.overall.formatScore())")
-                        .font(Font.custom("LithosPro-Regular", size: 70.0))
+                        .font(Font.custom("Montserrat-Medium", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
                         .padding(.leading, 90)
 
-                    Text("/ 1300")
+                    Text("/ 1350")
                         .foregroundColor(.gray)
-                        .font(.custom("LucidaGrande", size: 25))
-                        .padding(.bottom, 18)
+                        .font(.custom("Helvetica", size: 25))
+                        .padding(.bottom, 13)
                 }
                 ResultDetailsView(result: taskState.currentResult, time: nil)
             }.padding(.bottom, 150)
             ZStack {
                 Button(action: { taskState.switchNextStep() }) {
                     Text("OK")
-                        .font(.custom("LucidaGrande", size: 35))
+                        .font(.custom("Helvetica", size: 35))
                         .padding(.horizontal, 60)
                         .padding(.vertical, 25)
                         .overlay(RoundedRectangle(cornerRadius: 500).stroke(lineWidth: 4))
@@ -53,12 +53,9 @@ struct StepSuccessView_Previews: PreviewProvider {
     static func makeTaskState() -> TaskState {
         let ts = TaskState(task: Task(name: "", path: ""))
         let r = ts.currentResult!
-        r.overall = 0.9876
+        r.overall = 1.210
         r.blueK = 0.98765
-        r.oneMinusAlphaK = -0.1234
-        r.overlapK = -0.1
-        r.roughnessK = -0.1
-        r.strokeCountK = -0.1
+        r.roughnessK = 0.1
         return ts
     }
     

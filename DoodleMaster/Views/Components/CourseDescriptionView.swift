@@ -17,37 +17,41 @@ struct CourseDescriptionView: View {
             ZStack {
                 Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
                     Image(systemName: "chevron.left")
-                        .foregroundColor(Color(hex: "303b96ff"))
-                        .font(.system(size: 50))
+                        .foregroundColor(Color(hex: "537fc9ff"))
+                        .font(.system(size: 60, weight: .semibold))
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .padding(.top, 40)
-            .padding(.leading, 20)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            .padding(.leading, 30)
             HStack {
                 ZStack {
                     Image("thumbnails/\(course.path)/index")
                         .resizable()
-                        .aspectRatio(1,contentMode: .fit)
-                        .cornerRadius(40)
-                        .overlay(RoundedRectangle(cornerRadius: 40).stroke(Color(hex: "303b96ff")!, lineWidth: 4))
+                        .aspectRatio(1, contentMode: .fit)
+                        .background(Color.white)
+                        .cornerRadius(40 - 1)
+                        .padding(3.5)
+                        .overlay(RoundedRectangle(cornerRadius: 40 + 3.5).stroke(Color(hex: "537fc9ff")!, lineWidth: 7))
                     CourseProgressView(course: course)
                 }
                 .frame(width: 300, height: 300)
                 .padding(.trailing, 50)
                 VStack(alignment: .leading, spacing: 20) {
-                    Text(course.name)
-                        .font(.custom("LithosPro-Regular", size: 50.0))
-                        .foregroundColor(Color(hex: "303b96ff"))
+                    Text(course.name.replacingOccurrences(of: "\n", with: " "))
+                        .font(.custom("Montserrat-Medium", size: 50.0))
+                        .foregroundColor(Color.white)
+                        .minimumScaleFactor(0.7)
+                        .lineLimit(2)
                         .padding(.top, 10)
                     Text(course.description)
-                        .font(.custom("LucidaGrande", size: 30))
-                        .foregroundColor(Color(hex: "303b96ff"))
+                        .font(.custom("Helvetica", size: 30))
+                        .foregroundColor(Color.white)
                         .lineSpacing(10)
                         .minimumScaleFactor(0.7)
                         .lineLimit(10)
-                }.frame(height: 300, alignment: .topLeading)
-            }.frame(maxWidth: 1000).padding(60)
+                }
+                .frame(minWidth: 500, minHeight: 300, maxHeight: 300, alignment: .topLeading)
+            }.padding(.vertical, 40).padding(.horizontal, 100)
         }
     }
 }
@@ -55,6 +59,7 @@ struct CourseDescriptionView: View {
 struct CourseDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
         CourseDescriptionView(course: courses[0]).previewLayout(.fixed(width: 1366, height: 1024))
-        CourseDescriptionView(course: Course(name: "Some long name for a course",path: "", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tasks: [])).previewLayout(.fixed(width: 1200, height: 900))
+        CourseDescriptionView(course: Course(name: "Some\n long name for a course!",path: "", description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", tasks: [])).previewLayout(.fixed(width: 1200, height: 900))
+        CourseDescriptionView(course: Course(name: "Name",path: "", description: "Lorem Ipsum", tasks: [])).previewLayout(.fixed(width: 1366, height: 1024))
     }
 }

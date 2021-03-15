@@ -14,7 +14,6 @@ struct RootView: View {
             CourseListView()
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .statusBar(hidden: true)
     }
 }
 

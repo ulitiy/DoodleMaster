@@ -25,13 +25,15 @@
 		6C6B613A25A1CF65004ADDBA /* StepFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613925A1CF65004ADDBA /* StepFailView.swift */; };
 		6C6B613D25A1D128004ADDBA /* WhyFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */; };
 		6C6B614225A1DC0B004ADDBA /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C6B614125A1DC0B004ADDBA /* MyImageView.swift */; };
-		6C6B615025A1F202004ADDBA /* LucidaGrande.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */; };
 		6C81834625A31A730023EF67 /* TaskMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81834525A31A730023EF67 /* TaskMenuView.swift */; };
 		6C89EA1B259F6D8300CD8741 /* StepResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1A259F6D8300CD8741 /* StepResultView.swift */; };
 		6C89EA1E259F6DA200CD8741 /* TaskResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */; };
 		6C89EA22259F75CA00CD8741 /* ResultDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */; };
 		6C9D600325EF7C0900EF96D9 /* CourseProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D600225EF7C0900EF96D9 /* CourseProgressView.swift */; };
 		6CA1D2192534ACA600CDDDFE /* WebViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */; };
+		6CA5CA3125FD383B00CC9826 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CA5CA2E25FD383B00CC9826 /* Montserrat-SemiBold.ttf */; };
+		6CA5CA3225FD383B00CC9826 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CA5CA2F25FD383B00CC9826 /* Montserrat-Regular.ttf */; };
+		6CA5CA3325FD383B00CC9826 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CA5CA3025FD383B00CC9826 /* Montserrat-Medium.ttf */; };
 		6CAE185725B06C9B008AFD31 /* CourseListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CAE185625B06C9B008AFD31 /* CourseListState.swift */; };
 		6CB5E22E24EA71B30002E77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22D24EA71B30002E77B /* AppDelegate.swift */; };
 		6CB5E23024EA71B30002E77B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5E22F24EA71B30002E77B /* SceneDelegate.swift */; };
@@ -41,7 +43,6 @@
 		6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E23824EA71B40002E77B /* LaunchScreen.storyboard */; };
 		6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */ = {isa = PBXBuildFile; fileRef = 6CB5E24724EA7B8E0002E77B /* MaLiang */; };
 		6CD1912925BC5F1700D3C792 /* CourseDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */; };
-		6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */; };
 		6CDD7CC82551CDF700E750C2 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD7CC72551CDF700E750C2 /* LazyView.swift */; };
 		6CF01E9425D1AAD5004E8695 /* CourseListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */; };
 		6CF01EA125D3E7F8004E8695 /* TaskListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF01EA025D3E7F8004E8695 /* TaskListItemView.swift */; };
@@ -72,13 +73,15 @@
 		6C6B613925A1CF65004ADDBA /* StepFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFailView.swift; sourceTree = "<group>"; };
 		6C6B613C25A1D128004ADDBA /* WhyFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhyFailedView.swift; sourceTree = "<group>"; };
 		6C6B614125A1DC0B004ADDBA /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
-		6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LucidaGrande.ttf; sourceTree = "<group>"; };
 		6C81834525A31A730023EF67 /* TaskMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskMenuView.swift; sourceTree = "<group>"; };
 		6C89EA1A259F6D8300CD8741 /* StepResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepResultView.swift; sourceTree = "<group>"; };
 		6C89EA1D259F6DA200CD8741 /* TaskResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResultView.swift; sourceTree = "<group>"; };
 		6C89EA21259F75CA00CD8741 /* ResultDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailsView.swift; sourceTree = "<group>"; };
 		6C9D600225EF7C0900EF96D9 /* CourseProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseProgressView.swift; sourceTree = "<group>"; };
 		6CA1D2182534ACA600CDDDFE /* WebViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWrapper.swift; sourceTree = "<group>"; };
+		6CA5CA2E25FD383B00CC9826 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		6CA5CA2F25FD383B00CC9826 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		6CA5CA3025FD383B00CC9826 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		6CAE185625B06C9B008AFD31 /* CourseListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListState.swift; sourceTree = "<group>"; };
 		6CB5E22A24EA71B30002E77B /* Art Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Workout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB5E22D24EA71B30002E77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +94,6 @@
 		6CB5E24524EA7B720002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
 		6CB5E24724EA7B8E0002E77B /* MaLiang */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MaLiang; sourceTree = "<group>"; };
 		6CD1912825BC5F1700D3C792 /* CourseDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDescriptionView.swift; sourceTree = "<group>"; };
-		6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LithosPro-Regular.otf"; sourceTree = "<group>"; };
 		6CDD7CC72551CDF700E750C2 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 		6CF01E9325D1AAD5004E8695 /* CourseListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseListItemView.swift; sourceTree = "<group>"; };
 		6CF01EA025D3E7F8004E8695 /* TaskListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListItemView.swift; sourceTree = "<group>"; };
@@ -236,8 +238,9 @@
 		6CD9169925A1FB24005AF586 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				6C6B614725A1EC8D004ADDBA /* LucidaGrande.ttf */,
-				6CD9169625A1FB11005AF586 /* LithosPro-Regular.otf */,
+				6CA5CA3025FD383B00CC9826 /* Montserrat-Medium.ttf */,
+				6CA5CA2F25FD383B00CC9826 /* Montserrat-Regular.ttf */,
+				6CA5CA2E25FD383B00CC9826 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -313,11 +316,12 @@
 				6CF1709225924A88000DB2A9 /* pencil.png in Resources */,
 				6CB5E24824EA7B8E0002E77B /* MaLiang in Resources */,
 				6CB5E23A24EA71B40002E77B /* LaunchScreen.storyboard in Resources */,
-				6C6B615025A1F202004ADDBA /* LucidaGrande.ttf in Resources */,
 				6CB5E23724EA71B40002E77B /* Preview Assets.xcassets in Resources */,
 				6C4B8660253604CE000CB7E0 /* Web in Resources */,
+				6CA5CA3125FD383B00CC9826 /* Montserrat-SemiBold.ttf in Resources */,
 				6CB5E23424EA71B40002E77B /* Assets.xcassets in Resources */,
-				6CD9169725A1FB11005AF586 /* LithosPro-Regular.otf in Resources */,
+				6CA5CA3225FD383B00CC9826 /* Montserrat-Regular.ttf in Resources */,
+				6CA5CA3325FD383B00CC9826 /* Montserrat-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 34;
+				CURRENT_PROJECT_VERSION = 35;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
@@ -558,7 +562,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -568,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 34;
+				CURRENT_PROJECT_VERSION = 35;
 				DEVELOPMENT_ASSET_PATHS = "\"DoodleMaster/Preview Content\"";
 				DEVELOPMENT_TEAM = Y4F8L5FEED;
 				ENABLE_PREVIEWS = YES;
@@ -581,7 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.momwillbeproud.artworkout;
 				PRODUCT_NAME = "Art Workout";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

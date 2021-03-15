@@ -98,11 +98,11 @@ let letters = Course(
     ])
 
 let handwriting = Course(
-    name: "Handwriting practice",
+    name: "Handwriting\npractice",
     path: "handwriting",
     description: "This course contains handwriting practice from popular children's poems.",
     tasks: [
-        Task(name: "From a Railway Carriage pt.1", path: "handwriting/from-a-railway-carriage-1", text: [
+        Task(name: "From a Railway Carriage I", path: "handwriting/from-a-railway-carriage-1", text: [
             "Faster than fairies, faster than witches,",
             "Bridges and houses, hedges and ditches;",
             "And charging along like troops in a battle,",
@@ -112,7 +112,7 @@ let handwriting = Course(
             "And ever again, in the wink of an eye,",
             "Painted stations whistle by.",
         ]),
-        Task(name: "From a Railway Carriage pt.2", path: "handwriting/from-a-railway-carriage-2", text: [
+        Task(name: "From a Railway Carriage II", path: "handwriting/from-a-railway-carriage-2", text: [
             "Here is a child who clambers and scrambles,",
             "All by himself and gathering brambles;",
             "Here is a tramp who stands and gazes;",
@@ -121,6 +121,43 @@ let handwriting = Course(
             "Lumping along with man and load;",
             "And here is a mill and there is a river:",
             "Each a glimpse and gone for ever!",
+        ]),
+        Task(name: "Jabberwocky I", path: "handwriting/jabberwocky-1", text: [
+            "‘Twas brillig, and the slithy toves",
+            "Did gyre and gimble in the wabe:",
+            "All mimsy were the borogoves,",
+            "And the mome raths outgrabe.",
+
+            "“Beware the Jabberwock, my son!",
+            "The jaws that bite, the claws that catch!",
+            "Beware the Jubjub bird, and shun",
+            "The frumious Bandersnatch!”",
+
+            "He took his vorpal sword in hand;",
+            "Long time the manxome foe he sought—",
+            "So rested he by the Tumtum tree",
+            "And stood awhile in thought.",
+        ]),
+        Task(name: "Jabberwocky II", path: "handwriting/jabberwocky-2", text: [
+            "And, as in uffish thought he stood,",
+            "The Jabberwock, with eyes of flame,",
+            "Came whiffling through the tulgey wood,",
+            "And burbled as it came!",
+
+            "One, two! One, two! And through and through",
+            "The vorpal blade went snicker-snack!",
+            "He left it dead, and with its head",
+            "He went galumphing back.",
+
+            "“And hast thou slain the Jabberwock?",
+            "Come to my arms, my beamish boy!",
+            "O frabjous day! Callooh! Callay!”",
+            "He chortled in his joy.",
+
+            "‘Twas brillig, and the slithy toves",
+            "Did gyre and gimble in the wabe:",
+            "All mimsy were the borogoves,",
+            "And the mome raths outgrabe.",
         ]),
     ]
 )

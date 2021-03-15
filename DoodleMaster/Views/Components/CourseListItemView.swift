@@ -52,7 +52,6 @@ struct CourseListItemView: View {
                openCourse = true
            }
         }
-        .buttonStyle(PlainButtonStyle())
     }
 }
 

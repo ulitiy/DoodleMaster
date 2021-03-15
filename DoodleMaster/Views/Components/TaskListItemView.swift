@@ -48,7 +48,7 @@ struct TaskListItemView: View {
                         }
                     }
                     , alignment: .topTrailing)
-        }.buttonStyle(PlainButtonStyle())
+        }
     }
 }
 

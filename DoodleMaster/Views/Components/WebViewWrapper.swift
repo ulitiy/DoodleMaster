@@ -29,7 +29,7 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
     var wkWebView: WKWebView!
     var skipAnimationSink: AnyCancellable?
     var debugTemplateSink: AnyCancellable?
-    var stepNumberSink: AnyCancellable?
+    var templateSink: AnyCancellable?
     var brushScale = 1.0
 
     func webView(_ webView: WKWebView,
@@ -94,19 +94,15 @@ class WebViewController: UIViewController, WKNavigationDelegate, WKScriptMessage
             }
             self.showInputOrTemplate(self.taskState.stepNumber, template: val)
         }
-        stepNumberSink = taskState.$stepNumber.sink { [weak self] val in
-            guard let self = self, !self.wkWebView.isLoading else {
+        templateSink = taskState.$template.sink { [weak self] val in
+            guard let self = self, !self.wkWebView.isLoading, val != nil else {
                 return
             }
-            self.onStepNumberChange(val)
+            self.showInputOrTemplate(self.taskState.stepNumber, template: self.taskState.debugTemplate)
         }
     }
     
     func showInputOrTemplate(_ step: Int, template: Bool) {
         wkWebView.evaluateJavaScript(template ? "setShadowSize(\(self.taskState.currentStep.shadowSize * self.brushScale)); showTemplate(\(step));" : "showInput(\(step));")
-    }
-    
-    func onStepNumberChange(_ val: Int) {
-        showInputOrTemplate(val, template: taskState.debugTemplate)
     }
 }

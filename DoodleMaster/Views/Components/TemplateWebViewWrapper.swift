@@ -24,9 +24,7 @@ struct TemplateWebViewWrapper : UIViewControllerRepresentable {
     }
 }
 
-class TemplateWebViewController: WebViewController {
-    var templateSink: AnyCancellable?
-    
+class TemplateWebViewController: WebViewController {    
     override func onTaskLoaded() {
         self.getTaskSettings {
             self.getStepSettings(self.taskState.stepNumber) {
@@ -91,7 +89,7 @@ class TemplateWebViewController: WebViewController {
                 return
             }
             self.snapshot = img
-            self.taskState.template = self.createTexture(uiImage: self.snapshot!) // debug behavior. Because we skip InputReady event
+            self.taskState.template = self.createTexture(uiImage: self.snapshot!)
         })
     }
     

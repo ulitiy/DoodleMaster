@@ -22,13 +22,13 @@ struct StepResultView: View {
                     Text("\(taskState.currentResult!.overall.formatScore())")
                         .font(Font.custom("Montserrat-Medium", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
-                        .padding(.leading, 90)
 
                     Text("/ 1350")
                         .foregroundColor(.gray)
                         .font(.custom("Helvetica", size: 25))
                         .padding(.bottom, 13)
                 }
+                .padding(.leading, 90)
                 ResultDetailsView(result: taskState.currentResult, time: nil)
             }.padding(.bottom, 150)
             ZStack {

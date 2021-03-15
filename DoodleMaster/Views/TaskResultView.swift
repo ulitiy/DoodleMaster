@@ -27,13 +27,13 @@ struct TaskResultView: View {
                     Text("\(taskState.taskResult!.overall.formatScore())")
                         .font(Font.custom("Montserrat-Medium", size: 70.0))
                         .foregroundColor(Color(hex: "303b96ff"))
-                        .padding(.leading, 90)
 
                     Text("/ 1350")
                         .foregroundColor(.gray)
                         .font(.custom("Helvetica", size: 25))
                         .padding(.bottom, 13)
                 }
+                .padding(.leading, 90)
                 .padding(30)
                 ResultDetailsView(result: taskState.taskResult!, time: taskState.dateStarted.timeIntervalSinceNow)
                     .padding(30)
@@ -67,7 +67,7 @@ struct TaskResultView_Previews: PreviewProvider {
     static func makeTaskState() -> TaskState {
         let ts = TaskState(task: Task(name: "", path: ""))
         let r = Result(scoringSystem: ScoringSystem())
-        r.overall = 0.9876
+        r.overall = 1.234
         r.blueK = 0.98765
         r.oneMinusAlphaK = -0.1234
         r.roughnessK = 0.1

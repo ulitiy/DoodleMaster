@@ -9,7 +9,7 @@
 <rect id="Rectangle 6" x="1193.5" y="853" width="150" height="150" fill="#FF0000" stroke="#00FF00" stroke-width="50"/>
 </g>
 </g>
-<g id="step s-multistep-brush">
+<g id="step s-multistep-brush shadow-size-30">
 <g id="input_2">
 <g id="ref">
 <path id="Vector 16" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -25,7 +25,7 @@
 <path id="draw-line rgb-template" d="M584.425 623.116H497.632V374.78H844.804V623.116H754.689" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_2">
+<g id="step s-multistep-brush shadow-size-40">
 <g id="input_3">
 <g id="ref_2">
 <path id="Vector 16_2" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -42,7 +42,7 @@
 <path id="draw-line rgb-template_2" d="M553.695 697.035H552.234C542.781 697.035 533.967 701.804 528.795 709.717L420.463 875.474C408.292 894.098 421.653 918.793 443.901 918.793H893.529C915.61 918.793 929.002 894.428 917.168 875.786L811.926 710.007C806.798 701.929 797.894 697.035 788.326 697.035V697.035" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_3">
+<g id="step s-multistep-brush shadow-size-20">
 <g id="input_4">
 <g id="ref_3">
 <path id="Vector 16_3" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -58,7 +58,7 @@
 <path id="draw-line rgb-template_3" d="M670.667 603.182H701.623C710.31 603.182 717.6 609.733 718.526 618.371L721.112 642.51C722.189 652.558 714.314 661.321 704.209 661.321H632.684C622.482 661.321 614.578 652.399 615.808 642.272L618.739 618.133C619.775 609.6 627.019 603.182 635.615 603.182H669.244" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_4">
+<g id="step s-multistep-brush shadow-size-20_2">
 <g id="input_5">
 <g id="ref_4">
 <path id="Vector 16_4" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -76,7 +76,7 @@
 <path id="draw-line rgb-template_4" d="M522.134 754.343L585.671 644.71" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_5">
+<g id="step s-multistep-brush">
 <g id="input_6">
 <g id="ref_5">
 <path id="Vector 16_5" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -91,7 +91,7 @@
 <path id="draw-line rgb-template_5" d="M521.718 755.174V799.193H824.04V755.174H522.641" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_6">
+<g id="step s-multistep-brush shadow-size-20_3">
 <g id="input_7">
 <g id="ref_6">
 <path id="Vector 16_6" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -107,7 +107,7 @@
 <rect id="draw-line rgb-template_6" x="584.84" y="589.894" width="170.263" height="54.8165" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_7">
+<g id="step s-multistep-brush shadow-size-40_2">
 <g id="input_8">
 <g id="ref_7">
 <path id="Vector 16_7" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -123,7 +123,7 @@
 <path id="draw-line rgb-template_8" d="M1082 374L1082 647" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_8">
+<g id="step s-multistep-brush shadow-size-35">
 <g id="input_9">
 <g id="ref_8">
 <path id="Vector 16_8" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -140,7 +140,7 @@
 <path id="draw-line rgb-template_9" d="M965.649 395.129H998.5L1137.5 352.5" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_9">
+<g id="step s-multistep-brush_2">
 <g id="input_10">
 <g id="ref_9">
 <path id="Vector 16_9" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -155,7 +155,7 @@
 <path id="draw-line rgb-template_10" d="M964.403 394.714V623.946L1137.99 690.806V327.439L965.234 394.392" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_10">
+<g id="step s-multistep-brush_3">
 <g id="input_11">
 <g id="ref_10">
 <path id="Vector 16_10" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -172,7 +172,7 @@
 <path id="draw-line rgb-template_11" d="M922.876 652.185V739.238L1073.21 871.866V739.238L924.537 653.147" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_11">
+<g id="step s-multistep-brush_4">
 <g id="input_12">
 <g id="ref_11">
 <path id="Vector 16_11" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -189,7 +189,7 @@
 <path id="draw-line rgb-template_12" d="M177.869 311.658V882.248H272.552V311.658H178.7" stroke="#6685D4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_12">
+<g id="step s-multistep-brush_5">
 <g id="input_13">
 <g id="ref_12">
 <path id="Vector 16_12" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -207,7 +207,7 @@
 <path id="draw-line rgb-template_13" d="M437.417 352.771L95.2292 107.342" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_13">
+<g id="step s-multistep-first-brush">
 <g id="input_14">
 <g id="ref_13">
 <path id="Vector 16_13" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>
@@ -279,7 +279,7 @@
 <path id="draw-line rgb-template_17" d="M670.803 333.253V84.5018" stroke="#6685D4" stroke-width="8" stroke-linecap="round"/>
 </g>
 </g>
-<g id="step s-multistep-brush_14">
+<g id="step s-multistep-brush_6">
 <g id="input_18">
 <g id="ref_17">
 <path id="Vector 16_17" d="M1244.3 79.5185L89 944.955" stroke="#CBD8F1" stroke-width="6"/>

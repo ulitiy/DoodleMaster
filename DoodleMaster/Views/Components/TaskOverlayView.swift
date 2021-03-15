@@ -34,9 +34,9 @@ struct TaskOverlayView: View {
             #if DEBUG
             if taskState.debugTemplate {
                 Text(taskState.currentResult.toString())
+                    .foregroundColor(.black)
                     .padding()
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .bottomLeading)
-                    .allowsHitTesting(false)
             }
             #endif
         }
